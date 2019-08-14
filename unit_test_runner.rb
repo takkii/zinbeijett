@@ -20,7 +20,7 @@ end
 # Filename find loads.
 class Filename
   def find
-    puts Dir.glob('./test/*.rb')
+    puts Dir.glob('./test/*.rb'.toutf8)
   end
 end
 
@@ -66,12 +66,12 @@ __END__
 # >> Loaded suite test
 # >> Started
 # >> .........
-# >> Finished in 0.00192 seconds.
+# >> Finished in 0.00319 seconds.
 # >> -------------------------------------------------------------------------------
 # >> 9 tests, 6 assertions, 0 failures, 0 errors, 0 pendings, 0 omissions, 0 notifications
 # >> 100% passed
 # >> -------------------------------------------------------------------------------
-# >> 4687.50 tests/s, 3125.00 assertions/s
+# >> 2821.32 tests/s, 1880.88 assertions/s
 # >> 
 # >> ----------------------- Test All End -----------------------
 # >> 
