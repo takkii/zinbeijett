@@ -34,3 +34,20 @@ Rake::RDocTask.new do |rdoc|
   rdoc.rdoc_files.include('lib/**/*.rb')
   rdoc.options = ["--charset", "utf-8", "--line-numbers"]
 end
+
+require 'rake/testtask'
+
+task :default => [:test]
+Rake::TestTask.new do |test|
+  test.test_files = Dir['test/**/test_*.rb']
+  test.verbose = true
+end
+
+require 'rake/testtask'
+
+task :default => [:test]
+
+Rake::TestTask.new do |mini_test|
+  mini_test.test_files = Dir['mini_test/**/mini_test_*.rb']
+  mini_test.verbose = true
+end
