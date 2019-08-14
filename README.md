@@ -1,4 +1,4 @@
-[![Gem Version](https://badge.fury.io/rb/zinbeijett.svg)](http://badge.fury.io/rb/zinbeijett)[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
+[![Gem Version](https://badge.fury.io/rb/zinbeijett.svg)](http://badge.fury.io/rb/zinbeijett)[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)[![Build Status](https://travis-ci.org/takkii/zinbeijett.svg?branch=master)](https://travis-ci.org/takkii/zinbeijett)
 
 ### GitHub zinbeijett repo developments Start before,
 
@@ -71,13 +71,6 @@ Copyright (c) 2013-2019 Takayuki Kamiyama
 生じる一切の請求、損害、
 その他の義務について何らの責任も負わないものとします。
 ```
-
-[Shougo/defx.nvim](https://github.com/Shougo/defx.nvim)
-
-↑ スクリーンショットがマージされました ↓
-
-![Defxでzinbeijettのフォルダへ移動](https://user-images.githubusercontent.com/1314340/48659914-0b4a0c00-ea9c-11e8-9953-2f2d5ca7f24a.png)
-
 
 > minitest、実行結果。更新履歴  [2019.3.19]
 
