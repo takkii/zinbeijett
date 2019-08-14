@@ -2,6 +2,9 @@
 
 require 'kconv'
 require 'test/unit' # !> setting Encoding.default_internal
+# debug
+require 'byebug' # !> setting Encoding.default_internal
+require 'tanraku'
 
 Encoding.default_internal = 'UTF-8' # !> setting Encoding.default_internal
 
@@ -17,18 +20,18 @@ end
 # Filename find loads.
 class Filename
   def find
-    puts Dir.glob('./test/*.rb')
+    puts Dir.glob('./test/*.rb'.toutf8)
   end
 end
 
 # Super Class
 class One < Filename
-  include Test
+  include Test # !> mismatched indentations at 'rescue' with 'def' at 27
 
   def two
-    for_all
+    for_all # !> mismatched indentations at 'ensure' with 'def' at 27
   end
-end
+end # !> mismatched indentations at 'end' with 'def' at 27
 
 puts ''
 puts ' ./test in filename list...start! '.center(60, '-').toutf8
@@ -39,11 +42,14 @@ puts ' ./test in filename list...exit. '.center(60, '-').toutf8
 puts ''
 puts ''
 puts ' Test All Start '.center(60, '-').toutf8
-puts ''
+puts '' # !> mismatched indentations at 'rescue' with 'def' at 43
 One.new.two
 puts ''
-puts ' Test All End '.center(60, '-').toutf8
+puts ' Test All End '.center(60, '-').toutf8 # !> mismatched indentations at 'ensure' with 'def' at 43
 puts ''
+ # !> mismatched indentations at 'end' with 'def' at 43
+# Debug step
+# debugger
 
 __END__
 # >> 
@@ -60,12 +66,12 @@ __END__
 # >> Loaded suite test
 # >> Started
 # >> .........
-# >> Finished in 0.01212 seconds.
+# >> Finished in 0.00319 seconds.
 # >> -------------------------------------------------------------------------------
 # >> 9 tests, 6 assertions, 0 failures, 0 errors, 0 pendings, 0 omissions, 0 notifications
 # >> 100% passed
 # >> -------------------------------------------------------------------------------
-# >> 742.57 tests/s, 495.05 assertions/s
+# >> 2821.32 tests/s, 1880.88 assertions/s
 # >> 
 # >> ----------------------- Test All End -----------------------
 # >> 
