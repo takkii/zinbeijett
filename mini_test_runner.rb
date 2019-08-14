@@ -7,6 +7,7 @@ require 'minitest/unit'
 require 'minitest/reporters'
 # Debug on step.
 require 'byebug'
+require 'tanraku'
 
 Encoding.default_internal = 'UTF-8' # !> setting Encoding.default_internal
 
