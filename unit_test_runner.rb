@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 require 'kconv'
-require 'test/unit'
+require 'test/unit' # !> setting Encoding.default_internal
 # debug
-require 'byebug'
+require 'byebug' # !> setting Encoding.default_internal
 require 'tanraku'
 
 Encoding.default_internal = 'UTF-8' # !> setting Encoding.default_internal
@@ -52,8 +52,26 @@ puts ''
 # debugger
 
 __END__
-# ~> -:23:in `find': undefined method `toutf8' for ["./test/test_matcher.rb", "./test/test_version.rb"]:Array (NoMethodError)
-# ~> 	from -:39:in `<main>'
 # >> 
 # >> ------------- ./test in filename list...start! -------------
+# >> 
+# >> ./test/test_matcher.rb
+# >> ./test/test_version.rb
+# >> 
+# >> ------------- ./test in filename list...exit. --------------
+# >> 
+# >> 
+# >> ---------------------- Test All Start ----------------------
+# >> 
+# >> Loaded suite test
+# >> Started
+# >> .........
+# >> Finished in 0.00192 seconds.
+# >> -------------------------------------------------------------------------------
+# >> 9 tests, 6 assertions, 0 failures, 0 errors, 0 pendings, 0 omissions, 0 notifications
+# >> 100% passed
+# >> -------------------------------------------------------------------------------
+# >> 4687.50 tests/s, 3125.00 assertions/s
+# >> 
+# >> ----------------------- Test All End -----------------------
 # >> 
