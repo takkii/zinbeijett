@@ -9,11 +9,15 @@
     bundle install --path .bundle
     (Need bundle exec command.)
 
-[unit/mini test_ auto run]
+[AutoRun /mini_test/unit_test/rspec/all/ ]
 
     bundle exec ruby mini_test_runner.rb
 
     bundle exec ruby unit_test_runner.rb
+
+    rspec
+
+    bundle exec rake
 
 ## RubyGems: Zinbeijett
 
