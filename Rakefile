@@ -1,10 +1,7 @@
 # frozen_string_literal: true
 
 # bundle exec
-<<<<<<< HEAD
-=======
 require 'rubygems'
->>>>>>> 9d9a1775c3d36fad24df8089bc4376975f2f373b
 require 'bundler'
 require 'rake'
 require 'rspec/core'
@@ -21,13 +18,7 @@ rescue Bundler::BundlerError => e
 end
 
 # rspec
-<<<<<<< HEAD
 
-=======
-require 'rake'
-require 'rspec/core'
-require 'rspec/core/rake_task'
->>>>>>> 9d9a1775c3d36fad24df8089bc4376975f2f373b
 RSpec::Core::RakeTask.new(:spec) do |spec|
   spec.pattern = FileList['spec/**/*_spec.rb']
 end
@@ -49,10 +40,6 @@ Rake::RDocTask.new do |rdoc|
 end
 
 # unit_test
-<<<<<<< HEAD
-=======
-require 'rake/testtask'
->>>>>>> 9d9a1775c3d36fad24df8089bc4376975f2f373b
 
 task :default => [:test]
 Rake::TestTask.new do |test|
@@ -61,10 +48,6 @@ Rake::TestTask.new do |test|
 end
 
 # mini_test
-<<<<<<< HEAD
-=======
-require 'rake/testtask'
->>>>>>> 9d9a1775c3d36fad24df8089bc4376975f2f373b
 
 task :default => [:test]
 Rake::TestTask.new do |mini_test|
