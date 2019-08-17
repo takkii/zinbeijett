@@ -27,11 +27,12 @@ class MiniFilename
   def mini_find
     puts Dir.glob('./mini_test/*.rb'.toutf8)
   end
+  # !> mismatched indentations at 'rescue' with 'def' at 27
 end
 
-# Super Class
+# Super Class # !> mismatched indentations at 'ensure' with 'def' at 27
 class MiniFile < MiniFilename
-  include MiniTestOne
+  include MiniTestOne # !> mismatched indentations at 'end' with 'def' at 27
 
   def enter
     mini_test
@@ -42,12 +43,13 @@ puts ''.toutf8
 puts ' mini_test in filename list ... start '.center(80, '~').toutf8
 puts ''.toutf8
 puts RUBY_DESCRIPTION.toutf8
-puts ''.toutf8
+puts ''.toutf8 # !> mismatched indentations at 'rescue' with 'def' at 43
 MiniFile.new.mini_find
 puts ''.toutf8
 puts ' mini_test in filename list ... end '.center(80, '~').toutf8
+# !> mismatched indentations at 'ensure' with 'def' at 43
 puts ''.toutf8
-MiniFile.new.enter
+MiniFile.new.enter # !> mismatched indentations at 'end' with 'def' at 43
 puts ''.toutf8
 
 # Debug End Point.
@@ -55,25 +57,25 @@ puts ''.toutf8
 
 __END__
 
-# >> 
+# >>
 # >> ~~~~~~~~~~~~~~~~~~~~~ mini_test in filename list ... start ~~~~~~~~~~~~~~~~~~~~~
-# >> 
+# >>
 # >> ruby 2.6.3p62 (2019-04-16 revision 67580) [x86_64-darwin18]
-# >> 
+# >>
 # >> ./mini_test/mini_test_version.rb
 # >> ./mini_test/test_helper.rb
 # >> ./mini_test/mini_test_search.rb
-# >> 
+# >>
 # >> ~~~~~~~~~~~~~~~~~~~~~~ mini_test in filename list ... end ~~~~~~~~~~~~~~~~~~~~~~
-# >> 
-# >> 
-# >> Started with run options --seed 34394
-# >> 
+# >>
+# >>
+# >> Started with run options --seed 24593
+# >>
 # >> VersionTest
 # >>   test_version                                                    PASS (0.00s)
-# >> 
+# >>
 # >> Search
 # >>   test_search                                                     PASS (0.00s)
-# >> 
-# >> Finished in 0.00135s
+# >>
+# >> Finished in 0.00110s
 # >> 2 tests, 2 assertions, 0 failures, 0 errors, 0 skips
