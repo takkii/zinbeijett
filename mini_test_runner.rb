@@ -46,7 +46,8 @@ puts RUBY_DESCRIPTION.toutf8
 puts ''.toutf8 # !> mismatched indentations at 'rescue' with 'def' at 43
 MiniFile.new.mini_find
 puts ''.toutf8
-puts ' mini_test in filename list ... end '.center(80, '~').toutf8 # !> mismatched indentations at 'ensure' with 'def' at 43
+puts ' mini_test in filename list ... end '.center(80, '~').toutf8
+# !> mismatched indentations at 'ensure' with 'def' at 43
 puts ''.toutf8
 MiniFile.new.enter # !> mismatched indentations at 'end' with 'def' at 43
 puts ''.toutf8
