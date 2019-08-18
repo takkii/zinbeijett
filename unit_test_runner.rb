@@ -36,24 +36,28 @@ end # !> mismatched indentations at 'end' with 'def' at 27
 puts ''
 puts ' ./test in filename list...start! '.center(60, '-').toutf8
 puts ''
+puts RUBY_DESCRIPTION
+puts ''
 One.new.find
 puts ''
 puts ' ./test in filename list...exit. '.center(60, '-').toutf8
 puts ''
-puts ''
-puts ' Test All Start '.center(60, '-').toutf8
 puts '' # !> mismatched indentations at 'rescue' with 'def' at 43
-One.new.two
+puts ' Test All Start '.center(60, '-').toutf8
 puts ''
-puts ' Test All End '.center(60, '-').toutf8 # !> mismatched indentations at 'ensure' with 'def' at 43
+One.new.two # !> mismatched indentations at 'ensure' with 'def' at 43
 puts ''
- # !> mismatched indentations at 'end' with 'def' at 43
+puts ' Test All End '.center(60, '-').toutf8 # !> mismatched indentations at 'end' with 'def' at 43
+puts ''
+
 # Debug step
 # debugger
 
 __END__
 # >> 
 # >> ------------- ./test in filename list...start! -------------
+# >> 
+# >> ruby 2.6.3p62 (2019-04-16 revision 67580) [x86_64-darwin18]
 # >> 
 # >> ./test/test_matcher.rb
 # >> ./test/test_version.rb
@@ -66,12 +70,12 @@ __END__
 # >> Loaded suite test
 # >> Started
 # >> .........
-# >> Finished in 0.00319 seconds.
+# >> Finished in 0.003042 seconds.
 # >> -------------------------------------------------------------------------------
 # >> 9 tests, 6 assertions, 0 failures, 0 errors, 0 pendings, 0 omissions, 0 notifications
 # >> 100% passed
 # >> -------------------------------------------------------------------------------
-# >> 2821.32 tests/s, 1880.88 assertions/s
+# >> 2958.58 tests/s, 1972.39 assertions/s
 # >> 
 # >> ----------------------- Test All End -----------------------
 # >> 
