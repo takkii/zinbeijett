@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'rubygems'
 require 'kconv'
 require 'minitest' # !> setting Encoding.default_internal
 require 'minitest/autorun'
