@@ -43,8 +43,13 @@ end
 puts ''.toutf8
 puts ' mini_test in filename list ... start '.center(80, '~').toutf8
 puts ''.toutf8
+puts '[ タイムスタンプ ]'.toutf8
+puts Time.new.strftime('%Y年%m月%d日 %H時%M分%S秒').toutf8
+puts ''.toutf8
+puts '[ 実行環境 ]'.toutf8
 puts RUBY_DESCRIPTION.toutf8
-puts ''.toutf8 # !> mismatched indentations at 'rescue' with 'def' at 43
+puts ''.toutf8
+puts '[ ミニテストファイル読み込み ]'.toutf8
 MiniFile.new.mini_find
 puts ''.toutf8
 puts ' mini_test in filename list ... end '.center(80, '~').toutf8
@@ -57,26 +62,3 @@ puts ''.toutf8
 # debugger
 
 __END__
-
-# >>
-# >> ~~~~~~~~~~~~~~~~~~~~~ mini_test in filename list ... start ~~~~~~~~~~~~~~~~~~~~~
-# >>
-# >> ruby 2.6.3p62 (2019-04-16 revision 67580) [x86_64-darwin18]
-# >>
-# >> ./mini_test/mini_test_version.rb
-# >> ./mini_test/test_helper.rb
-# >> ./mini_test/mini_test_search.rb
-# >>
-# >> ~~~~~~~~~~~~~~~~~~~~~~ mini_test in filename list ... end ~~~~~~~~~~~~~~~~~~~~~~
-# >>
-# >>
-# >> Started with run options --seed 24593
-# >>
-# >> VersionTest
-# >>   test_version                                                    PASS (0.00s)
-# >>
-# >> Search
-# >>   test_search                                                     PASS (0.00s)
-# >>
-# >> Finished in 0.00110s
-# >> 2 tests, 2 assertions, 0 failures, 0 errors, 0 skips
