@@ -1,8 +1,7 @@
 # frozen_string_literal: true
 
-require 'rubygems'
 require 'kconv'
-require 'minitest' # !> setting Encoding.default_internal
+require 'minitest'
 require 'minitest/autorun'
 require 'minitest/unit'
 require 'minitest/reporters'
@@ -10,7 +9,7 @@ require 'minitest/reporters'
 require 'byebug'
 require 'tanraku'
 
-Encoding.default_internal = 'UTF-8' # !> setting Encoding.default_internal
+Encoding.default_internal = 'UTF-8'
 
 # Ruby test file.
 module MiniTestOne
@@ -28,12 +27,11 @@ class MiniFilename
   def mini_find
     puts Dir.glob('./mini_test/*.rb'.toutf8)
   end
-  # !> mismatched indentations at 'rescue' with 'def' at 27
 end
 
-# Super Class # !> mismatched indentations at 'ensure' with 'def' at 27
+# Super Class
 class MiniFile < MiniFilename
-  include MiniTestOne # !> mismatched indentations at 'end' with 'def' at 27
+  include MiniTestOne
 
   def enter
     mini_test
@@ -53,9 +51,8 @@ puts '[ ミニテストファイル読み込み ]'.toutf8
 MiniFile.new.mini_find
 puts ''.toutf8
 puts ' mini_test in filename list ... end '.center(80, '~').toutf8
-# !> mismatched indentations at 'ensure' with 'def' at 43
 puts ''.toutf8
-MiniFile.new.enter # !> mismatched indentations at 'end' with 'def' at 43
+MiniFile.new.enter
 puts ''.toutf8
 
 # Debug End Point.
