@@ -6,6 +6,8 @@ ruby '2.6.4'
 
 # gemspec
 
+gem 'bundler'
+gem 'byebug'
 gem 'minitest'
 gem 'minitest-reporters'
 gem 'pry'
@@ -16,5 +18,3 @@ gem 'ruby-prof'
 gem 'solargraph'
 gem 'tanraku'
 gem 'test-unit'
-gem 'byebug'
-gem 'bundler'
