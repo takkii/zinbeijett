@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
 require 'kconv'
-require 'test/unit' # !> setting Encoding.default_internal
+require 'test/unit'
 # debug
-require 'byebug' # !> setting Encoding.default_internal
+require 'byebug'
 require 'tanraku'
 
-Encoding.default_internal = 'UTF-8' # !> setting Encoding.default_internal
+Encoding.default_internal = 'UTF-8'
 
 # Test result loads.
 module Test
@@ -26,12 +26,12 @@ end
 
 # Super Class
 class One < Filename
-  include Test # !> mismatched indentations at 'rescue' with 'def' at 27
+  include Test
 
   def two
-    for_all # !> mismatched indentations at 'ensure' with 'def' at 27
+    for_all
   end
-end # !> mismatched indentations at 'end' with 'def' at 27
+end
 
 puts ''
 puts ' ./test in filename list...start! '.center(60, '-').toutf8
@@ -42,12 +42,12 @@ One.new.find
 puts ''
 puts ' ./test in filename list...exit. '.center(60, '-').toutf8
 puts ''
-puts '' # !> mismatched indentations at 'rescue' with 'def' at 43
+puts ''
 puts ' Test All Start '.center(60, '-').toutf8
 puts ''
-One.new.two # !> mismatched indentations at 'ensure' with 'def' at 43
+One.new.two
 puts ''
-puts ' Test All End '.center(60, '-').toutf8 # !> mismatched indentations at 'end' with 'def' at 43
+puts ' Test All End '.center(60, '-').toutf8
 puts ''
 
 # Debug step
