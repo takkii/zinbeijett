@@ -5,11 +5,18 @@
     "version": "0.2.0",
     "configurations": [
         {
-        "name": "Debug Local File",
+        "name": "Debug zinbeijett File1",
         "type": "Ruby",
         "request": "launch",
         "cwd": "${workspaceRoot}",
         "program": "${workspaceRoot}/mini_test_runner.rb"
-        }
+        },
+                {
+        "name": "Debug zinbeijett File2",
+        "type": "Ruby",
+        "request": "launch",
+        "cwd": "${workspaceRoot}",
+        "program": "${workspaceRoot}/unit_test_runner.rb"
+        },
     ]
 }
