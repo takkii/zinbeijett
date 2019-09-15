@@ -131,3 +131,41 @@ sort02     ["C#", "Go", "Hive", "Java", "Perl", "Ruby"]  0.000000   0.000000   0
 
 ---------------- mini_test assert Benchmark ----------------
 ```
+
+unit test [2019.09]
+
+```markdown
+
+------------- ./test in filename list...start! -------------
+
+
+[ タイムスタンプ ]
+2019年09月15日 17時13分58秒
+
+[ 実行環境 ]
+ruby 2.6.4p104 (2019-08-28 revision 67798) +JIT [x86_64-linux]
+
+[ ミニテストファイル読み込み ]
+./test/test_matcher.rb
+./test/test_version.rb
+
+------------- ./test in filename list...exit. --------------
+
+
+---------------------- Test All Start ----------------------
+
+Loaded suite test
+Started
+.........
+Finished in 0.0015386 seconds.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------9 tests, 6 assertions, 0 failures, 0 errors, 0 pendings, 0 omissions, 0 notifications
+100% passed
+---------------------------------------------------------------------------------------------------------------------------------------------------------------5849.47 tests/s, 3899.65 assertions/s
+
+----------------------- Test All End -----------------------
+
+```
+
+Author Takayuki Kamiyama
+
+zinbeijett for lisence MIT
