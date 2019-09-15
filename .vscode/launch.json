@@ -4,10 +4,12 @@
     // 詳細情報は次を確認してください: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+        {
         "name": "Debug Local File",
         "type": "Ruby",
         "request": "launch",
         "cwd": "${workspaceRoot}",
-        "program": "${workspaceRoot}/helloworld.rb"
+        "program": "${workspaceRoot}/mini_test_runner.rb"
+        }
     ]
 }
