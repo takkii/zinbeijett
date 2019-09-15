@@ -132,7 +132,7 @@ sort02     ["C#", "Go", "Hive", "Java", "Perl", "Ruby"]  0.000000   0.000000   0
 ---------------- mini_test assert Benchmark ----------------
 ```
 
-unit test [2019.09]
+> unit test [2019.09]
 
 ```markdown
 
@@ -166,6 +166,10 @@ Finished in 0.0015386 seconds.
 
 ```
 
+> Info
+
+```markdown
 Author Takayuki Kamiyama
 
 zinbeijett for lisence MIT
+```
