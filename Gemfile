@@ -18,3 +18,5 @@ gem 'ruby-prof'
 gem 'solargraph'
 gem 'tanraku'
 gem 'test-unit'
+#gem install ruby-debug-ide
+#gem instal debase

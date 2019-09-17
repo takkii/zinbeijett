@@ -68,7 +68,7 @@ Benchmark.bm 10 do |result|
   end
 
   result.report 'gc' do
-    Star.new.search
+    Star.search
   end
 
   result.report 'druby_erb' do

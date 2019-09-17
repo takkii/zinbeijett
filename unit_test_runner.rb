@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
 require 'kconv'
-require 'test/unit' # !> setting Encoding.default_internal
+require 'test/unit'
 # debug
-require 'byebug' # !> setting Encoding.default_internal
+require 'byebug'
 require 'tanraku'
 
-Encoding.default_internal = 'UTF-8' # !> setting Encoding.default_internal
+Encoding.default_internal = 'UTF-8'
 
 # Test result loads.
 module Test
@@ -26,56 +26,66 @@ end
 
 # Super Class
 class One < Filename
-  include Test # !> mismatched indentations at 'rescue' with 'def' at 27
+  include Test
 
   def two
-    for_all # !> mismatched indentations at 'ensure' with 'def' at 27
+    for_all
   end
-end # !> mismatched indentations at 'end' with 'def' at 27
+end
 
-puts ''
+puts ''.toutf8
 puts ' ./test in filename list...start! '.center(60, '-').toutf8
-puts ''
+puts ''.toutf8
+puts ''.toutf8
+puts '[ タイムスタンプ ]'.toutf8
+puts Time.new.strftime('%Y年%m月%d日 %H時%M分%S秒').toutf8
+puts ''.toutf8
+puts '[ 実行環境 ]'.toutf8
 puts RUBY_DESCRIPTION
-puts ''
+puts ''.toutf8
+puts '[ ミニテストファイル読み込み ]'.toutf8
 One.new.find
-puts ''
+puts ''.toutf8
 puts ' ./test in filename list...exit. '.center(60, '-').toutf8
-puts ''
-puts '' # !> mismatched indentations at 'rescue' with 'def' at 43
+puts ''.toutf8
+puts ''.toutf8
 puts ' Test All Start '.center(60, '-').toutf8
-puts ''
-One.new.two # !> mismatched indentations at 'ensure' with 'def' at 43
-puts ''
-puts ' Test All End '.center(60, '-').toutf8 # !> mismatched indentations at 'end' with 'def' at 43
+puts ''.toutf8
+One.new.two
+puts ''.toutf8
+puts ' Test All End '.center(60, '-').toutf8
 puts ''
 
 # Debug step
 # debugger
 
 __END__
-# >> 
-# >> ------------- ./test in filename list...start! -------------
-# >> 
-# >> ruby 2.6.3p62 (2019-04-16 revision 67580) [x86_64-darwin18]
-# >> 
-# >> ./test/test_matcher.rb
-# >> ./test/test_version.rb
-# >> 
-# >> ------------- ./test in filename list...exit. --------------
-# >> 
-# >> 
-# >> ---------------------- Test All Start ----------------------
-# >> 
-# >> Loaded suite test
-# >> Started
-# >> .........
-# >> Finished in 0.003042 seconds.
-# >> -------------------------------------------------------------------------------
-# >> 9 tests, 6 assertions, 0 failures, 0 errors, 0 pendings, 0 omissions, 0 notifications
-# >> 100% passed
-# >> -------------------------------------------------------------------------------
-# >> 2958.58 tests/s, 1972.39 assertions/s
-# >> 
-# >> ----------------------- Test All End -----------------------
-# >> 
+
+#[更新日、タイムスタンプ参照]
+#------------- ./test in filename list...start! -------------
+#
+#
+#[ タイムスタンプ ]
+#2019年09月15日 17時11分44秒
+#
+#[ 実行環境 ]
+#ruby 2.6.4p104 (2019-08-28 revision 67798) +JIT [x86_64-linux]
+#
+#[ ミニテストファイル読み込み ]
+#./test/test_matcher.rb
+#./test/test_version.rb
+#
+#------------- ./test in filename list...exit. --------------
+#
+#
+#---------------------- Test All Start ----------------------
+#
+#Loaded suite test
+#Started
+#.........
+#Finished in 0.0014104 seconds.
+#---------------------------------------------------------------------------------------------------------------------------------------------------------------9 tests, 6 assertions, 0 failures, 0 errors, 0 pendings, 0 omissions, 0 notifications
+#100% passed
+#---------------------------------------------------------------------------------------------------------------------------------------------------------------6381.17 tests/s, 4254.11 assertions/s
+#
+#----------------------- Test All End -----------------------
