@@ -3,8 +3,8 @@
 require 'kconv'
 require 'test/unit'
 # debug
-require 'byebug'
-require 'tanraku'
+# require 'byebug'
+# require 'tanraku'
 
 Encoding.default_internal = 'UTF-8'
 
