@@ -147,6 +147,9 @@ module Zinbeijett
     $ engine -f 2007 09
     Calendar views, select year and month.
 
+    $ engine -h [百人一首(one word)]
+    Search the full text from the first 百人一首.
+
     HELP
 
     puts 'Command'.center(60, '-').toutf8
