@@ -15,16 +15,16 @@ module Hyaku
   module_function
 
   def view
-    one = ('./txt/hyakunin.txt').toutf8
+    one = ('./txt/hyakunin.txt')
 
-    File.open(one) do |f|
+    open(one) do |f|
       while (str2 = f.gets)
         str = str2.chomp!
         twice = ARGV[1].toutf8
         three_act = /#{twice}/o
 
         begin
-          if str[three_act]
+          if str =~ three_act
             printf('%2d : %s', f.lineno, str)
             puts ''
           end
