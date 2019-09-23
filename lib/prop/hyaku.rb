@@ -24,7 +24,7 @@ module Hyaku
         three_act = /#{twice}/o
 
         begin
-          if str.match(three_act) || {}[:match]
+          if str.Regexp.match(three_act)
             printf('%2d : %s', f.lineno, str)
             puts ''
           end
