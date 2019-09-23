@@ -1,4 +1,4 @@
-﻿# frozen_string_literal: true
+# frozen_string_literal: true
 
 require 'kconv'
 require 'timeout'
@@ -62,6 +62,12 @@ module Engine
     Auto.view
     puts ''
   end
+
+  def hyaku_view
+    require_relative 'prop/hyaku'
+    Hyaku.view
+    puts ''
+  end
 end
 
 include Engine
@@ -77,6 +83,7 @@ m = /\A[-][m]\z/
 s = /\A[-][s]\z/
 c = /\A[-][c]\z/
 f = /\A[-][f]\z/
+h = /\A[-][h]\z/
 
 if one.nil?
   puts 'engine is Zinbeijett, I made in 2016.'.toutf8.freeze
@@ -100,6 +107,8 @@ elsif one.match?(c)
   calendar_view
 elsif one.match?(f)
   auto_view
+elsif one.match?(h)
+  hyaku_view
 else
   puts 'Not other arguments!'.toutf8.freeze
 end

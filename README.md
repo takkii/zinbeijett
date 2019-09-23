@@ -166,6 +166,8 @@ Finished in 0.0015386 seconds.
 
 ```
 
+![百人一首](https://github.com/takkii/zinbeijett/blob/master/img/hyaku.png)
+
 > Info
 
 ```markdown
