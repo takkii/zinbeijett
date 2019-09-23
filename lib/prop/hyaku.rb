@@ -20,7 +20,7 @@ module Hyaku
     File.open(one) do |f|
       while (str2 = f.gets)
         str = str2.chomp!
-        twice = ARGV[2].toutf8
+        twice = ARGV[1].toutf8
         three_act = /#{twice}/o
 
         begin
