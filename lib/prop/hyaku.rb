@@ -11,10 +11,10 @@ require 'timeout'
 Encoding.default_internal = 'UTF-8'
 
 # all search text
-module Zinbeijett2
+module Hyaku
   module_function
 
-  def all
+  def view
     one = ('./txt/hyakunin.txt').toutf8
 
     File.open(one) do |f|
@@ -37,7 +37,7 @@ module Zinbeijett2
         puts ''
       elsif !f.eof
         begin
-          raise Zinbeijett2
+          raise Hyaku
         rescue StandardError => ee
           puts ee.backtrace
           puts ee.backtrace_locations
