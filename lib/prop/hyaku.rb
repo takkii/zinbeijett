@@ -6,6 +6,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 puts ''
 
 require 'kconv'
+require 'timeout'
 
 Encoding.default_internal = 'UTF-8'
 
