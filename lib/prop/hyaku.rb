@@ -38,8 +38,8 @@ module Hyaku
         begin
           raise Hyaku
         rescue StandardError => ee
-          puts ee.backtrace
-          puts ee.backtrace_locations
+          #puts ee.backtrace
+          #puts ee.backtrace_locations
           exit!
         end
       end
