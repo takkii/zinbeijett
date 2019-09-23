@@ -36,10 +36,11 @@ module Hyaku
         puts ''
       elsif !f.eof
         begin
-          raise All
+          raise Hyaku
         rescue StandardError => ee
           puts ee.backtrace
           puts ee.backtrace_locations
+          exit!
         end
       end
     end
