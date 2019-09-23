@@ -14,7 +14,7 @@ module Hyaku
   module_function
 
   def view
-    one = ('/txt/hyakunin.txt').toutf8
+    one = ('./txt/hyakunin.txt').toutf8
 
     File.open(one) do |f|
       while (str2 = f.gets)
