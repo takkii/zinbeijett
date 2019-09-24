@@ -151,7 +151,7 @@ module Zinbeijett
     Search the full text from the first 百人一首.
 
     $ engine -p notojima.txt wajima
-    One word and line number views.
+    line number : Applicable number, outputs.
 
     HELP
 
