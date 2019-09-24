@@ -19,6 +19,7 @@ Gem::Specification.new do |s|
   s.files = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   s.homepage = "http://rubyist.hatenablog.com/"
   s.licenses = ["MIT"]
+  s.metadata = { "github_repo" => "ssh://github.com/takkii/zinbeijett" }
   s.require_paths = ["lib"]
   s.rubygems_version = "2.7.7"
   s.summary = "It is the form which made find of zinbeiw smart!"
