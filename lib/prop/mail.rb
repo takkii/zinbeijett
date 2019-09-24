@@ -17,7 +17,7 @@ module Mail
         three_act = /^[^0-9][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[@][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,4}$/o
 
         begin
-          if str.match(three_act) || {}[:match]
+          if str =~ three_act
             printf('%2d : %s', f.lineno, str)
             puts ''
           end

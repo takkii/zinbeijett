@@ -21,7 +21,7 @@ module Or
         three_act4 = /(#{twice}|#{drive})/o
 
         begin
-          if str.match(three_act4) || {}[:match]
+          if str =~ three_act4
             printf('%2d : %s', f.lineno, str)
             puts ''
           end

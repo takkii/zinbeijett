@@ -20,7 +20,7 @@ module All
         three_act = /#{twice}/o
 
         begin
-          if str.match(three_act) || {}[:match]
+          if str =~ three_act
             printf('%2d : %s', f.lineno, str)
             puts ''
           end
