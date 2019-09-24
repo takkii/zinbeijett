@@ -166,6 +166,14 @@ Finished in 0.0015386 seconds.
 
 ```
 
+```markdown
+
+git clone https://github.com/takkii/zinbeijett.git
+
+cd zinbeijett
+
+```
+
 ![百人一首](https://github.com/takkii/zinbeijett/blob/master/img/hyaku.png)
 
 ![百人一首](https://github.com/takkii/zinbeijett/blob/master/img/hyaku2.png)
