@@ -71,7 +71,7 @@ module Engine
 
   def mini_view
     require_relative 'prop/mini'
-    Mini.view
+    Mini.search
     puts ''
   end
 end
