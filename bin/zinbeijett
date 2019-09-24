@@ -150,6 +150,9 @@ module Zinbeijett
     $ engine -h [百人一首(one word)]
     Search the full text from the first 百人一首.
 
+    $ engine -p notojima.txt wajima
+    line number : Applicable number, outputs.
+
     HELP
 
     puts 'Command'.center(60, '-').toutf8
