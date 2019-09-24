@@ -68,6 +68,12 @@ module Engine
     Hyaku.view
     puts ''
   end
+
+  def mini_view
+    require_relative 'prop/mini'
+    Mini.view
+    puts ''
+  end
 end
 
 include Engine
@@ -84,6 +90,7 @@ s = /\A[-][s]\z/
 c = /\A[-][c]\z/
 f = /\A[-][f]\z/
 h = /\A[-][h]\z/
+p = /\A[-][p]\z/
 
 if one.nil?
   puts 'engine is Zinbeijett, I made in 2016.'.toutf8.freeze
@@ -109,6 +116,8 @@ elsif one.match?(f)
   auto_view
 elsif one.match?(h)
   hyaku_view
+elsif one.match?(p)
+  mini_view
 else
   puts 'Not other arguments!'.toutf8.freeze
 end
