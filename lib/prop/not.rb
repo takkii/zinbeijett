@@ -20,7 +20,7 @@ module Not
         three_act3 = /^(?!.*#{twice})/o
 
         begin
-          if str.match(three_act3) || {}[:match]
+          if str =~ three_act3
             printf('%2d : %s', f.lineno, str)
             puts ''
           end
