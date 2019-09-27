@@ -59,3 +59,50 @@ puts ''.toutf8
 # debugger
 
 __END__
+
+#~~~~~~~~~~~~~~~~~~~~~ mini_test in filename list ... start ~~~~~~~~~~~~~~~~~~~~~
+#
+#[ タイムスタンプ ]
+#2019年09月27日 14時49分14秒
+#
+#[ 実行環境 ]
+#ruby 2.6.4p104 (2019-08-28 revision 67798) +JIT [x86_64-linux]
+#
+#[ ミニテストファイル読み込み ]
+#./mini_test/mini_test_date.rb
+#./mini_test/mini_test_encode.rb
+#./mini_test/mini_test_method.rb
+#./mini_test/mini_test_search.rb
+#./mini_test/mini_test_sort.rb
+#./mini_test/mini_test_updown.rb
+#./mini_test/mini_test_version.rb
+#./mini_test/test_helper.rb
+#
+#~~~~~~~~~~~~~~~~~~~~~~ mini_test in filename list ... end ~~~~~~~~~~~~~~~~~~~~~~
+#
+#
+#Started with run options --seed 23270
+#
+#TestSort
+#  test_date                                                       PASS (0.00s)
+#
+#Search
+#  test_search                                                     PASS (0.00s)
+#
+#TestUpDown
+#  test_updown                                                     PASS (0.00s)
+#
+#TestEncode
+#  test_encode                                                     PASS (0.00s)
+#
+#TestMethod
+#  test_method                                                     PASS (0.00s)
+#
+#TestDate
+#  test_date                                                       PASS (0.00s)
+#
+#VersionTest
+#  test_version                                                    PASS (0.00s)
+#
+#Finished in 0.02098s
+#7 tests, 8 assertions, 0 failures, 0 errors, 0 skips
