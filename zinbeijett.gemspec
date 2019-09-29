@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.extra_rdoc_files = [
     "LICENSE.txt",
   ]
-  s.executables = %w(zinbeijett engine)
+  s.executables = %w(zinbeijett engine speak)
   s.files = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   s.homepage = "http://rubyist.hatenablog.com/"
   s.licenses = ["MIT"]
