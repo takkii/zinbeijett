@@ -2,7 +2,7 @@
 
 require 'kconv'
 require 'date'
-require 'tanraku'
+#require 'tanraku'
 
 #---Example-1---start---
 
