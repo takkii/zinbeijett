@@ -8,14 +8,14 @@
     bundle install
 
     bundle install --path .bundle
-    (Need bundle exec command.)
+    (use bundle exec command need this exec.)
 ```
 
 [AutoRun /mini_test/unit_test/rspec/all/ ]
 
 ```markdown
     bundle exec ruby mini_test_runner.rb
-    ( 2.x.x need use refinements methods. )
+    ( ruby version 2.x.x need,use refinements methods. )
 
     bundle exec ruby unit_test_runner.rb
 
@@ -49,12 +49,12 @@ $ gem install pycall
 
 $ env PYTHON_CONFIGURE_OPTS='--enable-shared' pyenv install 3.7.4
 
-Python 3.7.4 already install N/ Still install Y/
+Python 3.7.5 already install N/ Still install Y/
 
 ※ わからないときはとりあえずYを選びます...
 ```
 
-## License
+### License
 
 ```markdown
 The zinbeijett is MIT License
@@ -194,7 +194,9 @@ engine -h 花の色は
 > Info
 
 ```markdown
-Author Takayuki Kamiyama
 
-zinbeijett for lisence MIT
+Zinbeijett for MIT LICENSE.
+
+Textmining Search Engine.
+
 ```
