@@ -36,6 +36,7 @@ module MiniFile
   end
 end
 
+# Super Class
 module MiniFileN
   refine MiniFilename do
     def anker
