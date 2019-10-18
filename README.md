@@ -4,13 +4,16 @@
 
 [Project Rubygems install Example]
 
+```markdown
     bundle install
 
     bundle install --path .bundle
     (Need bundle exec command.)
+```
 
 [AutoRun /mini_test/unit_test/rspec/all/ ]
 
+```markdown
     bundle exec ruby mini_test_runner.rb
     ( 2.x.x need use refinements methods. )
 
@@ -19,18 +22,23 @@
     rspec
 
     bundle exec rake
+```
 
 ## RubyGems: Zinbeijett
 
+```markdown
     gem install zinbeijett
+```
 
 ## zinbeijett or engine. Please use option.
 
+```markdown
     zinbeijett バージョン情報 ライセンス情報 ヘルプ情報 スタートページ
 
     engine 全文検索 AND検索 NOT検索 OR検索 メールアドレス検索 GC表示
 
     文字列カウント 時刻表示 作成者情報 カレンダー 
+```
 
 [Use Pycall](https://github.com/mrkn/pycall.rb)
 
