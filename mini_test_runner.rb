@@ -36,6 +36,14 @@ module MiniFile
   end
 end
 
+module MiniFileN
+  refine MiniFilename do
+    def anker
+      mini_find
+    end
+  end
+end
+
 puts ''.toutf8
 puts ' mini_test in filename list ... start '.center(80, '~').toutf8
 puts ''.toutf8
@@ -46,6 +54,7 @@ puts '[ 実行環境 ]'.toutf8
 puts RUBY_DESCRIPTION.toutf8
 puts ''.toutf8
 puts '[ ミニテストファイル読み込み ]'.toutf8
+using MiniFileN
 MiniFilename.new.mini_find
 puts ''.toutf8
 puts ' mini_test in filename list ... end '.center(80, '~').toutf8
