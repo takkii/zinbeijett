@@ -12,9 +12,7 @@ require 'minitest/reporters'
 Encoding.default_internal = 'UTF-8'
 
 # Ruby test file.
-module MiniTestOne
-  module_function
-
+class MiniTestOne
   def mini_test
     Dir[File.dirname(__FILE__) + '/mini_test/*.rb'].each do |file|
       require file.toutf8
@@ -30,11 +28,11 @@ class MiniFilename
 end
 
 # Super Class
-class MiniFile < MiniFilename
-  include MiniTestOne
-
-  def enter
-    mini_test
+module MiniFile
+  refine MiniTestOne do
+    def enter
+      mini_test
+    end
   end
 end
 
@@ -48,11 +46,12 @@ puts '[ 実行環境 ]'.toutf8
 puts RUBY_DESCRIPTION.toutf8
 puts ''.toutf8
 puts '[ ミニテストファイル読み込み ]'.toutf8
-MiniFile.new.mini_find
+MiniFilename.new.mini_find
 puts ''.toutf8
 puts ' mini_test in filename list ... end '.center(80, '~').toutf8
 puts ''.toutf8
-MiniFile.new.enter
+using MiniFile
+MiniTestOne.new.mini_test
 puts ''.toutf8
 
 # Debug End Point.

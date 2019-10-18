@@ -12,6 +12,7 @@
 [AutoRun /mini_test/unit_test/rspec/all/ ]
 
     bundle exec ruby mini_test_runner.rb
+    ( 2.x.x need use refinements methods. )
 
     bundle exec ruby unit_test_runner.rb
 
