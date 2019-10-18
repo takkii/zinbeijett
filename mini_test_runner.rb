@@ -72,10 +72,10 @@ __END__
 #~~~~~~~~~~~~~~~~~~~~~ mini_test in filename list ... start ~~~~~~~~~~~~~~~~~~~~~
 #
 #[ タイムスタンプ ]
-#2019年09月27日 14時49分14秒
+#2019年10月18日 15時34分06秒
 #
 #[ 実行環境 ]
-#ruby 2.6.4p104 (2019-08-28 revision 67798) +JIT [x86_64-linux]
+#ruby 2.6.5p114 (2019-10-01 revision 67812) +JIT [x86_64-linux]
 #
 #[ ミニテストファイル読み込み ]
 #./mini_test/mini_test_date.rb
@@ -90,10 +90,7 @@ __END__
 #~~~~~~~~~~~~~~~~~~~~~~ mini_test in filename list ... end ~~~~~~~~~~~~~~~~~~~~~~
 #
 #
-#Started with run options --seed 23270
-#
-#TestSort
-#  test_date                                                       PASS (0.00s)
+#Started with run options --seed 51717
 #
 #Search
 #  test_search                                                     PASS (0.00s)
@@ -101,11 +98,11 @@ __END__
 #TestUpDown
 #  test_updown                                                     PASS (0.00s)
 #
-#TestEncode
-#  test_encode                                                     PASS (0.00s)
-#
 #TestMethod
 #  test_method                                                     PASS (0.00s)
+#
+#TestSort
+#  test_date                                                       PASS (0.00s)
 #
 #TestDate
 #  test_date                                                       PASS (0.00s)
@@ -113,5 +110,8 @@ __END__
 #VersionTest
 #  test_version                                                    PASS (0.00s)
 #
-#Finished in 0.02098s
+#TestEncode
+#  test_encode                                                     PASS (0.00s)
+#
+#Finished in 0.00185s
 #7 tests, 8 assertions, 0 failures, 0 errors, 0 skips
