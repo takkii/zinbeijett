@@ -8,7 +8,7 @@
     bundle install
 
     bundle install --path .bundle
-    (use bundle exec command need this exec.)
+    (use bundle exec command need.)
 ```
 
 [AutoRun /mini_test/unit_test/rspec/all/ ]
@@ -47,7 +47,7 @@ zinbeijett users.
 
 $ gem install pycall
 
-$ env PYTHON_CONFIGURE_OPTS='--enable-shared' pyenv install 3.7.4
+$ env PYTHON_CONFIGURE_OPTS='--enable-shared' pyenv install 3.7.5
 
 Python 3.7.5 already install N/ Still install Y/
 
