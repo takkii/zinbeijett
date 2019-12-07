@@ -2,10 +2,8 @@
 
 require 'kconv'
 require 'test/unit'
-# debug
-# require 'byebug'
-# require 'tanraku'
 
+# Encoding Setting.
 Encoding.default_internal = 'UTF-8'
 
 # Test result loads.
@@ -33,6 +31,7 @@ class One < Filename
   end
 end
 
+# Ouutput test result.
 puts ''.toutf8
 puts ' ./test in filename list...start! '.center(60, '-').toutf8
 puts ''.toutf8
@@ -56,36 +55,5 @@ puts ''.toutf8
 puts ' Test All End '.center(60, '-').toutf8
 puts ''
 
-# Debug step
-# debugger
-
 __END__
 
-#[更新日、タイムスタンプ参照]
-#------------- ./test in filename list...start! -------------
-#
-#
-#[ タイムスタンプ ]
-#2019年09月15日 17時11分44秒
-#
-#[ 実行環境 ]
-#ruby 2.6.4p104 (2019-08-28 revision 67798) +JIT [x86_64-linux]
-#
-#[ ミニテストファイル読み込み ]
-#./test/test_matcher.rb
-#./test/test_version.rb
-#
-#------------- ./test in filename list...exit. --------------
-#
-#
-#---------------------- Test All Start ----------------------
-#
-#Loaded suite test
-#Started
-#.........
-#Finished in 0.0014104 seconds.
-#---------------------------------------------------------------------------------------------------------------------------------------------------------------9 tests, 6 assertions, 0 failures, 0 errors, 0 pendings, 0 omissions, 0 notifications
-#100% passed
-#---------------------------------------------------------------------------------------------------------------------------------------------------------------6381.17 tests/s, 4254.11 assertions/s
-#
-#----------------------- Test All End -----------------------
