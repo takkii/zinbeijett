@@ -171,4 +171,4 @@ Style/TrailingCommaInArrayLiteral:
 # Configuration parameters: AllowHeredoc, AllowURI, URISchemes, IgnoreCopDirectives, IgnoredPatterns.
 # URISchemes: http, https
 Metrics/LineLength:
-  Max: 114
+  Max: 100
