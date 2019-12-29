@@ -53,10 +53,9 @@ Layout/Tab:
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle.
 # SupportedStyles: final_newline, final_blank_line
-Layout/TrailingEmptyLines:
-  Exclude:
-    - 'mini_test/mini_test_version.rb'
-    - 'zinbeijett.gemspec'
+#Layout/TrailingEmptyLines:
+#  Exclude:
+#    - 'zinbeijett.gemspec'
 
 # Offense count: 2
 # Cop supports --auto-correct.
