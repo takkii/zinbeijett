@@ -53,6 +53,7 @@ Layout/Tab:
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle.
 # SupportedStyles: final_newline, final_blank_line
+
 Layout/TrailingEmptyLines:
   Exclude:
     - 'mini_test/mini_test_version.rb'
@@ -171,4 +172,4 @@ Style/TrailingCommaInArrayLiteral:
 # Configuration parameters: AllowHeredoc, AllowURI, URISchemes, IgnoreCopDirectives, IgnoredPatterns.
 # URISchemes: http, https
 Metrics/LineLength:
-  Max: 114
+  Max: 100
