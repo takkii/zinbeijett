@@ -2,6 +2,7 @@
 
 require 'kconv'
 require 'test/unit'
+require 'himekuri'
 
 # Encoding Setting.
 Encoding.default_internal = 'UTF-8'
@@ -33,14 +34,14 @@ end
 
 # Ouutput test result.
 puts ''.toutf8
-puts ' ./test in filename list...start! '.center(60, '-').toutf8
+puts ' TimeStamp '.center(60, '-').toutf8
 puts ''.toutf8
+Object.new.reiwa_print
 puts ''.toutf8
-puts '[ タイムスタンプ ]'.toutf8
-puts Time.new.strftime('%Y年%m月%d日 %H時%M分%S秒').toutf8
+Object.new.himekuri_print
 puts ''.toutf8
-puts '[ 実行環境 ]'.toutf8
-puts RUBY_DESCRIPTION
+puts ' TimeStamp '.center(60, '-').toutf8
+puts ''.toutf8
 puts ''.toutf8
 puts '[ ミニテストファイル読み込み ]'.toutf8
 One.new.find

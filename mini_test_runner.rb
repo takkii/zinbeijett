@@ -5,6 +5,7 @@ require 'minitest'
 require 'minitest/autorun'
 require 'minitest/unit'
 require 'minitest/reporters'
+require 'himekuri'
 
 # Encoding Setting.
 Encoding.default_internal = 'UTF-8'
@@ -45,19 +46,22 @@ end
 
 # Console Output list.
 puts ''.toutf8
-puts ' mini_test in filename list ... start '.center(80, '~').toutf8
+puts ' TimeStamp '.center(60, '-').toutf8
 puts ''.toutf8
-puts '[ タイムスタンプ ]'.toutf8
-puts Time.new.strftime('%Y年%m月%d日 %H時%M分%S秒').toutf8
+Object.new.reiwa_print
 puts ''.toutf8
-puts '[ 実行環境 ]'.toutf8
-puts RUBY_DESCRIPTION.toutf8
+Object.new.himekuri_print
 puts ''.toutf8
-puts '[ ミニテストファイル読み込み ]'.toutf8
+puts ' TimeStamp '.center(60, '-').toutf8
+puts ''.toutf8
+puts ' minitest file load '.center(80, '~').toutf8
+puts ''.toutf8
 using MiniFileN
 MiniFilename.new.mini_find
 puts ''.toutf8
-puts ' mini_test in filename list ... end '.center(80, '~').toutf8
+puts ' minitest file load '.center(80, '~').toutf8
+puts ''.toutf8
+puts ' mini_test in filename list '.center(80, '~').toutf8
 puts ''.toutf8
 using MiniFile
 MiniTestOne.new.mini_test
