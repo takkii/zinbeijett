@@ -30,7 +30,7 @@ end
 module MiniFile
   refine MiniTestOne do
     def enter
-      mini_test
+      mini_test.toutf8
     end
   end
 end
@@ -39,7 +39,7 @@ end
 module MiniFileN
   refine MiniFilename do
     def anker
-      mini_find
+      mini_find.toutf8
     end
   end
 end
