@@ -68,4 +68,3 @@ MiniTestOne.new.mini_test
 puts ''.toutf8
 
 __END__
-

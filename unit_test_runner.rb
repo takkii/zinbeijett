@@ -57,4 +57,3 @@ puts ' Test All End '.center(60, '-').toutf8
 puts ''
 
 __END__
-
