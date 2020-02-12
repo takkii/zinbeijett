@@ -2,12 +2,11 @@
 
 source 'https://rubygems.org'
 
-ruby '2.6.5'
-
 # gemspec
 
 gem 'bundler'
 gem 'byebug'
+gem 'himekuri'
 gem 'minitest'
 gem 'minitest-reporters'
 gem 'pry'
