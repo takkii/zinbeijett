@@ -47,9 +47,9 @@ zinbeijett users.
 
 $ gem install pycall
 
-$ env PYTHON_CONFIGURE_OPTS='--enable-shared' pyenv install 3.7.5
+$ env PYTHON_CONFIGURE_OPTS='--enable-shared' pyenv install 3.7.6
 
-Python 3.7.5 already install N/ Still install Y/
+Python 3.7.6 already install N/ Still install Y/
 
 ※ わからないときはとりあえずYを選びます...
 ```
@@ -59,7 +59,7 @@ Python 3.7.5 already install N/ Still install Y/
 ```markdown
 The zinbeijett is MIT License
 
-Copyright (c) 2013-2019 Takayuki Kamiyama
+Copyright (c) 2013-2020 Takayuki Kamiyama
 
 以下に定める条件に従い、
 本ソフトウェアおよび関連文書のファイル（以下「ソフトウェア」）
