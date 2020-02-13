@@ -74,6 +74,12 @@ module Engine
     Mini.search
     puts ''
   end
+
+  def match_view
+    require_relative 'prop/match'
+    Mat.search
+    puts ''
+  end
 end
 
 include Engine
@@ -91,6 +97,7 @@ c = /\A[-][c]\z/
 f = /\A[-][f]\z/
 h = /\A[-][h]\z/
 p = /\A[-][p]\z/
+t = /\A[-][t]\z/
 
 if one.nil?
   puts 'engine is Zinbeijett, I made in 2016.'.toutf8.freeze
@@ -118,6 +125,8 @@ elsif one.match?(h)
   hyaku_view
 elsif one.match?(p)
   mini_view
+elsif one.match?(t)
+  match_view
 else
   puts 'Not other arguments!'.toutf8.freeze
 end

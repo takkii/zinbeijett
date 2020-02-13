@@ -159,6 +159,9 @@ module Zinbeijett
     $ engine -p notojima.txt wajima
     line number : Applicable number, outputs.
 
+    $ engine -t notojima.txt wajima
+    match method search. ( = all search )
+
     HELP
 
     puts 'Command'.center(60, '-').toutf8
