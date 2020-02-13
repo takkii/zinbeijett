@@ -6,6 +6,7 @@ require 'himekuri'
 
 # Encoding Setting.
 Encoding.default_internal = 'UTF-8'
+Encoding.default_external = 'UTF-8'
 
 # Test result loads.
 module Test
@@ -19,7 +20,7 @@ end
 # Filename find loads.
 class Filename
   def find
-    puts Dir.glob('./test/*.rb'.toutf8)
+    puts Dir.glob('./test/*.rb')
   end
 end
 
@@ -33,27 +34,27 @@ class One < Filename
 end
 
 # Ouutput test result.
-puts ''.toutf8
-puts ' TimeStamp '.center(60, '-').toutf8
-puts ''.toutf8
+puts ''
+puts ' TimeStamp '.center(60, '-')
+puts ''
 Object.new.reiwa_print
-puts ''.toutf8
+puts ''
 Object.new.himekuri_print
-puts ''.toutf8
-puts ' TimeStamp '.center(60, '-').toutf8
-puts ''.toutf8
-puts ''.toutf8
-puts '[ ミニテストファイル読み込み ]'.toutf8
+puts ''
+puts ' TimeStamp '.center(60, '-')
+puts ''
+puts ''
+puts '[ ミニテストファイル読み込み ]'
 One.new.find
-puts ''.toutf8
-puts ' ./test in filename list...exit. '.center(60, '-').toutf8
-puts ''.toutf8
-puts ''.toutf8
-puts ' Test All Start '.center(60, '-').toutf8
-puts ''.toutf8
+puts ''
+puts ' ./test in filename list...exit. '.center(60, '-')
+puts ''
+puts ''
+puts ' Test All Start '.center(60, '-')
+puts ''
 One.new.two
-puts ''.toutf8
-puts ' Test All End '.center(60, '-').toutf8
+puts ''
+puts ' Test All End '.center(60, '-')
 puts ''
 
 __END__
