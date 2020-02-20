@@ -3,13 +3,14 @@
 require 'kconv'
 
 Encoding.default_internal = 'UTF-8'
+Encoding.default_external = 'UTF-8'
 
 # Mail search loads.
 module Mail
   module_function
 
   def search
-    one = ARGV[1].toutf8
+    one = ARGV[1]
 
     File.open(one) do |f|
       while (str2 = f.gets)
