@@ -2,12 +2,12 @@
 
 puts ''
 
-require 'kconv'
 require 'drb/drb'
 require 'erb'
 require 'date'
 
 Encoding.default_internal = 'UTF-8'
+Encoding.default_external = 'UTF-8'
 
 # dRuby class method.
 class Remindar
@@ -47,3 +47,5 @@ Druby.new.main
 puts ''
 
 GC.start
+
+__END__
