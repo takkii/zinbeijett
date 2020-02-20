@@ -2,8 +2,7 @@
 
 puts ''
 
-require 'kconv'
-
+Encoding.default_external = 'UTF-8'
 Encoding.default_internal = 'UTF-8'
 
 # All search loads.
@@ -11,12 +10,12 @@ module All
   module_function
 
   def search
-    one = ARGV[1].toutf8
+    one = ARGV[1]
 
     File.open(one) do |f|
       while (str2 = f.gets)
         str = str2.chomp!
-        twice = ARGV[2].toutf8
+        twice = ARGV[2]
         three_act = /#{twice}/o
 
         begin
