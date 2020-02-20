@@ -6,11 +6,12 @@ module Calendar
   module_function
 
   def view
-    sys = PyCall.import_module('sys')
     d = Date.today
     pyimport :calendar
     puts (calendar.month(d.year,d.month))
   end
 end
+
+Calendar.view
 
 puts ''
