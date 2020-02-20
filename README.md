@@ -249,6 +249,6 @@ engine -h 花の色は
 
 Zinbeijett for MIT LICENSE.
 
-Textmining Search Engine.
+Lite Console Search Engine.
 
 ```
