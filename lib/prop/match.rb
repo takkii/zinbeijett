@@ -20,9 +20,9 @@ module Mat
 
         begin
             if str.match(three_act) || {}[:match]
-            printf('%2d : %s', f.lineno, str)
-            puts ''
-          end
+              printf('%2d : %s', f.lineno, str)
+              puts ''
+            end
         rescue Timeout::Error
           exit!
         end
