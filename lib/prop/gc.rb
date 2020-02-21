@@ -13,3 +13,5 @@ module Star
 end
 
 puts ''
+
+__END__

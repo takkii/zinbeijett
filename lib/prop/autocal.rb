@@ -17,3 +17,5 @@ module Auto
 end
 
 puts ''
+
+__END__

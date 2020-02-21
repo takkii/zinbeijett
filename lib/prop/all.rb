@@ -45,3 +45,5 @@ end
 puts ''
 
 GC.start
+
+__END__
