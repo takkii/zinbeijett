@@ -38,6 +38,8 @@
     engine 全文検索 AND検索 NOT検索 OR検索 メールアドレス検索 GC表示
 
     文字列カウント 時刻表示 作成者情報 カレンダー 全文検索(use match method) 
+
+    speak zinbeiwクローン(今後の機能は、雨音から移植)
 ```
 
 [Use Pycall](https://github.com/mrkn/pycall.rb)
