@@ -87,7 +87,7 @@ Copyright (c) 2013-2020 Takayuki Kamiyama
 その他の義務について何らの責任も負わないものとします。
 ```
 
-> minitest、実行結果。更新履歴  [2019.12.7]
+### minitest
 
 ```markdown
 
@@ -188,7 +188,7 @@ Tanraku Method Exception --> next class search...
 
 ```
 
-> unit test [2019.12.7]
+### unit_test
 
 ```markdown
 
@@ -246,7 +246,7 @@ Finished in 0.0922 seconds (files took 1.76 seconds to load)
 ```
 
 
-百人一首 検索
+### 百人一首 検索
 
 ```markdown
 
@@ -262,7 +262,7 @@ engine -h 花の色は
 
 ![百人一首](https://github.com/takkii/zinbeijett/blob/master/img/hyaku2.png)
 
-> Info
+### repo info
 
 ```markdown
 
