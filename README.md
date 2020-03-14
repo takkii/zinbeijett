@@ -229,6 +229,23 @@ Finished in 0.008082 seconds.
 
 ```
 
+### rspec_test
+
+```markdown
+
+------------------------ TIME_STAMP ------------------------
+
+時刻を表示:2020年03月14日：16時54分46秒
+
+------------------------ TIME_STAMP ------------------------
+...
+
+Finished in 0.06839 seconds (files took 1.48 seconds to load)
+3 examples, 0 failures
+
+```
+
+
 百人一首 検索
 
 ```markdown
