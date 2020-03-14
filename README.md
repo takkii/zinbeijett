@@ -235,13 +235,13 @@ Finished in 0.008082 seconds.
 
 ------------------------ TIME_STAMP ------------------------
 
-時刻を表示:2020年03月14日：16時54分46秒
+時刻を表示:2020年03月14日：17時12分52秒
 
 ------------------------ TIME_STAMP ------------------------
-...
+.
 
-Finished in 0.06839 seconds (files took 1.48 seconds to load)
-3 examples, 0 failures
+Finished in 0.0922 seconds (files took 1.76 seconds to load)
+1 example, 0 failures
 
 ```
 
