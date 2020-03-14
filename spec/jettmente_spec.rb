@@ -11,9 +11,9 @@ RSpec.describe 'Zinbeijett' do
   end
 
   describe 'Zinbeijett' do
-    ver = '1.0.13'
+    @ver = '1.0.13'
     it ":expect say '1.0.13' when it receives the greet() message" do
-      expect(Engine::VERSION).eql?(ver)
+      expect(Engine::VERSION).eql?(@ver)
     end
   end
 end
