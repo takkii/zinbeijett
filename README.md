@@ -11,7 +11,9 @@
     (use bundle exec command need.)
 ```
 
-[AutoRun /mini_test/unit_test/rspec/all/ ]
+### /minitest/unittest/rspec/
+
+*All Test Run*
 
 ```markdown
     bundle exec ruby mini_test_runner.rb
