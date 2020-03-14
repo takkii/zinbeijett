@@ -16,6 +16,7 @@ gem 'rspec'
 gem 'ruby-prof'
 gem 'solargraph'
 gem 'test-unit'
+gem 'nokogiri', '1.11.0.rc1'
 #gem install ruby-debug-ide
 #gem instal debase
 
