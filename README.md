@@ -2,7 +2,7 @@
 
 ### GitHub zinbeijett repo developments Start before,
 
-[Project Rubygems install Example]
+*Project Rubygems install Example*
 
 ```markdown
     bundle install
@@ -140,7 +140,7 @@ Finished in 0.01295s
 
 ```
 
-> minitest、Benchmark [2019.12.7]
+### benchmark
 
 ```markdown
 
