@@ -9,7 +9,7 @@ require 'himekuri'
 module Zinbeijett
   module_function
    def version
-     version = Engine::VERSION 
+     Engine::VERSION 
    end
 end
 
