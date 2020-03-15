@@ -237,13 +237,27 @@ Finished in 0.008082 seconds.
 
 ------------------------ TIME_STAMP ------------------------
 
-時刻を表示:2020年03月14日：17時12分52秒
+時刻を表示:2020年03月15日：15時35分38秒
 
 ------------------------ TIME_STAMP ------------------------
+
+<html>
+<head>時刻表示</head>
+<body>
+<p>2020年03月15日 15時35分39秒<p>
+</body>
+</html>
+
+.<html>
+<head>時刻表示</head>
+<body>
+<p>2020年03月15日 15時35分40秒<p>
+</body>
+</html>
 .
 
-Finished in 0.0922 seconds (files took 1.76 seconds to load)
-1 example, 0 failures
+Finished in 2.8 seconds (files took 7.53 seconds to load)
+2 examples, 0 failures
 
 ```
 

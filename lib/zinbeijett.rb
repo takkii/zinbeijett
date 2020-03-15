@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-require 'kconv'
 require 'timeout'
 
 lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Encoding.default_internal = 'UTF-8'
+Encoding.default_external = 'UTF-8'
 
 # zinbeijett function
 module Engine
@@ -100,7 +100,7 @@ p = /\A[-][p]\z/
 t = /\A[-][t]\z/
 
 if one.nil?
-  puts 'engine is Zinbeijett, I made in 2016.'.toutf8.freeze
+  puts 'engine is Zinbeijett, I made in 2016.'
 elsif one.match?(z)
   search_txt
 elsif one.match?(a)
@@ -128,7 +128,7 @@ elsif one.match?(p)
 elsif one.match?(t)
   match_view
 else
-  puts 'Not other arguments!'.toutf8.freeze
+  puts 'Not other arguments!'
 end
 
 GC.start
