@@ -13,7 +13,7 @@ RSpec.describe 'Zinbeijett' do
 
   describe 'prop/version' do
     @ver = '1.0.13'
-    it ":expect say 'version' when it receives the @ver message" do
+    it "まず最初に、'version'を評価します。@verとEngine::VERSIONを比較します。" do
       expect(Engine::VERSION).equal?(@ver)
     end
   end
@@ -32,7 +32,7 @@ RSpec.describe 'Zinbeijett' do
       end
     end
 
-    it ":expect say 'druby_erb' when it receives the erb_src message" do
+    it "次に、 'druby_erb'を評価します。本体のerb_srcと外部のerb_srcを比較します。" do
       expect(Druby.new.main).equal?(Ru.new.erb_src)
     end
   end
