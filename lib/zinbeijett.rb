@@ -100,7 +100,7 @@ p = /\A[-][p]\z/
 t = /\A[-][t]\z/
 
 if one.nil?
-  puts 'engine is Zinbeijett, I made in 2016.'.freeze
+  puts 'engine is Zinbeijett, I made in 2016.'
 elsif one.match?(z)
   search_txt
 elsif one.match?(a)
@@ -128,7 +128,7 @@ elsif one.match?(p)
 elsif one.match?(t)
   match_view
 else
-  puts 'Not other arguments!'.freeze
+  puts 'Not other arguments!'
 end
 
 GC.start
