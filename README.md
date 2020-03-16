@@ -235,29 +235,23 @@ Finished in 0.008082 seconds.
 
 ```markdown
 
------------------------- TIME_STAMP ------------------------
-
-時刻を表示:2020年03月15日：15時35分38秒
-
------------------------- TIME_STAMP ------------------------
-
 <html>
 <head>時刻表示</head>
 <body>
-<p>2020年03月15日 15時35分39秒<p>
+<p>2020年03月16日 15時53分09秒<p>
 </body>
 </html>
 
 .<html>
 <head>時刻表示</head>
 <body>
-<p>2020年03月15日 15時35分40秒<p>
+<p>2020年03月16日 15時53分10秒<p>
 </body>
 </html>
-.
+..
 
-Finished in 2.8 seconds (files took 7.53 seconds to load)
-2 examples, 0 failures
+Finished in 3.13 seconds (files took 6.58 seconds to load)
+3 examples, 0 failures
 
 ```
 
