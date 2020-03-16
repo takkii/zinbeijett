@@ -35,6 +35,19 @@ RSpec.describe 'Zinbeijett' do
       expect(Druby.new.main).equal?(Robot.new.erb_src)
     end
   end
+
+  context '=~とmatch' do
+    str = 'バナナ ぶどう りんご メロン'.match(/ぶどう/o)
+    mi = 'バナナ ぶどう りんご メロン' =~ /ぶどう/o
+
+    it "次は、'=~とmatch'を評価します" do
+      expect(str).equal?(mi)
+    end
+  end
+
+  after do
+    GC.start
+  end
 end
 
 __END__
