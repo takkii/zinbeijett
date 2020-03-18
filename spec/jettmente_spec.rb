@@ -8,6 +8,7 @@ RSpec.describe 'Zinbeijett' do
     require 'date'
     require 'prop/version'
     require 'prop/druby_erb'
+    require 'prop/calendar'
   end
 
   describe 'prop/version' do
@@ -42,6 +43,12 @@ RSpec.describe 'Zinbeijett' do
 
     it "次は、'=~とmatch'を評価します" do
       expect(str).equal?(mi)
+    end
+  end
+
+  context 'prop/calendar' do
+    it "'calendar.rb'同士を比較します" do
+      expect(Calendar.view).equal?(require('prop/calendar'))
     end
   end
 
