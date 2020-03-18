@@ -234,24 +234,40 @@ Finished in 0.008082 seconds.
 ### rspec_test
 
 ```markdown
-
 <html>
 <head>時刻表示</head>
 <body>
-<p>2020年03月16日 15時53分09秒<p>
+<p>2020年03月18日 15時39分57秒<p>
 </body>
 </html>
+
+     March 2020
+Mo Tu We Th Fr Sa Su
+                   1
+ 2  3  4  5  6  7  8
+ 9 10 11 12 13 14 15
+16 17 18 19 20 21 22
+23 24 25 26 27 28 29
+30 31
 
 .<html>
 <head>時刻表示</head>
 <body>
-<p>2020年03月16日 15時53分10秒<p>
+<p>2020年03月18日 15時40分08秒<p>
 </body>
 </html>
-..
+..     March 2020
+Mo Tu We Th Fr Sa Su
+                   1
+ 2  3  4  5  6  7  8
+ 9 10 11 12 13 14 15
+16 17 18 19 20 21 22
+23 24 25 26 27 28 29
+30 31
+.
 
-Finished in 3.13 seconds (files took 6.58 seconds to load)
-3 examples, 0 failures
+Finished in 13.16 seconds (files took 6.16 seconds to load)
+4 examples, 0 failures
 
 ```
 
