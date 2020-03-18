@@ -48,7 +48,7 @@ RSpec.describe 'Zinbeijett' do
 
   context 'prop/calendar' do
     it "'calendar.rb'同士を比較します" do
-      expect(Calendar.view).equal?(Calendar.view)
+      expect(Calendar.view).equal?(require('prop/calendar'))
     end
   end
 
