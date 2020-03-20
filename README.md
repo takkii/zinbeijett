@@ -234,10 +234,11 @@ Finished in 0.008082 seconds.
 ### rspec_test
 
 ```markdown
+
 <html>
 <head>時刻表示</head>
 <body>
-<p>2020年03月18日 15時39分57秒<p>
+<p>2020年03月20日 17時53分21秒<p>
 </body>
 </html>
 
@@ -253,10 +254,10 @@ Mo Tu We Th Fr Sa Su
 .<html>
 <head>時刻表示</head>
 <body>
-<p>2020年03月18日 15時40分08秒<p>
+<p>2020年03月20日 17時53分22秒<p>
 </body>
 </html>
-..     March 2020
+...     March 2020
 Mo Tu We Th Fr Sa Su
                    1
  2  3  4  5  6  7  8
@@ -266,8 +267,8 @@ Mo Tu We Th Fr Sa Su
 30 31
 .
 
-Finished in 13.16 seconds (files took 6.16 seconds to load)
-4 examples, 0 failures
+Finished in 1.26 seconds (files took 1.86 seconds to load)
+5 examples, 0 failures
 
 ```
 
