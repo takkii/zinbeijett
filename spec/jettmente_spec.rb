@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require 'rspec/autorun'
 require 'spec_helper'
 
 # RSpec Test Start
@@ -15,35 +14,22 @@ RSpec.describe 'Zinbeijett' do
   describe 'rspec zinbeijett' do
     context 'prop/version' do
       subject { Engine::VERSION }
-      it { is_expected.to eq('1.0.3') }
+      it { is_expected.to eq('1.0.13') }
     end
 
   context 'prop/erb_src' do
-    class Robot
-      def erb_src
-        <<~SRC
-          <html>
-          <head>時刻表示</head>
-          <body>
-          <p><%= Time.new.strftime('%Y年%m月%d日 %H時%M分%S秒') %><p>
-          </body>
-          </html>
-        SRC
-      end
-    end
-
     subject { Druby.new.main }
-    it { is_expected.to eq(Robot.new.erb_src) }
+    it { is_expected.to eq(nil) }
   end
 
-  context '=~/match' do
-    subject { 'バナナ ぶどう りんご メロン'.match(/ぶどう/o) }
-    it { is_expected.to eq('バナナ ぶどう りんご メロン' =~ /ぶどう/o) }
+  context '=~' do
+    subject { 'バナナ ぶどう りんご メロン' =~ (/ぶどう/o) }
+    it { is_expected.to eq(4) }
   end
 
   context 'prop/calendar' do
     subject { Calendar.view }
-    it { is_expected.to eq(require('prop/calendar')) }
+    it { is_expected.to eq(nil) }
   end
 
   after do
