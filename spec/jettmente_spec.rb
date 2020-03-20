@@ -38,12 +38,12 @@ RSpec.describe 'Zinbeijett' do
 
   context '=~とmatch' do
     subject { 'バナナ ぶどう りんご メロン'.match(/ぶどう/o) }
-    it { is_expected eq('バナナ ぶどう りんご メロン' =~ /ぶどう/o) }
+    it { is_expected.to eq('バナナ ぶどう りんご メロン' =~ /ぶどう/o) }
   end
 
   context 'prop/calendar' do
     subject { Calendar.view }
-    it { is_expected eq(require('prop/calendar')) }
+    it { is_expected.to eq(require('prop/calendar')) }
   end
 
   after do
