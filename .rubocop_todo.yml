@@ -173,3 +173,15 @@ Style/TrailingCommaInArrayLiteral:
 # URISchemes: http, https
 Metrics/LineLength:
   Max: 100
+
+# For rubocop < 1.0.0
+Style/HashEachMethods:
+  Enabled: true
+
+# For rubocop < 1.0.0
+Style/HashTransformKeys:
+  Enabled: true
+
+# For rubocop < 1.0.0
+Style/HashTransformValues:
+  Enabled: true
