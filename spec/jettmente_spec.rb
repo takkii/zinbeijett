@@ -11,10 +11,10 @@ RSpec.describe 'Zinbeijett' do
     require 'prop/calendar'
   end
 
-  describe 'prop/version' do
-    @ver = '1.0.13'
-    it "まず最初に、'version'を評価します。@verとEngine::VERSIONを比較します。" do
-      expect(Engine::VERSION).equal?(@ver)
+  describe 'rspec zinbeijett' do
+    context 'prop/version' do
+      subject { Engine::VERSION }
+      it { is_expected.to eq('1.0.3') }
     end
   end
 
@@ -32,24 +32,18 @@ RSpec.describe 'Zinbeijett' do
       end
     end
 
-    it "次に、 'druby_erb'を評価します。本体のerb_srcと外部のerb_srcを比較します。" do
-      expect(Druby.new.main).equal?(Robot.new.erb_src)
-    end
+    subject { Druby.new.main }
+    it { is_expected.to eq(Robot.new.erb_src) }
   end
 
   context '=~とmatch' do
-    str = 'バナナ ぶどう りんご メロン'.match(/ぶどう/o)
-    mi = 'バナナ ぶどう りんご メロン' =~ /ぶどう/o
-
-    it "次は、'=~とmatch'を評価します" do
-      expect(str).equal?(mi)
-    end
+    subject { 'バナナ ぶどう りんご メロン'.match(/ぶどう/o) }
+    it { is_expected eq('バナナ ぶどう りんご メロン' =~ /ぶどう/o) }
   end
 
   context 'prop/calendar' do
-    it "'calendar.rb'同士を比較します" do
-      expect(Calendar.view).equal?(require('prop/calendar'))
-    end
+    subject { Calendar.view }
+    it { is_expected eq(require('prop/calendar')) }
   end
 
   after do
