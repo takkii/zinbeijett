@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'rspec/autorun'
 require 'spec_helper'
 
 # RSpec Test Start
