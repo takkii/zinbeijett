@@ -17,7 +17,6 @@ RSpec.describe 'Zinbeijett' do
       subject { Engine::VERSION }
       it { is_expected.to eq('1.0.3') }
     end
-  end
 
   context 'prop/erb_src' do
     class Robot
@@ -37,7 +36,7 @@ RSpec.describe 'Zinbeijett' do
     it { is_expected.to eq(Robot.new.erb_src) }
   end
 
-  context '=~とmatch' do
+  context '=~/match' do
     subject { 'バナナ ぶどう りんご メロン'.match(/ぶどう/o) }
     it { is_expected.to eq('バナナ ぶどう りんご メロン' =~ /ぶどう/o) }
   end
@@ -49,6 +48,7 @@ RSpec.describe 'Zinbeijett' do
 
   after do
     GC.start
+  end
   end
 end
 
