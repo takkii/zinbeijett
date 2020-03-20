@@ -39,6 +39,7 @@ module Engine
 
   def search_druby_erb
     require_relative 'prop/druby_erb'
+    Druby.new.main
   end
 
   def search_mail

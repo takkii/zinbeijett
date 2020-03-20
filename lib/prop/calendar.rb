@@ -12,8 +12,6 @@ module Calendar
   end
 end
 
-Calendar.view
-
 puts ''
 
 __END__

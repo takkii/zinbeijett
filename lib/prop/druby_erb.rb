@@ -42,8 +42,6 @@ class Druby
   end
 end
 
-Druby.new.main
-
 puts ''
 
 GC.start
