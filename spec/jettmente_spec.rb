@@ -7,18 +7,12 @@ require 'date'
 RSpec.describe 'Zinbeijett' do
   before do
     require 'prop/version'
-    require 'prop/druby_erb'
   end
 
   describe 'rspec zinbeijett' do
     context 'prop/version' do
       subject { Engine::VERSION }
       it { is_expected.to eq('1.0.13') }
-    end
-
-    context 'prop/erb_src' do
-      subject { Druby.new.main }
-      it { is_expected.to eq(nil) }
     end
 
     context '=~' do
