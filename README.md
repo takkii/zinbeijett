@@ -234,10 +234,10 @@ Finished in 0.008082 seconds.
 ### rspec_test
 
 ```markdown
-...
+.....
 
-Finished in 0.1692 seconds (files took 5.14 seconds to load)
-3 examples, 0 failures
+Finished in 0.16599 seconds (files took 4.98 seconds to load)
+5 examples, 0 failures
 
 ```
 
