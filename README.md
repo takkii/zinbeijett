@@ -238,21 +238,13 @@ Finished in 0.008082 seconds.
 .<html>
 <head>時刻表示</head>
 <body>
-<p>2020年03月20日 19時04分04秒<p>
+<p>2020年03月28日 16時59分55秒<p>
 </body>
 </html>
-...     March 2020
-Mo Tu We Th Fr Sa Su
-                   1
- 2  3  4  5  6  7  8
- 9 10 11 12 13 14 15
-16 17 18 19 20 21 22
-23 24 25 26 27 28 29
-30 31
-.
+...
 
-Finished in 1.27 seconds (files took 1.8 seconds to load)
-5 examples, 0 failures
+Finished in 0.54211 seconds (files took 4.97 seconds to load)
+4 examples, 0 failures
 
 ```
 
