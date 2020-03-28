@@ -6,9 +6,9 @@ require 'spec_helper'
 RSpec.describe 'Zinbeijett' do
   str = 'バナナ ぶどう りんご メロン'
 
-    before do
-      require 'prop/version'
-    end
+  before do
+    require 'prop/version'
+  end
 
   describe 'rspec zinbeijett' do
     context 'prop/version' do
