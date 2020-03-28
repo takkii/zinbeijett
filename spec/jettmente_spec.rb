@@ -1,14 +1,13 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
+require 'date'
 
 # RSpec Test Start
 RSpec.describe 'Zinbeijett' do
   before do
-    require 'date'
     require 'prop/version'
     require 'prop/druby_erb'
-    require 'prop/calendar'
   end
 
   describe 'rspec zinbeijett' do
@@ -31,11 +30,6 @@ RSpec.describe 'Zinbeijett' do
       str = 'バナナ ぶどう りんご メロン'.match(/ぶどう/o)
       subject { 'バナナ ぶどう りんご メロン'.match(/ぶどう/o) }
       it { is_expected.to eq(str) }
-    end
-
-    context 'prop/calendar' do
-      subject { Calendar.view }
-      it { is_expected.to eq(nil) }
     end
 
     after do
