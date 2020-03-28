@@ -51,9 +51,9 @@ zinbeijett users.
 
 $ gem install pycall
 
-$ env PYTHON_CONFIGURE_OPTS='--enable-shared' pyenv install 3.7.6
+$ env PYTHON_CONFIGURE_OPTS='--enable-shared' pyenv install 3.7.7
 
-Python 3.7.6 already install N/ Still install Y/
+Python 3.7.7 already install N/ Still install Y/
 
 ※ わからないときはとりあえずYを選びます...
 ```
