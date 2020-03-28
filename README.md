@@ -234,17 +234,10 @@ Finished in 0.008082 seconds.
 ### rspec_test
 
 ```markdown
-
-.<html>
-<head>時刻表示</head>
-<body>
-<p>2020年03月28日 16時59分55秒<p>
-</body>
-</html>
 ...
 
-Finished in 0.54211 seconds (files took 4.97 seconds to load)
-4 examples, 0 failures
+Finished in 0.1692 seconds (files took 5.14 seconds to load)
+3 examples, 0 failures
 
 ```
 
