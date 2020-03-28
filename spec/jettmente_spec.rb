@@ -1,13 +1,14 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
-require 'date'
 
 # RSpec Test Start
 RSpec.describe 'Zinbeijett' do
-  before do
-    require 'prop/version'
-  end
+  str = 'バナナ ぶどう りんご メロン'
+
+    before do
+      require 'prop/version'
+    end
 
   describe 'rspec zinbeijett' do
     context 'prop/version' do
@@ -16,14 +17,26 @@ RSpec.describe 'Zinbeijett' do
     end
 
     context '=~' do
-      subject { 'バナナ ぶどう りんご メロン' =~ /ぶどう/o }
+      subject { str =~ /ぶどう/o }
       it { is_expected.to eq(4) }
     end
 
     context 'match' do
-      str = 'バナナ ぶどう りんご メロン'.match(/ぶどう/o)
-      subject { 'バナナ ぶどう りんご メロン'.match(/ぶどう/o) }
-      it { is_expected.to eq(str) }
+      matchs = str.match(/ぶどう/o)
+      subject { str.match(/ぶどう/o) }
+      it { is_expected.to eq(matchs) }
+    end
+
+    context 'and' do
+      ands = str.match(/^(?=.*ぶどう)/o)
+      subject { str.match(/^(?=.*ぶどう)/o) }
+      it { is_expected.to eq(ands) }
+    end
+
+    context 'not' do
+      nots = str.match(/^(?!.*ぶどう)/o)
+      subject { str.match(/^(?!.*ぶどう)/o) }
+      it { is_expected.to eq(nots) }
     end
 
     after do
