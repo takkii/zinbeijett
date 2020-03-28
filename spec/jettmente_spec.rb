@@ -27,16 +27,26 @@ RSpec.describe 'Zinbeijett' do
       it { is_expected.to eq(matchs) }
     end
 
-    context 'and' do
+    context 'and + match' do
       ands = str.match(/^(?=.*ぶどう)/o)
       subject { str.match(/^(?=.*ぶどう)/o) }
       it { is_expected.to eq(ands) }
     end
 
-    context 'not' do
+    context 'not + match' do
       nots = str.match(/^(?!.*ぶどう)/o)
       subject { str.match(/^(?!.*ぶどう)/o) }
       it { is_expected.to eq(nots) }
+    end
+
+    context '=~ + and' do
+      subject { str =~ /^(?=.*ぶどう)/o }
+      it { is_expected.to eq(0) }
+    end
+
+    context '=~ + not' do
+      subject { str =~ /^(?!.*ぶどう)/o }
+      it { is_expected.to eq(nil) }
     end
 
     after do
