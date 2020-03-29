@@ -5,6 +5,7 @@ require 'spec_helper'
 # RSpec Test Start
 RSpec.describe 'Zinbeijett' do
   str = 'バナナ ぶどう りんご メロン'
+  mail = 'example@gmail.com ruby*gmail.cc rails+gmail!123'
 
   before do
     require 'prop/version'
@@ -47,6 +48,12 @@ RSpec.describe 'Zinbeijett' do
     context '=~ + not' do
       subject { str =~ /^(?!.*ぶどう)/o }
       it { is_expected.to eq(nil) }
+    end
+
+    context 'mail' do
+    	mailer = mail.match(/^[^0-9][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[@][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,4}$/o)
+    	subject { mail.match(/^[^0-9][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[@][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,4}$/o)}
+    	it { is_expected.to eq(mailer)}
     end
 
     after do
