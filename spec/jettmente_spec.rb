@@ -50,10 +50,15 @@ RSpec.describe 'Zinbeijett' do
       it { is_expected.to eq(nil) }
     end
 
-    context 'mail' do
+    context 'mail + match' do
     	mailer = mail.match(/^[^0-9][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[@][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,4}$/o)
     	subject { mail.match(/^[^0-9][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[@][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,4}$/o)}
     	it { is_expected.to eq(mailer)}
+    end
+
+    context 'mail + =~' do
+    	subject { mail =~ /^[^0-9][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[@][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,4}$/o}
+    	it { is_expected.to eq(nil)}
     end
 
     after do
