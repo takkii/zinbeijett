@@ -51,25 +51,25 @@ RSpec.describe 'Zinbeijett' do
     end
 
     context 'mail + match' do
-    	mailer = mail.match(/^[^0-9][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[@][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,4}$/o)
-    	subject { mail.match(/^[^0-9][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[@][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,4}$/o)}
-    	it { is_expected.to eq(mailer)}
+      mailer = mail.match(/^[^0-9][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[@][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,4}$/o)
+      subject { mail.match(/^[^0-9][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[@][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,4}$/o) }
+      it { is_expected.to eq(mailer) }
     end
 
     context 'mail + =~' do
-    	subject { mail =~ /^[^0-9][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[@][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,4}$/o}
-    	it { is_expected.to eq(nil)}
+      subject { mail =~ /^[^0-9][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[@][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,4}$/o }
+      it { is_expected.to eq(nil) }
     end
 
     context 'or + match' do
-    	ors = str.match(/(りんご|ぶどう)/o)
-    	subject { str.match(/(りんご|ぶどう)/o) }
-    	it { is_expected.to eq(ors)}
+      ors = str.match(/(りんご|ぶどう)/o)
+      subject { str.match(/(りんご|ぶどう)/o) }
+      it { is_expected.to eq(ors) }
     end
 
-    context 'or + =~ 'do
-      subject { str =~ (/(りんご|ぶどう)/o) }
-      it { is_expected.to eq(4)}
+    context 'or + =~ ' do
+      subject { str =~ /(りんご|ぶどう)/o }
+      it { is_expected.to eq(4) }
     end
 
     after do
