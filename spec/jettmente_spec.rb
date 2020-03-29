@@ -61,6 +61,17 @@ RSpec.describe 'Zinbeijett' do
     	it { is_expected.to eq(nil)}
     end
 
+    context 'or + match' do
+    	ors = str.match(/(りんご|ぶどう)/o)
+    	subject { str.match(/(りんご|ぶどう)/o) }
+    	it { is_expected.to eq(ors)}
+    end
+
+    context 'or + =~ 'do
+      subject { str =~ (/(りんご|ぶどう)/o) }
+      it { is_expected.to eq(4)}
+    end
+
     after do
       GC.start
     end
