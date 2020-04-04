@@ -14,7 +14,7 @@ RSpec.describe 'Zinbeijett' do
   describe 'rspec zinbeijett' do
     context 'prop/version' do
       subject { Engine::VERSION }
-      it { is_expected.to eq('1.0.13') }
+      it { is_expected.to eq('1.1.0.beta1') }
     end
 
     context '=~' do
