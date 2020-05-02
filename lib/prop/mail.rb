@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'kconv'
+
 
 Encoding.default_internal = 'UTF-8'
 Encoding.default_external = 'UTF-8'
