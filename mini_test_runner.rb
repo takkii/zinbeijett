@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require './require.rb'
+require './require_mini.rb'
 
 # Encoding Setting.
 Encoding.default_internal = 'UTF-8'
