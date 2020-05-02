@@ -2,9 +2,6 @@
 
 require './req/require_bench.rb'
 
-require_relative File.join(File.dirname(__FILE__), '/lib/prop/version.rb')
-require_relative File.join(File.dirname(__FILE__), '/lib/prop/gc.rb')
-
 Encoding.default_internal = 'UTF-8'
 
 puts ' mini_test assert Benchmark '.center(60, '-').toutf8
