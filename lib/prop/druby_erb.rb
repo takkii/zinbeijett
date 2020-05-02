@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-puts ''
-
 require '../req/require_druby'
 
 Encoding.default_internal = 'UTF-8'
@@ -39,8 +37,6 @@ class Druby
     puts writer.to_html
   end
 end
-
-puts ''
 
 GC.start
 
