@@ -2,7 +2,7 @@
 
 puts ''
 
-require '../../req/require_druby'
+require '../req/require_druby'
 
 Encoding.default_internal = 'UTF-8'
 Encoding.default_external = 'UTF-8'

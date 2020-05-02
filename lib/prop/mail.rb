@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require '../../req/require_mail'
+require '../req/require_mail'
 
 Encoding.default_internal = 'UTF-8'
 Encoding.default_external = 'UTF-8'

@@ -1,4 +1,4 @@
-require '../../req/require_calendar'
+require '../req/require_calendar'
 
 module Calendar
   module_function

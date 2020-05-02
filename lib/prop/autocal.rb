@@ -1,4 +1,4 @@
-require '../../req/require_acalendar'
+require '../req/require_acalendar'
 
 Encoding.default_internal = 'UTF-8'
 Encoding.default_external = 'UTF-8'
