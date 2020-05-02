@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
-require 'test/unit'
-require 'himekuri'
+require './require.rb'
 
 # Encoding Setting.
 Encoding.default_internal = 'UTF-8'

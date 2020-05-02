@@ -1,10 +1,6 @@
 # frozen_string_literal: true
 
-require 'minitest'
-require 'minitest/autorun'
-require 'minitest/unit'
-require 'minitest/reporters'
-require 'himekuri'
+require './require.rb'
 
 # Encoding Setting.
 Encoding.default_internal = 'UTF-8'
