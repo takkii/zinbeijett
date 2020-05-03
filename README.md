@@ -58,6 +58,17 @@ Python 3.7.7 already install N/ Still install Y/
 ※ わからないときはとりあえずYを選びます...
 ```
 
+### development environments
+
+```markdown
+・require_mix.rbをファイル内で読み込むと、
+zinbeijett内の必要なライブラリすべてが対象になります。
+（minitestとunit-testは省きました。）
+
+もちろん速度低下もついて回るので、
+使うときは制約と誓約を意識してください。
+```
+
 ### License
 
 ```markdown
