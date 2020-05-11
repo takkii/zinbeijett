@@ -83,7 +83,7 @@ module Engine
   end
 
   def title_rss
-    require_relative 'prop/title_rss'
+    require_relative 'prop/title'
     Title.new.views
   end
 end
