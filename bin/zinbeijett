@@ -162,6 +162,9 @@ module Zinbeijett
     $ engine -t notojima.txt wajima
     match method search. ( = all search )
 
+    $ engine -r https://takkii.hatenablog.com/rss
+    Display Title from Hatena Blog
+
     HELP
 
     puts 'Command'.center(60, '-').toutf8
