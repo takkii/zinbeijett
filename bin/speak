@@ -87,6 +87,8 @@ begin
 
   denki = %w[Anpea Volt Rister].map!(&:freeze).freeze
 
+  rss = %w[reader].map!(&:freeze).freeze
+
   print '>'
 
   # search words exit!
@@ -344,6 +346,8 @@ Volt        オームの法則を使い、電圧を調べます
 Rister      オームの法則を使い、抵抗を調べます
 
 week        太陽暦で日付の曜日を真と偽で判定します
+
+reader      RSSの取得先からタイトル表示 (雨音から移植)
 
 終了するときは、exitと入力します'
 
@@ -769,6 +773,31 @@ week        太陽暦で日付の曜日を真と偽で判定します
 
       print '>'
       # The command which can be called is only once.
+
+      elsif line.match?(rss[0])
+      require 'rss'
+      require 'date'
+      require 'kconv'
+
+      begin
+        puts '調べたいRSSのURLを入力してください'
+        print '>'
+        URL = gets.chomp
+      rescue StandardError => eq
+        p eq
+        puts 'エラーです。URLを確認してください！'
+      end
+
+      rss = RSS::Parser.parse(URL)
+
+      puts ''
+
+      rss.items.collect do |scale|
+        puts scale.title
+      end
+
+      puts ''
+      print '>'
 
     else
       puts "Can't Enter this Words. Please input help"
