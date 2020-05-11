@@ -81,6 +81,11 @@ module Engine
     Mat.search
     puts ''
   end
+
+  def title_rss
+    require_relative 'prop/title_rss'
+    Title.new.views
+  end
 end
 
 include Engine
@@ -99,6 +104,7 @@ f = /\A[-][f]\z/
 h = /\A[-][h]\z/
 p = /\A[-][p]\z/
 t = /\A[-][t]\z/
+r = /\A[-][r]\z/
 
 if one.nil?
   puts 'engine is Zinbeijett, I made in 2016.'
@@ -128,6 +134,8 @@ elsif one.match?(p)
   mini_view
 elsif one.match?(t)
   match_view
+elsif one.match?(r)
+  title_rss
 else
   puts 'Not other arguments!'
 end

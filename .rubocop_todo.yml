@@ -45,7 +45,7 @@ Layout/SpaceInsideBlockBraces:
 # Offense count: 8
 # Cop supports --auto-correct.
 # Configuration parameters: IndentationWidth.
-Layout/Tab:
+Layout/IndentationStyle:
   Exclude:
     - 'spec/jettmente_spec.rb'
 
@@ -171,7 +171,7 @@ Style/TrailingCommaInArrayLiteral:
 # Offense count: 3
 # Configuration parameters: AllowHeredoc, AllowURI, URISchemes, IgnoreCopDirectives, IgnoredPatterns.
 # URISchemes: http, https
-Metrics/LineLength:
+Layout/LineLength:
   Max: 100
 
 # For rubocop < 1.0.0
@@ -185,3 +185,15 @@ Style/HashTransformKeys:
 # For rubocop < 1.0.0
 Style/HashTransformValues:
   Enabled: true
+
+Layout/SpaceAroundMethodCallOperator:
+  Enabled: false
+
+Lint/RaiseException:
+  Enabled: false
+
+Lint/StructNewOverride:
+  Enabled: false
+
+Style/ExponentialNotation:
+  Enabled: false
