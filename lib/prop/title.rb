@@ -4,8 +4,8 @@ require 'kconv'
 
 class Title
   def views
-    URL = ARGV[1]
-    rss = RSS::Parser.parse(URL)
+    url = ARGV[1]
+    rss = RSS::Parser.parse(url)
     puts ''
       rss.items.collect do |scale|
         puts scale.title
