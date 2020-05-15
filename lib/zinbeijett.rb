@@ -86,6 +86,13 @@ module Engine
     require_relative 'prop/title'
     Title.new.views
   end
+
+  def feed_xml
+    require_relative 'prop/feed'
+    puts 'GitHub Active'.center(60, '-')
+    Feed.new.jira
+    puts 'GitHub Active'.center(60, '-')
+  end
 end
 
 include Engine
@@ -105,6 +112,7 @@ h = /\A[-][h]\z/
 p = /\A[-][p]\z/
 t = /\A[-][t]\z/
 r = /\A[-][r]\z/
+j = /\A[-][j]\z/
 
 if one.nil?
   puts 'engine is Zinbeijett, I made in 2016.'
@@ -136,6 +144,8 @@ elsif one.match?(t)
   match_view
 elsif one.match?(r)
   title_rss
+elsif one.match?(j)
+  feed_xml
 else
   puts 'Not other arguments!'
 end
