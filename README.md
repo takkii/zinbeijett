@@ -37,7 +37,7 @@
 ```markdown
     zinbeijett バージョン情報 ライセンス情報 ヘルプ情報 スタートページ
 
-    engine 全文検索 AND検索 NOT検索 OR検索 メールアドレス検索 GC表示 RSSからタイトル表示
+    engine 全文検索 AND検索 NOT検索 OR検索 メールアドレス検索 GC表示 タイトル表示(RSS) GitHub Active表示(feedjira)
 
     文字列カウント 時刻表示 作成者情報 カレンダー 全文検索(use match method)
 
