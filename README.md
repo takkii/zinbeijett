@@ -26,6 +26,19 @@
     bundle exec rake
 ```
 
+### GitHub zinbeijett build HEAD
+
+```markdown
+git clone https://github.com/takkii/zinbeijett.git
+
+cd zinbeijett
+
+gem build zinbeijett.gemspec
+
+gem install zinbeijett-1.1.1.gem
+※ zinbeijett-○.○.○.gemはビルドされたバージョンを参照
+```
+
 ## RubyGems: Zinbeijett
 
 ```markdown
