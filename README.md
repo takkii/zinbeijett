@@ -26,7 +26,7 @@
     bundle exec rake
 ```
 
-### GitHub zinbeijett build HEAD
+### GitHub: Zinbeijett (HEAD build)
 
 ```markdown
 git clone https://github.com/takkii/zinbeijett.git
