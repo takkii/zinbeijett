@@ -50,7 +50,7 @@ gem install zinbeijett-1.1.1.gem
 ```markdown
     zinbeijett バージョン情報 ライセンス情報 ヘルプ情報 スタートページ
 
-    engine 全文検索 AND検索 NOT検索 OR検索 メールアドレス検索 GC表示 タイトル表示(RSS) GitHub Active表示(feedjira)
+    engine 全文検索 AND検索 NOT検索 OR検索 メールアドレス検索 GC表示 タイトル表示(RSS) タイトル表示(ATOMなど)
 
     文字列カウント 時刻表示 作成者情報 カレンダー 全文検索(use match method)
 
