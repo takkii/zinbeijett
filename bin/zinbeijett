@@ -167,9 +167,11 @@ module Zinbeijett
 
     $ engine -j https://github.com/takkii.atom
     engine -j http://weather.livedoor.com/forecast/rss/earthquake.xml
-    
+    engine -j https://visualstudiomagazine.com/rss-feeds/blogs.aspx
+
     Display GitHub Active for atom.
     Display earthquake japan info for xml.
+    Display visualstudio magazine blogs for aspx.
 
     HELP
 

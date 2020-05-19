@@ -267,7 +267,6 @@ Finished in 0.19942 seconds (files took 4.71 seconds to load)
 
 ```
 
-
 ### 百人一首 検索
 
 ```markdown
@@ -284,7 +283,7 @@ engine -h 花の色は
 
 ![百人一首](https://github.com/takkii/zinbeijett/blob/master/img/hyaku2.png)
 
-### 地震速報をRSS(xml)で一覧表示
+### 地震速報 ( RSS、xml形式表示 )
 
 ```markdown
 ------------------------ Feed Start ------------------------
@@ -339,6 +338,31 @@ engine -h 花の色は
 13日11:06 [ 最大震度 ] 震度 1 [ 震源地 ] 岐阜県飛騨地方
 13日10:28 [ 最大震度 ] 震度 3 [ 震源地 ] 岐阜県飛騨地方
 13日09:40 [ 最大震度 ] 震度 2 [ 震源地 ] 岐阜県飛騨地方
+------------------------- Feed End -------------------------
+```
+
+### Visual Studio magazine blog ( RSS、aspx形式表示 )
+
+```markdown
+------------------------ Feed Start ------------------------
+Leveraging Acceptance Criteria When Writing Agile User Stories
+Mocking an Authenticated User in Blazor/ASP.NET Core
+Extend Your .NET Namespaces for Static Methods and Simpler Code
+Arranging Columns in Visual Studio Windows (with Sorting!)
+Why Rejection Prevents Zombies in ASP.NET Core
+How to Integrate Code with Code Snippets in Visual Studio
+Calling .NET Methods With and Without Async
+Upgrading to ASP.NET Core Version 3.0: Top Tips
+How to Create New Code Snippets from Existing Ones in Visual Studio
+How to Efficiently Validate Against Cross-Site Request Forgery Attacks in ASP.NET Core
+How to Handle Multiple HttpClients in the Same ASP.NET Core Application
+(Really) Quick Tip: Blazor App Hosted as Azure Static Website in Blob Storage
+You're Using HttpClient Wrong
+Logging vs. Reporting Exceptions in Visual Studio
+Making Views Serve Two Roles in ASP.NET Core
+How to Use Regular Expressions in Visual Studio Find
+How to Build .NET Strings at Run Time
+OData Lives! 12-Year-Old RESTful API Protocol Put to New Use in Age of Blazor and ASP.NET Core
 ------------------------- Feed End -------------------------
 ```
 
