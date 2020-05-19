@@ -1,0 +1,24 @@
+@startuml zinbeijett
+
+zinbeijett <--> engine
+
+zinbeijett : ライセンス情報
+zinbeijett : ヘルプ情報
+zinbeijett : スタートページ
+zinbeijett : バージョン情報
+
+engine : 全文検索
+engine : AND検索
+engine : NOT検索
+engine : OR検索
+engine : メールアドレス検索
+engine : GC表示
+engine : タイトル表示(RSS、ruby core)
+engine : タイトル表示(ATOMなど、feedjira)
+engine : 文字列カウント
+engine : 時刻表示
+engine : 作成者情報 (Pycall)
+engine : カレンダー (Pycall)
+engine : 全文検索(use match method)
+
+@enduml
