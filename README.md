@@ -342,16 +342,16 @@ engine -h 花の色は
 ------------------------- Feed End -------------------------
 ```
 
-### UML
+### UML図 (zinbeijett)
 
 ![zinbeijett](https://github.com/takkii/zinbeijett/blob/master/out/zinbeijett/zinbeijett.png)
 
-### repo info
+### レポジトリ情報
 
 ```markdown
+・Zinbeijettは、軽量版多機能型コンソール検索エンジンです。
 
-Zinbeijett for MIT LICENSE.
+・Zinbeijettは、MITライセンスです。
 
-Lite Console Search Engine.
-
+・著作者は、Takayuki, Kamiyamaです。
 ```
