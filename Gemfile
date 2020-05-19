@@ -19,7 +19,6 @@ gem 'test-unit'
 gem 'nokogiri', '1.11.0.rc1'
 gem 'httparty'
 gem 'feedjira'
-gem 'activesupport'
 
 #gem install ruby-debug-ide
 #gem instal debase
