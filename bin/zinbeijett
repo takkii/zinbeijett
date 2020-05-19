@@ -166,7 +166,10 @@ module Zinbeijett
     Display Title from Hatena Blog
 
     $ engine -j https://github.com/takkii.atom
-    Display GitHub Active form GitHub atom.
+    engine -j http://weather.livedoor.com/forecast/rss/earthquake.xml
+    
+    Display GitHub Active for atom.
+    Display earthquake japan info for xml.
 
     HELP
 
