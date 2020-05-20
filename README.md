@@ -11,9 +11,7 @@
     (use bundle exec command need.)
 ```
 
-### /minitest/unittest/rspec/
-
-*All Test Run*
+*All Test Run ( minitest / unit-test / rspec )*
 
 ```markdown
     bundle exec ruby mini_test_runner.rb
