@@ -52,7 +52,7 @@ gem install zinbeijett-1.1.1.gem
 
     engine 全文検索 AND検索 NOT検索 OR検索 メールアドレス検索 GC表示 タイトル表示(RSS) タイトル表示(feedjira)
 
-    文字列カウント 時刻表示 作成者情報 カレンダー 全文検索(use match method) サマリー表示(feedjira)
+    文字列カウント 作成者情報 カレンダー(今の暦) カレンダー(指定した暦) 全文検索(use match method) サマリー表示(feedjira)
 
     speak zinbeiw複製(雨音からreader移植)
 ```
