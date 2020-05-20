@@ -93,6 +93,13 @@ module Engine
     Feed.new.jira
     puts ' Feed End '.center(60, '-')
   end
+
+  def desc_xml
+      require_relative 'prop/des.rb'
+      puts ' Description Start '.center(60, '-')
+      Feed.new.jira
+      puts ' Description end '.center(60, '-')
+  end
 end
 
 include Engine
@@ -113,6 +120,7 @@ p = /\A[-][p]\z/
 t = /\A[-][t]\z/
 r = /\A[-][r]\z/
 j = /\A[-][j]\z/
+b = /\A[-][b]\z/
 
 if one.nil?
   puts 'engine is Zinbeijett, I made in 2016.'
@@ -146,6 +154,8 @@ elsif one.match?(r)
   title_rss
 elsif one.match?(j)
   feed_xml
+elsif one.match?(b)
+  desc_xml
 else
   puts 'Not other arguments!'
 end

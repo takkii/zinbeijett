@@ -173,6 +173,13 @@ module Zinbeijett
     Display earthquake japan info for xml.
     Display visualstudio magazine blogs for aspx.
 
+    ※ Diplay title only.
+
+    $ engine -b http://weather.livedoor.com/forecast/rss/warn.xml
+    Diplay warn info for xml.
+
+    ※ Display title and description.
+
     HELP
 
     puts 'Command'.center(60, '-').toutf8
