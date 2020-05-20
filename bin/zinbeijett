@@ -178,7 +178,7 @@ module Zinbeijett
     $ engine -b http://weather.livedoor.com/forecast/rss/warn.xml
     Diplay warn info for xml.
 
-    ※ Display title and description.
+    ※ Display summary only.
 
     HELP
 

@@ -94,11 +94,11 @@ module Engine
     puts ' Feed End '.center(60, '-')
   end
 
-  def desc_xml
-      require_relative 'prop/des.rb'
-      puts ' Description Start '.center(60, '-')
+  def summa_xml
+      require_relative 'prop/summa.rb'
+      puts ' Summary Start '.center(60, '-')
       Feed.new.jira
-      puts ' Description end '.center(60, '-')
+      puts ' Summary end '.center(60, '-')
   end
 end
 
@@ -155,7 +155,7 @@ elsif one.match?(r)
 elsif one.match?(j)
   feed_xml
 elsif one.match?(b)
-  desc_xml
+  summa_xml
 else
   puts 'Not other arguments!'
 end

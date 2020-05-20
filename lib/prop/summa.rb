@@ -6,7 +6,6 @@ class Feed
      url = ARGV[1]
      xml = HTTParty.get(url).body
      Feedjira.parse(xml).entries.each do |entry|
-     puts "#{entry.title}"
      puts "#{entry.summary}"
      puts ''
     end
