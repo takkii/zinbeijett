@@ -7,7 +7,7 @@ class Feed
      xml = HTTParty.get(url).body
      Feedjira.parse(xml).entries.each do |entry|
      puts "#{entry.title}"
-     puts "#{entry.description}"
+     puts "#{entry.summary}"
      puts ''
     end
   end
