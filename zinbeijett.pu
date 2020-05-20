@@ -14,12 +14,12 @@ engine : NOT検索
 engine : OR検索
 engine : メールアドレス検索
 engine : GC表示
+engine : 作成者情報
 engine : 文字列カウント
-engine : 時刻表
 engine : タイトル表示(RSS)
 engine : タイトル表示(feedjira)
 engine : サマリー表示(feedjira)
-engine : 作成者情報 (Pycall)
-engine : カレンダー (Pycall)
+engine : カレンダー(指定した暦)(Pycall)
+engine : カレンダー(今の暦)(Pycall)
 
 @enduml
