@@ -40,13 +40,19 @@ module MiniFileN
   end
 end
 
+class HimekuriClass
+  def day_function
+    # use himekuri class
+  end
+end
+
 # Console Output list.
 puts ''
 puts ' TimeStamp '.center(60, '-')
 puts ''
-Object.new.reiwa_print
+HimekuriClass.new.reiwa_print
 puts ''
-Object.new.himekuri_print
+HimekuriClass.new.himekuri_print
 puts ''
 puts ' TimeStamp '.center(60, '-')
 puts ''
