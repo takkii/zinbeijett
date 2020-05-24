@@ -31,12 +31,6 @@ class One < Filename
   end
 end
 
-class HimekuriClass
-  def day_fraction
-    # use himekuri class.
-  end
-end
-
 # Ouutput test result.
 puts ''
 puts ' TimeStamp '.center(60, '-')
