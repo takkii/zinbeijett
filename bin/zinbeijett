@@ -141,7 +141,7 @@ module Zinbeijett
     $ engine -d druby://localhost:8888
     druby process print server output.
     
-    $ engine -e druby://localhost:8888
+    $ engine druby://localhost:8888
     druby process print server.
     
     $ engine -m notojima.txt
