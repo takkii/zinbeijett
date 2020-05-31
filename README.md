@@ -50,7 +50,9 @@ gem install zinbeijett-1.1.1.gem
 
     engine 全文検索(=~) 全文検索(match) AND検索 NOT検索 OR検索 メールアドレス検索 GC表示 文字列カウント 作成者情報 
 
-    カレンダー(今の暦) カレンダー(指定した暦) サマリー表示(feedjira) タイトル表示(RSS) タイトル表示(feedjira) drubyレシーバ drubyライター(データ送り)
+    カレンダー(今の暦) カレンダー(指定した暦) タイトル表示(RSS) サマリー表示(feedjira) タイトル表示(feedjira) 
+    
+    drubyレシーバ drubyライター(データ送り) 
 
     speak zinbeiw複製(雨音からreader移植)
 ```
