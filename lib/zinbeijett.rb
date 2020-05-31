@@ -41,10 +41,6 @@ module Engine
     require_relative 'prop/druby_erb'
     Druby.new.main
   end
-  
-  def druby_server
-    require_relative 'prop/druby_reci'
-  end
 
   def search_mail
     require_relative 'prop/mail'
@@ -125,10 +121,10 @@ t = /\A[-][t]\z/
 r = /\A[-][r]\z/
 j = /\A[-][j]\z/
 b = /\A[-][b]\z/
-e = /\A[-][e]\z/
 
 if one.nil?
   puts 'engine is Zinbeijett, I made in 2016.'
+  druby_server
 elsif one.match?(z)
   search_txt
 elsif one.match?(a)
@@ -161,8 +157,6 @@ elsif one.match?(j)
   feed_xml
 elsif one.match?(b)
   summa_xml
-elsif one.match?(e)
-  druby_server
 else
   puts 'Not other arguments!'
 end
