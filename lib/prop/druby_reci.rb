@@ -12,7 +12,7 @@ class Puts
  end
 end
 
-uri = ARGV.shift
+uri = ARGV[1].shift
 DRb.start_service(uri, Puts.new)
 puts DRb.uri
 sleep

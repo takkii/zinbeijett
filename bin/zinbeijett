@@ -122,9 +122,6 @@ module Zinbeijett
     engine [option] [ File name ] [ String or regular expression ]
 
     < Example >
-    
-    $ engine
-    druby process print server.
 
     $ engine -z notojima.txt wajima
     Full-text search.
@@ -141,10 +138,12 @@ module Zinbeijett
     $ engine -g
     print GC.stat, Garbage collection info output.
 
-    $ engine -d
+    $ engine -d druby://localhost:8888
     druby process print server output.
-
-
+    
+    $ engine -e druby://localhost:8888
+    druby process print server.
+    
     $ engine -m notojima.txt
     mail search. pattern match is mailaddress word only.
 
