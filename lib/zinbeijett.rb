@@ -126,6 +126,7 @@ r = /\A[-][r]\z/
 j = /\A[-][j]\z/
 b = /\A[-][b]\z/
 
+begin
 if one.nil?
   druby_server
 elsif one.match?(z)
@@ -161,6 +162,11 @@ elsif one.match?(j)
 elsif one.match?(b)
   summa_xml
 end
+rescue Exception=> e
+	e.backtrace
+	puts "例外を補足しました。"
+end
+
 
 GC.start
 
