@@ -6,8 +6,8 @@
 lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
-require 'kconv'
 require 'zinbeijett'
+require 'prop/druby_reci'
 
 Encoding.default_internal = 'UTF-8'
 
