@@ -139,10 +139,12 @@ module Zinbeijett
     print GC.stat, Garbage collection info output.
 
     $ engine -d druby://localhost:8888
-    druby process print server output.
+    druby process server output.
+    ※ console "can't parse uri:-d (DRb::DRbBadURI)"
     
     $ engine druby://localhost:8888
-    druby process print server.
+    druby process server.
+    engine -d server output.
     
     $ engine -m notojima.txt
     mail search. pattern match is mailaddress word only.
