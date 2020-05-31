@@ -139,7 +139,10 @@ module Zinbeijett
     print GC.stat, Garbage collection info output.
 
     $ engine -d
-    druby process erb templete output.
+    druby process print server output.
+    
+    $ engine -e
+    druby process print server.
 
     $ engine -m notojima.txt
     mail search. pattern match is mailaddress word only.
