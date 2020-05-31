@@ -159,9 +159,7 @@ elsif one.match?(r)
 elsif one.match?(j)
   feed_xml
 elsif one.match?(b)
-  summa_xml 
-else
-  puts 'Not other arguments!, engine is Zinbeijett, I made in 2016.'
+  summa_xml
 end
 
 GC.start
