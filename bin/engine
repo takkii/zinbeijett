@@ -9,7 +9,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 begin
 require 'zinbeijett'
 require 'prop/druby_reci'
-rescue Exception => 
+rescue Exception => e
 	#e.backtrace
 	puts '例外を補足しました...'
 end
