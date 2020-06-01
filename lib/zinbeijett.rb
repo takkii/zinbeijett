@@ -163,8 +163,8 @@ elsif one.match?(b)
   summa_xml
 end
 rescue Exception=> e
-	e.backtrace
-	puts "例外を補足しました。"
+	#e.backtrace
+	puts "例外を補足しました..."
 end
 
 
