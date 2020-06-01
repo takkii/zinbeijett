@@ -141,6 +141,7 @@ module Zinbeijett
     $ engine -d druby://localhost:8888
     druby process server output.
     ※ console "can't parse uri:-d (DRb::DRbBadURI)"
+    → "例外を補足しました" catch exception.
     
     $ engine druby://localhost:8888
     druby process server.
