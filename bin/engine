@@ -10,8 +10,7 @@ begin
 require 'zinbeijett'
 require 'prop/druby_reci'
 rescue Exception => e
-	#e.backtrace
-	puts '例外を補足しました...'
+	#puts e.backtrace
 end
 
 
