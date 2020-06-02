@@ -19,11 +19,3 @@ gem 'test-unit'
 gem 'nokogiri', '1.11.0.rc1'
 gem 'httparty'
 gem 'feedjira'
-
-#gem install ruby-debug-ide
-#gem instal debase
-
-#source "https://rubygems.pkg.github.com/takkii" do
-#  gem 'zinbeijett','1.0.12.2.beta2'
-#  gem 'tanraku'
-#end
