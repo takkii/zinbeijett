@@ -109,58 +109,59 @@ end
 include Engine
 
 one = ARGV[0]
-z = /\A[-][z]\z/
+
 a = /\A[-][a]\z/
+b = /\A[-][b]\z/
+c = /\A[-][c]\z/
+d = /\A[-][d]\z/
+f = /\A[-][f]\z/
+g = /\A[-][g]\z/
+h = /\A[-][h]\z/
+j = /\A[-][j]\z/
+m = /\A[-][m]\z/
 n = /\A[-][n]\z/
 o = /\A[-][o]\z/
-d = /\A[-][d]\z/
-g = /\A[-][g]\z/
-m = /\A[-][m]\z/
-s = /\A[-][s]\z/
-c = /\A[-][c]\z/
-f = /\A[-][f]\z/
-h = /\A[-][h]\z/
 p = /\A[-][p]\z/
-t = /\A[-][t]\z/
 r = /\A[-][r]\z/
-j = /\A[-][j]\z/
-b = /\A[-][b]\z/
+s = /\A[-][s]\z/
+t = /\A[-][t]\z/
+z = /\A[-][z]\z/
 
 begin
 if one.nil?
   druby_server
-elsif one.match?(z)
-  search_txt
 elsif one.match?(a)
   search_txi
+elsif one.match?(b)
+  summa_xml
+elsif one.match?(c)
+  calendar_view
+elsif one.match?(d)
+  search_druby_erb
+elsif one.match?(f)
+  auto_view
+elsif one.match?(g)
+  search_gc
+elsif one.match?(h)
+  hyaku_view
+elsif one.match?(j)
+  feed_xml
+elsif one.match?(m)
+  search_mail
 elsif one.match?(n)
   search_txe
 elsif one.match?(o)
   search_txs
-elsif one.match?(g)
-  search_gc
-elsif one.match?(m)
-  search_mail
-elsif one.match?(d)
-  search_druby_erb
-elsif one.match?(s)
-  count_search
-elsif one.match?(c)
-  calendar_view
-elsif one.match?(f)
-  auto_view
-elsif one.match?(h)
-  hyaku_view
 elsif one.match?(p)
   mini_view
-elsif one.match?(t)
-  match_view
 elsif one.match?(r)
   title_rss
-elsif one.match?(j)
-  feed_xml
-elsif one.match?(b)
-  summa_xml
+elsif one.match?(s)
+  count_search
+elsif one.match?(t)
+  match_view
+elsif one.match?(z)
+  search_txt
 end
 rescue Exception => e
 	#puts e.backtrace
