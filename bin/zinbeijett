@@ -103,11 +103,13 @@ module Zinbeijett
 
     [speak]
 
-    Now versin is zinbeiw (1.4.3.1) clone.
-
-    next dev zinbeijett original.
+    Now version is zinbeiw (= 1.4.3.1) clone.
+    
+    Plus amaoto function.
 
     [zinbeijett]
+    
+    zinbeijett [ option ]
 
     -s,start           Start page!
 
@@ -119,57 +121,38 @@ module Zinbeijett
 
     < how to use >
 
-    engine [option] [ File name ] [ String or regular expression ]
+    engine [ option ] [ File name ] [ String or regular expression ]
 
     < Example >
 
-    $ engine -z notojima.txt wajima
-    Full-text search.
+    $ engine druby://localhost:8888
+    druby process server.
+    engine -d server output.
 
     $ engine -a notojima.txt wajima
     AND Search.
 
-    $ engine -n notojima.txt wajima
-    NOT Search.
+    $ engine -b http://weather.livedoor.com/forecast/rss/warn.xml
+    Diplay warn info for xml.
 
-    $ engine -o notojima.txt wajima notojima
-    OR search. use two words.
+    ※ Display summary only.
 
-    $ engine -g
-    print GC.stat, Garbage collection info output.
+    $ engine -c
+    Calendar views. Today now.
 
     $ engine -d druby://localhost:8888
     druby process server output.
     ※ console "can't parse uri:-d (DRb::DRbBadURI)"
     → The output disappeared by catching the exception.
-    
-    $ engine druby://localhost:8888
-    druby process server.
-    engine -d server output.
-    
-    $ engine -m notojima.txt
-    mail search. pattern match is mailaddress word only.
-
-    $ engine -s notojima.txt notojima
-    String count search. String count in File.
-
-    $ engine -c
-    Calendar views. Today now.
 
     $ engine -f 2007 09
     Calendar views, select year and month.
 
+    $ engine -g
+    print GC.stat, Garbage collection info output.
+
     $ engine -h [百人一首(one word)]
     Search the full text from the first 百人一首.
-
-    $ engine -p notojima.txt wajima
-    line number : Applicable number, outputs.
-
-    $ engine -t notojima.txt wajima
-    match method search. ( = all search )
-
-    $ engine -r https://takkii.hatenablog.com/rss
-    Display Title from Hatena Blog
 
     $ engine -j https://github.com/takkii.atom
     engine -j http://weather.livedoor.com/forecast/rss/earthquake.xml
@@ -179,12 +162,31 @@ module Zinbeijett
     Display earthquake japan info for xml.
     Display visualstudio magazine blogs for aspx.
 
-    ※ Diplay title only.
+    ※ Diplay title only.    
 
-    $ engine -b http://weather.livedoor.com/forecast/rss/warn.xml
-    Diplay warn info for xml.
+    $ engine -m notojima.txt
+    mail search. pattern match is mailaddress word only.
 
-    ※ Display summary only.
+    $ engine -n notojima.txt wajima
+    NOT Search.
+
+    $ engine -o notojima.txt wajima notojima
+    OR search. use two words.
+
+    $ engine -p notojima.txt wajima
+    line number : Applicable number, outputs.
+
+    $ engine -r https://takkii.hatenablog.com/rss
+    Display Title from Hatena Blog
+
+    $ engine -s notojima.txt notojima
+    String count search. String count in File.
+
+    $ engine -t notojima.txt wajima
+    match method search. ( = all search )
+
+    $ engine -z notojima.txt wajima
+    Full-text search.
 
     HELP
 
