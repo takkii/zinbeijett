@@ -106,7 +106,7 @@ module Engine
   end
   
   def version_info
-    puts 'The zinbeijett is MIT License, Copyright (c) 2013-2020 Takayuki Kamiyama'
+    puts '(Engine and Zinbeijett) is MIT License, Copyright (c) 2013-2020 Takayuki Kamiyama.'
   end
 end
 
