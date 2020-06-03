@@ -2,7 +2,8 @@
 
 # --------------------------------------
 
-require 'drb/drb'
 require 'date'
+require 'drb/drb'
+require 'erb'
 
 # --------------------------------------

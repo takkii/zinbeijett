@@ -7,6 +7,11 @@ Encoding.default_external = 'UTF-8'
 
 # dRuby class method.
 class Remindar
+  def initialize(remindar)
+    @remindar = remindar
+    @erb = ERB.new(erb_src)
+  end
+
   def erb_src
     <<~SRC
       <html>
@@ -17,6 +22,10 @@ class Remindar
       </html>
     SRC
   end
+
+  def to_html
+    @erb.result(binding)
+  end
 end
 
 # Druby Class
@@ -24,8 +33,8 @@ class Druby
   def main
     DRb.start_service
     there = DRbObject.new_with_uri('druby://localhost:8888')
-    writer = Remindar.new.erb_src
-    there.puts(writer)
+    writer = Remindar.new(there)
+    there.puts(writer.to_html)
   end
 end
 
