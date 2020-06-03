@@ -9,7 +9,7 @@ Encoding.default_internal = 'UTF-8'
 class TestVersion < Test::Unit::TestCase
   def setup
     @versions = Engine::VERSION
-    @version = '1.1.2'
+    @version = '1.1.3'
   end
 
   def test_new
