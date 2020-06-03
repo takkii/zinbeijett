@@ -104,6 +104,10 @@ module Engine
       Feed.new.jira
       puts ' Summary end '.center(60, '-')
   end
+  
+  def version_info
+    puts 'The zinbeijett is MIT License, Copyright (c) 2013-2020 Takayuki Kamiyama'
+  end
 end
 
 include Engine
@@ -131,7 +135,7 @@ r = /\A[-][r]\z/
 s = /\A[-][s]\z/
 t = /\A[-][t]\z/
 # u = /\A[-][u]\z/
-# v = /\A[-][v]\z/
+v = /\A[-][v]\z/
 # w = /\A[-][w]\z/
 # x = /\A[-][x]\z/
 # y = /\A[-][y]\z/
@@ -170,6 +174,8 @@ elsif one.match?(s)
   count_search
 elsif one.match?(t)
   match_view
+elsif one.match?(v)
+  version_info
 elsif one.match?(z)
   search_txt
 end
