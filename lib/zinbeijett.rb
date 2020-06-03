@@ -152,14 +152,22 @@ elsif one.match?(c)
   calendar_view
 elsif one.match?(d)
   search_druby_erb
+# elsif one.match?(e)
+  # method name here.
 elsif one.match?(f)
   auto_view
 elsif one.match?(g)
   search_gc
 elsif one.match?(h)
   hyaku_view
+# elsif one.match?(i)
+  # method name here.
 elsif one.match?(j)
   feed_xml
+# elsif one.match?(k)
+  # method name here.
+# elsif one.match?(l)
+  # method name here.
 elsif one.match?(m)
   search_mail
 elsif one.match?(n)
@@ -168,14 +176,24 @@ elsif one.match?(o)
   search_txs
 elsif one.match?(p)
   mini_view
+# elsif one.match?(q)
+  # method name here.
 elsif one.match?(r)
   title_rss
 elsif one.match?(s)
   count_search
 elsif one.match?(t)
   match_view
+# elsif one.match?(u)
+  # method name here.
 elsif one.match?(v)
   version_info
+# elsif one.match?(w)
+  # method name here.
+# elsif one.match?(x)
+  # method name here.
+# elsif one.match?(y)
+  # method name here.
 elsif one.match?(z)
   search_txt
 end
