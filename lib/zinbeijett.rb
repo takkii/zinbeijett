@@ -107,7 +107,11 @@ module Engine
   
   def version_info
     require_relative 'prop/version'
+    puts '[ version ]'.center(60, '-')
+    puts ''
     puts 'Engine VERSION : ' + Engine::VERSION
+    puts ''
+    puts '[ version ]'.center(60, '-')
   end
 end
 
