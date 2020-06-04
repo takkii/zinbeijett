@@ -106,6 +106,7 @@ module Engine
   end
   
   def version_info
+    require_relative 'prop/version'
     puts 'Engine VERSION : ' + Engine::VERSION
   end
 end
