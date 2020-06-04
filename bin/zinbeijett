@@ -1,15 +1,14 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
-
 # vim: filetype=ruby
 
 lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
-require 'kconv'
 require 'prop/version'
 
 Encoding.default_internal = 'UTF-8'
+Encoding.default_external = 'UTF-8'
 
 # zinbeijett loads.
 module Zinbeijett
@@ -18,14 +17,14 @@ module Zinbeijett
   def version
     puts '[ version ]'.center(60, '-')
     puts ''
-    puts 'Zinbeijett VERSION : '.toutf8 + Engine::VERSION.toutf8
+    puts 'Zinbeijett VERSION : ' + Engine::VERSION
     puts ''
     puts '[ version ]'.center(60, '-')
   end
 
   def start
     puts ''
-    puts 'Start'.center(60, '-').toutf8
+    puts 'Start'.center(60, '-')
 
     puts <<-DOC
     == Contributing to zinbeijett
@@ -51,13 +50,13 @@ module Zinbeijett
     > Thank you for reading to the last.
     DOC
 
-    puts 'Start'.center(60, '-').toutf8
+    puts 'Start'.center(60, '-')
     puts ''
   end
 
   def licen
     puts ''
-    puts 'License'.center(60, '-').toutf8
+    puts 'License'.center(60, '-')
     puts <<-HOW
 
     The MIT License
@@ -91,13 +90,13 @@ module Zinbeijett
     HOW
 
     puts ''
-    puts 'License'.center(60, '-').toutf8
+    puts 'License'.center(60, '-')
     puts ''
   end
 
   def help
     puts ''
-    puts 'Command'.center(60, '-').toutf8
+    puts 'Command'.center(60, '-')
 
     puts <<-HELP
 
@@ -190,13 +189,13 @@ module Zinbeijett
 
     HELP
 
-    puts 'Command'.center(60, '-').toutf8
+    puts 'Command'.center(60, '-')
     puts ''
   end
 
   def soft
     puts RUBY_DESCRIPTION
-    puts 'On Zinbeijett Engine VERSION : '.toutf8 + Engine::VERSION
+    puts 'On Zinbeijett Engine VERSION : ' + Engine::VERSION
   end
 end
 
@@ -232,7 +231,7 @@ elsif one.match?(co)
 elsif one.match?(com)
   help
 else
-  puts 'Please choose an option.'.toutf8
+  puts 'Please choose an option.'
 end
 
 GC.start
