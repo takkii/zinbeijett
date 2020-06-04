@@ -18,7 +18,7 @@ module Zinbeijett
   def version
     puts '[ version ]'.center(60, '-')
     puts ''
-    puts 'Zinbeijett and Engine VERSION : '.toutf8 + Engine::VERSION.toutf8
+    puts 'Zinbeijett VERSION : '.toutf8 + Engine::VERSION.toutf8
     puts ''
     puts '[ version ]'.center(60, '-')
   end
