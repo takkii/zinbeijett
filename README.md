@@ -57,7 +57,7 @@ gem install zinbeijett-1.1.3.gem
     speak zinbeiw複製(雨音からreader移植)
 ```
 
-[Use Pycall](https://github.com/mrkn/pycall.rb)
+[Pycall](https://github.com/mrkn/pycall.rb)
 
 ```ruby
 zinbeijett users.
