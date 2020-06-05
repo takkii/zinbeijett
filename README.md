@@ -52,7 +52,7 @@ gem install zinbeijett-1.1.3.gem
 
     カレンダー(今の暦) カレンダー(指定した暦) タイトル表示(RSS) サマリー表示(feedjira) タイトル表示(feedjira) 
     
-    drubyレシーバ drubyライター(データ送り) バージョン情報
+    drubyレシーバ drubyライター(データ送り) バージョン情報 形態素解析 わかち書き わかち書き&ワードカウント
 
     speak zinbeiw複製(雨音からreader移植)
 ```
