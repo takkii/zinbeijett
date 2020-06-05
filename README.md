@@ -57,6 +57,14 @@ gem install zinbeijett-1.1.3.gem
     speak zinbeiw複製(雨音からreader移植)
 ```
 
+[mecab_ruby_keitaiso](https://github.com/takkii/mecab_ruby_keitaiso)
+
+```markdown
+・rice、suihan、komeシェルをengineに取り込みました。
+ 
+ ※zinbeijettのhelpオプションで使い方をみましょう。
+```
+
 [Pycall](https://github.com/mrkn/pycall.rb)
 
 ```ruby
