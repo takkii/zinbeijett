@@ -113,6 +113,18 @@ module Engine
     puts ''
     puts '[ version ]'.center(60, '-')
   end
+  
+  def rice_keitaiso
+    require_relative 'prop/rice'
+  end
+  
+  def suihan_wakati
+    require_relative 'prop/suihan'
+  end
+  
+  def kome_wakati
+    require_relative 'prop/kome'
+  end
 end
 
 include Engine
@@ -141,9 +153,9 @@ s = /\A[-][s]\z/
 t = /\A[-][t]\z/
 # u = /\A[-][u]\z/
 v = /\A[-][v]\z/
-# w = /\A[-][w]\z/
-# x = /\A[-][x]\z/
-# y = /\A[-][y]\z/
+w = /\A[-][w]\z/
+x = /\A[-][x]\z/
+y = /\A[-][y]\z/
 z = /\A[-][z]\z/
 
 begin
@@ -193,12 +205,12 @@ elsif one.match?(t)
   # method name here.
 elsif one.match?(v)
   version_info
-# elsif one.match?(w)
-  # method name here.
-# elsif one.match?(x)
-  # method name here.
-# elsif one.match?(y)
-  # method name here.
+elsif one.match?(w)
+  rice_keitaiso
+elsif one.match?(x)
+  kome_wakati
+elsif one.match?(y)
+  suihan_wakati
 elsif one.match?(z)
   search_txt
 end
