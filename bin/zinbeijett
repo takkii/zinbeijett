@@ -183,6 +183,15 @@ module Zinbeijett
 
     $ engine -t notojima.txt wajima
     match method search. ( = all search )
+    
+    $ engine -w notojima.txt
+    rice is keitaiso analyse
+
+    $ engine -x notojima.txt
+    suihan is wakati writer.
+    
+    $ engine -y notojima.txt
+    kome is wakati writer and wordcount.
 
     $ engine -z notojima.txt wajima
     Full-text search.
