@@ -62,7 +62,11 @@ gem install zinbeijett-1.1.3.gem
 ```markdown
 ・rice、suihan、komeシェルをengineに取り込みました。
  
- ※zinbeijettのhelpオプションで使い方をみましょう。
+ ※zinbeijettのhelpオプションで使い方を確認しましょう。
+ 
+・まずリンクから、mecab、mecab-ruby、nattoの環境構築をしましょう。
+
+ ※環境構築ができてないと動作しません。
 ```
 
 [Pycall](https://github.com/mrkn/pycall.rb)
