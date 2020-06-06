@@ -10,7 +10,7 @@ window = TkRoot.new do
 end
 
 window1 = TkToplevel.new do
-  title 'boyaki is shout!'
+  title 'ぼやきったーログ版'
 end
 
 TkLabel.new(nil,
