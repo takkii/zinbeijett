@@ -125,6 +125,10 @@ module Engine
   def kome_wakati
     require_relative 'prop/kome'
   end
+  
+  def tubuyaki_jett
+    require_relative 'prop/tubuyaki'
+  end
 end
 
 include Engine
@@ -135,7 +139,7 @@ a = /\A[-][a]\z/
 b = /\A[-][b]\z/
 c = /\A[-][c]\z/
 d = /\A[-][d]\z/
-# e = /\A[-][e]\z/
+e = /\A[-][e]\z/
 f = /\A[-][f]\z/
 g = /\A[-][g]\z/
 h = /\A[-][h]\z/
@@ -169,8 +173,8 @@ elsif one.match?(c)
   calendar_view
 elsif one.match?(d)
   search_druby_erb
-# elsif one.match?(e)
-  # method name here.
+elsif one.match?(e)
+  tubuyaki_jett
 elsif one.match?(f)
   auto_view
 elsif one.match?(g)

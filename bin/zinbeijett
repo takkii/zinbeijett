@@ -144,6 +144,9 @@ module Zinbeijett
     ※ console "can't parse uri:-d (DRb::DRbBadURI)"
     → The output disappeared by catching the exception.
 
+    $ engine -e
+    Tubuyaki clone ver. zinbeijett.
+
     $ engine -f 2007 09
     Calendar views, select year and month.
 
