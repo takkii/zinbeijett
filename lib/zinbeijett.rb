@@ -129,6 +129,10 @@ module Engine
   def tubuyaki_jett
     require_relative 'prop/tubuyaki'
   end
+  
+  def tubuyaki_log
+    require_relative 'prop/tubuyaki_memo'
+  end
 end
 
 include Engine
@@ -143,7 +147,7 @@ e = /\A[-][e]\z/
 f = /\A[-][f]\z/
 g = /\A[-][g]\z/
 h = /\A[-][h]\z/
-# i = /\A[-][i]\z/
+i = /\A[-][i]\z/
 j = /\A[-][j]\z/
 # k = /\A[-][k]\z/
 # l = /\A[-][l]\z/
@@ -181,8 +185,8 @@ elsif one.match?(g)
   search_gc
 elsif one.match?(h)
   hyaku_view
-# elsif one.match?(i)
-  # method name here.
+elsif one.match?(i)
+  tubuyaki_log
 elsif one.match?(j)
   feed_xml
 # elsif one.match?(k)
