@@ -21,5 +21,5 @@ cipher.pkcs5_keyivgen(passwd, salt, 1, md)
 decrypted = cipher.update(encrypted)
 
 File.open('log/cript.txt', 'a:utf-8', perm = 0o777) do |f|
-  f.puts decrypted
+  f.puts(decrypted)
 end
