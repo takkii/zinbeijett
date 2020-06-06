@@ -186,6 +186,9 @@ module Zinbeijett
 
     $ engine -p notojima.txt wajima
     line number : Applicable number, outputs.
+    
+    $ engine -q aes-256-cbc notojima.txt sha256
+    engine -q Algorithm_name Input_file_name (Digest_name)
 
     $ engine -r https://takkii.hatenablog.com/rss
     Display Title from Hatena Blog

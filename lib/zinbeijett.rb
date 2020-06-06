@@ -143,6 +143,10 @@ module Engine
   def tweet_tubuyaki
     require_relative 'prop/tweet'
   end
+  
+  def decript_snowcat
+    require_relative 'prop/decript'
+  end
 end
 
 include Engine
@@ -211,8 +215,8 @@ elsif one.match?(o)
   search_txs
 elsif one.match?(p)
   mini_view
-# elsif one.match?(q)
-  # method name here.
+elsif one.match?(q)
+  decript_snowcat
 elsif one.match?(r)
   title_rss
 elsif one.match?(s)
