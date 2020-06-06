@@ -33,7 +33,7 @@ cd zinbeijett
 
 gem build zinbeijett.gemspec
 
-gem install zinbeijett-1.1.4.gem
+gem install zinbeijett-1.1.5.gem
 ※ zinbeijett-○.○.○.gemはビルドされたバージョンを参照
 ```
 
@@ -62,10 +62,12 @@ gem install zinbeijett-1.1.4.gem
 [tubuyaki](https://github.com/takkii/tubuyaki)
 
 ```markdown
-・tcl/tkをRubyで使います。
-・Ruby/Tkが動く環境が必要です。
-・rbenvでtkが動くビルドをしたのち、
- UNIXであればgem install tkをします。
+・ tcl/tkをRubyで使います。
+
+・ Ruby/Tkが動く環境が必要です。
+
+・ rbenvでtkが動くビルドをしたのち、
+  UNIXであればgem install tkをします。
 ```
 
 [mecab_ruby_keitaiso](https://github.com/takkii/mecab_ruby_keitaiso)
@@ -77,7 +79,7 @@ gem install zinbeijett-1.1.4.gem
  
 ・まずリンクから、mecab、mecab-ruby、nattoの環境構築をしましょう。
 
- ※環境構築ができてないと動作しません。
+ ※ 環境構築ができてないと動作しません。
 ```
 
 [Pycall](https://github.com/mrkn/pycall.rb)
@@ -505,7 +507,7 @@ OData Lives! 12-Year-Old RESTful API Protocol Put to New Use in Age of Blazor an
 ### レポジトリ情報
 
 ```markdown
-・Zinbeijettは、軽量版多機能型コンソール検索エンジンです。
+・Zinbeijettは、軽量版多機能コンソール検索エンジンです。
 
 ・Zinbeijettは、MITライセンスです。
 
