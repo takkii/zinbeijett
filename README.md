@@ -54,7 +54,18 @@ gem install zinbeijett-1.1.4.gem
     
     drubyレシーバ drubyライター(データ送り) バージョン情報 形態素解析 わかち書き わかち書き&ワードカウント
 
+    つぶやきツール ログがとれるつぶやきツール
+
     speak zinbeiw複製(雨音からreader移植)
+```
+
+[tubuyaki](https://github.com/takkii/tubuyaki)
+
+```markdown
+・tcl/tkをRubyで使います。
+・Ruby/Tkが動く環境が必要です。
+・rbenvでtkが動くビルドをしたのち、
+ UNIXであればgem install tkをします。
 ```
 
 [mecab_ruby_keitaiso](https://github.com/takkii/mecab_ruby_keitaiso)
