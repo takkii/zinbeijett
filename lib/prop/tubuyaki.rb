@@ -2,6 +2,7 @@
 
 require 'tk'
 
+begin
 window = TkRoot.new{
 title 'つぶやき！'
 resizable [0,0]
@@ -63,3 +64,7 @@ end
 }
 
 Tk.mainloop
+
+rescue Exception => e
+# puts e.backtrace
+end
