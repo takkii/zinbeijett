@@ -133,6 +133,12 @@ module Engine
   def tubuyaki_log
     require_relative 'prop/tubuyaki_memo'
   end
+  
+  def match_log
+    require_relative 'prop/all_log'
+    Mat.search
+    puts ''
+  end
 end
 
 include Engine
@@ -149,7 +155,7 @@ g = /\A[-][g]\z/
 h = /\A[-][h]\z/
 i = /\A[-][i]\z/
 j = /\A[-][j]\z/
-# k = /\A[-][k]\z/
+k = /\A[-][k]\z/
 # l = /\A[-][l]\z/
 m = /\A[-][m]\z/
 n = /\A[-][n]\z/
@@ -189,8 +195,8 @@ elsif one.match?(i)
   tubuyaki_log
 elsif one.match?(j)
   feed_xml
-# elsif one.match?(k)
-  # method name here.
+elsif one.match?(k)
+  match_log
 # elsif one.match?(l)
   # method name here.
 elsif one.match?(m)
