@@ -59,7 +59,7 @@ gem install zinbeijett-1.1.5.gem
     speak zinbeiw複製(雨音からreader移植)
 ```
 
-[tubuyaki](https://github.com/takkii/tubuyaki)
+[tubuyaki](https://github.com/takkii/tubuyaki)[tubuyaki_gui](https://github.com/takkii/tubuyaki_gui)
 
 ```markdown
 ・ tcl/tkをRubyで使います。
