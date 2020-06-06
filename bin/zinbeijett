@@ -156,6 +156,9 @@ module Zinbeijett
     $ engine -h [百人一首(one word)]
     Search the full text from the first 百人一首.
 
+    $ engine -i
+    Tubuyaki GUI CLONE, Log write version.
+
     $ engine -j https://github.com/takkii.atom
     engine -j http://weather.livedoor.com/forecast/rss/earthquake.xml
     engine -j https://visualstudiomagazine.com/rss-feeds/blogs.aspx
