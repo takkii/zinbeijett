@@ -186,6 +186,10 @@ module Zinbeijett
 
     $ engine -p notojima.txt wajima
     line number : Applicable number, outputs.
+    
+    $ engine -q string1 string2
+    ruby convert encript use openssl.
+    sha cript use case password. 
 
     $ engine -r https://takkii.hatenablog.com/rss
     Display Title from Hatena Blog
@@ -195,6 +199,9 @@ module Zinbeijett
 
     $ engine -t notojima.txt wajima
     match method search. ( = all search )
+    
+    $ engine -u
+    rubygems tanraku installer.
     
     $ engine -w notojima.txt
     rice is keitaiso analyse

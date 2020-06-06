@@ -143,6 +143,15 @@ module Engine
   def tweet_tubuyaki
     require_relative 'prop/tweet'
   end
+  
+  def decript_snowcat
+    require_relative 'prop/decript'
+    String_encrypt.new.use_case_hash
+  end
+  
+  def tanraku_shell
+    require_relative 'prop/installer'
+  end
 end
 
 include Engine
@@ -165,11 +174,11 @@ m = /\A[-][m]\z/
 n = /\A[-][n]\z/
 o = /\A[-][o]\z/
 p = /\A[-][p]\z/
-# q = /\A[-][q]\z/
+q = /\A[-][q]\z/
 r = /\A[-][r]\z/
 s = /\A[-][s]\z/
 t = /\A[-][t]\z/
-# u = /\A[-][u]\z/
+u = /\A[-][u]\z/
 v = /\A[-][v]\z/
 w = /\A[-][w]\z/
 x = /\A[-][x]\z/
@@ -211,16 +220,16 @@ elsif one.match?(o)
   search_txs
 elsif one.match?(p)
   mini_view
-# elsif one.match?(q)
-  # method name here.
+elsif one.match?(q)
+  decript_snowcat
 elsif one.match?(r)
   title_rss
 elsif one.match?(s)
   count_search
 elsif one.match?(t)
   match_view
-# elsif one.match?(u)
-  # method name here.
+elsif one.match?(u)
+  tanraku_shell
 elsif one.match?(v)
   version_info
 elsif one.match?(w)
