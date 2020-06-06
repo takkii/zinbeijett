@@ -70,6 +70,19 @@ gem install zinbeijett-1.1.5.gem
   UNIXであればgem install tkをします。
 ```
 
+[Twitter_tweet](https://github.com/takkii/Twitter_tweet)
+
+### .bashrc or .zshrc
+
+```markdown
+export TWITTER_CONSUMER_KEY="登録したカスタマーキー"
+export TWITTER_CONSUMER_SECRET="登録したカスタマーシークレットキー"
+export TWITTER_ACCESS_TOKEN="登録したアクセストークン"
+export TWITTER_ACCESS_TOKEN_SECRET="登録したアクセストークンシークレットキー"
+```
+
+> 〜 それぞれ設定します 〜
+
 [mecab_ruby_keitaiso](https://github.com/takkii/mecab_ruby_keitaiso)
 
 ```markdown
