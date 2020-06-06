@@ -146,6 +146,7 @@ module Engine
   
   def decript_snowcat
     require_relative 'prop/decript'
+    String_encrypt.new.use_case_hash
   end
 end
 
