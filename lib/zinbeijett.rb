@@ -139,6 +139,10 @@ module Engine
     Mat.search
     puts ''
   end
+  
+  def tweet_tubuyaki
+    require_relative 'prop/tweet'
+  end
 end
 
 include Engine
@@ -156,7 +160,7 @@ h = /\A[-][h]\z/
 i = /\A[-][i]\z/
 j = /\A[-][j]\z/
 k = /\A[-][k]\z/
-# l = /\A[-][l]\z/
+l = /\A[-][l]\z/
 m = /\A[-][m]\z/
 n = /\A[-][n]\z/
 o = /\A[-][o]\z/
@@ -197,8 +201,8 @@ elsif one.match?(j)
   feed_xml
 elsif one.match?(k)
   match_log
-# elsif one.match?(l)
-  # method name here.
+elsif one.match?(l)
+  tweet_tubuyaki
 elsif one.match?(m)
   search_mail
 elsif one.match?(n)

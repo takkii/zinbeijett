@@ -171,6 +171,9 @@ module Zinbeijett
 
     $ engine -k notojima.txt wajima
     match method all search, log/output.txt write.
+    
+    $ engine -l
+    original tweet tubuyaki tools.
 
     $ engine -m notojima.txt
     mail search. pattern match is mailaddress word only.

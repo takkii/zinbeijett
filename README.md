@@ -59,7 +59,7 @@ gem install zinbeijett-1.1.5.gem
     speak zinbeiw複製(雨音からreader移植)
 ```
 
-[tubuyaki](https://github.com/takkii/tubuyaki)
+[tubuyaki](https://github.com/takkii/tubuyaki)[tubuyaki_gui](https://github.com/takkii/tubuyaki_gui)
 
 ```markdown
 ・ tcl/tkをRubyで使います。
@@ -69,6 +69,19 @@ gem install zinbeijett-1.1.5.gem
 ・ rbenvでtkが動くビルドをしたのち、
   UNIXであればgem install tkをします。
 ```
+
+[Twitter_tweet](https://github.com/takkii/Twitter_tweet)
+
+### .bashrc or .zshrc
+
+```markdown
+export TWITTER_CONSUMER_KEY="登録したカスタマーキー"
+export TWITTER_CONSUMER_SECRET="登録したカスタマーシークレットキー"
+export TWITTER_ACCESS_TOKEN="登録したアクセストークン"
+export TWITTER_ACCESS_TOKEN_SECRET="登録したアクセストークンシークレットキー"
+```
+
+> 〜 それぞれ設定します 〜
 
 [mecab_ruby_keitaiso](https://github.com/takkii/mecab_ruby_keitaiso)
 
