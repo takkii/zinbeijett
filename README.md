@@ -56,7 +56,7 @@ gem install zinbeijett-1.1.5.gem
 
     つぶやきツール ログがとれるつぶやきツール 全文検索(match)の結果をログ書き出し ハッシュ値で暗号化   
 
-    短絡自動インストーラ
+    自動インストーラ twitterへ投稿 
 
     speak zinbeiw複製(雨音からreader移植)
 ```
