@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
     "LICENSE.txt",
   ]
   s.executables = %w(zinbeijett engine speak)
-  s.files = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
+  s.files = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|mini_test)/}) }
   s.homepage = "http://rubyist.hatenablog.com/"
   s.licenses = ["MIT"]
   s.metadata = { "github_repo" => "ssh://github.com/takkii/zinbeijett" }
