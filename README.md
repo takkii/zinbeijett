@@ -27,14 +27,14 @@
 ### GitHub: Zinbeijett (HEAD build)
 
 ```markdown
-git clone https://github.com/takkii/zinbeijett.git
+   git clone https://github.com/takkii/zinbeijett.git
 
-cd zinbeijett
+   cd zinbeijett
 
-gem build zinbeijett.gemspec
+   gem build zinbeijett.gemspec
 
-gem install zinbeijett-1.1.5.gem
-※ zinbeijett-○.○.○.gemはビルドされたバージョンを参照
+   gem install zinbeijett-1.1.5.gem
+   ※ zinbeijett-○.○.○.gemはビルドされたバージョンを参照
 ```
 
 ## RubyGems: Zinbeijett
@@ -64,12 +64,12 @@ gem install zinbeijett-1.1.5.gem
 [tubuyaki](https://github.com/takkii/tubuyaki)[tubuyaki_gui](https://github.com/takkii/tubuyaki_gui)
 
 ```markdown
-・ tcl/tkをRubyで使います。
+   ・ tcl/tkをRubyで使います。
 
-・ Ruby/Tkが動く環境が必要です。
+   ・ Ruby/Tkが動く環境が必要です。
 
-・ rbenvでtkが動くビルドをしたのち、
-  UNIXであればgem install tkをします。
+   ・ rbenvでtkが動くビルドをしたのち、
+     UNIXであればgem install tkをします。
 ```
 
 [Twitter_tweet](https://github.com/takkii/Twitter_tweet)
@@ -88,40 +88,40 @@ export TWITTER_ACCESS_TOKEN_SECRET="登録したアクセストークンシー�
 [mecab_ruby_keitaiso](https://github.com/takkii/mecab_ruby_keitaiso)
 
 ```markdown
-・rice、suihan、komeシェルをengineに取り込みました。
+   ・rice、suihan、komeシェルをengineに取り込みました。
  
- ※zinbeijettのhelpオプションで使い方を確認しましょう。
+    ※zinbeijettのhelpオプションで使い方を確認しましょう。
  
-・まずリンクから、mecab、mecab-ruby、nattoの環境構築をしましょう。
+   ・まずリンクから、mecab、mecab-ruby、nattoの環境構築をしましょう。
 
- ※ 環境構築ができてないと動作しません。
+    ※ 環境構築ができてないと動作しません。
 ```
 
 [Pycall](https://github.com/mrkn/pycall.rb)
 
 ```ruby
-zinbeijett users.
+   zinbeijett users.
 
-$ gem install pycall
+   $ gem install pycall
 
-$ env PYTHON_CONFIGURE_OPTS='--enable-shared' pyenv install 3.7.7
+   $ env PYTHON_CONFIGURE_OPTS='--enable-shared' pyenv install 3.7.7
 
-Python 3.7.7 already install N/ Still install Y/
+   Python 3.7.7 already install N/ Still install Y/
 
-※ わからないときはとりあえずYを選びます...
+   ※ わからないときはとりあえずYを選びます...
 ```
 
 ### development environments
 
 ```markdown
-require './require_mix.rb'
+   require './require_mix.rb'
 
-・require_mix.rbをファイル内で読み込むと、
-zinbeijett内の必要なライブラリすべてが対象になります。
-（minitestとunit-testは省きました。）
+   ・require_mix.rbをファイル内で読み込むと、
+    zinbeijett内の必要なライブラリすべてが対象になります。
+    （minitestとunit-testは省きました。）
 
-もちろん速度低下もついて回るので、
-使うときは制約と誓約を意識してください。
+   もちろん速度低下もついて回るので、
+   使うときは制約と誓約を意識してください。
 ```
 
 ### License
@@ -522,9 +522,9 @@ OData Lives! 12-Year-Old RESTful API Protocol Put to New Use in Age of Blazor an
 ### レポジトリ情報
 
 ```markdown
-・Zinbeijettは、軽量版多機能コンソール検索エンジンです。
+   ・Zinbeijettは、軽量版多機能コンソール検索エンジンです。
 
-・Zinbeijettは、MITライセンスです。
+   ・Zinbeijettは、MITライセンスです。
 
-・著作者は、Takayuki, Kamiyamaです。
+   ・著作者は、Takayuki, Kamiyamaです。
 ```
