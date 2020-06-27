@@ -109,7 +109,7 @@ module Engine
     require_relative 'prop/version'
     puts '[ version ]'.center(60, '-')
     puts ''
-    puts 'Engine VERSION : ' + Engine::VERSION
+    puts 'Engine VERSION : ' + EngineLeft::VERSION
     puts ''
     puts '[ version ]'.center(60, '-')
   end
@@ -154,7 +154,7 @@ module Engine
   end
 end
 
-include Engine
+include EngineLeft
 
 one = ARGV[0]
 

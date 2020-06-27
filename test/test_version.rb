@@ -8,7 +8,7 @@ Encoding.default_internal = 'UTF-8'
 # Unit-test file load.
 class TestVersion < Test::Unit::TestCase
   def setup
-    @versions = Engine::VERSION
+    @versions = EngineLeft::VERSION
     @version = '1.1.6'
   end
 

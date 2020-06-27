@@ -13,7 +13,7 @@ RSpec.describe 'Zinbeijett' do
 
   describe 'rspec zinbeijett' do
     context 'prop/version' do
-      subject { Engine::VERSION }
+      subject { EngineLeft::VERSION }
       it { is_expected.to eq('1.1.6') }
     end
 

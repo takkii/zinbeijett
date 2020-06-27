@@ -9,7 +9,7 @@ puts ''
 
 Benchmark.bm 10 do |result|
   result.report 'version1' do
-    puts Engine::VERSION
+    puts EngineLeft::VERSION
     puts ''
   end
 

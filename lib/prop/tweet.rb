@@ -3,12 +3,15 @@
 require 'tk'
 require 'twitter'
 require 'kconv'
+require 'yaml'
+
+Settings = YAML.load_file("#{Dir.home}/yml/setting.yml")
 
 client = Twitter::REST::Client.new do |config|
-  config.consumer_key = ENV['TWITTER_CONSUMER_KEY']
-  config.consumer_secret = ENV['TWITTER_CONSUMER_SECRET']
-  config.access_token = ENV['TWITTER_ACCESS_TOKEN']
-  config.access_token_secret = ENV['TWITTER_ACCESS_TOKEN_SECRET']
+  config.consumer_key = Settings['consumer_key']
+  config.consumer_secret = Settings['consumer_secret']
+  config.access_token = Settings['access_token']
+  config.access_token_secret = Settings['access_token_secret']
 end
 
 window = TkRoot.new do
