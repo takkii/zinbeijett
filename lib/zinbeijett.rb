@@ -140,10 +140,6 @@ module Engine
     puts ''
   end
   
-  def tweet_tubuyaki
-    require_relative 'prop/tweet'
-  end
-  
   def decript_snowcat
     require_relative 'prop/decript'
     String_encrypt.new.use_case_hash
@@ -169,7 +165,7 @@ h = /\A[-][h]\z/
 i = /\A[-][i]\z/
 j = /\A[-][j]\z/
 k = /\A[-][k]\z/
-l = /\A[-][l]\z/
+#l = /\A[-][l]\z/
 m = /\A[-][m]\z/
 n = /\A[-][n]\z/
 o = /\A[-][o]\z/
@@ -211,7 +207,7 @@ elsif one.match?(j)
 elsif one.match?(k)
   match_log
 elsif one.match?(l)
-  tweet_tubuyaki
+  # method here
 elsif one.match?(m)
   search_mail
 elsif one.match?(n)
