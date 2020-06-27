@@ -74,13 +74,24 @@ gem install zinbeijett-1.1.5.gem
 
 [Twitter_tweet](https://github.com/takkii/Twitter_tweet)
 
-### .bashrc or .zshrc
+### 直接書いていたキーを自前で用意する仕様に変更
+
+_環境構築 ($HOME/yml/setting.yml)_
 
 ```markdown
-export TWITTER_CONSUMER_KEY="登録したカスタマーキー"
-export TWITTER_CONSUMER_SECRET="登録したカスタマーシークレットキー"
-export TWITTER_ACCESS_TOKEN="登録したアクセストークン"
-export TWITTER_ACCESS_TOKEN_SECRET="登録したアクセストークンシークレットキー"
+mkdir yml
+cd yml
+vim setting.yml
+vim内で:w
+```
+
+_setting.ymlの設定_
+
+```markdown
+consumer_key: "登録したカスタマーキー"
+consumer_secret: "登録したカスタマーシークレットキー"
+access_token: "登録したアクセストークン"
+access_token_secret: "登録したアクセストークンシークレットキー"
 ```
 
 > 〜 それぞれ設定します 〜
