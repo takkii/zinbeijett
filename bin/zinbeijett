@@ -99,6 +99,10 @@ module Zinbeijett
     puts 'Command'.center(60, '-')
 
     puts <<-HELP
+    
+    [tweet]
+    engine -l → tweet
+    Twitter_tubuyaki tools.
 
     [speak]
 
@@ -173,7 +177,7 @@ module Zinbeijett
     match method all search, log/output.txt write.
     
     $ engine -l
-    original tweet tubuyaki tools.
+    It's a missing alphabet
 
     $ engine -m notojima.txt
     mail search. pattern match is mailaddress word only.
