@@ -10,7 +10,7 @@ Encoding.default_external = 'UTF-8'
 
 Gem::Specification.new do |s|
   s.name = "zinbeijett"
-  s.version = Engine::VERSION
+  s.version = EngineLeft::VERSION
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["takkii"]
   s.email = "karuma.reason@gmail.com"

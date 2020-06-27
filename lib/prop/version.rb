@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Engine
+module EngineLeft
   VERSION = '1.1.6'.freeze
 end
 
