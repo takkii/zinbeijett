@@ -33,7 +33,7 @@ _GitHub: zinbeijett (latest)_
 
    gem build zinbeijett.gemspec
 
-   gem install zinbeijett-1.1.6.gem
+   gem install zinbeijett-1.1.7.gem
    ※ zinbeijett-○.○.○.gemはビルドされたバージョンを参照
 ```
 
