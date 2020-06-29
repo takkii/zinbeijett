@@ -2,7 +2,7 @@
 
 ### GitHub zinbeijett repo developments Start before,
 
-*Project Rubygems install Example*
+_Project RubyGems install Example_
 
 ```markdown
     bundle install
@@ -11,7 +11,7 @@
     (use bundle exec command need.)
 ```
 
-*All Test Run ( minitest / unit-test / rspec )*
+_All Test Run ( minitest / unit-test / rspec )_
 
 ```markdown
     bundle exec ruby mini_test_runner.rb
@@ -73,8 +73,6 @@
 ```
 
 [Twitter_tweet](https://github.com/takkii/Twitter_tweet)
-
-### 直接書いていたキーを自前で用意する仕様に変更
 
 _環境構築_
 
