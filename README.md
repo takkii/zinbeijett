@@ -2,7 +2,7 @@
 
 ### GitHub zinbeijett repo developments Start before,
 
-_Project RubyGems install Example_
+_Project install Example_
 
 ```markdown
     bundle install
@@ -11,7 +11,7 @@ _Project RubyGems install Example_
     (use bundle exec command need.)
 ```
 
-_All Test Run ( minitest / unit-test / rspec )_
+_All Test Run_
 
 ```markdown
     bundle exec ruby mini_test_runner.rb
@@ -24,7 +24,7 @@ _All Test Run ( minitest / unit-test / rspec )_
     bundle exec rake
 ```
 
-_GitHub: zinbeijett (latest)__
+_GitHub: zinbeijett (latest)_
 
 ```markdown
    git clone https://github.com/takkii/zinbeijett.git
@@ -43,7 +43,7 @@ _RubyGems: zinbeijett (Stable)_
     gem install zinbeijett
 ```
 
-_zinbeijett or engine. Please use option_
+_zinbeijett or engine_
 
 ```markdown
     zinbeijett バージョン情報 ライセンス情報 ヘルプ情報 スタートページ
