@@ -148,6 +148,11 @@ module Engine
   def tanraku_shell
     require_relative 'prop/installer'
   end
+  
+  def saikoro_py
+    require_relative 'prop/saikoro'
+    Dice.new.saiko
+  end
 end
 
 include EngineLeft
@@ -165,7 +170,7 @@ h = /\A[-][h]\z/
 i = /\A[-][i]\z/
 j = /\A[-][j]\z/
 k = /\A[-][k]\z/
-#l = /\A[-][l]\z/
+l = /\A[-][l]\z/
 m = /\A[-][m]\z/
 n = /\A[-][n]\z/
 o = /\A[-][o]\z/
@@ -207,7 +212,7 @@ elsif one.match?(j)
 elsif one.match?(k)
   match_log
 elsif one.match?(l)
-  # method here
+  saikoro_py
 elsif one.match?(m)
   search_mail
 elsif one.match?(n)
