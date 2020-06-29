@@ -11,13 +11,10 @@ client = Twitter::REST::Client.new do |config|
 end
 
 max_id = client.home_timeline.first.id
-20.times do
-    client.home_timeline(max_id: max_id,count: 200).each do |tweet|
-        puts tweet.user.name
-        puts tweet.full_text
-        puts "Fav: #{tweet.favorite_count}, Retweet: #{tweet.retweet_count}"
-        max_id = tweet.id unless tweet.retweeted?
-    end
-    #sleep 60
-    exit!
+client.home_timeline(max_id: max_id,count: 200).each do |tweet|
+ puts tweet.user.name
+ puts tweet.full_text
+ puts "Fav: #{tweet.favorite_count}, Retweet: #{tweet.retweet_count}"
 end
+
+__END__
