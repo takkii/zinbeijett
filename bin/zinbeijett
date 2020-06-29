@@ -205,7 +205,7 @@ module Zinbeijett
     match method search. ( = all search )
     
     $ engine -u
-    rubygems tanraku installer.
+    Twitter, log/backup.txt save and output tweet list.
     
     $ engine -w notojima.txt
     rice is keitaiso analyse
