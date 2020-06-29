@@ -37,7 +37,7 @@
    ※ zinbeijett-○.○.○.gemはビルドされたバージョンを参照
 ```
 
-### RubyGems: Zinbeijett (Stable)
+### RubyGems: zinbeijett (Stable)
 
 ```markdown
     gem install zinbeijett
@@ -64,7 +64,7 @@
 [tubuyaki](https://github.com/takkii/tubuyaki)[tubuyaki_gui](https://github.com/takkii/tubuyaki_gui)
 
 ```markdown
-   ・ tcl/tkをRubyで使います。
+   ・ tcl/tkをRubyで使います(Ruby/Tk)
 
    ・ Ruby/Tkが動く環境が必要です。
 
@@ -123,18 +123,23 @@ access_token_secret: "登録したアクセストークンシークレットキ�
    ※ わからないときはとりあえずYを選びます...
 ```
 
-### development environments
+### 百人一首 検索
 
 ```markdown
-require './require_mix.rb'
+    git clone https://github.com/takkii/zinbeijett.git
 
-・require_mix.rbをファイル内で読み込むと、
-zinbeijett内の必要なライブラリすべてが対象になります。
-（minitestとunit-testは省きました。）
+    cd zinbeijett
 
-もちろん速度低下もついて回るので、
-使うときは制約と誓約を意識してください。
+    engine -h 花の色は
 ```
+
+![百人一首](https://github.com/takkii/zinbeijett/blob/master/img/hyaku.png)
+
+![百人一首](https://github.com/takkii/zinbeijett/blob/master/img/hyaku2.png)
+
+### UML図 (zinbeijett)
+
+![zinbeijett](https://github.com/takkii/zinbeijett/blob/master/out/zinbeijett/zinbeijett.png)
 
 ### License
 
@@ -166,23 +171,3 @@ Copyright (c) 2013-2020 Takayuki Kamiyama
 生じる一切の請求、損害、
 その他の義務について何らの責任も負わないものとします。
 ```
-
-### 百人一首 検索
-
-```markdown
-    git clone https://github.com/takkii/zinbeijett.git
-
-    cd zinbeijett
-
-    engine -h 花の色は
-```
-
-![百人一首](https://github.com/takkii/zinbeijett/blob/master/img/hyaku.png)
-
-![百人一首](https://github.com/takkii/zinbeijett/blob/master/img/hyaku2.png)
-
-```
-
-### UML図 (zinbeijett)
-
-![zinbeijett](https://github.com/takkii/zinbeijett/blob/master/out/zinbeijett/zinbeijett.png)
