@@ -24,7 +24,7 @@ _All Test Run ( minitest / unit-test / rspec )_
     bundle exec rake
 ```
 
-### GitHub: Zinbeijett (latest)
+_GitHub: zinbeijett (latest)__
 
 ```markdown
    git clone https://github.com/takkii/zinbeijett.git
@@ -37,13 +37,13 @@ _All Test Run ( minitest / unit-test / rspec )_
    ※ zinbeijett-○.○.○.gemはビルドされたバージョンを参照
 ```
 
-### RubyGems: zinbeijett (Stable)
+_RubyGems: zinbeijett (Stable)_
 
 ```markdown
     gem install zinbeijett
 ```
 
-## zinbeijett or engine. Please use option.
+_zinbeijett or engine. Please use option_
 
 ```markdown
     zinbeijett バージョン情報 ライセンス情報 ヘルプ情報 スタートページ
@@ -61,7 +61,7 @@ _All Test Run ( minitest / unit-test / rspec )_
     speak zinbeiw複製(雨音からreader移植)
 ```
 
-[tubuyaki](https://github.com/takkii/tubuyaki)[tubuyaki_gui](https://github.com/takkii/tubuyaki_gui)
+[tubuyaki](https://github.com/takkii/tubuyaki) | [tubuyaki_gui](https://github.com/takkii/tubuyaki_gui) | [Twitter_tweet](https://github.com/takkii/Twitter_tweet)
 
 ```markdown
    ・ tcl/tkをRubyで使います(Ruby/Tk)
@@ -71,8 +71,6 @@ _All Test Run ( minitest / unit-test / rspec )_
    ・ rbenvでtkが動くビルドをしたのち、
      UNIXであればgem install tkをします。
 ```
-
-[Twitter_tweet](https://github.com/takkii/Twitter_tweet)
 
 _環境構築_
 
@@ -92,8 +90,6 @@ consumer_secret: "登録したカスタマーシークレットキー"
 access_token: "登録したアクセストークン"
 access_token_secret: "登録したアクセストークンシークレットキー"
 ```
-
-> 〜 それぞれ設定します 〜
 
 [mecab_ruby_keitaiso](https://github.com/takkii/mecab_ruby_keitaiso)
 
@@ -121,7 +117,7 @@ access_token_secret: "登録したアクセストークンシークレットキ�
    ※ わからないときはとりあえずYを選びます...
 ```
 
-### 百人一首 検索
+_百人一首、検索例_
 
 ```markdown
     git clone https://github.com/takkii/zinbeijett.git
@@ -135,11 +131,11 @@ access_token_secret: "登録したアクセストークンシークレットキ�
 
 ![百人一首](https://github.com/takkii/zinbeijett/blob/master/img/hyaku2.png)
 
-### UML図 (zinbeijett)
+_UML図 (zinbeijett)_
 
 ![zinbeijett](https://github.com/takkii/zinbeijett/blob/master/out/zinbeijett/zinbeijett.png)
 
-### License
+_License_
 
 ```markdown
 The zinbeijett is MIT License
