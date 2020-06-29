@@ -145,8 +145,8 @@ module EngineLeft
     String_encrypt.new.use_case_hash
   end
   
-  def tanraku_shell
-    require_relative 'prop/installer'
+  def tweet_cmd
+    require_relative 'prop/tweet_cmd'
   end
   
   def saikoro_py
@@ -230,7 +230,7 @@ elsif one.match?(s)
 elsif one.match?(t)
   match_view
 elsif one.match?(u)
-  tanraku_shell
+  tweet_cmd
 elsif one.match?(v)
   version_info
 elsif one.match?(w)
