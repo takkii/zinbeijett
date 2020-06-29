@@ -9,7 +9,7 @@ Encoding.default_internal = 'UTF-8'
 Encoding.default_external = 'UTF-8'
 
 # zinbeijett function
-module Engine
+module EngineLeft
   module_function
 
   def search_txt
