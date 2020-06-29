@@ -64,12 +64,12 @@ _zinbeijett or engine_
 [tubuyaki](https://github.com/takkii/tubuyaki) | [tubuyaki_gui](https://github.com/takkii/tubuyaki_gui) | [Twitter_tweet](https://github.com/takkii/Twitter_tweet)
 
 ```markdown
-   ・ tcl/tkをRubyで使います(Ruby/Tk)
-
    ・ Ruby/Tkが動く環境が必要です。
 
    ・ rbenvでtkが動くビルドをしたのち、
      UNIXであればgem install tkをします。
+     
+   ・ rbenvでtcl/tkを指定してビルドする方法もあります。
 ```
 
 _環境構築_
