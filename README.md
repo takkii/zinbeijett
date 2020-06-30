@@ -66,8 +66,9 @@ _zinbeijett or engine_
 ```markdown
    ・ Ruby/Tkが動く環境が必要です。
 
-   ・ rbenvでtkが動くビルドをしたのち、
-     UNIXであればgem install tkをします。
+   ・ UNIXであれば、
+     gem install tk
+     をします。tcl/tkがインストールされていれば入ります。
      
    ・ rbenvでtcl/tkを指定してビルドする方法もあります。
    
