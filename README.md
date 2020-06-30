@@ -56,7 +56,7 @@ _zinbeijett or engine_
 
     つぶやきツール ログがとれるつぶやきツール 全文検索(match)の結果をログ書き出し ハッシュ値で暗号化   
 
-    自動インストーラ twitterへ投稿 サイコロを6回転がす
+    twitterへ投稿 TwitterのTL取得 サイコロを6回転がす
 
     speak zinbeiw複製(雨音からreader移植)
 ```
@@ -70,6 +70,10 @@ _zinbeijett or engine_
      UNIXであればgem install tkをします。
      
    ・ rbenvでtcl/tkを指定してビルドする方法もあります。
+   
+   ・ RubyGemsからTwitterを、
+     gem install twitter
+     などでインストールする必要があります。
 ```
 
 _環境構築_
