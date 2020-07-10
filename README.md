@@ -115,11 +115,9 @@ access_token_secret: "登録したアクセストークンシークレットキ�
 
    $ gem install pycall
 
-   $ env PYTHON_CONFIGURE_OPTS='--enable-shared'
-   
-   $ pyenv install 3.7.8
+   $ env PYTHON_CONFIGURE_OPTS='--enable-shared' pyenv install 3.8.3
 
-   → Python 3.7.8 already install N/ Still install Y/
+   → Python 3.8.3 already install N/ Still install Y/
 
    ※ わからないときはとりあえずYを選びます...
 ```
