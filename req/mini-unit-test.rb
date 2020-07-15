@@ -2,8 +2,9 @@
 
 # --------------------------------------
 
-require 'himekuri'
-require 'test/unit'
+require 'minitest/autorun'
+require 'minitest/unit'
 require 'kconv'
+require 'himekuri'
 
 # --------------------------------------

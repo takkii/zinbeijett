@@ -54,3 +54,11 @@ Rake::TestTask.new do |mini_test|
   mini_test.test_files = Dir['mini_test/**/mini_test_*.rb']
   mini_test.verbose = true
 end
+
+# mini_unit_test
+
+task :default => [:test]
+Rake::TestTask.new do |mini_test|
+  mini_test.test_files = Dir['mini_unit/**/mini_unit_*.rb']
+  mini_test.verbose = true
+end
