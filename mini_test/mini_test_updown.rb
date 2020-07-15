@@ -4,7 +4,7 @@ require 'minitest/autorun'
 require 'minitest/reporters'
 
 # UpDown Unit Test
-class TestUpDown < Minitest::Test
+class MiniUnitUpDown < Minitest::Test
   def test_updown
     str = 'object oriented language'
     str2 = 'RUBY_VERSION_IS'

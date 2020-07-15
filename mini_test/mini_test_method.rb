@@ -4,7 +4,7 @@ require 'minitest/autorun'
 require 'minitest/reporters'
 
 # Method Unit Test
-class TestMethod < Minitest::Test
+class MiniUnitMethod < Minitest::Test
   def test_method
     # method test add.
     ary = []

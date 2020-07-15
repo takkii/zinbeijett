@@ -71,7 +71,7 @@ Layout/TrailingWhitespace:
 # Configuration parameters: AllowSafeAssignment.
 Lint/AssignmentInCondition:
   Exclude:
-    - 'test/test_matcher.rb'
+    - 'test/mini_unit_matcher.rb'
 
 # Offense count: 6
 Metrics/AbcSize:
@@ -116,7 +116,7 @@ Style/FrozenStringLiteralComment:
 # Configuration parameters: MinBodyLength.
 Style/GuardClause:
   Exclude:
-    - 'test/test_matcher.rb'
+    - 'test/mini_unit_matcher.rb'
 
 # Offense count: 1
 # Cop supports --auto-correct.
