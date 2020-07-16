@@ -39,14 +39,6 @@ Rake::RDocTask.new do |rdoc|
   rdoc.options = ["--charset", "utf-8", "--line-numbers"]
 end
 
-# unit_test
-
-task :default => [:test]
-Rake::TestTask.new do |test|
-  test.test_files = Dir['test/**/test_*.rb']
-  test.verbose = true
-end
-
 # mini_test
 
 task :default => [:test]
@@ -62,3 +54,4 @@ Rake::TestTask.new do |mini_test|
   mini_test.test_files = Dir['mini_unit/**/mini_unit_*.rb']
   mini_test.verbose = true
 end
+
