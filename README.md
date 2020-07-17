@@ -108,7 +108,7 @@ access_token_secret: "登録したアクセストークンシークレットキ�
     ※ 環境構築ができてないと動作しません。
 ```
 
-[Pycall](https://github.com/mrkn/pycall.rb)
+[インストールエラー対処「Qiita記事」](https://qiita.com/takkii/items/af8b76ce4b3c591d86ab)
 
 ```ruby
    zinbeijett users.
