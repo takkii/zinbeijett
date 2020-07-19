@@ -44,8 +44,9 @@ end
 puts ''
 puts ' TimeStamp '.center(60, '-')
 puts ''
-print '現在時刻 : '
-Himekuri.new.cal
+HimekuriClass.new.himekuri_print
+puts ''
+HimekuriClass.new.reiwa_print
 puts ''
 puts ' TimeStamp '.center(60, '-')
 puts ''
