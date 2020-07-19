@@ -48,6 +48,9 @@ HimekuriClass.new.reiwa_print
 puts ''
 HimekuriClass.new.himekuri_print
 puts ''
+print '現在時刻 : '
+Himekuri.new.cal
+puts ''
 puts ' TimeStamp '.center(60, '-')
 puts ''
 puts ' minitest file load '.center(80, '~')
