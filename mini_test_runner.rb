@@ -44,9 +44,9 @@ end
 puts ''
 puts ' TimeStamp '.center(60, '-')
 puts ''
-HimekuriClass.new.himekuri_print
+Himekuri.new.cal
 puts ''
-HimekuriClass.new.reiwa_print
+puts '日めくり2、バージョン : ' + Himekuri2::VERSION
 puts ''
 puts ' TimeStamp '.center(60, '-')
 puts ''
