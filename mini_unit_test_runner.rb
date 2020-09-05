@@ -8,36 +8,36 @@ Encoding.default_external = 'UTF-8'
 
 # SubClass test function.
 class MiniTestOne
-	def mini_test
-		Dir[File.dirname(__FILE__) + '/mini_unit/*.rb'].sort.select do |file|
-			require file
-		end
-	end
+  def mini_test
+    Dir[File.dirname(__FILE__) + '/mini_unit/*.rb'].sort.select do |file|
+      require file
+    end
+  end
 end
 
 # SubClass current directory
 class MiniFilename
-	def mini_find
-		puts Dir.glob('./mini_unit/*.rb')
-	end
+  def mini_find
+    puts Dir.glob('./mini_unit/*.rb')
+  end
 end
 
 # Super Class with refinements methods.
 module MiniFile
-	refine MiniTestOne do
-		def enter
-			mini_test
-		end
-	end
+  refine MiniTestOne do
+    def enter
+      mini_test
+    end
+  end
 end
 
 # Super Class feeting refinements mehtod.
 module MiniFileN
-	refine MiniFilename do
-		def anker
-			mini_find
-		end
-	end
+  refine MiniFilename do
+    def anker
+      mini_find
+    end
+  end
 end
 
 # Console Output list.
