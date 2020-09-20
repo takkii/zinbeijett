@@ -135,10 +135,8 @@ module Zinbeijett
     $ engine -a notojima.txt wajima
     AND Search.
 
-    $ engine -b http://weather.livedoor.com/forecast/rss/warn.xml
-    Diplay warn info for xml.
-
-    ※ Display summary only.
+    $ engine -b https://takkii.hatenablog.com/rss
+    Diplay summary, HatenaBlog for takkii.
 
     $ engine -c
     Calendar views. Today now.
@@ -164,11 +162,11 @@ module Zinbeijett
     Tubuyaki GUI CLONE, Log write version.
 
     $ engine -j https://github.com/takkii.atom
-    engine -j http://weather.livedoor.com/forecast/rss/earthquake.xml
     engine -j https://visualstudiomagazine.com/rss-feeds/blogs.aspx
 
+    [ Example ]
+
     Display GitHub Active for atom.
-    Display earthquake japan info for xml.
     Display visualstudio magazine blogs for aspx.
 
     ※ Diplay title only.    
@@ -196,7 +194,7 @@ module Zinbeijett
     sha cript use case password. 
 
     $ engine -r https://takkii.hatenablog.com/rss
-    Display Title from Hatena Blog
+    Display Title, from Hatena Blog for takkii.
 
     $ engine -s notojima.txt notojima
     String count search. String count in File.
