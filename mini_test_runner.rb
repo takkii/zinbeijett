@@ -40,27 +40,25 @@ module MiniFileN
   end
 end
 
-# Console Output list.
-puts ''
-puts ' TimeStamp '.center(60, '-')
-puts ''
-Himekuri.new.cal
-puts ''
-puts '日めくり2、バージョン : ' + Himekuri2::VERSION
-puts ''
-puts ' TimeStamp '.center(60, '-')
-puts ''
-puts ' minitest file load '.center(80, '~')
-puts ''
+class Nyanco
+  def self.big
+    # Console Output list.
+    puts '';puts ' TimeStamp '.center(60, '-');puts '';Himekuri.new.cal;puts '';
+    puts '日めくり2、バージョン : ' + Himekuri2::VERSION;puts '';
+    puts ' TimeStamp '.center(60, '-');puts '';
+    puts ' minitest file load '.center(80, '~');puts '';
+  end
+end
+
+Nyanco.big
+
 using MiniFileN
-MiniFilename.new.mini_find
-puts ''
-puts ' minitest file load '.center(80, '~')
-puts ''
-puts ' mini_test in filename list '.center(80, '~')
-puts ''
+MiniFilename.new.mini_find;puts '';
+
+puts ' minitest file load '.center(80, '~');puts '';
+puts ' mini_test in filename list '.center(80, '~');puts '';
+
 using MiniFile
-MiniTestOne.new.mini_test
-puts ''
+MiniTestOne.new.mini_test;puts '';
 
 __END__
