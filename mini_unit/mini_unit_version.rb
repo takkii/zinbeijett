@@ -8,7 +8,7 @@ require File.join(File.dirname(__FILE__), '../lib/prop/version.rb') # !> setting
 class MiniUnitVersion < Minitest::Test
   def setup
     @versions = EngineLeft::VERSION
-    @version = '1.1.7'
+    @version = '1.1.8'
   end
 
   def test_new
