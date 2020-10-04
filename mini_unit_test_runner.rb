@@ -44,17 +44,15 @@ end
 
 class ConsoleOutput
   def self.timestamp
-    HimekuriClass.new.himekuri_print
-    puts ''
-    HimekuriClass.new.reiwa_print
+    puts ' TimeStamp '.center(60, '-'); puts '';
+    HimekuriClass.new.himekuri_print; puts '';
+    HimekuriClass.new.reiwa_print; puts '';
+    puts ' TimeStamp '.center(60, '-');
+    puts ''; puts ' minitest file load '.center(80, '~'); puts '';
   end
 end
 
-puts ' TimeStamp '.center(60, '-'); puts '';
 ConsoleOutput.timestamp
-puts ''; puts ' TimeStamp '.center(60, '-');
-
-puts ''; puts ' minitest file load '.center(80, '~'); puts '';
 
 using MiniFileN
 MiniFilename.new.mini_find
