@@ -41,14 +41,18 @@ module MiniFileN
 end
 
 # Console Output list.
-
 class ConsoleOutput
   def self.timestamp
-    puts ' TimeStamp '.center(60, '-'); puts ''
-    HimekuriClass.new.himekuri_print; puts ''
-    HimekuriClass.new.reiwa_print; puts ''
     puts ' TimeStamp '.center(60, '-')
-    puts ''; puts ' minitest file load '.center(80, '~'); puts ''
+    puts ''
+    HimekuriClass.new.himekuri_print
+    puts ''
+    HimekuriClass.new.reiwa_print
+    puts ''
+    puts ' TimeStamp '.center(60, '-')
+    puts ''
+    puts ' minitest file load '.center(80, '~')
+    puts ''
   end
 end
 
@@ -57,8 +61,11 @@ ConsoleOutput.timestamp
 using MiniFileN
 MiniFilename.new.mini_find
 
-puts ''; puts ' minitest file load '.center(80, '~'); puts ''
-puts ' mini_test in filename list '.center(80, '~'); puts ''
+puts ''
+puts ' minitest file load '.center(80, '~')
+puts ''
+puts ' mini_test in filename list '.center(80, '~')
+puts ''
 
 using MiniFile
 MiniTestOne.new.mini_test
