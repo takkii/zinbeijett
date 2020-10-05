@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require './req/mini-unit-test.rb'
+require './req/miniunit'
 
 # Encoding Setting.
 Encoding.default_internal = 'UTF-8'
@@ -9,7 +9,7 @@ Encoding.default_external = 'UTF-8'
 # SubClass test function.
 class MiniTestOne
   def mini_test
-    Dir[File.dirname(__FILE__) + '/mini_unit/*.rb'].sort.select do |file|
+    Dir[File.dirname(__FILE__) + '/mini_test/*.rb'].sort.select do |file|
       require file
     end
   end
