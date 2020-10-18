@@ -132,13 +132,13 @@ _百人一首、検索例_
     engine -h 花の色は
 ```
 
-![百人一首](https://github.com/takkii/zinbeijett/blob/master/img/hyaku.png)
+![百人一首](https://github.com/takkii/zinbeijett/blob/main/img/hyaku.png)
 
-![百人一首](https://github.com/takkii/zinbeijett/blob/master/img/hyaku2.png)
+![百人一首](https://github.com/takkii/zinbeijett/blob/main/img/hyaku2.png)
 
 _UML図 (zinbeijett)_
 
-![zinbeijett](https://github.com/takkii/zinbeijett/blob/master/out/zinbeijett/zinbeijett.png)
+![zinbeijett](https://github.com/takkii/zinbeijett/blob/main/out/zinbeijett/zinbeijett.png)
 
 _License_
 
