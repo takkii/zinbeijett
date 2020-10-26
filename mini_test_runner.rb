@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require './req/minitest.rb'
+require './req/minitest'
 
 # Encoding Setting.
 Encoding.default_internal = 'UTF-8'
@@ -44,10 +44,10 @@ end
 class Nyanco
   def self.big
     # Console Output list.
-    puts '';puts ' TimeStamp '.center(60, '-');puts '';Himekuri.new.cal;puts '';
-    puts '日めくり2、バージョン : ' + Himekuri2::VERSION;puts '';
-    puts ' TimeStamp '.center(60, '-');puts '';
-    puts ' minitest file load '.center(80, '~');puts '';
+    puts '';puts ' TimeStamp '.center(60, '-');puts '';Himekuri.new.cal;puts ''
+    puts '日めくり2、バージョン : ' + Himekuri2::VERSION;puts ''
+    puts ' TimeStamp '.center(60, '-');puts ''
+    puts ' minitest file load '.center(80, '~');puts ''
   end
 end
 
