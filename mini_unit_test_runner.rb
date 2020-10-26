@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require './req/mini-unit-test.rb'
+require './req/miniunit'
 
 # Encoding Setting.
 Encoding.default_internal = 'UTF-8'
@@ -41,25 +41,35 @@ module MiniFileN
 end
 
 # Console Output list.
-puts ' TimeStamp '.center(60, '-')
-puts ''
-HimekuriClass.new.himekuri_print
-puts ''
-HimekuriClass.new.reiwa_print
-puts ''
-puts ' TimeStamp '.center(60, '-')
-puts ''
-puts ' minitest file load '.center(80, '~')
-puts ''
+class ConsoleOutput
+  def self.timestamp
+    puts ' TimeStamp '.center(60, '-')
+    puts ''
+    HimekuriClass.new.himekuri_print
+    puts ''
+    HimekuriClass.new.reiwa_print
+    puts ''
+    puts ' TimeStamp '.center(60, '-')
+    puts ''
+    puts ' minitest file load '.center(80, '~')
+    puts ''
+  end
+end
+
+ConsoleOutput.timestamp
+
 using MiniFileN
 MiniFilename.new.mini_find
+
 puts ''
 puts ' minitest file load '.center(80, '~')
 puts ''
 puts ' mini_test in filename list '.center(80, '~')
 puts ''
+
 using MiniFile
 MiniTestOne.new.mini_test
+
 puts ''
 
 __END__
