@@ -41,22 +41,24 @@ module MiniFileN
 end
 
 # Console Output list.
-class ConsoleOutput
-  def self.timestamp
-    puts ' TimeStamp '.center(60, '-')
+Border = Struct.new(:timestamp, :minitest_load) do
+  def stamp
+    puts ''
+    puts "#{timestamp}".center(60, '-')
     puts ''
     HimekuriClass.new.himekuri_print
     puts ''
     HimekuriClass.new.reiwa_print
     puts ''
-    puts ' TimeStamp '.center(60, '-')
+    puts "#{timestamp}".center(60, '-')
     puts ''
-    puts ' minitest file load '.center(80, '~')
+    puts "#{minitest_load}".center(80, '~')
     puts ''
   end
 end
 
-ConsoleOutput.timestamp
+border = Border.new(' TimeStamp ', ' minitest file load ')
+border.stamp
 
 using MiniFileN
 MiniFilename.new.mini_find
