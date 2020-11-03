@@ -44,20 +44,20 @@ end
 Border = Struct.new(:timestamp, :minitest_load) do
   def stamp
     puts ''
-    puts "#{timestamp}".center(60, '-')
+    puts "#{timestamp}"
     puts ''
     HimekuriClass.new.himekuri_print
     puts ''
     HimekuriClass.new.reiwa_print
     puts ''
-    puts "#{timestamp}".center(60, '-')
+    puts "#{timestamp}"
     puts ''
-    puts "#{minitest_load}".center(80, '~')
+    puts "#{minitest_load}"
     puts ''
   end
 end
 
-border = Border.new(' TimeStamp ', ' minitest file load ')
+border = Border.new(' TimeStamp '.center(60, '-'), ' minitest file load '.center(60, '-'))
 border.stamp
 
 using MiniFileN
