@@ -60,6 +60,7 @@ class Nyanco
   end
 end
 
+begin
 puts ' mini_test in filename list '.center(80, '~')
 
 Nyanco.big
@@ -76,5 +77,9 @@ puts ''
 using MiniFile
 MiniTestOne.new.mini_test
 puts ''
+
+rescue Exception => e
+  puts e.backtrace
+end
 
 __END__
