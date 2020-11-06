@@ -57,6 +57,10 @@ Border = Struct.new(:timestamp, :minitest_load) do
   end
 end
 
+puts ''
+puts ' minitest file load '.center(80, '~')
+puts ''
+
 border = Border.new(' TimeStamp '.center(60, '-'), ' minitest file load '.center(60, '-'))
 border.stamp
 
