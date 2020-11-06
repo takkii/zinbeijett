@@ -1,5 +1,4 @@
 .ruby-version
-/Gemfile.lock
 /.rbenv-gemsets
 /zinbeijett.iml
 .nvimlog
