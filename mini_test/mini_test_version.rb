@@ -7,7 +7,11 @@ require_relative File.join(File.dirname(__FILE__), '../lib/prop/version.rb')
 # Mini_test file load.
 class VersionTest < Minitest::Test
   def test_version
-    assert_equal EngineLeft::VERSION, '1.1.8'
+    @v1 = EngineLeft::VERSION
+    @v2 = '2.0.0'
+
+    refute_equal(@v1, @v2)
+    assert_operator(@v1, :<, @v2)
   end
 end
 
