@@ -57,25 +57,25 @@ Border = Struct.new(:timestamp, :minitest_load) do
   end
 end
 
+begin
 puts ''
 puts ' minitest file load '.center(80, '~')
 puts ''
-
 border = Border.new(' TimeStamp '.center(60, '-'), ' minitest file load '.center(60, '-'))
 border.stamp
-
 using MiniFileN
 MiniFilename.new.mini_find
-
 puts ''
 puts ' minitest file load '.center(80, '~')
 puts ''
 puts ' mini_test in filename list '.center(80, '~')
 puts ''
-
 using MiniFile
 MiniTestOne.new.mini_test
-
 puts ''
+
+rescue Exception => e
+  puts e.backtrace
+end
 
 __END__
