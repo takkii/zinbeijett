@@ -25,6 +25,7 @@ GEM
       ffi (>= 1.0.0)
       rake
     himekuri (0.1.7)
+    himekuri_ts (1.0.4)
     http (4.4.1)
       addressable (~> 2.3)
       http-cookie (~> 1.0)
@@ -146,6 +147,7 @@ DEPENDENCIES
   byebug
   feedjira
   himekuri
+  himekuri_ts
   httparty
   minitest
   minitest-reporters
