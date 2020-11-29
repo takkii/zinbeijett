@@ -59,12 +59,15 @@ end
 
 begin
 puts ''
-puts ' minitest file load '.center(80, '~')
+puts ' mini_test in filename list '.center(80, '~')
 puts ''
+puts ' minitest file load '.center(80, '~')
 border = Border.new(' TimeStamp '.center(60, '-'), ' minitest file load '.center(60, '-'))
 border.stamp
 using MiniFileN
 MiniFilename.new.mini_find
+puts ''
+puts ' minitest file load '.center(60, '-')
 puts ''
 puts ' minitest file load '.center(80, '~')
 puts ''
