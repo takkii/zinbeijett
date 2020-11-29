@@ -48,10 +48,8 @@ class Nyanco
     puts ' minitest file load '.center(80, '~')
     puts ''
     puts ' TimeStamp '.center(60, '-')
-    puts ''
-    Himekuri.new.cal
-    puts ''
-    puts '日めくり2、バージョン : ' + Himekuri2::VERSION
+    puts HimekuriTsBasicWeb.new.now_before
+    puts HimekuriTsBasicWeb.new.now_after
     puts ''
     puts ' TimeStamp '.center(60, '-')
     puts ''
