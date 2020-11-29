@@ -40,7 +40,7 @@ module MiniFileN
   end
 end
 
-# TimeStamp, use himekuri2.
+# TimeStamp, use himekuri_ts.
 class Nyanco
   def self.big
     # Console Output list.
