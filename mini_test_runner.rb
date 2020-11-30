@@ -48,8 +48,9 @@ class Nyanco
     puts ' minitest file load '.center(80, '~')
     puts ''
     puts ' TimeStamp '.center(60, '-')
-    puts HimekuriTsBasicWeb.new.now_before
-    puts HimekuriTsBasicWeb.new.now_after
+    puts HimekuriTsBasic.before
+    puts HimekuriTsBasic.after
+    HimekuriTsClass.version
     puts ''
     puts ' TimeStamp '.center(60, '-')
     puts ''
