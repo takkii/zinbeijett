@@ -15,100 +15,100 @@ module EngineLeft
   module_function
 
   def search_txt
-    require_relative 'all'
+    require 'all'
     All.search
   end
 
   def search_txi
-    require_relative 'and'
+    require 'and'
     And.search
   end
 
   def search_txe
-    require_relative 'not'
+    require 'not'
     Not.search
   end
 
   def search_txs
-    require_relative 'or'
+    require 'or'
     Or.search
   end
 
   def search_gc
-    require_relative 'gc'
+    require 'gc'
     Star.search
   end
 
   def search_druby_erb
-    require_relative 'druby_erb'
+    require 'druby_erb'
     Druby.new.main
   end
   
   def druby_server
-    require_relative 'druby_reci'
+    require 'druby_reci'
   end
 
   def search_mail
-    require_relative 'mail'
+    require 'mail'
     Mail.search
   end
 
   def count_search
-    require_relative 'count'
+    require 'count'
     Count.search
   end
 
   def calendar_view
-    require_relative 'calendar'
+    require 'calendar'
     Calendar.view
     puts ''
   end
 
   def auto_view
-    require_relative 'autocal'
+    require 'autocal'
     Auto.view
     puts ''
   end
 
   def hyaku_view
-    require_relative 'hyaku'
+    require 'hyaku'
     Hyaku.view
     puts ''
   end
 
   def mini_view
-    require_relative 'mini'
+    require 'mini'
     Mini.search
     puts ''
   end
 
   def match_view
-    require_relative 'match'
+    require 'match'
     Mat.search
     puts ''
   end
 
   def title_rss
-    require_relative 'title'
+    require 'title'
     Title.new.views
   end
 
   def feed_xml
-    require_relative 'feed'
+    require 'feed'
     puts ' Feed Start '.center(60, '-')
     Feed.new.jira
     puts ' Feed End '.center(60, '-')
   end
 
   def summa_xml
-      require_relative 'summa.rb'
+      require 'summa.rb'
       puts ' Summary Start '.center(60, '-')
       Feed.new.jira
       puts ' Summary end '.center(60, '-')
   end
   
   def version_info
-    require_relative 'version'
+    require 'version'
     puts '[ version ]'.center(60, '-')
     puts ''
     puts 'Engine VERSION : ' + EngineLeft::VERSION
@@ -117,42 +117,42 @@ module EngineLeft
   end
   
   def rice_keitaiso
-    require_relative 'rice'
+    require 'rice'
   end
   
   def suihan_wakati
-    require_relative 'suihan'
+    require 'suihan'
   end
   
   def kome_wakati
-    require_relative 'kome'
+    require 'kome'
   end
   
   def tubuyaki_jett
-    require_relative 'tubuyaki'
+    require 'tubuyaki'
   end
   
   def tubuyaki_log
-    require_relative 'tubuyaki_memo'
+    require 'tubuyaki_memo'
   end
   
   def match_log
-    require_relative 'all_log'
+    require 'all_log'
     Mat.search
     puts ''
   end
   
   def decript_snowcat
-    require_relative 'decript'
+    require 'decript'
     String_encrypt.new.use_case_hash
   end
   
   def tweet_cmd
-    require_relative 'tweet_cmd'
+    require 'tweet_cmd'
   end
   
   def saikoro_py
-    require_relative 'saikoro'
+    require 'saikoro'
     Dice.new.saiko
   end
 end
