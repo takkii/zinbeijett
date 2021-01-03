@@ -37,8 +37,17 @@ _GitHub: zinbeijett (latest)_
    ※ zinbeijett-○.○.○.gemはビルドされたバージョンを参照
    
    Ruby_VERSION
-   rbenv インストール 3.0.0 2.7.2 動作○
-   homeberw インストール 3.0.0 動作×
+   rbenv インストール 3.0.0 2.7.2 動作 ○
+   homebrew インストール 3.0.0 動作 ×
+   
+   rbenvのruby-3.0.0でpycallがgcc-10を見つけられず
+   no such file directoryを示すならば、
+   
+   cd /usr/local/Cellar/gcc
+   ln -s 10.2.0_1 10.2.0
+   
+   gem install pycall
+   シンボリックリンクを貼ると通るようになる
 ```
 
 _RubyGems: zinbeijett (Stable)_
