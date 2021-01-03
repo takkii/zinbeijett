@@ -33,8 +33,12 @@ _GitHub: zinbeijett (latest)_
 
    gem build zinbeijett.gemspec
 
-   gem install zinbeijett-1.1.7.gem
+   gem install zinbeijett-1.1.8.gem
    ※ zinbeijett-○.○.○.gemはビルドされたバージョンを参照
+   
+   Ruby_VERSION
+   rbenv インストール 3.0.0 2.7.2 動作○
+   homeberw インストール 3.0.0 動作×
 ```
 
 _RubyGems: zinbeijett (Stable)_
@@ -145,5 +149,5 @@ _License_
 ```markdown
 The zinbeijett is MIT License
 
-Copyright (c) 2013-2020 Takayuki Kamiyama
+Copyright (c) 2013-2021 Takayuki Kamiyama
 ```
