@@ -15,100 +15,100 @@ module EngineLeft
   module_function
 
   def search_txt
-    require_relative 'prop/all'
+    require_relative 'all'
     All.search
   end
 
   def search_txi
-    require_relative 'prop/and'
+    require_relative 'and'
     And.search
   end
 
   def search_txe
-    require_relative 'prop/not'
+    require_relative 'not'
     Not.search
   end
 
   def search_txs
-    require_relative 'prop/or'
+    require_relative 'or'
     Or.search
   end
 
   def search_gc
-    require_relative 'prop/gc'
+    require_relative 'gc'
     Star.search
   end
 
   def search_druby_erb
-    require_relative 'prop/druby_erb'
+    require_relative 'druby_erb'
     Druby.new.main
   end
   
   def druby_server
-    require_relative 'prop/druby_reci'
+    require_relative 'druby_reci'
   end
 
   def search_mail
-    require_relative 'prop/mail'
+    require_relative 'mail'
     Mail.search
   end
 
   def count_search
-    require_relative 'prop/count'
+    require_relative 'count'
     Count.search
   end
 
   def calendar_view
-    require_relative 'prop/calendar'
+    require_relative 'calendar'
     Calendar.view
     puts ''
   end
 
   def auto_view
-    require_relative 'prop/autocal'
+    require_relative 'autocal'
     Auto.view
     puts ''
   end
 
   def hyaku_view
-    require_relative 'prop/hyaku'
+    require_relative 'hyaku'
     Hyaku.view
     puts ''
   end
 
   def mini_view
-    require_relative 'prop/mini'
+    require_relative 'mini'
     Mini.search
     puts ''
   end
 
   def match_view
-    require_relative 'prop/match'
+    require_relative 'match'
     Mat.search
     puts ''
   end
 
   def title_rss
-    require_relative 'prop/title'
+    require_relative 'title'
     Title.new.views
   end
 
   def feed_xml
-    require_relative 'prop/feed'
+    require_relative 'feed'
     puts ' Feed Start '.center(60, '-')
     Feed.new.jira
     puts ' Feed End '.center(60, '-')
   end
 
   def summa_xml
-      require_relative 'prop/summa.rb'
+      require_relative 'summa.rb'
       puts ' Summary Start '.center(60, '-')
       Feed.new.jira
       puts ' Summary end '.center(60, '-')
   end
   
   def version_info
-    require_relative 'prop/version'
+    require_relative 'version'
     puts '[ version ]'.center(60, '-')
     puts ''
     puts 'Engine VERSION : ' + EngineLeft::VERSION
@@ -117,42 +117,42 @@ module EngineLeft
   end
   
   def rice_keitaiso
-    require_relative 'prop/rice'
+    require_relative 'rice'
   end
   
   def suihan_wakati
-    require_relative 'prop/suihan'
+    require_relative 'suihan'
   end
   
   def kome_wakati
-    require_relative 'prop/kome'
+    require_relative 'kome'
   end
   
   def tubuyaki_jett
-    require_relative 'prop/tubuyaki'
+    require_relative 'tubuyaki'
   end
   
   def tubuyaki_log
-    require_relative 'prop/tubuyaki_memo'
+    require_relative 'tubuyaki_memo'
   end
   
   def match_log
-    require_relative 'prop/all_log'
+    require_relative 'all_log'
     Mat.search
     puts ''
   end
   
   def decript_snowcat
-    require_relative 'prop/decript'
+    require_relative 'decript'
     String_encrypt.new.use_case_hash
   end
   
   def tweet_cmd
-    require_relative 'prop/tweet_cmd'
+    require_relative 'tweet_cmd'
   end
   
   def saikoro_py
-    require_relative 'prop/saikoro'
+    require_relative 'saikoro'
     Dice.new.saiko
   end
 end
