@@ -35,6 +35,9 @@ _GitHub: zinbeijett (latest)_
 
    gem install zinbeijett-1.1.7.gem
    ※ zinbeijett-○.○.○.gemはビルドされたバージョンを参照
+    
+   Ruby_Version
+   ※ 2.7.2をお使いください、3.0.0は未対応です。
 ```
 
 _RubyGems: zinbeijett (Stable)_
