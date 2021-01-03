@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-puts ''
-
 Encoding.default_external = 'UTF-8'
 Encoding.default_internal = 'UTF-8'
 
@@ -17,12 +15,10 @@ module All
         str = str2.chomp!
         twice = ARGV[2]
         three_act = /#{twice}/o
+        ext = 'else文には到達しないはずです!'
 
         begin
-          if str =~ three_act
-            printf('%2d : %s', f.lineno, str)
-            puts ''
-          end
+          str =~ three_act ? printf("%2d : %s\n", f.lineno, str) : ext
         rescue Timeout::Error
           exit!
         end
