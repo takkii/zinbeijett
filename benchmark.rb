@@ -3,9 +3,10 @@
 require 'kconv'
 require 'benchmark'
 require 'tanraku'
+require 'version'
 
-require_relative File.join(File.dirname(__FILE__), '../lib/version.rb')
-require_relative File.join(File.dirname(__FILE__), '../lib/gc.rb')
+lib = File.expand_path('lib', __dir__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Encoding.default_internal = 'UTF-8'
 
@@ -65,14 +66,6 @@ Benchmark.bm 10 do |result|
   result.report 'sort02' do
     array = ['Ruby', 'Java', 'Go', 'Hive', 'Perl', 'C#']
     print array.sort
-  end
-
-  result.report 'gc' do
-    Star.search
-  end
-
-  result.report 'druby_erb' do
-    require_relative File.join(File.dirname(__FILE__), '/lib/prop/druby_erb.rb')
   end
 end
 
