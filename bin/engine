@@ -248,6 +248,10 @@ rescue Exception => e
 	#puts e.backtrace
 end
 
+begin
+require 'druby_reci'
+rescue Exception => e
+end
 
 GC.start
 
