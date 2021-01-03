@@ -1,6 +1,11 @@
-﻿# frozen_string_literal: true
+# frozen_string_literal: true
 
-require './req/require_bench.rb'
+require 'kconv'
+require 'benchmark'
+require 'tanraku'
+
+require_relative File.join(File.dirname(__FILE__), '../lib/version.rb')
+require_relative File.join(File.dirname(__FILE__), '../lib/gc.rb')
 
 Encoding.default_internal = 'UTF-8'
 

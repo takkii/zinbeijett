@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
-require '../req/require_druby'
+require 'date'
+require 'drb/drb'
+require 'erb'
 
 class Puts
  def initialize(stream=$stdout)

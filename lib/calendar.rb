@@ -1,4 +1,6 @@
-require '../req/require_calendar'
+require 'date'
+require 'pycall/import'
+include PyCall::Import
 
 module Calendar
   module_function

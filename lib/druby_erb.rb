@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
-require '../req/require_druby'
+require 'date'
+require 'drb/drb'
+require 'erb'
 
 Encoding.default_internal = 'UTF-8'
 Encoding.default_external = 'UTF-8'
