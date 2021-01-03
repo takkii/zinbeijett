@@ -8,15 +8,12 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Encoding.default_internal = 'UTF-8'
 
-#begin
+begin
 require 'zinbeijett'
-#require 'prop/druby_reci'
-#rescue Exception => e
+require 'prop/druby_reci'
+rescue Exception => e
 	# puts e.backtrace
-#end
-
-
-
+end
 
 GC.stress = true
 
