@@ -7,3 +7,5 @@ The zinbeijett is MIT License
 
 Copyright (c) 2013-2021 Takayuki Kamiyama
 ```
+
+Please readme, how to use [zinbeijett wiki.](https://github.com/takkii/zinbeijett/wiki)
