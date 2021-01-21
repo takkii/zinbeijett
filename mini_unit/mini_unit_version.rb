@@ -2,13 +2,13 @@
 
 require 'minitest/autorun'
 require 'minitest/unit'
-require File.join(File.dirname(__FILE__), '../lib/prop/version.rb') # !> setting Encoding.default_internal
+require File.join(File.dirname(__FILE__), '../lib/version.rb')
 
 # Unit-test file load.
 class MiniUnitVersion < Minitest::Test
   def setup
     @versions = EngineLeft::VERSION
-    @version = '1.1.8'
+    @version = '1.1.9'
   end
 
   def test_new
