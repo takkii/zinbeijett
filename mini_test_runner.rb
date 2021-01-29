@@ -9,7 +9,7 @@ Encoding.default_external = 'UTF-8'
 # SubClass test function.
 class MiniTestOne
   def mini_test
-    Dir[File.dirname(__FILE__) + '/mini_test/*.rb'].sort.select do |file|
+    Dir["#{File.dirname(__FILE__)} /mini_test/*.rb"].sort.select do |file|
       require file
     end
   end
@@ -75,7 +75,7 @@ begin
   using MiniFile
   MiniTestOne.new.mini_test
   puts ''
-rescue Exception => e
+rescue StandardError => e
   puts e.backtrace
 end
 
