@@ -78,6 +78,8 @@ begin
   puts ''
 rescue StandardError => e
   puts e.backtrace
+ensure
+  GC.start
 end
 
 __END__
