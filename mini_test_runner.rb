@@ -10,7 +10,7 @@ Encoding.default_external = 'UTF-8'
 class MiniTestOne
   def mini_test
     dir_minitest = Dir["#{File.dirname(__FILE__)}/mini_test/*.rb"]
-    dir_minitest.sort.select do |file|
+    dir_minitest.sort.filter do |file|
       require file
     end
   end
