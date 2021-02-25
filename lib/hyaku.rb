@@ -15,7 +15,7 @@ module Hyaku
   module_function
 
   def view
-    one = ('./txt/hyakunin.txt')
+    one = File.dirname(__FILE__) + '/txt/hyakunin.txt'
 
     open(one) do |f|
       while (str2 = f.gets)
