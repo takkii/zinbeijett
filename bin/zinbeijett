@@ -209,10 +209,10 @@ module Zinbeijett
     rice is keitaiso analyse
 
     $ engine -x notojima.txt
-    suihan is wakati writer.
-    
-    $ engine -y notojima.txt
     kome is wakati writer and wordcount.
+        
+    $ engine -y notojima.txt
+    suihan is wakati writer.
 
     $ engine -z notojima.txt wajima
     Full-text search.
