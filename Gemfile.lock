@@ -44,7 +44,7 @@ GEM
       rexml
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
-    loofah (2.9.0)
+    loofah (2.9.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     memoizable (0.4.2)
@@ -63,13 +63,13 @@ GEM
     multi_xml (0.6.0)
     multipart-post (2.1.1)
     naught (1.1.0)
-    nokogiri (1.11.2)
+    nokogiri (1.11.3)
       mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
-    nokogiri (1.11.2-x86_64-darwin)
+    nokogiri (1.11.3-x86_64-darwin)
       racc (~> 1.4)
     parallel (1.20.1)
-    parser (3.0.0.0)
+    parser (3.0.1.0)
       ast (~> 2.4.1)
     pry (0.14.0)
       coderay (~> 1.1)
@@ -82,7 +82,7 @@ GEM
     regexp_parser (2.1.1)
     reverse_markdown (2.0.0)
       nokogiri
-    rexml (3.2.4)
+    rexml (3.2.5)
     rspec (3.10.0)
       rspec-core (~> 3.10.0)
       rspec-expectations (~> 3.10.0)
@@ -96,7 +96,7 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.10.0)
     rspec-support (3.10.2)
-    rubocop (1.12.0)
+    rubocop (1.12.1)
       parallel (~> 1.10)
       parser (>= 3.0.0.0)
       rainbow (>= 2.2.2, < 4.0)
@@ -165,4 +165,4 @@ DEPENDENCIES
   twitter
 
 BUNDLED WITH
-   2.2.3
+   2.2.15

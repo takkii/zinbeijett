@@ -3,6 +3,8 @@
 
 # vim: filetype=ruby
 
+require 'readline'
+
 lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
@@ -89,13 +91,19 @@ begin
 
   rss = %w[reader].map!(&:freeze).freeze
 
+  WORDS = (str + once + lucky + dark + denki + rss).map!(&:freeze).freeze
+
+  Readline.completion_proc = proc {|word|
+    WORDS.grep(/\A#{Regexp.quote word}/)
+  }
+
   print '>'
 
   # search words exit!
 
   # Wainting Action code!
 
-  while (line = ARGF.gets)
+  while (line = Readline.readline(""))
 
     line.chomp!
 
