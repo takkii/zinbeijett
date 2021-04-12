@@ -8,7 +8,7 @@ require File.join(File.dirname(__FILE__), '../lib/version.rb')
 class MiniUnitVersion < Minitest::Test
   def setup
     @versions = EngineLeft::VERSION
-    @version = '1.1.9.1'
+    @version = '1.2.0'
   end
 
   def test_new
