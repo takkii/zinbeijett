@@ -89,13 +89,19 @@ begin
 
   rss = %w[reader].map!(&:freeze).freeze
 
+  WORDS = (str + once + lucky + dark + denki + rss).map!(&:freeze).freeze
+
+  Readline.completion_proc = proc {|word|
+    WORDS.grep(/\A#{Regexp.quote word}/)
+  }
+
   print '>'
 
   # search words exit!
 
   # Wainting Action code!
 
-  while (line = ARGF.gets)
+  while (line = Readline.readline(""))
 
     line.chomp!
 
