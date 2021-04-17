@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "#{File.dirname(__FILE__)}" + '/req/minitest'
+require "#{File.dirname(__FILE__)}/req/minitest"
 
 # Encoding Setting.
 Encoding.default_internal = 'UTF-8'
