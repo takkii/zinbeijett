@@ -508,3 +508,7 @@ Style/TrailingCommaInArrayLiteral:
 # URISchemes: http, https
 Layout/LineLength:
   Max: 229
+
+# windows lf
+Style/EndOfLine: 
+  EnforcedStyle: lf
