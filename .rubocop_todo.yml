@@ -510,5 +510,5 @@ Layout/LineLength:
   Max: 229
 
 # windows lf
-Style/EndOfLine: 
+Style/EndOfLine:
   EnforcedStyle: lf
