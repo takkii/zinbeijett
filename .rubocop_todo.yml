@@ -123,6 +123,7 @@ Layout/EndOfLine:
     - "req/require_druby.rb"
     - "req/require_mail.rb"
     - "req/require_zinbeij.rb"
+  EnforcedStyle: lf
 
 # Offense count: 1
 # Cop supports --auto-correct.
@@ -509,6 +510,3 @@ Style/TrailingCommaInArrayLiteral:
 Layout/LineLength:
   Max: 229
 
-# windows lf
-Layout/EndOfLine:
-  EnforcedStyle: lf
