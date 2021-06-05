@@ -6,7 +6,7 @@ source 'https://rubygems.org'
 
 gem 'bundler'
 gem 'byebug'
-gem 'himekuri2'
+gem 'himekuri_ts'
 gem 'minitest'
 gem 'minitest-reporters'
 gem 'pry'

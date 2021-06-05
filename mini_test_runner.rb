@@ -49,7 +49,7 @@ class Nyanco
     puts ''
     puts ' TimeStamp '.center(60, '-')
     puts ''
-    Himekuri.new.cal
+    puts HimekuriTsBasic.running
     puts ''
     puts ' TimeStamp '.center(60, '-')
     puts ''
