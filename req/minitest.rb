@@ -5,5 +5,5 @@ require 'minitest'
 require 'minitest/autorun'
 require 'minitest/unit'
 require 'minitest/reporters'
-require 'himekuri2'
+require 'himekurits'
 # --------------------------------------
