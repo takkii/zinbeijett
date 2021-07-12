@@ -17,8 +17,14 @@ end
 
 # SubClass current directory
 class MiniFilename
-  def mini_find
-    puts Dir.glob("#{File.dirname(__FILE__)}/mini_test/*.rb")
+  attr_reader :find
+
+  def initialize
+    @find = Dir.glob("#{File.dirname(__FILE__)}/mini_test/*.rb")
+  end
+
+  def remove
+    remove_instance_variable(:@find)
   end
 end
 
@@ -63,7 +69,7 @@ begin
   puts ' mini_test in filename list '.center(80, '~')
   Nyanco.big
   using MiniFileN
-  MiniFilename.new.mini_find
+  puts MiniFilename.new.remove
   puts ''
   puts ' minitest file load '.center(80, '~')
   puts ''
