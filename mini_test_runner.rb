@@ -58,6 +58,7 @@ class Nyanco
   end
 end
 
+# About Exception, rescue and ensure.
 begin
   puts ' mini_test in filename list '.center(80, '~')
   Nyanco.big
