@@ -48,26 +48,32 @@ end
 
 # TimeStamp, use himekuri2.
 class Nyanco
-  def self.big
+  attr_reader :himekurits
+
+  def initialize
     # Console Output list.
     puts ''
     puts ' minitest file load '.center(80, '~')
     puts ''
     puts ' TimeStamp '.center(60, '-')
     puts ''
-    puts HimekuriTsBasic.running
+    @himekurits = puts HimekuriTsBasic.running
     puts ''
     puts ' TimeStamp '.center(60, '-')
     puts ''
     puts ' minitest file load '.center(80, '~')
     puts ''
   end
+
+  def remove
+    remove_instance_variable(:@himekurits)
+  end
 end
 
 # About Exception, rescue and ensure.
 begin
   puts ' mini_test in filename list '.center(80, '~')
-  Nyanco.big
+  Nyanco.new.remove
   using MiniFileN
   puts MiniFilename.new.remove
   puts ''
