@@ -233,26 +233,22 @@ end
 
 include Zinbeijett
 
-v = /\Aversion\z/
-ve = /\A-v\z/
-h = /\A-l\z/
-he = /\Alicense\z/
-s = /\Astart\z/
-so = /\A-s\z/
-co = /\A-h\z/
-com = /\Ahelp\z/
+v = /\Aversion|\A-v\z/
+h = /\Alicense|\A-l\z/
+s = /\Astart|\A-s\z/
+c = /\Ahelp|\A-h\z/
 
 one = ARGV[0]
 
 if one.nil?
   soft
-elsif one.match?(v, ve)
+elsif one.match?(v)
   version
-elsif one.match?(h, he)
+elsif one.match?(h)
   licen
-elsif one.match?(s, so)
+elsif one.match?(s)
   start
-elsif one.match?(co, com)
+elsif one.match?(c)
   help
 else
   puts 'Please choose an option.'
