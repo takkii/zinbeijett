@@ -17,7 +17,8 @@ module Zinbeijett
   def version
     puts '[ version ]'.center(60, '-')
     puts ''
-    puts 'Zinbeijett VERSION : ' + EngineLeft::VERSION
+    print 'Zinbeijett VERSION : '
+    puts EngineLeft::VERSION
     puts ''
     puts '[ version ]'.center(60, '-')
   end
@@ -99,7 +100,7 @@ module Zinbeijett
     puts 'Command'.center(60, '-')
 
     puts <<-HELP
-    
+
     [tweet]
     engine -l → tweet
     Twitter_tubuyaki tools.
@@ -107,11 +108,11 @@ module Zinbeijett
     [speak]
 
     Now version is zinbeiw (= 1.4.3.1) clone.
-    
+
     Plus amaoto function.
 
     [zinbeijett]
-    
+
     zinbeijett [ option ]
 
     -s,start           Start page!
@@ -169,11 +170,11 @@ module Zinbeijett
     Display GitHub Active for atom.
     Display visualstudio magazine blogs for aspx.
 
-    ※ Diplay title only.    
+    ※ Diplay title only.
 
     $ engine -k notojima.txt wajima
     match method all search, log/output.txt write.
-    
+
     $ engine -l
     Use Pycall, Roll the dice.
 
@@ -188,10 +189,10 @@ module Zinbeijett
 
     $ engine -p notojima.txt wajima
     line number : Applicable number, outputs.
-    
+
     $ engine -q string1 string2
     ruby convert encript use openssl.
-    sha cript use case password. 
+    sha cript use case password.
 
     $ engine -r https://takkii.hatenablog.com/rss
     Display Title, from Hatena Blog for takkii.
@@ -201,16 +202,16 @@ module Zinbeijett
 
     $ engine -t notojima.txt wajima
     match method search. ( = all search )
-    
+
     $ engine -u
     Twitter User, Tweet TIMELINE list output.
-    
+
     $ engine -w notojima.txt
     rice is keitaiso analyse
 
     $ engine -x notojima.txt
     kome is wakati writer and wordcount.
-        
+
     $ engine -y notojima.txt
     suihan is wakati writer.
 
@@ -225,40 +226,33 @@ module Zinbeijett
 
   def soft
     puts RUBY_DESCRIPTION
-    puts 'On Zinbeijett Engine VERSION : ' + EngineLeft::VERSION
+    print 'On Zinbeijett Engine VERSION : '
+    puts EngineLeft::VERSION
   end
 end
 
 include Zinbeijett
 
 v = /\Aversion\z/
-ve = /\A[-][v]\z/
-h = /\A[-][l]\z/
+ve = /\A-v\z/
+h = /\A-l\z/
 he = /\Alicense\z/
 s = /\Astart\z/
-so = /\A[-][s]\z/
-co = /\A[-][h]\z/
+so = /\A-s\z/
+co = /\A-h\z/
 com = /\Ahelp\z/
 
 one = ARGV[0]
 
 if one.nil?
   soft
-elsif one.match?(v)
+elsif one.match?(v, ve)
   version
-elsif one.match?(ve)
-  version
-elsif one.match?(he)
+elsif one.match?(h, he)
   licen
-elsif one.match?(h)
-  licen
-elsif one.match?(s)
+elsif one.match?(s, so)
   start
-elsif one.match?(so)
-  start
-elsif one.match?(co)
-  help
-elsif one.match?(com)
+elsif one.match?(co, com)
   help
 else
   puts 'Please choose an option.'
