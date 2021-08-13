@@ -20,12 +20,11 @@ GEM
     feedjira (3.2.0)
       loofah (>= 2.3.1)
       sax-machine (>= 1.0)
-    ffi (1.15.3)
     ffi (1.15.3-x64-mingw32)
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
       rake
-    himekuri2 (0.0.3)
+    himekuri_ts (1.0.8.1)
     http (4.4.1)
       addressable (~> 2.3)
       http-cookie (~> 1.0)
@@ -54,7 +53,6 @@ GEM
     mime-types (3.3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2021.0704)
-    mini_portile2 (2.6.1)
     minitest (5.14.4)
     minitest-reporters (1.4.3)
       ansi
@@ -64,12 +62,7 @@ GEM
     multi_xml (0.6.0)
     multipart-post (2.1.1)
     naught (1.1.0)
-    nokogiri (1.12.3)
-      mini_portile2 (~> 2.6.1)
-      racc (~> 1.4)
     nokogiri (1.12.3-x64-mingw32)
-      racc (~> 1.4)
-    nokogiri (1.12.3-x86_64-darwin)
       racc (~> 1.4)
     parallel (1.20.1)
     parser (3.0.2.0)
@@ -157,7 +150,7 @@ DEPENDENCIES
   bundler
   byebug
   feedjira
-  himekuri2
+  himekuri_ts
   httparty
   minitest
   minitest-reporters
