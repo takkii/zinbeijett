@@ -7,22 +7,23 @@ require File.join(File.dirname(__FILE__), '../lib/version.rb')
 # Unit-test file load.
 class MiniUnitVersion < Minitest::Test
   def setup
-    @versions = EngineLeft::VERSION
-    @version = '1.2.0'
+    @standard_versions = EngineLeft::VERSION
+    @next_version = '2.0.0'
   end
 
   def test_new
-    assert_equal @version, @versions
+    refute_equal(@standard_versions, @next_version)
+    assert_operator(@standard_versions, :<, @next_version)
   end
 
   def test_version_should_be_string
-    assert_kind_of String, @version
-    assert_instance_of String, @version
+    assert_kind_of String, @standard_versions
+    assert_instance_of String, @next_version
   end
 
   def test_version_should_be_string2
-    assert_kind_of String, @versions
-    assert_instance_of String, @versions
+    assert_kind_of String, @standard_versions
+    assert_instance_of String, @next_version
   end
 
   def test_nil_variable
