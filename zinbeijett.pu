@@ -1,6 +1,8 @@
 @startuml zinbeijett
 
 zinbeijett <--> engine
+zinbeijett <--> speak
+zinbeijett <--> tweet
 
 zinbeijett : ライセンス情報
 zinbeijett : ヘルプ情報
@@ -21,5 +23,11 @@ engine : タイトル表示(feedjira)
 engine : サマリー表示(feedjira)
 engine : カレンダー(指定した暦)(Pycall)
 engine : カレンダー(今の暦)(Pycall)
+
+speak : 対話的プログラム(zinbeiwから機能移植)
+speak : 対話的プログラム(Tabで入力補完追加)
+
+tweet : Twitter登録ユーザ(つぶやき機能)
+tweet : Twitter登録ユーザ(情報表示)
 
 @enduml
