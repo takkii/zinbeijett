@@ -8,10 +8,14 @@ Encoding.default_external = 'UTF-8'
 
 # SubClass test function.
 class MiniTestOne
-  def mini_test
-    Dir["#{File.dirname(__FILE__)}/mini_test/*.rb"].sort.filter do |file|
-      require file
-    end
+  attr_reader :test_find
+
+  def initialize
+    @test_find = Dir["#{File.dirname(__FILE__)}/mini_test/*.rb"].sort.filter { |file| require file }
+  end
+
+  def remove
+    remove_instance_variable(:@test_find)
   end
 end
 
