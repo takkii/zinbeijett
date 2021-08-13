@@ -76,6 +76,7 @@ end
 
 # About Exception, rescue and ensure.
 begin
+  puts ''
   puts ' mini_test in filename list '.center(80, '~')
   Nyanco.new.remove
   using MiniFileN
@@ -86,7 +87,7 @@ begin
   puts ' mini_test in filename list '.center(80, '~')
   puts ''
   using MiniFile
-  MiniTestOne.new.mini_test
+  MiniTestOne.new.remove
   puts ''
 rescue StandardError => e
   puts e.backtrace
