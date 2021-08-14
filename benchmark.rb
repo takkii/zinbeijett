@@ -72,5 +72,5 @@ end
 puts ''
 puts ' mini_test assert Benchmark '.center(60, '-').toutf8
 puts ''
-puts RUBY_DESCRIPTION.tanraku
+puts RUBY_DESCRIPTION.tanraku_exit
 puts ''
