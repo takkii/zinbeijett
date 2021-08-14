@@ -30,7 +30,7 @@ Benchmark.bm 10 do |result|
   end
 
   result.report 'match2' do
-    puts 'abc'.match(/[a]/)
+    puts 'abc'.match(/a/)
     puts ''
   end
 
