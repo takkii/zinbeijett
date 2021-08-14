@@ -97,7 +97,7 @@ begin
     WORDS.grep(/\A#{Regexp.quote word}/)
   }
 
-  print '>'
+  print '> '
 
   # search words exit!
 
@@ -113,12 +113,12 @@ begin
         y
       end
       puts '華氏を入力してください!'
-        .print '>'
+        .print '> '
       f = gets.to_i
       m = seru(f)
       puts "摂氏は、#{m.round}です。"
 
-      print '>'
+      print '> '
 
     elsif line.match?(str[1])
       def seru(b)
@@ -126,12 +126,12 @@ begin
         y
       end
       puts '摂氏を入力してください！'
-      print '>'
+      print '> '
       f = gets.to_i
       m = seru(f)
       puts "華氏は、#{m.round}です。"
 
-      print '>'
+      print '> '
 
     elsif line.match?(str[2])
       exit!
@@ -160,7 +160,7 @@ begin
       puts ''
       puts '※当たるも八卦、当たらぬも八卦。勝負は時の運です。'
 
-      print '>'
+      print '> '
 
     elsif line.match?(lucky[1])
       puts 'ナンバーズで参考にする数字をランダムで表示します！'
@@ -180,7 +180,7 @@ begin
       puts ''
       puts '※当たるも八卦、当たらぬも八卦。勝負は時の運です。'
 
-      print '>'
+      print '> '
 
     elsif line.match?(lucky[2])
       puts '今日の運勢を占ってみましょう。'
@@ -210,21 +210,21 @@ begin
       else
         puts '数字があふれています！注意！'
       end
-      print '>'
+      print '> '
 
     elsif line.match?(dark[0])
 
       begin
         puts '
         ワンライナー、１行コードの館へようこそ。さぁ、はじめましょう！'
-        print '>'
+        print '> '
         re = gets.chomp
         puts ''
         eval(re)
         puts ''
       rescue StandardError => et
         p et
-        print '>'
+        print '> '
         puts 'エラーです。文字列を確認してください！'
         puts ''
         retry
@@ -232,7 +232,7 @@ begin
         puts '終了は exit を入力してください！'
       end
 
-      print '>'
+      print '> '
 
     elsif line.match?(denki[0])
 
@@ -244,12 +244,12 @@ begin
       puts
       puts '抵抗を入力してください'
 
-      print '>'
+      print '> '
       f = gets.to_i
 
       puts
       puts '電圧を入力してください'
-      print '>'
+      print '> '
 
       g = gets.to_i
 
@@ -258,7 +258,7 @@ begin
       puts
       puts "電流は#{m.round}です。"
 
-      print '>'
+      print '> '
 
     elsif line.match?(denki[1])
 
@@ -269,13 +269,13 @@ begin
 
       puts
       puts '抵抗を入力してください'
-      print '>'
+      print '> '
 
       h = gets.to_i
       puts
       puts '電流を入力してください'
 
-      print '>'
+      print '> '
       i = gets.to_i
 
       j = volt(h, i)
@@ -283,7 +283,7 @@ begin
       puts
       puts "電圧は#{j.round}です。"
 
-      print '>'
+      print '> '
 
     elsif line.match?(denki[2])
 
@@ -294,13 +294,13 @@ begin
 
       puts
       puts '電流を入力してください'
-      print '>'
+      print '> '
 
       l = gets.to_i
       puts
       puts '電圧を入力してください'
 
-      print '>'
+      print '> '
       k = gets.to_i
 
       q = rister(k, l)
@@ -308,7 +308,7 @@ begin
       puts
       puts "抵抗は#{q.round}です。"
 
-      print '>'
+      print '> '
 
       # It is a help document of zinbeic.
 
@@ -361,7 +361,7 @@ reader      RSSの取得先からタイトル表示 (雨音から移植)
 
       puts 'COMMAND'.center(60, '-')
 
-      print '>'
+      print '> '
 
       # It is a help document of zinbeic exit!
 
@@ -414,7 +414,7 @@ reader      RSSの取得先からタイトル表示 (雨音から移植)
       ensure
         puts '終了は exit を入力してください！'
       end
-      print '>'
+      print '> '
 
     elsif line.match?(once[1])
 
@@ -446,7 +446,7 @@ reader      RSSの取得先からタイトル表示 (雨音から移植)
       ensure
         puts '終了は exit を入力してください！'
       end
-      print '>'
+      print '> '
 
     elsif line.match?(once[2])
 
@@ -478,7 +478,7 @@ reader      RSSの取得先からタイトル表示 (雨音から移植)
       ensure
         puts '終了は exit を入力してください！'
       end
-      print '>'
+      print '> '
     elsif line.match?(once[3])
 
       begin
@@ -520,7 +520,7 @@ reader      RSSの取得先からタイトル表示 (雨音から移植)
         puts '終了は exit を入力してください！'
       end
 
-      print '>'
+      print '> '
     elsif line.match?(once[4])
 
       begin
@@ -552,7 +552,7 @@ reader      RSSの取得先からタイトル表示 (雨音から移植)
         puts '終了は exit を入力してください！'
       end
 
-      print '>'
+      print '> '
     elsif line.match?(once[5])
 
       begin
@@ -610,7 +610,7 @@ reader      RSSの取得先からタイトル表示 (雨音から移植)
         puts '終了は exit を入力してください！'
       end
 
-      print '>'
+      print '> '
 
     elsif line.match?(once[6])
 
@@ -619,22 +619,22 @@ reader      RSSの取得先からタイトル表示 (雨音から移植)
       numb += 1
 
       puts '何回まで、NumberGameで繰り返すか指定してください'
-      print '>'
+      print '> '
       num = gets.chomp.to_i
       puts "#{num}回、繰り返すまでに当ててください"
       puts
       puts '1~100までの数字をいれてくださいNumberGameスタート！'
-      print '>'
+      print '> '
 
       num.times do |z|
         i_num = gets.chomp.to_i
         if i_num < z
           puts 'コンピュータの選んだ数字の方が大きいため大きい数字を入力してください'
-          print '>'
+          print '> '
           numb += 1
         elsif i_num > z
           puts 'コンピュータの選んだ数字の方が小さいため小さい数字を入力してください'
-          print '>'
+          print '> '
           numb += 1
         else i_num == x
              puts
@@ -658,14 +658,14 @@ reader      RSSの取得先からタイトル表示 (雨音から移植)
       end
 
       puts 'お疲れさまでした。'
-      print '>'
+      print '> '
     elsif line.match?(once[7])
       puts
 
       class Enco
         begin
           puts '文字列を入力してください'
-          print '>'
+          print '> '
           filename = gets.chomp
         rescue StandardError => ee
           p ee
@@ -675,14 +675,14 @@ reader      RSSの取得先からタイトル表示 (雨音から移植)
         puts ''
         puts '変更前のエンコードを指定してください'
         puts 'ISO-2022-JP,SJIS,eucJP,UTF-8　が候補です。'
-        print '>'
+        print '> '
         befenco = gets.chomp
 
         begin
           puts ''
           puts 'エンコードを指定してください'
           puts 'ISO-2022-JP,SJIS,eucJP,UTF-8　が候補です。'
-          print '>'
+          print '> '
           aftenco = gets.chomp
           puts
         rescue StandardError => ed
@@ -699,37 +699,41 @@ reader      RSSの取得先からタイトル表示 (雨音から移植)
         puts '終了は exit を入力してください！'
         puts
       end
-      print '>'
+      print '> '
     elsif line.match?(dark[1])
       begin
         puts 'eval族の館へようこそ！
 簡単な文字列を評価してください'
-        print '>'
+        print '> '
         re = gets.chomp
         puts ''
         p eval(re)
         puts ''
       rescue StandardError => et
         p et
-        print '>'
+        print '> '
         puts 'エラーです。文字列を確認してください！'
         puts ''
         retry
       ensure
         puts '終了は exit を入力してください！'
       end
-      print '>'
+      print '> '
 
     elsif line.match?(once[8])
       puts ''
-      puts '日付の曜日をtrue,falseで判定します'
+      puts 'WEEK'.center(60, '-')
+      puts ''
+      puts '入力した日付を曜日で判定します'
       puts '半角数字で入力してください'
       puts 'それでは、スタート！'
+      puts ''
+      puts 'WEEK'.center(60, '-')
       puts ''
 
       begin
         puts '調べたい年を入力してください'
-        print '>'
+        print '> '
         nen = gets.chomp.to_i
       rescue StandardError => ee
         p ee
@@ -740,7 +744,7 @@ reader      RSSの取得先からタイトル表示 (雨音から移植)
 
       begin
         puts '調べたい月を入力してください'
-        print '>'
+        print '> '
         mon = gets.chomp.to_i
       rescue StandardError => ey
         p ey
@@ -751,7 +755,7 @@ reader      RSSの取得先からタイトル表示 (雨音から移植)
 
       begin
         puts '調べたい日を入力してください'
-        print '>'
+        print '> '
         days = gets.chomp.to_i
       rescue StandardError => ex
         p ex
@@ -762,24 +766,34 @@ reader      RSSの取得先からタイトル表示 (雨音から移植)
 
       t = Time.local(nen, mon, days)
 
-      print '日曜日ですか？：'
-      puts  t.sunday?
-      print '月曜日ですか？：'
-      puts t.monday?
-      print '火曜日ですか？：'
-      puts  t.tuesday?
-      print '水曜日ですか？：'
-      puts  t.wednesday?
-      print '木曜日ですか？：'
-      puts  t.thursday?
-      print '金曜日ですか？：'
-      puts  t.friday?
-      print '土曜日ですか？：'
-      puts t.saturday?
+      if t.sunday?
+        puts "#{nen}年#{mon}月#{days}日は、日曜日です。"
+        puts ''
+      elsif t.monday?
+        puts "#{nen}年#{mon}月#{days}日は、月曜日です。"
+        puts ''
+      elsif t.tuesday?
+        puts "#{nen}年#{mon}月#{days}日は、火曜日です。"
+        puts ''
+      elsif t.wednesday?
+        puts "#{nen}年#{mon}月#{days}日は、水曜日です。"
+        puts ''
+      elsif  t.thursday?
+        puts "#{nen}年#{mon}月#{days}日は、木曜日です。"
+        puts ''
+      elsif t.friday?
+        puts "#{nen}年#{mon}月#{days}日は、金曜日です。"
+        puts ''
+      elsif t.saturday?
+        puts "#{nen}年#{mon}月#{days}日は、土曜日です。"
+        puts ''
+      else
+        puts 'ありえない曜日を指しています...終了します! '
+        exit!
+      end
 
-      puts
+      print '> '
 
-      print '>'
       # The command which can be called is only once.
 
       elsif line.match?(rss[0])
@@ -789,7 +803,7 @@ reader      RSSの取得先からタイトル表示 (雨音から移植)
 
       begin
         puts '調べたいRSSのURLを入力してください'
-        print '>'
+        print '> '
         URL = gets.chomp
       rescue StandardError => eq
         p eq
@@ -805,11 +819,11 @@ reader      RSSの取得先からタイトル表示 (雨音から移植)
       end
 
       puts ''
-      print '>'
+      print '> '
 
     else
       puts "Can't Enter this Words. Please input help"
-      print '>'
+      print '> '
     end
   end
 # Wainting Action Code exit!
@@ -819,7 +833,7 @@ rescue StandardError => ex
   p ex
   puts 'エラーです。文字列を確認してください！'
   retry
-  print '>'
+  print '> '
 
 # Ruby ensure is Java Exception of finally.
 ensure
