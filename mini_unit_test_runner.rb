@@ -18,7 +18,7 @@ end
 # SubClass current directory
 class MiniFilename
   def mini_find
-    puts Dir.glob("#{File.dirname(__FILE__) + '/mini_unit/*.rb'}")
+    puts Dir.glob("#{File.dirname(__FILE__)}/mini_unit/*.rb")
   end
 end
 
