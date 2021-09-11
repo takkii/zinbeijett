@@ -11,12 +11,14 @@
   var index_rel_prefix = "./";
 </script>
 
-<script src="./js/jquery.js"></script>
-<script src="./js/darkfish.js"></script>
+<script src="./js/navigation.js" defer></script>
+<script src="./js/search.js" defer></script>
+<script src="./js/search_index.js" defer></script>
+<script src="./js/searcher.js" defer></script>
+<script src="./js/darkfish.js" defer></script>
 
 <link href="./css/fonts.css" rel="stylesheet">
 <link href="./css/rdoc.css" rel="stylesheet">
-
 
 
 <body id="top" role="document" class="file">
@@ -52,39 +54,20 @@
   </div>
 
   
-<div class="nav-section">
-  <h3>Table of Contents</h3>
-
-  <ul class="link-list" role="directory">
-    <li><a href="#label-GitHub+zinbeijett+repo+developments+Start+before-2C">GitHub zinbeijett repo developments Start before,</a>
-    <li><a href="#label-use+refinements+method.">use refinements method.</a>
-    <li><a href="#label-however+1.0.6.6+-E3-80-9C"><strong>however 1.0.6.6 〜</strong></a>
-    <li><a href="#label-RubyGems-3A+Zinbeijett">RubyGems: Zinbeijett</a>
-    <li><a href="#label-zinbeijett+or+engine.+Please+use+option.">zinbeijett or engine. Please use option.</a>
-    <li><a href="#label-E2-80-BB-E7-AE-B1-E5-85-A5-E3-82-8A-E5-A8-98-E3-81-AE-E3-82-B5-E3-83-9D-E3-83-BC-E3-83-88-E3-83-9A-E3-83-BC-E3-82-B8-E3-82-92-E5-8F-82-E7-85-A7">※詳しくは<a href="http://www.hakoirimusume.xyz/">箱入り娘のサポートページ</a>を参照</a>
-    <li><a href="#label-License">License</a>
-  </ul>
-</div>
-
 
   <div id="project-metadata">
-    <div id="fileindex-section" class="nav-section">
+    
+<div id="fileindex-section" class="nav-section">
   <h3>Pages</h3>
 
   <ul class="link-list">
-  
     <li><a href="./Gemfile.html">Gemfile</a>
-  
     <li><a href="./Gemfile_lock.html">Gemfile.lock</a>
-  
     <li><a href="./LICENSE_txt.html">LICENSE</a>
-  
     <li><a href="./README_md.html">README</a>
-  
     <li><a href="./Rakefile.html">Rakefile</a>
-  
-    <li><a href="./zinbeijett_gemspec.html">zinbeijett.gemspec</a>
-  
+    <li><a href="./lib/txt/hyakunin_txt.html">hyakunin</a>
+    <li><a href="./zinbeijett_pu.html">zinbeijett.pu</a>
   </ul>
 </div>
 
@@ -93,80 +76,23 @@
 
 <main role="main" aria-label="Page README.md">
 
-<p><a href="LICENSE"><img
-src="https://badge.fury.io/rb/zinbeijett.svg}[http://badge.fury.io/rb/zinbeijett]{rdoc-image:http://img.shields.io/badge/license-MIT-blue.svg?style=flat"></a></p>
+<p><a href="http://badge.fury.io/rb/zinbeijett"><img src="https://badge.fury.io/rb/zinbeijett.svg"></a> <a href="LICENSE"><img src="http://img.shields.io/badge/license-MIT-blue.svg?style=flat"></a> <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg"></a> <a href="https://travis-ci.org/takkii/zinbeijett"><img src="https://travis-ci.org/takkii/zinbeijett.svg?branch=main"></a> <img src="https://img.shields.io/github/release/takkii/zinbeijett.svg?style=flat"> <a href="GitHub"><img src="https://img.shields.io/github/last-commit/takkii/zinbeijett.svg?style=flat"></a></p>
 
-<h3 id="label-GitHub+zinbeijett+repo+developments+Start+before-2C">GitHub zinbeijett repo developments Start before,<span><a href="#label-GitHub+zinbeijett+repo+developments+Start+before-2C">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<p>&lt;br /&gt;&lt;br /&gt;</p>
+<div align="center">
+  <p> The zinbeijett is MIT License </p>
+  <b> Copyright (c) 2013-2021 Takayuki Kamiyama </b>
+  <p> Please readme, See the <a href="https://github.com/takkii/zinbeijett/wiki/%E4%BB%95%E6%A7%98">wiki</a> for how to use zinbeijett. </p>
+</div>
+<p>&lt;br /&gt;</p>
 
-<pre class="ruby"><span class="ruby-identifier">bundle</span> <span class="ruby-identifier">install</span>
-</pre>
-
-<p><strong>After the Next version 1.0.3</strong></p>
-
-<h5 id="label-use+refinements+method.">use refinements method.<span><a href="#label-use+refinements+method.">&para;</a> <a href="#top">&uarr;</a></span></h5>
-
-<pre>need Ruby 2.0.x, 2.1.x, 2.2.x ... 2.0 lines.</pre>
-
-<h4 id="label-however+1.0.6.6+-E3-80-9C"><strong>however 1.0.6.6 〜</strong><span><a href="#label-however+1.0.6.6+-E3-80-9C">&para;</a> <a href="#top">&uarr;</a></span></h4>
-
-<pre>druby method engine -d option only.</pre>
-
-<h2 id="label-RubyGems-3A+Zinbeijett">RubyGems: <a href="Zinbeijett.html">Zinbeijett</a><span><a href="#label-RubyGems-3A+Zinbeijett">&para;</a> <a href="#top">&uarr;</a></span></h2>
-
-<pre class="ruby"><span class="ruby-identifier">gem</span> <span class="ruby-identifier">install</span> <span class="ruby-identifier">zinbeijett</span>
-</pre>
-
-<h2 id="label-zinbeijett+or+engine.+Please+use+option.">zinbeijett or engine. Please use option.<span><a href="#label-zinbeijett+or+engine.+Please+use+option.">&para;</a> <a href="#top">&uarr;</a></span></h2>
-
-<pre class="ruby"><span class="ruby-identifier">zinbeijett　バージョン情報</span> <span class="ruby-identifier">ライセンス情報</span> <span class="ruby-identifier">ヘルプ情報</span> <span class="ruby-identifier">スタートページ</span>
-
-<span class="ruby-identifier">engine　全文検索　AND検索　NOT検索　OR検索</span> <span class="ruby-identifier">メールアドレス検索</span> <span class="ruby-constant">GC表示</span> <span class="ruby-identifier">文字列カウント</span> <span class="ruby-identifier">時刻表示</span> <span class="ruby-identifier">作成者情報</span>
-</pre>
-
-<h2 id="label-E2-80-BB-E7-AE-B1-E5-85-A5-E3-82-8A-E5-A8-98-E3-81-AE-E3-82-B5-E3-83-9D-E3-83-BC-E3-83-88-E3-83-9A-E3-83-BC-E3-82-B8-E3-82-92-E5-8F-82-E7-85-A7">※詳しくは<a href="http://www.hakoirimusume.xyz/">箱入り娘のサポートページ</a>を参照<span><a href="#label-E2-80-BB-E7-AE-B1-E5-85-A5-E3-82-8A-E5-A8-98-E3-81-AE-E3-82-B5-E3-83-9D-E3-83-BC-E3-83-88-E3-83-9A-E3-83-BC-E3-82-B8-E3-82-92-E5-8F-82-E7-85-A7">&para;</a> <a href="#top">&uarr;</a></span></h2>
-
-<h2 id="label-License">License<span><a href="#label-License">&para;</a> <a href="#top">&uarr;</a></span></h2>
-
-<pre>The zinbeijett is MIT License
-
-Copyright (c) 2013-2018 Takayuki Kamiyama
-
-以下に定める条件に従い、
-本ソフトウェアおよび関連文書のファイル（以下「ソフトウェア」）
-の複製を取得するすべての人に対し、ソフトウェアを無制限に扱う
-ことを無償で許可します。
-これには、ソフトウェアの複製を使用、複写、変更、結合、掲載、頒布、
-サブライセンス、および/または販売する権利、
-およびソフトウェアを提供する相手に同じことを許可する権利も
-無制限に含まれます。
-
-上記の著作権表示および本許諾表示を、
-ソフトウェアのすべての複製または重要な部分に記載するものとします。
-
-ソフトウェアは「現状のまま」で、明示であるか暗黙であるかを問わず、
-何らの保証もなく提供されます。
-ここでいう保証とは、商品性、特定の目的への適合性、
-および権利非侵害についての保証も含みますが、
-それに限定されるものではありません。
-作者または著作権者は、契約行為、不法行為、
-またはそれ以外であろうと、ソフトウェアに起因または関連し、
-あるいはソフトウェアの使用またはその他の扱いによって
-生じる一切の請求、損害、
-その他の義務について何らの責任も負わないものとします。</pre>
-
-<p><a href="https://github.com/Shougo/defx.nvim">Shougo/defx.nvim</a></p>
-
-<p>↑ スクリーンショットがマージされました ↓</p>
-
-<p><img
-src="https://user-images.githubusercontent.com/1314340/48659914-0b4a0c00-ea9c-11e8-9953-2f2d5ca7f24a.png"></p>
 </main>
 
 
 
 <footer id="validator-badges" role="contentinfo">
   <p><a href="https://validator.w3.org/check/referer">Validate</a>
-  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.0.1.
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.3.1.
   <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
 </footer>
 

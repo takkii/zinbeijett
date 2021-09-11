@@ -11,12 +11,14 @@
   var index_rel_prefix = "./";
 </script>
 
-<script src="./js/jquery.js"></script>
-<script src="./js/darkfish.js"></script>
+<script src="./js/navigation.js" defer></script>
+<script src="./js/search.js" defer></script>
+<script src="./js/search_index.js" defer></script>
+<script src="./js/searcher.js" defer></script>
+<script src="./js/darkfish.js" defer></script>
 
 <link href="./css/fonts.css" rel="stylesheet">
 <link href="./css/rdoc.css" rel="stylesheet">
-
 
 
 <body id="top" role="document" class="module">
@@ -58,22 +60,17 @@
     
     
     
-    <!-- Method Quickref -->
+    
+<!-- Method Quickref -->
 <div id="method-list-section" class="nav-section">
   <h3>Methods</h3>
 
   <ul class="link-list" role="directory">
-    
     <li ><a href="#method-i-help">#help</a>
-    
     <li ><a href="#method-i-licen">#licen</a>
-    
     <li ><a href="#method-i-soft">#soft</a>
-    
     <li ><a href="#method-i-start">#start</a>
-    
     <li ><a href="#method-i-version">#version</a>
-    
   </ul>
 </div>
 
@@ -87,54 +84,52 @@
 
   <section class="description">
     
-<p>zinbeijett</p>
+<p>zinbeijett loads.</p>
 
   </section>
 
-  
   <section id="5Buntitled-5D" class="documentation-section">
-    
 
-    
 
-    
 
-    
 
-    
+
      <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
        <header>
          <h3>Public Instance Methods</h3>
        </header>
 
-    
       <div id="method-i-help" class="method-detail ">
-        
         <div class="method-heading">
           <span class="method-name">help</span><span
             class="method-args">()</span>
-          
           <span class="method-click-advice">click to toggle source</span>
-          
         </div>
-        
 
         <div class="method-description">
           
-          
-          
-          
 
-          
           <div class="method-source-code" id="help-source">
-            <pre><span class="ruby-comment"># File bin/zinbeijett, line 91</span>
+            <pre><span class="ruby-comment"># File bin/zinbeijett, line 98</span>
   <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">help</span>
     <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;&#39;</span>
-    <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;Command&#39;</span>.<span class="ruby-identifier">center</span>(<span class="ruby-value">60</span>, <span class="ruby-string">&#39;-&#39;</span>).<span class="ruby-identifier">toutf8</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;Command&#39;</span>.<span class="ruby-identifier">center</span>(<span class="ruby-value">60</span>, <span class="ruby-string">&#39;-&#39;</span>)
 
     <span class="ruby-identifier">puts</span> <span class="ruby-identifier">&lt;&lt;-HELP</span>
 <span class="ruby-value">
+    [tweet]
+    engine -l → tweet
+    Twitter_tubuyaki tools.
+
+    [speak]
+
+    Now version is zinbeiw (= 1.4.3.1) clone.
+
+    Plus amaoto function.
+
     [zinbeijett]
+
+    zinbeijett [ option ]
 
     -s,start           Start page!
 
@@ -146,15 +141,61 @@
 
     &lt; how to use &gt;
 
-    engine [option] [ File name ] [ String or regular expression ]
+    engine [ option ] [ File name ] [ String or regular expression ]
 
     &lt; Example &gt;
 
-    $ engine -z notojima.txt wajima
-    Full-text search.
+    $ engine druby://localhost:8888
+    druby process server.
+    engine -d server output.
 
     $ engine -a notojima.txt wajima
     AND Search.
+
+    $ engine -b https://takkii.hatenablog.com/rss
+    Diplay summary, HatenaBlog for takkii.
+
+    $ engine -c
+    Calendar views. Today now.
+
+    $ engine -d druby://localhost:8888
+    druby process server output.
+    ※ console &quot;can&#39;t parse uri:-d (DRb::DRbBadURI)&quot;
+    → The output disappeared by catching the exception.
+
+    $ engine -e
+    Tubuyaki clone ver. zinbeijett.
+
+    $ engine -f 2007 09
+    Calendar views, select year and month.
+
+    $ engine -g
+    print GC.stat, Garbage collection info output.
+
+    $ engine -h [百人一首(one word)]
+    Search the full text from the first 百人一首.
+
+    $ engine -i
+    Tubuyaki GUI CLONE, Log write version.
+
+    $ engine -j https://github.com/takkii.atom
+    engine -j https://visualstudiomagazine.com/rss-feeds/blogs.aspx
+
+    [ Example ]
+
+    Display GitHub Active for atom.
+    Display visualstudio magazine blogs for aspx.
+
+    ※ Diplay title only.
+
+    $ engine -k notojima.txt wajima
+    match method all search, log/output.txt write.
+
+    $ engine -l
+    Use Pycall, Roll the dice.
+
+    $ engine -m notojima.txt
+    mail search. pattern match is mailaddress word only.
 
     $ engine -n notojima.txt wajima
     NOT Search.
@@ -162,61 +203,68 @@
     $ engine -o notojima.txt wajima notojima
     OR search. use two words.
 
-    $ engine -g
-    print GC.stat, Garbage collection info output.
+    $ engine -p notojima.txt wajima
+    line number : Applicable number, outputs.
 
-    $ engine -d
-    druby process erb templete output.
+    $ engine -q string1 string2
+    ruby convert encript use openssl.
+    sha cript use case password.
 
-    $ engine -m notojima.txt
-    mail search. pattern match is mailaddress word only.
+    $ engine -r https://takkii.hatenablog.com/rss
+    Display Title, from Hatena Blog for takkii.
 
-    $ engine -c notojima.txt notojima
+    $ engine -s notojima.txt notojima
     String count search. String count in File.
+
+    $ engine -t notojima.txt wajima
+    match method search. ( = all search )
+
+    $ engine -u
+    Twitter User, Tweet TIMELINE list output.
+
+    $ engine -w notojima.txt
+    rice is keitaiso analyse
+
+    $ engine -x notojima.txt
+    kome is wakati writer and wordcount.
+
+    $ engine -y notojima.txt
+    suihan is wakati writer.
+
+    $ engine -z notojima.txt wajima
+    Full-text search.
 
 </span><span class="ruby-identifier">    HELP</span>
 
-    <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;Command&#39;</span>.<span class="ruby-identifier">center</span>(<span class="ruby-value">60</span>, <span class="ruby-string">&#39;-&#39;</span>).<span class="ruby-identifier">toutf8</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;Command&#39;</span>.<span class="ruby-identifier">center</span>(<span class="ruby-value">60</span>, <span class="ruby-string">&#39;-&#39;</span>)
     <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;&#39;</span>
   <span class="ruby-keyword">end</span></pre>
           </div>
-          
         </div>
 
-        
 
-        
       </div>
 
-    
       <div id="method-i-licen" class="method-detail ">
-        
         <div class="method-heading">
           <span class="method-name">licen</span><span
             class="method-args">()</span>
-          
           <span class="method-click-advice">click to toggle source</span>
-          
         </div>
-        
 
         <div class="method-description">
           
-          
-          
-          
 
-          
           <div class="method-source-code" id="licen-source">
-            <pre><span class="ruby-comment"># File bin/zinbeijett, line 51</span>
+            <pre><span class="ruby-comment"># File bin/zinbeijett, line 58</span>
   <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">licen</span>
     <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;&#39;</span>
-    <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;License&#39;</span>.<span class="ruby-identifier">center</span>(<span class="ruby-value">60</span>, <span class="ruby-string">&#39;-&#39;</span>).<span class="ruby-identifier">toutf8</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;License&#39;</span>.<span class="ruby-identifier">center</span>(<span class="ruby-value">60</span>, <span class="ruby-string">&#39;-&#39;</span>)
     <span class="ruby-identifier">puts</span> <span class="ruby-identifier">&lt;&lt;-HOW</span>
 <span class="ruby-value">
     The MIT License
 
-    Copyright (c) 2013-2018 Takayuki Kamiyama
+    Copyright (c) 2013-2021 Takayuki Kamiyama
 
     Permission is hereby granted, free of charge,
     to any person obtaining a copy of this software and
@@ -245,75 +293,53 @@
 </span><span class="ruby-identifier">    HOW</span>
 
     <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;&#39;</span>
-    <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;License&#39;</span>.<span class="ruby-identifier">center</span>(<span class="ruby-value">60</span>, <span class="ruby-string">&#39;-&#39;</span>).<span class="ruby-identifier">toutf8</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;License&#39;</span>.<span class="ruby-identifier">center</span>(<span class="ruby-value">60</span>, <span class="ruby-string">&#39;-&#39;</span>)
     <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;&#39;</span>
   <span class="ruby-keyword">end</span></pre>
           </div>
-          
         </div>
 
-        
 
-        
       </div>
 
-    
       <div id="method-i-soft" class="method-detail ">
-        
         <div class="method-heading">
           <span class="method-name">soft</span><span
             class="method-args">()</span>
-          
           <span class="method-click-advice">click to toggle source</span>
-          
         </div>
-        
 
         <div class="method-description">
           
-          
-          
-          
 
-          
           <div class="method-source-code" id="soft-source">
-            <pre><span class="ruby-comment"># File bin/zinbeijett, line 143</span>
+            <pre><span class="ruby-comment"># File bin/zinbeijett, line 227</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">soft</span>
-  <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;Zinbeijett is open source software.&#39;</span>.<span class="ruby-identifier">toutf8</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-constant">RUBY_DESCRIPTION</span>
+  <span class="ruby-identifier">print</span> <span class="ruby-string">&#39;On Zinbeijett Engine VERSION : &#39;</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-constant">EngineLeft</span><span class="ruby-operator">::</span><span class="ruby-constant">VERSION</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
-          
         </div>
 
-        
 
-        
       </div>
 
-    
       <div id="method-i-start" class="method-detail ">
-        
         <div class="method-heading">
           <span class="method-name">start</span><span
             class="method-args">()</span>
-          
           <span class="method-click-advice">click to toggle source</span>
-          
         </div>
-        
 
         <div class="method-description">
           
-          
-          
-          
 
-          
           <div class="method-source-code" id="start-source">
-            <pre><span class="ruby-comment"># File bin/zinbeijett, line 21</span>
+            <pre><span class="ruby-comment"># File bin/zinbeijett, line 26</span>
   <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">start</span>
     <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;&#39;</span>
-    <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;Start&#39;</span>.<span class="ruby-identifier">center</span>(<span class="ruby-value">60</span>, <span class="ruby-string">&#39;-&#39;</span>).<span class="ruby-identifier">toutf8</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;Start&#39;</span>.<span class="ruby-identifier">center</span>(<span class="ruby-value">60</span>, <span class="ruby-string">&#39;-&#39;</span>)
 
     <span class="ruby-identifier">puts</span> <span class="ruby-identifier">&lt;&lt;-DOC</span>
 <span class="ruby-value">    == Contributing to zinbeijett
@@ -334,64 +360,55 @@
 
     match method : 1.x.x
 
+    minimum core : 2.x.x
+
     &gt; Thank you for reading to the last.
 </span><span class="ruby-identifier">    DOC</span>
 
-    <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;Start&#39;</span>.<span class="ruby-identifier">center</span>(<span class="ruby-value">60</span>, <span class="ruby-string">&#39;-&#39;</span>).<span class="ruby-identifier">toutf8</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;Start&#39;</span>.<span class="ruby-identifier">center</span>(<span class="ruby-value">60</span>, <span class="ruby-string">&#39;-&#39;</span>)
     <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;&#39;</span>
   <span class="ruby-keyword">end</span></pre>
           </div>
-          
         </div>
 
-        
 
-        
       </div>
 
-    
       <div id="method-i-version" class="method-detail ">
-        
         <div class="method-heading">
           <span class="method-name">version</span><span
             class="method-args">()</span>
-          
           <span class="method-click-advice">click to toggle source</span>
-          
         </div>
-        
 
         <div class="method-description">
           
-          
-          
-          
 
-          
           <div class="method-source-code" id="version-source">
             <pre><span class="ruby-comment"># File bin/zinbeijett, line 17</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">version</span>
-  <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;Zinbeijett VERSION: &#39;</span>.<span class="ruby-identifier">toutf8</span> <span class="ruby-operator">+</span> <span class="ruby-constant">Engine</span><span class="ruby-operator">::</span><span class="ruby-constant">VERSION</span>.<span class="ruby-identifier">toutf8</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;[ version ]&#39;</span>.<span class="ruby-identifier">center</span>(<span class="ruby-value">60</span>, <span class="ruby-string">&#39;-&#39;</span>)
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;&#39;</span>
+  <span class="ruby-identifier">print</span> <span class="ruby-string">&#39;Zinbeijett VERSION : &#39;</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-constant">EngineLeft</span><span class="ruby-operator">::</span><span class="ruby-constant">VERSION</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;&#39;</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;[ version ]&#39;</span>.<span class="ruby-identifier">center</span>(<span class="ruby-value">60</span>, <span class="ruby-string">&#39;-&#39;</span>)
 <span class="ruby-keyword">end</span></pre>
           </div>
-          
         </div>
 
-        
 
-        
       </div>
 
-    
     </section>
-  
+
   </section>
 </main>
 
 
 <footer id="validator-badges" role="contentinfo">
   <p><a href="https://validator.w3.org/check/referer">Validate</a>
-  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.0.1.
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.3.1.
   <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
 </footer>
 
