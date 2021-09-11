@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require './req/miniunit'
+require "#{File.dirname(__FILE__)}/req/miniunit"
 
 # Encoding Setting.
 Encoding.default_internal = 'UTF-8'
@@ -8,17 +8,27 @@ Encoding.default_external = 'UTF-8'
 
 # SubClass test function.
 class MiniTestOne
-  def mini_test
-    Dir["#{File.dirname(__FILE__)}/mini_unit/*.rb"].sort.filter do |file|
-      require file
-    end
+  attr_reader :mini_test
+
+  def initialize
+      @mini_test = Dir["#{File.dirname(__FILE__)}/mini_unit/*.rb"].sort.filter { |file| require file }
+  end
+
+  def remove
+    remove_instance_variable(:@mini_test)
   end
 end
 
 # SubClass current directory
 class MiniFilename
-  def mini_find
-    puts Dir.glob("#{File.dirname(__FILE__)}/mini_unit/*.rb")
+  attr_reader :mini_find
+
+  def initialize
+    @mini_find = puts Dir.glob("#{File.dirname(__FILE__)}/mini_unit/*.rb")
+  end
+
+  def remove
+    remove_instance_variable(:@mini_find)
   end
 end
 
@@ -65,7 +75,7 @@ begin
   border = Border.new(' TimeStamp '.center(60, '-'), ' minitest file load '.center(60, '-'))
   border.stamp
   using MiniFileN
-  MiniFilename.new.mini_find
+  MiniFilename.new.remove
   puts ''
   puts ' minitest file load '.center(60, '-')
   puts ''
@@ -74,7 +84,7 @@ begin
   puts ' mini_test in filename list '.center(80, '~')
   puts ''
   using MiniFile
-  MiniTestOne.new.mini_test
+  MiniTestOne.new.remove
   puts ''
 rescue StandardError => e
   puts e.backtrace
