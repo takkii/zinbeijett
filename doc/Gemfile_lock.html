@@ -11,12 +11,14 @@
   var index_rel_prefix = "./";
 </script>
 
-<script src="./js/jquery.js"></script>
-<script src="./js/darkfish.js"></script>
+<script src="./js/navigation.js" defer></script>
+<script src="./js/search.js" defer></script>
+<script src="./js/search_index.js" defer></script>
+<script src="./js/searcher.js" defer></script>
+<script src="./js/darkfish.js" defer></script>
 
 <link href="./css/fonts.css" rel="stylesheet">
 <link href="./css/rdoc.css" rel="stylesheet">
-
 
 
 <body id="top" role="document" class="file">
@@ -54,23 +56,18 @@
   
 
   <div id="project-metadata">
-    <div id="fileindex-section" class="nav-section">
+    
+<div id="fileindex-section" class="nav-section">
   <h3>Pages</h3>
 
   <ul class="link-list">
-  
     <li><a href="./Gemfile.html">Gemfile</a>
-  
     <li><a href="./Gemfile_lock.html">Gemfile.lock</a>
-  
     <li><a href="./LICENSE_txt.html">LICENSE</a>
-  
     <li><a href="./README_md.html">README</a>
-  
     <li><a href="./Rakefile.html">Rakefile</a>
-  
-    <li><a href="./zinbeijett_gemspec.html">zinbeijett.gemspec</a>
-  
+    <li><a href="./lib/txt/hyakunin_txt.html">hyakunin</a>
+    <li><a href="./zinbeijett_pu.html">zinbeijett.pu</a>
   </ul>
 </div>
 
@@ -83,51 +80,189 @@
 
 <pre>remote: https://rubygems.org/
 specs:
-  diff-lcs (1.2.5)
-  power_assert (1.1.3)
-  rake (10.5.0)
-  rspec (3.4.0)
-    rspec-core (~&gt; 3.4.0)
-    rspec-expectations (~&gt; 3.4.0)
-    rspec-mocks (~&gt; 3.4.0)
-  rspec-core (3.4.2)
-    rspec-support (~&gt; 3.4.0)
-  rspec-expectations (3.4.0)
+  addressable (2.8.0)
+    public_suffix (&gt;= 2.0.2, &lt; 5.0)
+  ansi (1.5.0)
+  ast (2.4.2)
+  backport (1.2.0)
+  benchmark (0.1.1)
+  buftok (0.2.0)
+  builder (3.2.4)
+  byebug (11.1.3)
+  coderay (1.1.3)
+  crass (1.0.6)
+  diff-lcs (1.4.4)
+  domain_name (0.5.20190701)
+    unf (&gt;= 0.0.5, &lt; 1.0.0)
+  e2mmap (0.1.0)
+  equalizer (0.0.11)
+  feedjira (3.2.0)
+    loofah (&gt;= 2.3.1)
+    sax-machine (&gt;= 1.0)
+  ffi (1.15.4)
+  ffi (1.15.4-x64-mingw32)
+  ffi-compiler (1.0.1)
+    ffi (&gt;= 1.0.0)
+    rake
+  himekuri_ts (1.0.8.1)
+  http (4.4.1)
+    addressable (~&gt; 2.3)
+    http-cookie (~&gt; 1.0)
+    http-form_data (~&gt; 2.2)
+    http-parser (~&gt; 1.2.0)
+  http-cookie (1.0.4)
+    domain_name (~&gt; 0.5)
+  http-form_data (2.3.0)
+  http-parser (1.2.3)
+    ffi-compiler (&gt;= 1.0, &lt; 2.0)
+  http_parser.rb (0.6.0)
+  httparty (0.19.0)
+    mime-types (~&gt; 3.0)
+    multi_xml (&gt;= 0.5.2)
+  jaro_winkler (1.5.4)
+  kramdown (2.3.1)
+    rexml
+  kramdown-parser-gfm (1.1.0)
+    kramdown (~&gt; 2.0)
+  loofah (2.12.0)
+    crass (~&gt; 1.0.2)
+    nokogiri (&gt;= 1.5.9)
+  memoizable (0.4.2)
+    thread_safe (~&gt; 0.3, &gt;= 0.3.1)
+  method_source (1.0.0)
+  mime-types (3.3.1)
+    mime-types-data (~&gt; 3.2015)
+  mime-types-data (3.2021.0901)
+  mini_portile2 (2.6.1)
+  minitest (5.14.4)
+  minitest-reporters (1.4.3)
+    ansi
+    builder
+    minitest (&gt;= 5.0)
+    ruby-progressbar
+  multi_xml (0.6.0)
+  multipart-post (2.1.1)
+  naught (1.1.0)
+  nokogiri (1.12.4)
+    mini_portile2 (~&gt; 2.6.1)
+    racc (~&gt; 1.4)
+  nokogiri (1.12.4-x64-mingw32)
+    racc (~&gt; 1.4)
+  nokogiri (1.12.4-x86_64-darwin)
+    racc (~&gt; 1.4)
+  parallel (1.20.1)
+  parser (3.0.2.0)
+    ast (~&gt; 2.4.1)
+  pry (0.14.1)
+    coderay (~&gt; 1.1)
+    method_source (~&gt; 1.0)
+  public_suffix (4.0.6)
+  pycall (1.4.1)
+  racc (1.5.2)
+  rainbow (3.0.0)
+  rake (13.0.6)
+  regexp_parser (2.1.1)
+  reverse_markdown (2.0.0)
+    nokogiri
+  rexml (3.2.5)
+  rspec (3.10.0)
+    rspec-core (~&gt; 3.10.0)
+    rspec-expectations (~&gt; 3.10.0)
+    rspec-mocks (~&gt; 3.10.0)
+  rspec-core (3.10.1)
+    rspec-support (~&gt; 3.10.0)
+  rspec-expectations (3.10.1)
     diff-lcs (&gt;= 1.2.0, &lt; 2.0)
-    rspec-support (~&gt; 3.4.0)
-  rspec-mocks (3.4.1)
+    rspec-support (~&gt; 3.10.0)
+  rspec-mocks (3.10.2)
     diff-lcs (&gt;= 1.2.0, &lt; 2.0)
-    rspec-support (~&gt; 3.4.0)
-  rspec-support (3.4.1)
-  tanraku (0.0.10)
-  test-unit (3.2.8)
-    power_assert</pre>
+    rspec-support (~&gt; 3.10.0)
+  rspec-support (3.10.2)
+  rubocop (1.20.0)
+    parallel (~&gt; 1.10)
+    parser (&gt;= 3.0.0.0)
+    rainbow (&gt;= 2.2.2, &lt; 4.0)
+    regexp_parser (&gt;= 1.8, &lt; 3.0)
+    rexml
+    rubocop-ast (&gt;= 1.9.1, &lt; 2.0)
+    ruby-progressbar (~&gt; 1.7)
+    unicode-display_width (&gt;= 1.4.0, &lt; 3.0)
+  rubocop-ast (1.11.0)
+    parser (&gt;= 3.0.1.1)
+  ruby-progressbar (1.11.0)
+  sax-machine (1.3.2)
+  simple_oauth (0.3.1)
+  solargraph (0.43.0)
+    backport (~&gt; 1.2)
+    benchmark
+    bundler (&gt;= 1.17.2)
+    diff-lcs (~&gt; 1.4)
+    e2mmap
+    jaro_winkler (~&gt; 1.5)
+    kramdown (~&gt; 2.3)
+    kramdown-parser-gfm (~&gt; 1.1)
+    parser (~&gt; 3.0)
+    reverse_markdown (&gt;= 1.0.5, &lt; 3)
+    rubocop (&gt;= 0.52)
+    thor (~&gt; 1.0)
+    tilt (~&gt; 2.0)
+    yard (~&gt; 0.9, &gt;= 0.9.24)
+  thor (1.1.0)
+  thread_safe (0.3.6)
+  tilt (2.0.10)
+  twitter (7.0.0)
+    addressable (~&gt; 2.3)
+    buftok (~&gt; 0.2.0)
+    equalizer (~&gt; 0.0.11)
+    http (~&gt; 4.0)
+    http-form_data (~&gt; 2.0)
+    http_parser.rb (~&gt; 0.6.0)
+    memoizable (~&gt; 0.4.0)
+    multipart-post (~&gt; 2.0)
+    naught (~&gt; 1.0)
+    simple_oauth (~&gt; 0.3.0)
+  unf (0.1.4)
+    unf_ext
+  unf_ext (0.0.7.7)
+  unicode-display_width (2.0.0)
+  yard (0.9.26)</pre>
 
 <p>PLATFORMS</p>
 
 <pre class="ruby"><span class="ruby-identifier">ruby</span>
-<span class="ruby-identifier">x86</span><span class="ruby-operator">-</span><span class="ruby-identifier">mingw32</span>
+<span class="ruby-identifier">x64</span><span class="ruby-operator">-</span><span class="ruby-identifier">mingw32</span>
+<span class="ruby-identifier">x86_64</span><span class="ruby-operator">-</span><span class="ruby-identifier">darwin</span><span class="ruby-value">-20</span>
 </pre>
 
 <p>DEPENDENCIES</p>
 
-<pre>bundler
-diff-lcs
-rake (&lt; 11.0)
-rspec
-tanraku
-test-unit</pre>
+<pre class="ruby"><span class="ruby-identifier">bundler</span>
+<span class="ruby-identifier">byebug</span>
+<span class="ruby-identifier">feedjira</span>
+<span class="ruby-identifier">himekuri_ts</span>
+<span class="ruby-identifier">httparty</span>
+<span class="ruby-identifier">minitest</span>
+<span class="ruby-identifier">minitest</span><span class="ruby-operator">-</span><span class="ruby-identifier">reporters</span>
+<span class="ruby-identifier">nokogiri</span>
+<span class="ruby-identifier">pry</span>
+<span class="ruby-identifier">pycall</span>
+<span class="ruby-identifier">rake</span>
+<span class="ruby-identifier">rspec</span>
+<span class="ruby-identifier">solargraph</span>
+<span class="ruby-identifier">twitter</span>
+</pre>
 
 <p>BUNDLED WITH</p>
 
-<pre>1.16.2</pre>
+<pre>2.2.25</pre>
+
 </main>
 
 
 
 <footer id="validator-badges" role="contentinfo">
   <p><a href="https://validator.w3.org/check/referer">Validate</a>
-  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.0.1.
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.3.1.
   <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
 </footer>
 
