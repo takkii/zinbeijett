@@ -1,15 +1,21 @@
 # frozen_string_literal: true
 
+# ./lib directory for load.
 lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
+# require folder load.
 require "#{File.dirname(__FILE__)}/req/benchmark"
 
+# Encoding Setting.
 Encoding.default_internal = 'UTF-8'
+Encoding.default_external = 'UTF-8'
 
+# benckmark border start.
 puts ' mini_test assert Benchmark '.center(60, '-').toutf8
 puts ''
 
+# benchmark calc.
 Benchmark.bm 10 do |result|
   result.report 'version1' do
     puts EngineLeft::VERSION
@@ -66,8 +72,11 @@ Benchmark.bm 10 do |result|
   end
 end
 
+# bencmark border end.
 puts ''
 puts ' mini_test assert Benchmark '.center(60, '-').toutf8
 puts ''
+
+# tanraku is raise exception methods.
 puts RUBY_DESCRIPTION.tanraku_exit
 puts ''
