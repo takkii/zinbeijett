@@ -18,3 +18,4 @@ gem 'nokogiri'
 gem 'httparty'
 gem 'feedjira'
 gem 'twitter'
+gem 'win32console' if Gem.win_platform?
