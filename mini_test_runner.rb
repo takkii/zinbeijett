@@ -92,7 +92,7 @@ begin
 rescue StandardError => e
   puts e.backtrace
 ensure
-  GC.start
+  GC.compact
 end
 
 __END__
