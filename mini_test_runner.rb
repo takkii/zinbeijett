@@ -51,17 +51,19 @@ module MiniFileN
 end
 
 # TimeStamp, use himekuri2.
-class Nyanco
+class Daytimerecord
   attr_reader :himekurits
 
   def initialize
+    @himekurits = HimekuriTsBasic.running
+
     # Console Output list.
     puts ''
     puts ' minitest file load '.center(80, '~')
     puts ''
     puts ' TimeStamp '.center(60, '-')
     puts ''
-    @himekurits = puts HimekuriTsBasic.running
+    puts @himekurits
     puts ''
     puts ' TimeStamp '.center(60, '-')
     puts ''
@@ -78,7 +80,7 @@ end
 begin
   puts ''
   puts ' mini_test in filename list '.center(80, '~')
-  Nyanco.new.remove
+  Daytimerecord.new.remove
   using MiniFileN
   puts MiniFilename.new.remove
   puts ''
