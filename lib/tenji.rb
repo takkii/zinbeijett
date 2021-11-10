@@ -497,15 +497,15 @@ class TenjiMaker
       puts wo
       puts ''
 
-    elsif alpha.match?(/\ANN\z/)
+    elsif alpha.match?(/\AN\z/)
 
-      nn = <<~EOS.chomp
+      n = <<~EOS.chomp
         --
         -o
         oo
       EOS
 
-      puts nn
+      puts n
       puts ''
 
     end
@@ -921,8 +921,8 @@ class TenjiMaker
       elsif beta.match?(/\ARU\z/)
 
         ru = <<~EOS.chomp
-          -o
           oo
+          -o
           --
         EOS
 
@@ -1006,15 +1006,15 @@ class TenjiMaker
         puts wo
         puts ''
 
-      elsif beta.match?(/\ANN\z/)
+      elsif beta.match?(/\AN\z/)
 
-        nn = <<~EOS.chomp
+        n = <<~EOS.chomp
           --
           -o
           oo
         EOS
 
-        puts nn
+        puts n
         puts ''
 
       end
@@ -1514,15 +1514,15 @@ class TenjiMaker
           puts wo
           puts ''
 
-        elsif gamma.match?(/\ANN\z/)
+        elsif gamma.match?(/\AN\z/)
 
-          nn = <<~EOS.chomp
+          n = <<~EOS.chomp
             --
             -o
             oo
           EOS
 
-          puts nn
+          puts n
           puts ''
 
         end
@@ -2022,15 +2022,15 @@ class TenjiMaker
             puts wo
             puts ''
 
-          elsif delta.match?(/\ANN\z/)
+          elsif delta.match?(/\AN\z/)
 
-            nn = <<~EOS.chomp
+            n = <<~EOS.chomp
               --
               -o
               oo
             EOS
 
-            puts nn
+            puts n
             puts ''
 
           end
@@ -2530,15 +2530,15 @@ class TenjiMaker
               puts wo
               puts ''
 
-            elsif epsilon.match?(/\ANN\z/)
+            elsif epsilon.match?(/\AN\z/)
 
-              nn = <<~EOS.chomp
+              n = <<~EOS.chomp
                 --
                 -o
                 oo
               EOS
 
-              puts nn
+              puts n
               puts ''
 
             end
@@ -3039,15 +3039,15 @@ class TenjiMaker
                 puts wo
                 puts ''
 
-              elsif zeta.match?(/\ANN\z/)
+              elsif zeta.match?(/\AN\z/)
 
-                nn = <<~EOS.chomp
+                n = <<~EOS.chomp
                   --
                   -o
                   oo
                 EOS
 
-                puts nn
+                puts n
                 puts ''
 
               end
@@ -3548,15 +3548,15 @@ class TenjiMaker
                   puts wo
                   puts ''
 
-                elsif eta.match?(/\ANN\z/)
+                elsif eta.match?(/\AN\z/)
 
-                  nn = <<~EOS.chomp
+                  n = <<~EOS.chomp
                     --
                     -o
                     oo
                   EOS
 
-                  puts nn
+                  puts n
                   puts ''
 
                 end
@@ -4057,15 +4057,15 @@ class TenjiMaker
                     puts wo
                     puts ''
 
-                  elsif theta.match?(/\ANN\z/)
+                  elsif theta.match?(/\AN\z/)
 
-                    nn = <<~EOS.chomp
+                    n = <<~EOS.chomp
                       --
                       -o
                       oo
                     EOS
 
-                    puts nn
+                    puts n
                     puts ''
 
                   end
@@ -4566,15 +4566,15 @@ class TenjiMaker
                       puts wo
                       puts ''
 
-                    elsif iota.match?(/\ANN\z/)
+                    elsif iota.match?(/\AN\z/)
 
-                      nn = <<~EOS.chomp
+                      n = <<~EOS.chomp
                         --
                         -o
                         oo
                       EOS
 
-                      puts nn
+                      puts n
                       puts ''
 
                     end
@@ -5075,15 +5075,15 @@ class TenjiMaker
                         puts wo
                         puts ''
 
-                      elsif kappa.match?(/\ANN\z/)
+                      elsif kappa.match?(/\AN\z/)
 
-                        nn = <<~EOS.chomp
+                        n = <<~EOS.chomp
                           --
                           -o
                           oo
                         EOS
 
-                        puts nn
+                        puts n
                         puts ''
 
                       end
