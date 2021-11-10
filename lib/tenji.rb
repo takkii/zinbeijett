@@ -46,7 +46,7 @@ class TenjiMaker
     elsif alpha.match?(/\AO\z/)
 
       o = <<~EOS.chomp
-        oo
+        -o
         o-
         --
       EOS
