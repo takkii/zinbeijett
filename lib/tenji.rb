@@ -11,6 +11,7 @@ class TenjiMaker
         --
       EOS
 
+      puts ''
       puts a
       puts ''
 
@@ -22,6 +23,7 @@ class TenjiMaker
         --
       EOS
 
+      puts ''
       puts i
       puts ''
 
@@ -33,6 +35,7 @@ class TenjiMaker
         --
       EOS
 
+      puts ''
       puts u
       puts ''
 
@@ -44,6 +47,7 @@ class TenjiMaker
         --
       EOS
 
+      puts ''
       puts e
       puts ''
 
@@ -55,6 +59,7 @@ class TenjiMaker
         --
       EOS
 
+      puts ''
       puts o
       puts ''
 
@@ -66,6 +71,7 @@ class TenjiMaker
         -o
       EOS
 
+      puts ''
       puts ka
       puts ''
 
@@ -77,6 +83,7 @@ class TenjiMaker
         -o
       EOS
 
+      puts ''
       puts ki
       puts ''
 
@@ -88,6 +95,7 @@ class TenjiMaker
         -o
       EOS
 
+      puts ''
       puts ku
       puts ''
 
@@ -99,6 +107,7 @@ class TenjiMaker
         -o
       EOS
 
+      puts ''
       puts ke
       puts ''
 
@@ -110,6 +119,7 @@ class TenjiMaker
         -o
       EOS
 
+      puts ''
       puts ko
       puts ''
 
@@ -121,6 +131,7 @@ class TenjiMaker
         -o
       EOS
 
+      puts ''
       puts sa
       puts ''
 
@@ -132,6 +143,7 @@ class TenjiMaker
         -o
       EOS
 
+      puts ''
       puts si
       puts ''
 
@@ -143,6 +155,7 @@ class TenjiMaker
         -o
       EOS
 
+      puts ''
       puts su
       puts ''
 
@@ -154,6 +167,7 @@ class TenjiMaker
         -o
       EOS
 
+      puts ''
       puts se
       puts ''
 
@@ -165,6 +179,7 @@ class TenjiMaker
         -o
       EOS
 
+      puts ''
       puts so
       puts ''
 
@@ -176,6 +191,7 @@ class TenjiMaker
         o-
       EOS
 
+      puts ''
       puts ta
       puts ''
 
@@ -187,6 +203,7 @@ class TenjiMaker
         o-
       EOS
 
+      puts ''
       puts ti
       puts ''
 
@@ -198,6 +215,7 @@ class TenjiMaker
         o-
       EOS
 
+      puts ''
       puts tu
       puts ''
 
@@ -209,6 +227,7 @@ class TenjiMaker
         o-
       EOS
 
+      puts ''
       puts te
       puts ''
 
@@ -220,6 +239,7 @@ class TenjiMaker
         o-
       EOS
 
+      puts ''
       puts to
       puts ''
 
@@ -231,6 +251,7 @@ class TenjiMaker
         o-
       EOS
 
+      puts ''
       puts na
       puts ''
 
@@ -242,6 +263,7 @@ class TenjiMaker
         o-
       EOS
 
+      puts ''
       puts ni
       puts ''
 
@@ -253,6 +275,7 @@ class TenjiMaker
         o-
       EOS
 
+      puts ''
       puts nu
       puts ''
 
@@ -264,6 +287,7 @@ class TenjiMaker
         o-
       EOS
 
+      puts ''
       puts ne
       puts ''
 
@@ -275,6 +299,7 @@ class TenjiMaker
         o-
       EOS
 
+      puts ''
       puts no
       puts ''
 
@@ -286,6 +311,7 @@ class TenjiMaker
         oo
       EOS
 
+      puts ''
       puts ha
       puts ''
 
@@ -297,6 +323,7 @@ class TenjiMaker
         oo
       EOS
 
+      puts ''
       puts hi
       puts ''
 
@@ -308,6 +335,7 @@ class TenjiMaker
         oo
       EOS
 
+      puts ''
       puts hu
       puts ''
 
@@ -319,6 +347,7 @@ class TenjiMaker
         oo
       EOS
 
+      puts ''
       puts he
       puts ''
 
@@ -330,6 +359,7 @@ class TenjiMaker
         oo
       EOS
 
+      puts ''
       puts ho
       puts ''
 
@@ -341,6 +371,7 @@ class TenjiMaker
         oo
       EOS
 
+      puts ''
       puts ma
       puts ''
 
@@ -352,6 +383,7 @@ class TenjiMaker
         oo
       EOS
 
+      puts ''
       puts mi
       puts ''
 
@@ -363,6 +395,7 @@ class TenjiMaker
         oo
       EOS
 
+      puts ''
       puts mu
       puts ''
 
@@ -374,6 +407,7 @@ class TenjiMaker
         oo
       EOS
 
+      puts ''
       puts me
       puts ''
 
@@ -385,6 +419,7 @@ class TenjiMaker
         oo
       EOS
 
+      puts ''
       puts mo
       puts ''
 
@@ -396,6 +431,7 @@ class TenjiMaker
         --
       EOS
 
+      puts ''
       puts ra
       puts ''
 
@@ -407,6 +443,7 @@ class TenjiMaker
         --
       EOS
 
+      puts ''
       puts ri
       puts ''
 
@@ -418,6 +455,7 @@ class TenjiMaker
         --
       EOS
 
+      puts ''
       puts ru
       puts ''
 
@@ -429,6 +467,7 @@ class TenjiMaker
         --
       EOS
 
+      puts ''
       puts re
       puts ''
 
@@ -440,6 +479,7 @@ class TenjiMaker
         --
       EOS
 
+      puts ''
       puts ro
       puts ''
 
@@ -451,6 +491,7 @@ class TenjiMaker
         o-
       EOS
 
+      puts ''
       puts ya
       puts ''
 
@@ -462,6 +503,7 @@ class TenjiMaker
         oo
       EOS
 
+      puts ''
       puts yu
       puts ''
 
@@ -473,6 +515,7 @@ class TenjiMaker
         o-
       EOS
 
+      puts ''
       puts yo
       puts ''
 
@@ -484,6 +527,7 @@ class TenjiMaker
         o-
       EOS
 
+      puts ''
       puts wa
       puts ''
 
@@ -495,6 +539,7 @@ class TenjiMaker
         o-
       EOS
 
+      puts ''
       puts wo
       puts ''
 
@@ -506,6 +551,7 @@ class TenjiMaker
         oo
       EOS
 
+      puts ''
       puts n
       puts ''
 

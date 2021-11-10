@@ -17,7 +17,6 @@ module Tenji
 
   def to_tenji
     require 'tenji'
-    puts ''
     TenjiMaker.to_tenji_a
     TenjiMaker.to_tenji_b
     TenjiMaker.to_tenji_g
