@@ -110,6 +110,34 @@ module Zinbeijett
     Now version is zinbeiw (= 1.4.3.1) clone.
 
     Plus amaoto function.
+    
+    [tenji]
+    
+    Convert Romaji to Tenji.
+    
+    tenji [alphabet] [alphabet] .. 10 case
+    
+    tenji A I U E O
+    
+    o-
+    --
+    --
+
+    o-
+    o-
+    --
+
+    oo
+    --
+    --
+
+    oo
+    o-
+    --
+
+    oo
+    o-
+    --
 
     [zinbeijett]
 
