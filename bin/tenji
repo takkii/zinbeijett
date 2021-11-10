@@ -1,0 +1,54 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# vim: filetype=ruby
+
+require 'timeout'
+
+lib = File.expand_path('lib', __dir__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+
+Encoding.default_internal = 'UTF-8'
+Encoding.default_external = 'UTF-8'
+
+# zinbeijett function
+module Tenji
+  module_function
+
+  def to_tenji
+    require 'tenji'
+    puts ''
+    TenjiMaker.to_tenji_a
+    puts ''
+    TenjiMaker.to_tenji_b
+    puts ''
+    TenjiMaker.to_tenji_g
+    puts ''
+    TenjiMaker.to_tenji_d
+    puts ''
+    TenjiMaker.to_tenji_e
+    puts ''
+    TenjiMaker.to_tenji_z
+    puts ''
+    TenjiMaker.to_tenji_t
+    puts ''
+    TenjiMaker.to_tenji_c
+    puts ''
+    TenjiMaker.to_tenji_i
+    puts ''
+    TenjiMaker.to_tenji_k
+    puts ''
+  end
+end
+
+include Tenji
+
+begin
+  to_tenji
+rescue Exception => e
+  puts e.backtrace
+end
+
+GC.compact
+
+__END__
