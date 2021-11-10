@@ -17,27 +17,16 @@ module Tenji
 
   def to_tenji
     require 'tenji'
-    puts ''
     TenjiMaker.to_tenji_a
-    puts ''
     TenjiMaker.to_tenji_b
-    puts ''
     TenjiMaker.to_tenji_g
-    puts ''
     TenjiMaker.to_tenji_d
-    puts ''
     TenjiMaker.to_tenji_e
-    puts ''
     TenjiMaker.to_tenji_z
-    puts ''
     TenjiMaker.to_tenji_t
-    puts ''
     TenjiMaker.to_tenji_c
-    puts ''
     TenjiMaker.to_tenji_i
-    puts ''
     TenjiMaker.to_tenji_k
-    puts ''
   end
 end
 
