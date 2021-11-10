@@ -375,6 +375,7 @@ class TenjiMaker
       EOS
 
       puts me
+      puts ''
 
     elsif alpha.match?(/\AMO\z/)
 
@@ -884,6 +885,7 @@ class TenjiMaker
         EOS
 
         puts me
+        puts ''
 
       elsif beta.match?(/\AMO\z/)
 
@@ -1392,6 +1394,7 @@ class TenjiMaker
           EOS
 
           puts me
+          puts ''
 
         elsif gamma.match?(/\AMO\z/)
 
@@ -1900,6 +1903,7 @@ class TenjiMaker
             EOS
 
             puts me
+            puts ''
 
           elsif delta.match?(/\AMO\z/)
 
@@ -2408,6 +2412,7 @@ class TenjiMaker
               EOS
 
               puts me
+              puts ''
 
             elsif epsilon.match?(/\AMO\z/)
 
@@ -2917,6 +2922,7 @@ class TenjiMaker
                 EOS
 
                 puts me
+                puts ''
 
               elsif zeta.match?(/\AMO\z/)
 
@@ -3426,6 +3432,7 @@ class TenjiMaker
                   EOS
 
                   puts me
+                  puts ''
 
                 elsif eta.match?(/\AMO\z/)
 
@@ -3935,6 +3942,7 @@ class TenjiMaker
                     EOS
 
                     puts me
+                    puts ''
 
                   elsif theta.match?(/\AMO\z/)
 
@@ -4444,6 +4452,7 @@ class TenjiMaker
                       EOS
 
                       puts me
+                      puts ''
 
                     elsif iota.match?(/\AMO\z/)
 
@@ -4953,6 +4962,7 @@ class TenjiMaker
                         EOS
 
                         puts me
+                        puts ''
 
                       elsif kappa.match?(/\AMO\z/)
 
