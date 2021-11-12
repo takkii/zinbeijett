@@ -36,8 +36,8 @@ begin
   to_tenji
 rescue Exception => e
   puts e.backtrace
+ensure
+  GC.compact
 end
-
-GC.compact
 
 __END__
