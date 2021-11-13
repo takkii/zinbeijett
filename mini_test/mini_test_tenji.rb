@@ -2,7 +2,7 @@
 
 require 'minitest/autorun'
 require 'minitest/reporters'
-require "./lib/minitest_tenji"
+require './lib/minitest_tenji'
 
 lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
@@ -15,7 +15,7 @@ class TenjiMakerTest < Minitest::Test
     @tenji_maker = TenjiMaker.new
   end
 
-def test_a_hi_ru
+  def test_a_hi_ru
     tenji = @tenji_maker.to_tenji('A HI RU')
     assert_equal <<~TENJI.chomp, tenji
       o- o- oo
@@ -69,4 +69,13 @@ def test_a_hi_ru
     TENJI
   end
 
+  # single word mini-test.
+  def test_A
+    tenji = @tenji_maker.to_tenji('A')
+    assert_equal <<~TENJI.chomp, tenji
+      o-
+      --
+      --
+    TENJI
+  end
 end
