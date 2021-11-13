@@ -1,67 +1,14 @@
+# frozen_string_literal: true
+
 require 'minitest/autorun'
 require 'minitest/reporters'
+require "./lib/minitest_tenji"
 
-class TenjiMaker
-  def to_tenji(*text)
-    beta = text.to_s.split.join
+lib = File.expand_path('lib', __dir__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
-   if beta.match?(/"AHIRU"/)
-      ahiru = <<~EOS.chomp
-        o- o- oo
-        -- o- -o
-        -- oo --
-      EOS
-
-      ahiru
-
-    elsif beta.match?(/"KIRIN"/)
-      kirin = <<~EOS.chomp
-        o- o- --
-        o- oo -o
-        -o -- oo
-      EOS
-
-      kirin
-
-    elsif beta.match?(/"SIMAUMA"/)
-      simauma = <<~EOS.chomp
-        o- o- oo o-
-        oo -o -- -o
-        -o oo -- oo
-      EOS
-
-      simauma
-
-    elsif beta.match?(/"NIWATORI"/)
-      niwatori = <<~EOS.chomp
-        o- -- -o o-
-        o- -- oo oo
-        o- o- o- --
-      EOS
-
-      niwatori
-
-    elsif beta.match?(/"HIYOKO"/)
-      hiyoko = <<~EOS.chomp
-        o- -o -o
-        o- -o o-
-        oo o- -o
-      EOS
-
-      hiyoko
-
-    elsif beta.match?(/"KITUNE"/)
-      kitune = <<~EOS.chomp
-        o- oo oo
-        o- -o o-
-        -o o- o-
-      EOS
-
-      kitune
-
-    end
-  end
-end
+Encoding.default_internal = 'UTF-8'
+Encoding.default_external = 'UTF-8'
 
 class TenjiMakerTest < Minitest::Test
   def setup
