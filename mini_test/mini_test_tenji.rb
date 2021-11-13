@@ -2,7 +2,7 @@
 
 require 'minitest/autorun'
 require 'minitest/reporters'
-require './lib/minitest_tenji'
+require './lib/tenji_minitest'
 
 lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
