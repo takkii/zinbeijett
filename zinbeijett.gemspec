@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
   ]
   s.executables = %w(zinbeijett engine speak tweet tenji)
   s.files = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|mini_test)/}) }
-  s.homepage = "http://rubyist.hatenablog.com/"
+  s.homepage = "https://github.com/takkii/zinbeijett"
   s.licenses = ["MIT"]
   s.metadata = { "github_repo" => "ssh://github.com/takkii/zinbeijett" }
   s.metadata["yard.run"] = "yri"
