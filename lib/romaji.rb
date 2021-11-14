@@ -4,7 +4,7 @@ Encoding.default_internal = 'UTF-8'
 Encoding.default_external = 'UTF-8'
 
 class TenjiMaker
-  def self.to_romaji
+  def self.to_romaji_1
     one = ARGV[0]
 
     File.open(one) do |f|
@@ -52,41 +52,119 @@ class TenjiMaker
 
         EOS
 
+        tenji_ka = <<~EOS.chomp
+
+          o-
+          --
+          -o
+
+        EOS
+
+        tenji_ki = <<~EOS.chomp
+
+          o-
+          o-
+          -o
+
+        EOS
+
+        tenji_ku = <<~EOS.chomp
+
+          o-
+          o-
+          -o
+
+        EOS
+
+        tenji_ke = <<~EOS.chomp
+
+          o-
+          o-
+          -o
+
+        EOS
+
+        tenji_ko = <<~EOS.chomp
+
+          o-
+          o-
+          -o
+
+        EOS
+
+        # A ~ O
         tenji_a_s = tenji_a.to_s
         tenji_i_s = tenji_i.to_s
         tenji_u_s = tenji_u.to_s
         tenji_e_s = tenji_e.to_s
         tenji_o_s = tenji_o.to_s
 
+        # KA KO
+        tenji_ka_s = tenji_ka.to_s
+        tenji_ki_s = tenji_ki.to_s
+        tenji_ku_s = tenji_ku.to_s
+        tenji_ke_s = tenji_ke.to_s
+        tenji_ko_s = tenji_ko.to_s
+
         if alpha.match?(tenji_a_s)
-        puts ''
-        puts 'A'
-        puts ''
-        exit!
-        
+          puts ''
+          puts 'A'
+          puts ''
+          exit!
+
         elsif alpha.match?(tenji_i_s)
-        puts ''
-        puts 'I'
-        puts ''
-        exit!
-        
+          puts ''
+          puts 'I'
+          puts ''
+          exit!
+
         elsif alpha.match?(tenji_u_s)
-        puts ''
-        puts 'U'
-        puts ''
-        exit!
-        
+          puts ''
+          puts 'U'
+          puts ''
+          exit!
+
         elsif alpha.match?(tenji_e_s)
-        puts ''
-        puts 'E'
-        puts ''
-        exit!
-        
+          puts ''
+          puts 'E'
+          puts ''
+          exit!
+
         elsif alpha.match?(tenji_o_s)
-        puts ''
-        puts 'O'
-        puts ''
-        exit!
+          puts ''
+          puts 'O'
+          puts ''
+          exit!
+
+        elsif alpha.match?(tenji_ka_s)
+          puts ''
+          puts 'KA'
+          puts ''
+          exit!
+
+        elsif alpha.match?(tenji_ki_s)
+          puts ''
+          puts 'KI'
+          puts ''
+          exit!
+
+        elsif alpha.match?(tenji_ku_s)
+          puts ''
+          puts 'KU'
+          puts ''
+          exit!
+
+        elsif alpha.match?(tenji_ke_s)
+          puts ''
+          puts 'KE'
+          puts ''
+          exit!
+
+        elsif alpha.match?(tenji_ko_s)
+          puts ''
+          puts 'KO'
+          puts ''
+          exit!
 
         end
       end
