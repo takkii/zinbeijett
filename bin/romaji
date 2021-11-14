@@ -18,6 +18,7 @@ module Romaji
   def to_romaji
     require 'romaji'
     TenjiMaker.to_romaji_1
+    exit!
   end
 end
 
