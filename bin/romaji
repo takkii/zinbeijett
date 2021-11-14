@@ -26,7 +26,7 @@ include Romaji
 begin
   to_romaji
 rescue Exception => e
-  puts e.backtrace
+  # puts e.backtrace
 ensure
   GC.compact
 end
