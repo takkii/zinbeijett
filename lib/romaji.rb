@@ -58,8 +58,6 @@ class TenjiMaker
         tenji_e_s = tenji_e.to_s
         tenji_o_s = tenji_o.to_s
 
-        begin
-
         if alpha.match?(tenji_a_s)
         puts ''
         puts 'A'
@@ -84,15 +82,8 @@ class TenjiMaker
         puts ''
         puts 'O'
         puts ''
-
-        rescue StandardError => e
-        puts e.backtrace
-
-        ensure
-        exit!
-
-          end
         end
+        
       end
     end
   end
