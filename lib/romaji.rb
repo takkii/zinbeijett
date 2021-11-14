@@ -110,51 +110,61 @@ class TenjiMaker
           puts ''
           puts 'A'
           puts ''
+          exit!
 
         elsif alpha.match?(tenji_i_s)
           puts ''
           puts 'I'
           puts ''
+          exit!
 
         elsif alpha.match?(tenji_u_s)
           puts ''
           puts 'U'
           puts ''
+          exit!
 
         elsif alpha.match?(tenji_e_s)
           puts ''
           puts 'E'
           puts ''
+          exit!
 
         elsif alpha.match?(tenji_o_s)
           puts ''
           puts 'O'
           puts ''
+          exit!
 
         elsif alpha.match?(tenji_ka_s)
           puts ''
           puts 'KA'
           puts ''
+          exit!
 
         elsif alpha.match?(tenji_ki_s)
           puts ''
           puts 'KI'
           puts ''
+          exit!
 
         elsif alpha.match?(tenji_ku_s)
           puts ''
           puts 'KU'
           puts ''
+          exit!
 
         elsif alpha.match?(tenji_ke_s)
           puts ''
           puts 'KE'
           puts ''
+          exit!
 
         elsif alpha.match?(tenji_ko_s)
           puts ''
           puts 'KO'
           puts ''
+          exit!
 
         end
       end
