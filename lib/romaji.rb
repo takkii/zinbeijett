@@ -4,7 +4,7 @@ Encoding.default_internal = 'UTF-8'
 Encoding.default_external = 'UTF-8'
 
 class TenjiMaker
-  def self.to_tenji_a
+  def self.to_romaji
     one = ARGV[0]
 
     File.open(one) do |f|
@@ -48,8 +48,6 @@ class TenjiMaker
     end
   end
 end
-
-TenjiMaker.to_tenji_a
 
 GC.compact
 
