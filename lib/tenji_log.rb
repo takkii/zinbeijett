@@ -5214,14 +5214,3 @@ class TenjiMaker
     end
   end
 end
-
-    TenjiMaker.to_tenji_a
-    TenjiMaker.to_tenji_b
-    TenjiMaker.to_tenji_g
-    TenjiMaker.to_tenji_d
-    TenjiMaker.to_tenji_e
-    TenjiMaker.to_tenji_z
-    TenjiMaker.to_tenji_t
-    TenjiMaker.to_tenji_c
-    TenjiMaker.to_tenji_i
-    TenjiMaker.to_tenji_k
