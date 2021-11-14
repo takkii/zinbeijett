@@ -16,7 +16,7 @@ module Tenji
   module_function
 
   def to_tenji
-    require 'tenji'
+    require 'tenji_log'
     TenjiMaker.to_tenji_a
     TenjiMaker.to_tenji_b
     TenjiMaker.to_tenji_g
