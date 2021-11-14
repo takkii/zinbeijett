@@ -55,6 +55,8 @@ end
 
 include Tenji
 
+one = ARGV[0]
+
 r = /\A[-][r]\z/
 m = /\A[-][m]\z/
 
