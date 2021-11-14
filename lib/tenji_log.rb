@@ -2,7 +2,7 @@
 
 class TenjiMaker
   def self.to_tenji_a
-    alpha = ARGV[1].to_s
+    alpha = ARGV[0].to_s
 
     begin
       File.open('log/tenji_a.txt', 'a:utf-8', perm = 0o777) do |f|
@@ -564,7 +564,7 @@ class TenjiMaker
     end
 
     def self.to_tenji_b
-      beta = ARGV[2].to_s
+      beta = ARGV[1].to_s
 
       begin
         File.open('log/tenji_b.txt', 'a:utf-8', perm = 0o777) do |f|
@@ -1080,7 +1080,7 @@ class TenjiMaker
       end
 
       def self.to_tenji_g
-        gamma = ARGV[3].to_s
+        gamma = ARGV[2].to_s
 
         begin
           File.open('log/tenji_g.txt', 'a:utf-8', perm = 0o777) do |f|
@@ -1596,7 +1596,7 @@ class TenjiMaker
         end
 
         def self.to_tenji_d
-          delta = ARGV[4].to_s
+          delta = ARGV[3].to_s
 
           begin
             File.open('log/tenji_d.txt', 'a:utf-8', perm = 0o777) do |f|
@@ -2112,7 +2112,7 @@ class TenjiMaker
           end
 
           def self.to_tenji_e
-            epsilon = ARGV[5].to_s
+            epsilon = ARGV[4].to_s
 
             begin
               File.open('log/tenji_e.txt', 'a:utf-8', perm = 0o777) do |f|
@@ -2628,7 +2628,7 @@ class TenjiMaker
             end
 
             def self.to_tenji_z
-              zeta = ARGV[6].to_s
+              zeta = ARGV[5].to_s
 
               begin
                 File.open('log/tenji_z.txt', 'a:utf-8', perm = 0o777) do |f|
@@ -3144,7 +3144,7 @@ class TenjiMaker
               end
 
               def self.to_tenji_t
-                eta = ARGV[7].to_s
+                eta = ARGV[6].to_s
 
                 begin
                   File.open('log/tenji_t.txt', 'a:utf-8', perm = 0o777) do |f|
@@ -3660,7 +3660,7 @@ class TenjiMaker
                 end
 
                 def self.to_tenji_c
-                  theta = ARGV[8].to_s
+                  theta = ARGV[7].to_s
 
                   begin
                     File.open('log/tenji_c.txt', 'a:utf-8', perm = 0o777) do |f|
@@ -4176,7 +4176,7 @@ class TenjiMaker
                   end
 
                   def self.to_tenji_i
-                    iota = ARGV[9].to_s
+                    iota = ARGV[8].to_s
 
                     begin
                       File.open('log/tenji_i.txt', 'a:utf-8', perm = 0o777) do |f|
@@ -4692,7 +4692,7 @@ class TenjiMaker
                     end
 
                     def self.to_tenji_k
-                      kappa = ARGV[10].to_s
+                      kappa = ARGV[9].to_s
 
                       File.open('log/tenji_k.txt', 'a:utf-8', perm = 0o777) do |f|
                         if kappa.match?(/\AA\z/)
@@ -5214,3 +5214,14 @@ class TenjiMaker
     end
   end
 end
+
+    TenjiMaker.to_tenji_a
+    TenjiMaker.to_tenji_b
+    TenjiMaker.to_tenji_g
+    TenjiMaker.to_tenji_d
+    TenjiMaker.to_tenji_e
+    TenjiMaker.to_tenji_z
+    TenjiMaker.to_tenji_t
+    TenjiMaker.to_tenji_c
+    TenjiMaker.to_tenji_i
+    TenjiMaker.to_tenji_k
