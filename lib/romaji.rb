@@ -28,8 +28,35 @@ class TenjiMaker
 
         EOS
 
+        tenji_u = <<~EOS.chomp
+
+          oo
+          --
+          --
+
+        EOS
+
+        tenji_e = <<~EOS.chomp
+
+          oo
+          o-
+          --
+
+        EOS
+
+        tenji_o = <<~EOS.chomp
+
+          -o
+          o-
+          --
+
+        EOS
+
         tenji_a_s = tenji_a.to_s
         tenji_i_s = tenji_i.to_s
+        tenji_u_s = tenji_i.to_s
+        tenji_e_s = tenji_i.to_s
+        tenji_o_s = tenji_i.to_s
 
         if alpha.match?(tenji_a_s)
         puts ''
@@ -40,6 +67,24 @@ class TenjiMaker
         elsif alpha.match?(tenji_i_s)
         puts ''
         puts 'I'
+        puts ''
+        exit!
+
+        elsif alpha.match?(tenji_u_s)
+        puts ''
+        puts 'U'
+        puts ''
+        exit!
+
+        elsif alpha.match?(tenji_e_s)
+        puts ''
+        puts 'E'
+        puts ''
+        exit!
+
+        elsif alpha.match?(tenji_e_s)
+        puts ''
+        puts 'O'
         puts ''
         exit!
 
