@@ -78,7 +78,7 @@ class TenjiMaker
 
         tenji_ke = <<~EOS.chomp
 
-          o-
+          oo
           o-
           -o
 
@@ -86,7 +86,7 @@ class TenjiMaker
 
         tenji_ko = <<~EOS.chomp
 
-          o-
+          -o
           o-
           -o
 
