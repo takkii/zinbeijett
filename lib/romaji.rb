@@ -54,9 +54,9 @@ class TenjiMaker
 
         tenji_a_s = tenji_a.to_s
         tenji_i_s = tenji_i.to_s
-        tenji_u_s = tenji_i.to_s
-        tenji_e_s = tenji_i.to_s
-        tenji_o_s = tenji_i.to_s
+        tenji_u_s = tenji_u.to_s
+        tenji_e_s = tenji_e.to_s
+        tenji_o_s = tenji_o.to_s
 
         if alpha.match?(tenji_a_s)
         puts ''
