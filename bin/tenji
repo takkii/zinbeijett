@@ -69,7 +69,7 @@ elsif one.match?(m)
   to_tenji_m
 end
 rescue Exception => e
-  puts e.backtrace
+  #puts e.backtrace
 ensure
   GC.compact
 end
