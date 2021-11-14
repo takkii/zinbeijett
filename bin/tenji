@@ -28,12 +28,44 @@ module Tenji
     TenjiMaker.to_tenji_i
     TenjiMaker.to_tenji_k
   end
+  
+  def to_tenji_m
+    require 'tenji_log'
+    TenjiMaker.to_tenji_a
+    TenjiMaker.to_tenji_b
+    TenjiMaker.to_tenji_g
+    TenjiMaker.to_tenji_d
+    TenjiMaker.to_tenji_e
+    TenjiMaker.to_tenji_z
+    TenjiMaker.to_tenji_t
+    TenjiMaker.to_tenji_c
+    TenjiMaker.to_tenji_i
+    TenjiMaker.to_tenji_k
+  end
+  
+  def version_info
+    require 'version'
+    puts '[ version ]'.center(60, '-')
+    puts ''
+    puts 'Tenji VERSION : ' + EngineLeft::VERSION
+    puts ''
+    puts '[ version ]'.center(60, '-')
+  end
 end
 
 include Tenji
 
+r = /\A[-][r]\z/
+m = /\A[-][m]\z/
+
 begin
+if one.nil?
+  version_info
+elsif one.match?(r)
   to_tenji
+elsif one.match?(m)
+  to_tenji_m
+end
 rescue Exception => e
   puts e.backtrace
 ensure

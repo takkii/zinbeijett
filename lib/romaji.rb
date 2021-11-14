@@ -94,6 +94,7 @@ class TenjiMaker
 
         EOS
 
+        # SA ~ SO
         tenji_sa = <<~EOS.chomp
 
           o-
