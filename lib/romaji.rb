@@ -218,31 +218,31 @@ class TenjiMaker
           exit!
 
         # SA ~ SO
-        elsif alpha.match?(tenji_ko_s)
+        elsif alpha.match?(tenji_sa_s)
           puts ''
           puts 'SA'
           puts ''
           exit!
 
-        elsif alpha.match?(tenji_ko_s)
+        elsif alpha.match?(tenji_si_s)
           puts ''
           puts 'SI'
           puts ''
           exit!
 
-        elsif alpha.match?(tenji_ko_s)
+        elsif alpha.match?(tenji_su_s)
           puts ''
           puts 'SU'
           puts ''
           exit!
 
-        elsif alpha.match?(tenji_ko_s)
+        elsif alpha.match?(tenji_se_s)
           puts ''
           puts 'SE'
           puts ''
           exit!
 
-        elsif alpha.match?(tenji_ko_s)
+        elsif alpha.match?(tenji_so_s)
           puts ''
           puts 'SO'
           puts ''
