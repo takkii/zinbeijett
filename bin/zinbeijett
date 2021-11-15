@@ -119,25 +119,41 @@ module Zinbeijett
     
     tenji A I U E O
     
+    ---output---
     o-
     --
     --
-
     o-
     o-
     --
-
     oo
     --
     --
-
     oo
     o-
     --
-
     -o
     o-
     --
+    ---output---
+
+    [romaji]
+
+    Convert Tenji to Romaji.
+
+    romaji [tenji in filename.txt]
+    
+    Example
+    
+    romaji log/tenji_a.txt
+
+    [tenji_log]
+
+    10 case, alpha beta ... kappa
+    
+    log/tenji_*.txt write Tenji.
+
+    tenji_log [alphabet] [alphabet] .. 10 case
 
     [zinbeijett]
 
