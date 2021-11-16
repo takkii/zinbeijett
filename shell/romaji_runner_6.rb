@@ -369,93 +369,93 @@ class TenjiMaker
           puts ''
           puts 'A'
           puts ''
-          exit!
+          f.close
 
         elsif alpha.match?(tenji_i_s)
           puts ''
           puts 'I'
           puts ''
-          exit!
+          f.close
 
         elsif alpha.match?(tenji_u_s)
           puts ''
           puts 'U'
           puts ''
-          exit!
+          f.close
 
         elsif alpha.match?(tenji_e_s)
           puts ''
           puts 'E'
           puts ''
-          exit!
+          f.close
 
         elsif alpha.match?(tenji_o_s)
           puts ''
           puts 'O'
           puts ''
-          exit!
+          f.close
 
         # KA ~ KO
         elsif alpha.match?(tenji_ka_s)
           puts ''
           puts 'KA'
           puts ''
-          exit!
+          f.close
 
         elsif alpha.match?(tenji_ki_s)
           puts ''
           puts 'KI'
           puts ''
-          exit!
+          f.close
 
         elsif alpha.match?(tenji_ku_s)
           puts ''
           puts 'KU'
           puts ''
-          exit!
+          f.close
 
         elsif alpha.match?(tenji_ke_s)
           puts ''
           puts 'KE'
           puts ''
-          exit!
+          f.close
 
         elsif alpha.match?(tenji_ko_s)
           puts ''
           puts 'KO'
           puts ''
-          exit!
+          f.close
 
         # SA ~ SO
         elsif alpha.match?(tenji_sa_s)
           puts ''
           puts 'SA'
           puts ''
-          exit!
+          f.close
 
         elsif alpha.match?(tenji_si_s)
           puts ''
           puts 'SI'
           puts ''
-          exit!
+          f.close
 
         elsif alpha.match?(tenji_su_s)
           puts ''
           puts 'SU'
           puts ''
-          exit!
+          f.close
 
         elsif alpha.match?(tenji_se_s)
           puts ''
           puts 'SE'
           puts ''
-          exit!
+          f.close
 
         elsif alpha.match?(tenji_so_s)
           puts ''
           puts 'SO'
           puts ''
-          exit!
+          f.close
 
         # TA ~ TO
 
@@ -463,193 +463,193 @@ class TenjiMaker
           puts ''
           puts 'TA'
           puts ''
-          exit!
+          f.close
 
         elsif alpha.match?(tenji_ti_s)
           puts ''
           puts 'TI'
           puts ''
-          exit!
+          f.close
 
         elsif alpha.match?(tenji_tu_s)
           puts ''
           puts 'TU'
           puts ''
-          exit!
+          f.close
 
         elsif alpha.match?(tenji_te_s)
           puts ''
           puts 'TE'
           puts ''
-          exit!
+          f.close
 
         elsif alpha.match?(tenji_to_s)
           puts ''
           puts 'TO'
           puts ''
-          exit!
+          f.close
 
         # NA = NO
         elsif alpha.match?(tenji_na_s)
           puts ''
           puts 'NA'
           puts ''
-          exit!
+          f.close
 
         elsif alpha.match?(tenji_ni_s)
           puts ''
           puts 'NI'
           puts ''
-          exit!
+          f.close
 
         elsif alpha.match?(tenji_nu_s)
           puts ''
           puts 'NU'
           puts ''
-          exit!
+          f.close
 
         elsif alpha.match?(tenji_ne_s)
           puts ''
           puts 'NE'
           puts ''
-          exit!
+          f.close
 
         elsif alpha.match?(tenji_no_s)
           puts ''
           puts 'NO'
           puts ''
-          exit!
+          f.close
 
         # HA ~ HO
         elsif alpha.match?(tenji_ha_s)
           puts ''
           puts 'HA'
           puts ''
-          exit!
+          f.close
 
         elsif alpha.match?(tenji_hi_s)
           puts ''
           puts 'HI'
           puts ''
-          exit!
+          f.close
 
         elsif alpha.match?(tenji_hu_s)
           puts ''
           puts 'HU'
           puts ''
-          exit!
+          f.close
 
         elsif alpha.match?(tenji_he_s)
           puts ''
           puts 'HE'
           puts ''
-          exit!
+          f.close
 
         elsif alpha.match?(tenji_ho_s)
           puts ''
           puts 'HO'
           puts ''
-          exit!
+          f.close
 
         # MA ~ MO
         elsif alpha.match?(tenji_ma_s)
           puts ''
           puts 'MA'
           puts ''
-          exit!
+          f.close
 
         elsif alpha.match?(tenji_mi_s)
           puts ''
           puts 'MI'
           puts ''
-          exit!
+          f.close
 
         elsif alpha.match?(tenji_mu_s)
           puts ''
           puts 'MU'
           puts ''
-          exit!
+          f.close
 
         elsif alpha.match?(tenji_me_s)
           puts ''
           puts 'ME'
           puts ''
-          exit!
+          f.close
 
         elsif alpha.match?(tenji_mo_s)
           puts ''
           puts 'MO'
           puts ''
-          exit!
+          f.close
 
         # YA ~ YO
         elsif alpha.match?(tenji_ya_s)
           puts ''
           puts 'YA'
           puts ''
-          exit!
+          f.close
 
         elsif alpha.match?(tenji_yu_s)
           puts ''
           puts 'YU'
           puts ''
-          exit!
+          f.close
 
         elsif alpha.match?(tenji_yo_s)
           puts ''
           puts 'YO'
           puts ''
-          exit!
+          f.close
 
         # RA ~ RO
         elsif alpha.match?(tenji_ra_s)
           puts ''
           puts 'RA'
           puts ''
-          exit!
+          f.close
 
         elsif alpha.match?(tenji_ri_s)
           puts ''
           puts 'RI'
           puts ''
-          exit!
+          f.close
 
         elsif alpha.match?(tenji_ru_s)
           puts ''
           puts 'RU'
           puts ''
-          exit!
+          f.close
 
         elsif alpha.match?(tenji_re_s)
           puts ''
           puts 'RE'
           puts ''
-          exit!
+          f.close
 
         elsif alpha.match?(tenji_ro_s)
           puts ''
           puts 'RO'
           puts ''
-          exit!
+          f.close
 
         # WA ~ N
         elsif alpha.match?(tenji_wa_s)
           puts ''
           puts 'WA'
           puts ''
-          exit!
+          f.close
 
         elsif alpha.match?(tenji_wo_s)
           puts ''
           puts 'WO'
           puts ''
-          exit!
+          f.close
 
         elsif alpha.match?(tenji_n_s)
           puts ''
           puts 'N'
           puts ''
-          exit!
+          f.close
 
         end
       end
@@ -659,7 +659,7 @@ end
 
 begin
   TenjiMaker.to_romaji_6
-  exit!
+  f.close
 rescue Exception => e
 # puts e.backtrace
 ensure
