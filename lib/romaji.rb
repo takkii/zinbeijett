@@ -249,6 +249,37 @@ class TenjiMaker
           o-
         EOS
 
+        # RA ~ RO
+        tenji_ra = <<~EOS.chomp
+o-
+-o
+--
+        EOS
+
+        tenji_ri = <<~EOS.chomp
+o-
+oo
+--
+        EOS
+
+        tenji_ru = <<~EOS.chomp
+-o
+oo
+--
+        EOS
+
+        tenji_re = <<~EOS.chomp
+oo
+oo
+--
+        EOS
+
+        tenji_ro = <<~EOS.chomp
+-o
+oo
+--
+        EOS
+
         # WA ~ N
 
         tenji_wa = <<~EOS.chomp
@@ -317,6 +348,13 @@ class TenjiMaker
         tenji_mu_s = tenji_mu.to_s
         tenji_me_s = tenji_me.to_s
         tenji_mo_s = tenji_mo.to_s
+
+        # RA ~ RO
+        tenji_ra_s = tenji_ra.to_s
+        tenji_ri_s = tenji_ri.to_s
+        tenji_ru_s = tenji_ru.to_s
+        tenji_re_s = tenji_re.to_s
+        tenji_ro_s = tenji_ro.to_s
 
         # YA ~ YO
         tenji_ya_s = tenji_ya.to_s
@@ -562,6 +600,37 @@ class TenjiMaker
         elsif alpha.match?(tenji_yo_s)
           puts ''
           puts 'YO'
+          puts ''
+          exit!
+
+        # RA ~ RO
+        elsif alpha.match?(tenji_ra_s)
+          puts ''
+          puts 'RA'
+          puts ''
+          exit!
+
+        elsif alpha.match?(tenji_ri_s)
+          puts ''
+          puts 'RI'
+          puts ''
+          exit!
+
+        elsif alpha.match?(tenji_ru_s)
+          puts ''
+          puts 'RU'
+          puts ''
+          exit!
+
+        elsif alpha.match?(tenji_re_s)
+          puts ''
+          puts 'RE'
+          puts ''
+          exit!
+
+        elsif alpha.match?(tenji_ro_s)
+          puts ''
+          puts 'RO'
           puts ''
           exit!
 
