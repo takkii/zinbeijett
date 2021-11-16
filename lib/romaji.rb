@@ -251,33 +251,33 @@ class TenjiMaker
 
         # RA ~ RO
         tenji_ra = <<~EOS.chomp
-o-
--o
---
+          o-
+          -o
+          --
         EOS
 
         tenji_ri = <<~EOS.chomp
-o-
-oo
---
+          o-
+          oo
+          --
         EOS
 
         tenji_ru = <<~EOS.chomp
--o
-oo
---
+          -o
+          oo
+          --
         EOS
 
         tenji_re = <<~EOS.chomp
-oo
-oo
---
+          oo
+          oo
+          --
         EOS
 
         tenji_ro = <<~EOS.chomp
--o
-oo
---
+          -o
+          oo
+          --
         EOS
 
         # WA ~ N
