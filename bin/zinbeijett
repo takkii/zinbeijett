@@ -141,9 +141,9 @@ module Zinbeijett
 
     Convert Tenji to Romaji.
 
-    romaji [tenji in filename.txt]
+    romaji [tenji convert in filename.txt]
     
-    Example
+    <Example>
     
     romaji log/tenji_a.txt
 
@@ -154,6 +154,20 @@ module Zinbeijett
     log/tenji_*.txt write Tenji.
 
     tenji_log [alphabet] [alphabet] .. 10 case
+
+    [katakana]
+
+    Convert Tenji to Katakana.
+
+    katakana [katakana convert in filename.txt]
+
+    <Example>
+
+    tenji_log A
+
+    katakana tenji_a.txt
+
+    ア
 
     [zinbeijett]
 
