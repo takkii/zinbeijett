@@ -82,6 +82,6 @@ KatakanaRunner.run8
 KatakanaRunner.run9
 KatakanaRunner.run10
 
-# 終了はCtrl + C
+# CLI stop is Ctrl + C.
 
 __END__

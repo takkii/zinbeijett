@@ -82,6 +82,6 @@ RomajiRunner.run8
 RomajiRunner.run9
 RomajiRunner.run10
 
-# 終了はCtrl + C
+# CLI Stop is Ctrl + C.
 
 __END__
