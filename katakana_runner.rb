@@ -11,63 +11,63 @@ require 'open3'
 # Katakana Runner
 class KatakanaRunner
   def self.run1
-    stdout_ts, _stderr_ts, _status_ts = Open3.capture3('ruby ./shell_ka/katakana_runner_1.rb')
+    stdout_rb, _stderr_rb, _status_rb = Open3.capture3('ruby ./shell_ka/katakana_runner_1.rb')
 
-    puts stdout_ts
+    puts stdout_rb
   end
 
   def self.run2
-    stdout_ts, _stderr_ts, _status_ts = Open3.capture3('ruby ./shell_ka/katakana_runner_2.rb')
+    stdout_rb, _stderr_rb, _status_rb = Open3.capture3('ruby ./shell_ka/katakana_runner_2.rb')
 
-    puts stdout_ts
+    puts stdout_rb
   end
 
   def self.run3
-    stdout_ts, _stderr_ts, _status_ts = Open3.capture3('ruby ./shell_ka/katakana_runner_3.rb')
+    stdout_rb, _stderr_rb, _status_rb = Open3.capture3('ruby ./shell_ka/katakana_runner_3.rb')
 
-    puts stdout_ts
+    puts stdout_rb
   end
 
   def self.run4
-    stdout_ts, _stderr_ts, _status_ts = Open3.capture3('ruby ./shell_ka/katakana_runner_4.rb')
+    stdout_rb, _stderr_rb, _status_rb = Open3.capture3('ruby ./shell_ka/katakana_runner_4.rb')
 
-    puts stdout_ts
+    puts stdout_rb
   end
 
   def self.run5
-    stdout_ts, _stderr_ts, _status_ts = Open3.capture3('ruby ./shell_ka/katakana_runner_5.rb')
+    stdout_rb, _stderr_rb, _status_rb = Open3.capture3('ruby ./shell_ka/katakana_runner_5.rb')
 
-    puts stdout_ts
+    puts stdout_rb
   end
 
   def self.run6
-    stdout_ts, _stderr_ts, _status_ts = Open3.capture3('ruby ./shell_ka/katakana_runner_6.rb')
+    stdout_rb, _stderr_rb, _status_rb = Open3.capture3('ruby ./shell_ka/katakana_runner_6.rb')
 
-    puts stdout_ts
+    puts stdout_rb
   end
 
   def self.run7
-    stdout_ts, _stderr_ts, _status_ts = Open3.capture3('ruby ./shell_ka/katakana_runner_7.rb')
+    stdout_rb, _stderr_rb, _status_rb = Open3.capture3('ruby ./shell_ka/katakana_runner_7.rb')
 
-    puts stdout_ts
+    puts stdout_rb
   end
 
   def self.run8
-    stdout_ts, _stderr_ts, _status_ts = Open3.capture3('ruby ./shell_ka/katakana_runner_8.rb')
+    stdout_rb, _stderr_rb, _status_rb = Open3.capture3('ruby ./shell_ka/katakana_runner_8.rb')
 
-    puts stdout_ts
+    puts stdout_rb
   end
 
   def self.run9
-    stdout_ts, _stderr_ts, _status_ts = Open3.capture3('ruby ./shell_ka/katakana_runner_9.rb')
+    stdout_rb, _stderr_rb, _status_rb = Open3.capture3('ruby ./shell_ka/katakana_runner_9.rb')
 
-    puts stdout_ts
+    puts stdout_rb
   end
 
   def self.run10
-    stdout_ts, _stderr_ts, _status_ts = Open3.capture3('ruby ./shell_ka/katakana_runner_10.rb')
+    stdout_rb, _stderr_rb, _status_rb = Open3.capture3('ruby ./shell_ka/katakana_runner_10.rb')
 
-    puts stdout_ts
+    puts stdout_rb
   end
 end
 
