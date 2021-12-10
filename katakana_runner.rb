@@ -8,8 +8,8 @@ require 'open3'
 # Katakana Runner
 class KatakanaRunner
 
+  # default encoding.
   def self.encoding_style
-    # default encoding.
     Encoding.default_internal = 'UTF-8'
     Encoding.default_external = 'UTF-8'
   end
