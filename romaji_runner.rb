@@ -8,7 +8,7 @@ require 'open3'
 # Romaji Runner
 class RomajiRunner
 
-  # encoding style
+  # default encoding utf-8, change encode here.
   def self.encodig_style
     Encoding.default_internal = 'UTF-8'
     Encoding.default_external = 'UTF-8'
