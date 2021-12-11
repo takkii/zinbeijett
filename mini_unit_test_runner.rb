@@ -2,9 +2,11 @@
 
 require "#{File.dirname(__FILE__)}/req/miniunit"
 
-# Encoding Setting.
-Encoding.default_internal = 'UTF-8'
-Encoding.default_external = 'UTF-8'
+# default encoding utf-8, change encode here.
+def encoding_style
+  Encoding.default_internal = 'UTF-8'
+  Encoding.default_external = 'UTF-8'
+end
 
 # SubClass test function.
 class MiniTestOne
@@ -68,6 +70,7 @@ Border = Struct.new(:timestamp, :minitest_load) do
 end
 
 begin
+  encoding_style
   puts ''
   puts ' mini_test in filename list '.center(80, '~')
   puts ''
