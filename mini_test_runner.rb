@@ -96,6 +96,7 @@ begin
   puts ''
 rescue StandardError => e
   puts e.backtrace
+  encoding_style.tanraku_exit
 ensure
   GC.compact
 end
