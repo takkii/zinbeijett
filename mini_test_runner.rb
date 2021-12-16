@@ -13,7 +13,7 @@ class MiniTestOne
   attr_reader :test_find
 
   def initialize
-    @test_find = Dir["#{File.dirname(__FILE__)}/mini_test/*.rb"].sort.filter { |file| require file }
+    @test_find = Dir["#{File.dirname(__FILE__)}/mini_test/*.rb"].sort.filter { |f| require f }
   end
 
   def remove
