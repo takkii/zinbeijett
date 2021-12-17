@@ -8,12 +8,12 @@ def encoding_style
   Encoding.default_external = 'UTF-8'
 end
 
-# SubClass test function.
+# The new instance will be deleted after process ends.
 class MiniTestOne
   attr_reader :mini_test
 
   def initialize
-    @mini_test = Dir["#{File.dirname(__FILE__)}/mini_unit/*.rb"].sort.filter { |file| require file }
+    @mini_test = Dir["#{File.dirname(__FILE__)}/mini_unit/*.rb"].sort.filter { |f| require f }
   end
 
   def remove
@@ -21,7 +21,7 @@ class MiniTestOne
   end
 end
 
-# SubClass current directory
+# The new instance will be deleted after process ends.
 class MiniFilename
   attr_reader :mini_find
 
@@ -69,6 +69,7 @@ Border = Struct.new(:timestamp, :minitest_load) do
   end
 end
 
+# About Exception, begin ~ rescue ~ ensure.
 begin
   encoding_style
   puts ''
