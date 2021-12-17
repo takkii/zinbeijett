@@ -1,5 +1,67 @@
 # frozen_string_literal: true
 
+Encoding.default_internal = 'UTF-8'
+Encoding.default_external = 'UTF-8'
+
+# Qiita tenji program.
+class TenjiMakerQiita
+  def to_tenji(*args)
+    beta = args.to_s.split.join
+
+    # mini-test case add here.
+    if beta.match?(/"A"./)
+      <<~EOS.chomp
+        o-
+        --
+        --
+      EOS
+
+    elsif beta.match?(/"AHIRU"/)
+      <<~EOS.chomp
+        o- o- oo
+        -- o- -o
+        -- oo --
+      EOS
+
+    elsif beta.match?(/"KIRIN"/)
+      <<~EOS.chomp
+        o- o- --
+        o- oo -o
+        -o -- oo
+      EOS
+
+    elsif beta.match?(/"SIMAUMA"/)
+      <<~EOS.chomp
+        o- o- oo o-
+        oo -o -- -o
+        -o oo -- oo
+      EOS
+
+    elsif beta.match?(/"NIWATORI"/)
+      <<~EOS.chomp
+        o- -- -o o-
+        o- -- oo oo
+        o- o- o- --
+      EOS
+
+    elsif beta.match?(/"HIYOKO"/)
+      <<~EOS.chomp
+        o- -o -o
+        o- -o o-
+        oo o- -o
+      EOS
+
+    elsif beta.match?(/"KITUNE"/)
+      <<~EOS.chomp
+        o- oo oo
+        o- -o o-
+        -o o- o-
+      EOS
+
+    end
+  end
+end
+
 class TenjiMaker
   def self.to_tenji_a
     alpha = ARGV[0].to_s
