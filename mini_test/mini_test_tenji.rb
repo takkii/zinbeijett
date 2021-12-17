@@ -2,7 +2,7 @@
 
 require 'minitest/autorun'
 require 'minitest/reporters'
-require './lib/tenji'
+require "#{File.dirname(__FILE__)}/../lib/tenji"
 
 class TenjiMakerTest < Minitest::Test
   def self.encoding_style
