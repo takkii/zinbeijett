@@ -8,7 +8,7 @@ def encoding_style
   Encoding.default_external = 'UTF-8'
 end
 
-# SubClass test function.
+# The new instance will be deleted after process ends.
 class MiniTestOne
   attr_reader :test_find
 
@@ -21,7 +21,7 @@ class MiniTestOne
   end
 end
 
-# SubClass current directory
+# The new instance will be deleted after process ends.
 class MiniFilename
   attr_reader :find
 
@@ -52,7 +52,8 @@ module MiniFileN
   end
 end
 
-# TimeStamp, use himekuri2.
+# TimeStamp, use himekuri_ts.
+# The new instance will be deleted after the process ends.
 class Daytimerecord
   attr_reader :himekurits
 
@@ -78,7 +79,7 @@ class Daytimerecord
   end
 end
 
-# About Exception, rescue and ensure.
+# About Exception, begin ~ rescue ~ ensure.
 begin
   encoding_style
   puts ''
