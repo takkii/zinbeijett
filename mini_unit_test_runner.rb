@@ -97,4 +97,42 @@ ensure
   GC.compact
 end
 
+# After this, it will not be analyzed / executed.
 __END__
+~~~~~~~~~~~~~~~~~~~~~~~~~~ mini_test in filename list ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ minitest file load ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+------------------------ TimeStamp -------------------------
+
+時刻を表示 : 2021年12月18日 : 13時16分08秒 : 土曜日
+
+令和3年12月18日 : R03.12.18
+
+------------------------ TimeStamp -------------------------
+
+-------------------- minitest file load --------------------
+
+./mini_unit/mini_unit_date.rb
+./mini_unit/mini_unit_encode.rb
+./mini_unit/mini_unit_matcher.rb
+./mini_unit/mini_unit_method.rb
+./mini_unit/mini_unit_sort.rb
+./mini_unit/mini_unit_version.rb
+
+-------------------- minitest file load --------------------
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ minitest file load ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~ mini_test in filename list ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Run options: --seed 41105
+
+# Running:
+
+.............................
+
+Finished in 0.014133s, 2051.8916 runs/s, 2051.8916 assertions/s.
+
+29 runs, 29 assertions, 0 failures, 0 errors, 0 skips
