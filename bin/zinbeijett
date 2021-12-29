@@ -195,7 +195,7 @@ module Zinbeijett
     AND Search.
 
     $ engine -b https://takkii.hatenablog.com/rss
-    Diplay summary, HatenaBlog for takkii.
+    Display summary, HatenaBlog for takkii.
 
     $ engine -c
     Calendar views. Today now.
@@ -228,7 +228,7 @@ module Zinbeijett
     Display GitHub Active for atom.
     Display visualstudio magazine blogs for aspx.
 
-    ※ Diplay title only.
+    ※ Display title only.
 
     $ engine -k notojima.txt wajima
     match method all search, log/output.txt write.
