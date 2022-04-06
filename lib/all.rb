@@ -4,7 +4,7 @@ Encoding.default_external = 'UTF-8'
 Encoding.default_internal = 'UTF-8'
 
 if RUBY_VERSION.to_s == '3.2.0'
-  require 'timeout'
+  require 'seiki'
 end
 
 # All search loads.
