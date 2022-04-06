@@ -1,5 +1,10 @@
 # frozen_string_literal: true
 
+if RUBY_VERSION.to_s == '3.2.0'
+  require 'seiki'
+else
+end
+
 puts ''
 
 Encoding.default_internal = 'UTF-8'
