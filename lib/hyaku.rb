@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
-if RUBY_VERSION.to_s == '3.2.0'
-  require 'seiki'
-end
+require 'require_sec_seiki'
 
 lib = File.expand_path('txt', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)

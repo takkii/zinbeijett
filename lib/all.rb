@@ -1,11 +1,9 @@
 # frozen_string_literal: true
 
+require 'require_sec_seiki'
+
 Encoding.default_external = 'UTF-8'
 Encoding.default_internal = 'UTF-8'
-
-if RUBY_VERSION.to_s == '3.2.0'
-  require 'seiki'
-end
 
 # All search loads.
 module All
