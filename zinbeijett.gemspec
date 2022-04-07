@@ -44,7 +44,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency('feedjira', '~> 3.2')
   s.add_runtime_dependency('solargraph', '~> 0.44')
   s.add_runtime_dependency('twitter', '~> 7.0')
-  s.add_runtime_dependency('nokogiri', '~> 1.12')
+  s.add_runtime_dependency('nokogiri', '~> 1.13')
 
   if s.respond_to? :specification_version
     s.specification_version = 4
