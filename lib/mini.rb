@@ -31,7 +31,7 @@ module Mini
       end
 
       if f.eof?
-        puts ''
+        f.close
       elsif !f.eof
         begin
           raise Mini

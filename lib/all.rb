@@ -27,7 +27,7 @@ module All
       end
 
       if f.eof?
-        puts ''
+        f.close
       elsif !f.eof
         begin
           raise All

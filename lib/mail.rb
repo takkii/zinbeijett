@@ -29,7 +29,7 @@ module Mail
       end
 
       if f.eof?
-        puts ''
+        f.close
       elsif !f.eof
         begin
           raise Mail
