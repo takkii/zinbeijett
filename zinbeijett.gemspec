@@ -29,6 +29,7 @@ Gem::Specification.new do |s|
   s.description = "engine is simple search which moves by Ruby."
 
   # 依存ライブラリ
+  s.add_runtime_dependency('himekuri', '~> 0.1')
   s.add_runtime_dependency('himekuri_ts', '~> 1.0')
   s.add_runtime_dependency('minitest', '~> 5.0')
   s.add_runtime_dependency('minitest-reporters', '~> 1.4')
