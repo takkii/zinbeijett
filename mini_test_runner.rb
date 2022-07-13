@@ -55,10 +55,10 @@ end
 # TimeStamp, use himekuri_ts.
 # The new instance will be deleted after the process ends.
 class Daytimerecord
-  attr_reader :himekurits
+  attr_reader :himekuri
 
   def initialize
-    @himekurits = HimekuriTsBasic.running
+    @himekuri = HimekuriClass.new.himekuri_print
 
     # Console Output list.
     puts ''
@@ -66,7 +66,7 @@ class Daytimerecord
     puts ''
     puts ' TimeStamp '.center(60, '-')
     puts ''
-    puts @himekurits
+    puts @himekuri
     puts ''
     puts ' TimeStamp '.center(60, '-')
     puts ''
