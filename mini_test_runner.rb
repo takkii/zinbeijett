@@ -9,92 +9,22 @@ def encoding_style
 end
 
 # The new instance will be deleted after process ends.
-class MiniTestOne
-  attr_reader :test_find
+class MiniTestFile
+  attr_reader :mini_test
 
   def initialize
-    @test_find = Dir["#{File.dirname(__FILE__)}/mini_test/*.rb"].sort.filter { |f| require f }
+    require 'mini_auto_runner'
+    @mini_test = Mini_Runner(true, '/GitHub/zinbeijett/mini_test')
   end
 
   def remove
-    remove_instance_variable(:@test_find)
-  end
-end
-
-# The new instance will be deleted after process ends.
-class MiniFilename
-  attr_reader :find
-
-  def initialize
-    @find = Dir.glob("#{File.dirname(__FILE__)}/mini_test/*.rb")
-  end
-
-  def remove
-    remove_instance_variable(:@find)
-  end
-end
-
-# Super Class with refinements methods.
-module MiniFile
-  refine MiniTestOne do
-    def enter
-      mini_test
-    end
-  end
-end
-
-# Super Class feeting refinements mehtod.
-module MiniFileN
-  refine MiniFilename do
-    def anker
-      mini_find
-    end
-  end
-end
-
-# TimeStamp, use himekuri_ts.
-# The new instance will be deleted after the process ends.
-class Daytimerecord
-  attr_reader :himekuri
-
-  def initialize
-    @himekuri = HimekuriClass.new.himekuri_print
-
-    # Console Output list.
-    puts ''
-    puts ' minitest file load '.center(80, '~')
-    puts ''
-    puts ' TimeStamp '.center(60, '-')
-    puts ''
-    puts @himekuri
-    puts ''
-    puts ' TimeStamp '.center(60, '-')
-    puts ''
-    puts ' minitest file load '.center(80, '~')
-    puts ''
-  end
-
-  def remove
-    remove_instance_variable(:@himekurits)
+    remove_instance_variable(:@mini_test)
   end
 end
 
 # About Exception, begin ~ rescue ~ ensure.
 begin
-  encoding_style
-  puts ''
-  puts ' mini_test in filename list '.center(80, '~')
-  Daytimerecord.new.remove
-  using MiniFileN
-  puts MiniFilename.new.remove
-  puts ''
-  puts ' minitest file load '.center(80, '~')
-  puts ''
-  puts ' mini_test in filename list '.center(80, '~')
-  puts ''
-  using MiniFile
-  MiniTestOne.new.remove
-  puts ''
+  MiniTestFile.new.remove
 rescue StandardError => e
   puts e.backtrace
   encoding_style.tanraku_exit
