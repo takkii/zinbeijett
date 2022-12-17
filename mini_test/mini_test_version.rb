@@ -5,7 +5,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 require 'minitest/autorun'
 require 'minitest/reporters'
-require File.join(File.dirname(__FILE__), '../lib/version.rb')
+require "#{File.dirname(__FILE__)}/../lib/version"
 
 # Mini_test file load.
 class VersionTest < Minitest::Test
