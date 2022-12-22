@@ -29,23 +29,24 @@ Gem::Specification.new do |s|
   s.description = "engine is simple search which moves by Ruby."
 
   # 依存ライブラリ
+  s.add_runtime_dependency('feedjira', '~> 3.2')
   s.add_runtime_dependency('himekuri', '~> 0.1')
   s.add_runtime_dependency('himekuri_ts', '~> 1.0')
+  s.add_runtime_dependency('httparty', '~> 0.20')
   s.add_runtime_dependency('minitest', '~> 5.0')
   s.add_runtime_dependency('minitest-reporters', '~> 1.4')
+  s.add_runtime_dependency('minitest-runners', '~> 1.1.5')
+  s.add_runtime_dependency('nokogiri', '~> 1.13')
+  s.add_runtime_dependency('pycall', '~> 1.4')
   s.add_runtime_dependency('rake', '~> 13.0')
   s.add_runtime_dependency('rspec', '~> 3.10')
   s.add_runtime_dependency('rubocop', '~> 1.24')
   s.add_runtime_dependency('ruby-debug-ide', '~> 0.7')
   s.add_runtime_dependency('ruby-prof', '~> 1.4')
+  s.add_runtime_dependency('solargraph', '~> 0.44')
   s.add_runtime_dependency('tanraku', '~> 1.0')
   s.add_runtime_dependency('test-unit', '~> 3.5')
-  s.add_runtime_dependency('pycall', '~> 1.4')
-  s.add_runtime_dependency('httparty', '~> 0.20')
-  s.add_runtime_dependency('feedjira', '~> 3.2')
-  s.add_runtime_dependency('solargraph', '~> 0.44')
-  s.add_runtime_dependency('twitter', '~> 7.0')
-  s.add_runtime_dependency('nokogiri', '~> 1.13')
+  # s.add_runtime_dependency('twitter', '~> 7.0')
 
   if s.respond_to? :specification_version
     s.specification_version = 4
