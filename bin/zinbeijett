@@ -32,7 +32,6 @@ module Zinbeijett
 
     GitHub account  : takkii
     GitLab instance : takkii
-    Twitter account : @takkii
 
     ** Spectacle **
 
@@ -62,7 +61,7 @@ module Zinbeijett
 
     The MIT License
 
-    Copyright (c) 2013-2021 Takayuki Kamiyama
+    Copyright (c) 2013-2022 Takayuki Kamiyama
 
     Permission is hereby granted, free of charge,
     to any person obtaining a copy of this software and
@@ -194,8 +193,8 @@ module Zinbeijett
     $ engine -a notojima.txt wajima
     AND Search.
 
-    $ engine -b https://takkii.hatenablog.com/rss
-    Display summary, HatenaBlog for takkii.
+    $ engine -b https://takkii.github.io/feed.xml
+    Display summary, GitHub Pages for takkii.
 
     $ engine -c
     Calendar views. Today now.
@@ -252,8 +251,8 @@ module Zinbeijett
     ruby convert encript use openssl.
     sha cript use case password.
 
-    $ engine -r https://takkii.hatenablog.com/rss
-    Display Title, from Hatena Blog for takkii.
+    $ engine -r https://takkii.github.io/feed.xml
+    Display Title, GitHub Pages for takkii.
 
     $ engine -s notojima.txt notojima
     String count search. String count in File.
