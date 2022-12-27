@@ -43,7 +43,7 @@ Gem::Specification.new do |s|
   #s.add_runtime_dependency('rubocop', '~> 1.24')
   s.add_runtime_dependency('ruby-debug-ide', '~> 0.7')
   s.add_runtime_dependency('ruby-prof', '~> 1.4')
-  s.add_runtime_dependency('solargraph', '~> 0.44')
+  # s.add_runtime_dependency('solargraph', '~> 0.44')
   s.add_runtime_dependency('tanraku', '~> 1.0')
   s.add_runtime_dependency('test-unit', '~> 3.5')
   # s.add_runtime_dependency('twitter', '~> 7.0')
