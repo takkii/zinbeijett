@@ -36,7 +36,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency('minitest', '~> 5.0')
   s.add_runtime_dependency('minitest-reporters', '~> 1.4')
   s.add_runtime_dependency('minitest-runners', '~> 1.1.5')
-  s.add_runtime_dependency('nokogiri', '~> 1.13')
+  # s.add_runtime_dependency('nokogiri', '~> 1.13')
   s.add_runtime_dependency('pycall', '~> 1.4')
   s.add_runtime_dependency('rake', '~> 13.0')
   s.add_runtime_dependency('rspec', '~> 3.10')
