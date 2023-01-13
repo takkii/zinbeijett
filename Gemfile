@@ -3,12 +3,10 @@
 source 'https://rubygems.org'
 
 # gemspec
-
 gem 'bundler'
 gem 'ruby-debug-ide'
 gem 'himekuri'
 gem 'minitest-reporters'
-gem 'minitest-runners'
 gem 'pry'
 gem 'pycall'
 gem 'rake'
@@ -17,5 +15,12 @@ gem 'solargraph'
 gem 'nokogiri'
 gem 'httparty'
 gem 'feedjira'
-# gem 'twitter'
 gem 'win32console' if Gem.win_platform?
+
+# No use Twitter SNS.
+# gem 'twitter'
+
+# GitHub Package.
+# source "https://rubygems.pkg.github.com/takkii" do
+#   gem "minitest-runners", "1.1.6"
+# end
