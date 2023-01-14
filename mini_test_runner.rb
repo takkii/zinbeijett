@@ -10,15 +10,17 @@ end
 
 # The new instance will be deleted after process ends.
 class MiniTestFile
-  attr_reader :mini_test
+  attr_reader :mini_test, :mini_unit
 
   def initialize
     require 'minitest/mini_auto_runner'
     @mini_test = Mini_Runner(true, '/GitHub/zinbeijett/mini_test')
+    @mini_unit = Mini_Runner(true, '/GitHub/zinbeijett/mini_unit')
   end
 
   def remove
     remove_instance_variable(:@mini_test)
+    remove_instance_variable(:@mini_unit)
   end
 end
 
