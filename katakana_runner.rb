@@ -85,6 +85,7 @@ class KatakanaRunner
 end
 
 begin
+  puts ""
   puts "Katakana Runner Stop is Ctrl and C, Please Input."
   puts ""
 
