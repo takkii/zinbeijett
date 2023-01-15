@@ -107,8 +107,9 @@ rescue StandardError => e
   puts e.backtrace
   encodig_style.tanraku_exit
 rescue Interrupt
-  # false → default true
+  # [now] false → [default] true
   # puts Thread.current.report_on_exception
+  puts ""
   puts "Katakana Runner is Stopped."
   puts ""
 ensure
