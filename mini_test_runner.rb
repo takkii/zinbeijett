@@ -13,7 +13,7 @@ class MiniTestFile
   attr_reader :mini_test, :mini_unit
 
   def initialize
-    require 'minitest/mini_auto_runner'
+    require 'minitest/mini_runner'
     @mini_test = Mini_Runner(true, '/GitHub/zinbeijett/mini_test')
     @mini_unit = Mini_Runner(true, '/GitHub/zinbeijett/mini_unit')
   end
