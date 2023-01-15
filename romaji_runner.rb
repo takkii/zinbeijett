@@ -87,27 +87,28 @@ class RomajiRunner
 end
 
 begin
-  puts "Romaji Runner Stop is Ctrl + C. Please Input."
+  puts "Romaji Runner Stop is Ctrl and C, Please Input."
   puts ""
 
+  Thread.current.report_on_exception = false
   threads = []
-  threads << Thread.new(RomajiRunner.run1) { |r1| r1 }
-  threads << Thread.fork(RomajiRunner.run2) { |r2| r2 }
-  threads << Thread.fork(RomajiRunner.run3) { |r3| r3 }
-  threads << Thread.fork(RomajiRunner.run4) { |r4| r4 }
-  threads << Thread.fork(RomajiRunner.run5) { |r5| r5 }
-  threads << Thread.fork(RomajiRunner.run6) { |r6| r6 }
-  threads << Thread.fork(RomajiRunner.run7) { |r7| r7 }
-  threads << Thread.fork(RomajiRunner.run8) { |r8| r8 }
-  threads << Thread.fork(RomajiRunner.run9) { |r9| r9 }
-  threads << Thread.fork(RomajiRunner.run10) { |r10| r10 }
+  threads << Thread.start(RomajiRunner.run1) { |r1| r1 }
+  threads << Thread.start(RomajiRunner.run2) { |r2| r2 }
+  threads << Thread.start(RomajiRunner.run3) { |r3| r3 }
+  threads << Thread.start(RomajiRunner.run4) { |r4| r4 }
+  threads << Thread.start(RomajiRunner.run5) { |r5| r5 }
+  threads << Thread.start(RomajiRunner.run6) { |r6| r6 }
+  threads << Thread.start(RomajiRunner.run7) { |r7| r7 }
+  threads << Thread.start(RomajiRunner.run8) { |r8| r8 }
+  threads << Thread.start(RomajiRunner.run9) { |r9| r9 }
+  threads << Thread.start(RomajiRunner.run10) { |r10| r10 }
   threads.each { |thr| thr.join }
 
-  # Thread.current.report_on_exception = false
 rescue StandardError => e
   puts e.backtrace
   encodig_style.tanraku_exit
 rescue Interrupt
+  # puts Thread.current.report_on_exception
   puts "Romaji Runner is Stoped."
   puts ""
 ensure
