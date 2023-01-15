@@ -91,24 +91,25 @@ begin
 
   Thread.current.report_on_exception = false
   threads = []
-  threads << Thread.new(KatakanaRunner.run1) { |r1| r1 }
-  threads << Thread.fork(KatakanaRunner.run2) { |r2| r2 }
-  threads << Thread.fork(KatakanaRunner.run3) { |r3| r3 }
-  threads << Thread.fork(KatakanaRunner.run4) { |r4| r4 }
-  threads << Thread.fork(KatakanaRunner.run5) { |r5| r5 }
-  threads << Thread.fork(KatakanaRunner.run6) { |r6| r6 }
-  threads << Thread.fork(KatakanaRunner.run7) { |r7| r7 }
-  threads << Thread.fork(KatakanaRunner.run8) { |r8| r8 }
-  threads << Thread.fork(KatakanaRunner.run9) { |r9| r9 }
-  threads << Thread.fork(KatakanaRunner.run10) { |r10| r10 }
+  threads << Thread.start(KatakanaRunner.run1) { |r1| r1 }
+  threads << Thread.start(KatakanaRunner.run2) { |r2| r2 }
+  threads << Thread.start(KatakanaRunner.run3) { |r3| r3 }
+  threads << Thread.start(KatakanaRunner.run4) { |r4| r4 }
+  threads << Thread.start(KatakanaRunner.run5) { |r5| r5 }
+  threads << Thread.start(KatakanaRunner.run6) { |r6| r6 }
+  threads << Thread.start(KatakanaRunner.run7) { |r7| r7 }
+  threads << Thread.start(KatakanaRunner.run8) { |r8| r8 }
+  threads << Thread.start(KatakanaRunner.run9) { |r9| r9 }
+  threads << Thread.start(KatakanaRunner.run10) { |r10| r10 }
   threads.each { |thr| thr.join }
 
 rescue StandardError => e
   puts e.backtrace
   encodig_style.tanraku_exit
 rescue Interrupt
+  # false → default true
   # puts Thread.current.report_on_exception
-  puts "Katakana Runner is Stoped."
+  puts "Katakana Runner is Stopped."
   puts ""
 ensure
   GC.compact

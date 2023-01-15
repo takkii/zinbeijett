@@ -109,8 +109,9 @@ rescue StandardError => e
   puts e.backtrace
   encodig_style.tanraku_exit
 rescue Interrupt
+  # false → default true
   # puts Thread.current.report_on_exception
-  puts "Romaji Runner is Stoped."
+  puts "Romaji Runner is Stopped."
   puts ""
 ensure
   GC.compact
