@@ -87,6 +87,7 @@ class RomajiRunner
 end
 
 begin
+  puts ""
   puts "Romaji Runner Stop is Ctrl and C, Please Input."
   puts ""
 
