@@ -84,16 +84,33 @@ class KatakanaRunner
   end
 end
 
-KatakanaRunner.run1
-KatakanaRunner.run2
-KatakanaRunner.run3
-KatakanaRunner.run4
-KatakanaRunner.run5
-KatakanaRunner.run6
-KatakanaRunner.run7
-KatakanaRunner.run8
-KatakanaRunner.run9
-KatakanaRunner.run10
+begin
+  puts "Katakana Runner Stop is Ctrl + C. Please Input."
+  puts ""
+
+  threads = []
+  threads << Thread.new(KatakanaRunner.run1) { |r1| r1 }
+  threads << Thread.fork(KatakanaRunner.run2) { |r2| r2 }
+  threads << Thread.fork(KatakanaRunner.run3) { |r3| r3 }
+  threads << Thread.fork(KatakanaRunner.run4) { |r4| r4 }
+  threads << Thread.fork(KatakanaRunner.run5) { |r5| r5 }
+  threads << Thread.fork(KatakanaRunner.run6) { |r6| r6 }
+  threads << Thread.fork(KatakanaRunner.run7) { |r7| r7 }
+  threads << Thread.fork(KatakanaRunner.run8) { |r8| r8 }
+  threads << Thread.fork(KatakanaRunner.run9) { |r9| r9 }
+  threads << Thread.fork(KatakanaRunner.run10) { |r10| r10 }
+  threads.each { |thr| thr.join }
+
+  # Thread.current.report_on_exception = false
+rescue StandardError => e
+  puts e.backtrace
+  encodig_style.tanraku_exit
+rescue Interrupt
+  puts "Katakana Runner is Stoped."
+  puts ""
+ensure
+  GC.compact
+end
 
 # CLI stop is Ctrl + C.
 
