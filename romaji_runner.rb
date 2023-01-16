@@ -3,8 +3,7 @@
 lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
-require 'open3'
-require 'tanraku'
+require "#{File.dirname(__FILE__)}/req/romaji"
 
 # Romaji Runner
 class RomajiRunner
@@ -109,7 +108,7 @@ rescue StandardError => e
   puts e.backtrace
   encodig_style.tanraku_exit
 rescue Interrupt
-  # [now] false → [default] true
+  # [result] false ↔ [default] true
   # puts Thread.current.report_on_exception
   puts ""
   puts "Romaji Runner is Stopped."
