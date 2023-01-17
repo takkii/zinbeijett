@@ -102,7 +102,7 @@ begin
   threads << Thread.start(RomajiRunner.run8) { |r8| r8 }
   threads << Thread.start(RomajiRunner.run9) { |r9| r9 }
   threads << Thread.start(RomajiRunner.run10) { |r10| r10 }
-  threads.each { |thr| thr.join }
+  threads.each { |thr| thr.join.value }
 
 rescue StandardError => e
   puts e.backtrace
