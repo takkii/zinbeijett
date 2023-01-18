@@ -22,5 +22,5 @@ gem 'win32console' if Gem.win_platform?
 
 # GitHub Package.
 # source "https://rubygems.pkg.github.com/takkii" do
-#   gem "minitest-runners", "1.1.6"
+#   gem "minitest-runners", "1.1.7"
 # end
