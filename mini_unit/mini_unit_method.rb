@@ -21,7 +21,6 @@ class MiniUnitMethod < Minitest::Test
 
   def test_new
     assert_equal @step, @step2
-
   end
 
   def test_step_should_be_array
