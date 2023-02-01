@@ -13,6 +13,7 @@ class MiniTestFile
   attr_reader :mini_test, :mini_unit
 
   def initialize
+    encoding_style
     @mini_test = Mini_Runner(true, '/GitHub/zinbeijett/mini_test')
     @mini_unit = Mini_Runner(true, '/GitHub/zinbeijett/mini_unit')
   end
@@ -27,8 +28,7 @@ end
 begin
   MiniTestFile.new.remove
 rescue StandardError => e
-  puts e.backtrace
-  encoding_style.tanraku_exit
+  puts e.backtrace.tanraku_exit
 ensure
   GC.compact
 end
