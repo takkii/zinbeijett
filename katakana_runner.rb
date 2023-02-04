@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-lib = File.expand_path('lib', __dir__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-
 require "#{File.dirname(__FILE__)}/req/katakana"
 
 # Katakana Runner
@@ -85,9 +82,9 @@ class KatakanaRunner
 end
 
 begin
-  puts ""
-  puts "Katakana Runner Stop is Ctrl and C, Please Input."
-  puts ""
+  puts ''
+  puts 'Katakana Runner Stop is Ctrl and C, Please Input.'
+  puts ''
 
   Thread.current.report_on_exception = false
   threads = []
@@ -102,16 +99,15 @@ begin
   threads << Thread.start(KatakanaRunner.run9) { |r9| r9 }
   threads << Thread.start(KatakanaRunner.run10) { |r10| r10 }
   threads.each { |thr| thr.join.value }
-
 rescue StandardError => e
   puts e.backtrace
   encodig_style.tanraku_exit
 rescue Interrupt
   # [result] false ↔ [default] true
   # puts Thread.current.report_on_exception
-  puts ""
-  puts "Katakana Runner is Stopped."
-  puts ""
+  puts ''
+  puts 'Katakana Runner is Stopped.'
+  puts ''
 ensure
   GC.compact
 end
