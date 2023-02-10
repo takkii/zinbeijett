@@ -14,8 +14,8 @@ class MiniTestFile
 
   def initialize
     encoding_style
-    @mini_test = Mini_Runner(true, '/GitHub/zinbeijett/mini_test')
-    @mini_unit = Mini_Runner(true, '/GitHub/zinbeijett/mini_unit')
+    @mini_test = Mini(true, '/GitHub/zinbeijett/mini_test')
+    @mini_unit = Mini(true, '/GitHub/zinbeijett/mini_unit')
   end
 
   def remove
