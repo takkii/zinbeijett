@@ -2,15 +2,15 @@
 
 require "#{File.dirname(__FILE__)}/req/minitest"
 
-# Default encoding utf8, Encoding change here.
-def encoding_style
-  Encoding.default_internal = 'UTF-8'
-  Encoding.default_external = 'UTF-8'
-end
-
 # The new instance will be deleted after process ends.
 class MiniTestFile
   attr_reader :mini_test, :mini_unit
+
+  # Default encoding utf8, Encoding change here.
+  def encoding_style
+    Encoding.default_internal = 'UTF-8'
+    Encoding.default_external = 'UTF-8'
+  end
 
   def initialize
     encoding_style
