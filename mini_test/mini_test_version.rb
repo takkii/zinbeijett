@@ -4,7 +4,6 @@ lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 require 'minitest/autorun'
-require 'minitest/reporters'
 require "#{File.dirname(__FILE__)}/../lib/version"
 
 # Mini_test file load.

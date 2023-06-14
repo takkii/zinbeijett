@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'minitest/autorun'
-require 'minitest/reporters'
 
 # Method Unit Test
 class MiniUnitMethod < Minitest::Test

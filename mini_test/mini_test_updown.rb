@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'minitest/autorun'
-require 'minitest/reporters'
 
 # UpDown Unit Test
 class MiniUnitUpDown < Minitest::Test

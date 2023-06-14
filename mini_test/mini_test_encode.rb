@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'minitest/autorun'
-require 'minitest/reporters'
 
 # Encode Unit Test
 class MiniUnitEncode < Minitest::Test
