@@ -5,7 +5,6 @@ source 'https://rubygems.org'
 # gemspec
 gem 'bundler'
 #gem 'ruby-debug-ide'
-gem 'himekuri'
 gem 'pry'
 #gem 'pycall'
 gem 'rake'
