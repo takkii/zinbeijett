@@ -24,6 +24,7 @@ Gem::Specification.new do |s|
   s.metadata = { "github_repo" => "ssh://github.com/takkii/zinbeijett" }
   s.metadata["yard.run"] = "yri"
   s.require_paths = ["lib"]
+  s.required_ruby_version = ['>= 3.0']
   s.rubygems_version = "3.5.7"
   s.summary = "It is the form which made find of zinbeiw smart!"
   s.description = "engine is simple search which moves by Ruby."
