@@ -24,15 +24,15 @@ Gem::Specification.new do |s|
   s.metadata = { "github_repo" => "ssh://github.com/takkii/zinbeijett" }
   s.metadata["yard.run"] = "yri"
   s.require_paths = ["lib"]
-  s.rubygems_version = "3.1.2"
+  s.rubygems_version = "3.5.7"
   s.summary = "It is the form which made find of zinbeiw smart!"
   s.description = "engine is simple search which moves by Ruby."
 
   # 依存ライブラリ
-  s.add_runtime_dependency('himekuri', '~> 0.1')
-  s.add_runtime_dependency('himekuri_ts', '~> 1.0')
-  s.add_runtime_dependency('minitest-runners', '~> 1.1.5')
-  s.add_runtime_dependency('tanraku', '~> 1.0')
+  # s.add_runtime_dependency('himekuri', '~> 0.1')
+  # s.add_runtime_dependency('himekuri_ts', '~> 1.0')
+  # s.add_runtime_dependency('minitest-runners', '~> 1.1.5')
+  # s.add_runtime_dependency('tanraku', '~> 1.0')
   # s.add_runtime_dependency('gem名', '~> 2桁バージョン番号')
 
   if s.respond_to? :specification_version
