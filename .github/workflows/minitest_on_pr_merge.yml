@@ -1,4 +1,4 @@
-name: RSpec on PR merge
+name: MiniTest on PR merge
 
 on:
   push:
