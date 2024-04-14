@@ -1,4 +1,6 @@
-/coverage
+/coverage/assets/*
+/coverage/index.html
+/coverage/.resultset.json.lock
 /zinbeijett.iml
 .ruby-version
 Gemfile.lock
