@@ -10,4 +10,4 @@ codeToTestRatio:
    - "mini_unit/*.rb"
 report:
   datastores:
-    - artifact://${GITHUB_REPOSITORY}/base # .octocov.ymlとは違う保存先を指定する
+    - artifact://${GITHUB_REPOSITORY}/base
