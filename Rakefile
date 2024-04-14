@@ -8,6 +8,7 @@ require 'rspec/core'
 require 'rspec/core/rake_task'
 require 'rdoc/task'
 require 'rake/testtask'
+require 'simplecov'
 
 begin
   Bundler.setup(:default, :development)
@@ -17,18 +18,11 @@ rescue Bundler::BundlerError => e
   exit e.status_code
 end
 
-# rspec
 
-RSpec::Core::RakeTask.new(:spec) do |spec|
-  spec.pattern = FileList['spec/**/*_spec.rb']
-end
+# simplecov
+SimpleCov.start
 
-RSpec::Core::RakeTask.new(:rcov) do |spec|
-  spec.pattern = 'spec/**/*_spec.rb'
-  spec.rcov = true
-end
-
-task :default => :spec
+# RDoc
 
 Rake::RDocTask.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
