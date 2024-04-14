@@ -1,3 +1,4 @@
-.ruby-version
+/coverage
 /zinbeijett.iml
+.ruby-version
 Gemfile.lock
