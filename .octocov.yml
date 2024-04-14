@@ -1,22 +1,20 @@
-coverage: # カバレッジ計測の設定
+coverage:
  paths:
-   - coverage/.resultset.json # ここで指定した計測結果ファイルを読み込んで分析を行う
-  # acceptable: current >= 5% && diff >= 0% # カバレッジが5%以上かつ比較対象との差分が+0%以上でなければCIがfailする
-testExecutionTime: # テスト実行時間
+   - coverage/.resultset.json
+testExecutionTime:
  steps:
-   - Exec rspec # この名前に対応するGitHub Actionsのstepの実行時間を計測する
-  acceptable: current <= 3min && diff <= 1min # 実行時間が3min以内かつ比較対象との差分が1min以内でなければCIがfailする
-codeToTestRatio: # Code to Test Ratio（実装コードの行数を1とした場合のテストコード行数の比率）の設定
+   - Exec MiniTest
+  acceptable: current <= 3min && diff <= 1min
+codeToTestRatio:
  test:
    - "mini_test/*.rb"
    - "mini_unit/*.rb"
-  # acceptable: current >= 0.2 && diff >= 0 # Code to Test Ratioが0.2以上かつ比較対象との差分が0以上でなければCIがfailする
-comment: # レポート内容をコメント投稿設定
- if: is_pull_request # PRの場合のみコメントを投稿する
- hideFooterLink: false # フッターのoctocovのリンクを非表示にしない
-report: # レポートの出力設定
+comment:
+ if: is_pull_request
+ hideFooterLink: false
+report:
  datastores:
-   - artifact://${GITHUB_REPOSITORY} # レポートの出力先（GitHub ActionsのArtifactsに保存する）
+   - artifact://${GITHUB_REPOSITORY}
 diff:
   datastores:
-    - artifact://${GITHUB_REPOSITORY}/base # .octocov.base.ymlのreport.datastoresで設定した保存先を指定する
+    - artifact://${GITHUB_REPOSITORY}/base
