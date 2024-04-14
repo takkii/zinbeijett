@@ -1,0 +1,13 @@
+coverage:
+  paths:
+    - coverage/.resultset.json
+testExecutionTime:
+  steps:
+    - Exec MiniTest
+codeToTestRatio:
+  test:
+   - "mini_test/*.rb"
+   - "mini_unit/*.rb"
+report:
+  datastores:
+    - artifact://${GITHUB_REPOSITORY}/base # .octocov.ymlとは違う保存先を指定する
