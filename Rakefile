@@ -4,8 +4,6 @@
 require 'rubygems'
 require 'bundler'
 require 'rake'
-require 'rspec/core'
-require 'rspec/core/rake_task'
 require 'rdoc/task'
 require 'rake/testtask'
 require 'simplecov'
@@ -20,17 +18,10 @@ end
 
 
 # simplecov
-SimpleCov.start
-
-# RDoc
-
-Rake::RDocTask.new do |rdoc|
-  version = File.exist?('VERSION') ? File.read('VERSION') : ""
-  rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "zinbeijett #{version}"
-  rdoc.rdoc_files.include('README*')
-  rdoc.rdoc_files.include('lib/**/*.rb')
-  rdoc.options = ["--charset", "utf-8", "--line-numbers"]
+SimpleCov.command_name 'MiniTest'
+SimpleCov.start do
+  add_filter './mini_test/'
+  add_filter './mini_unit/'
 end
 
 # mini_test
