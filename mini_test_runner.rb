@@ -26,6 +26,7 @@ end
 
 # About Exception, begin ~ rescue ~ ensure.
 begin
+  SimpleCov.start
   MiniTestFile.new.remove
 rescue StandardError => e
   puts e.backtrace.tanraku_exit
