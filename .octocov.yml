@@ -1,6 +1,8 @@
 coverage:
  paths:
    - coverage/.resultset.json
+   acceptable: current >= 0%
+   # acceptable: current >= 60% && diff >= 0%
 testExecutionTime:
  steps:
    - Exec MiniTest
@@ -9,6 +11,8 @@ codeToTestRatio:
  test:
    - "mini_test/*.rb"
    - "mini_unit/*.rb"
+   acceptable: current >= 0.1
+   #acceptable: current >= 1.2 && diff >= 0
 comment:
  if: is_pull_request
  hideFooterLink: false
