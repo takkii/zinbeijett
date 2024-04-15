@@ -2,12 +2,11 @@
 
 require 'minitest/autorun'
 require 'minitest/unit'
-require File.join(File.dirname(__FILE__), '../lib/version.rb')
 
 # Unit-test file load.
 class MiniUnitVersion < Minitest::Test
   def setup
-    @standard_versions = EngineLeft::VERSION
+    @standard_versions = '1.1.10.1'
     @next_version = '2.0.0'
   end
 
