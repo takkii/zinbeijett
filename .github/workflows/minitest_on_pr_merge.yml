@@ -21,8 +21,7 @@ jobs:
       with:
         ruby-version: ${{ matrix.ruby-version }}
     - run: mv .octocov.base.yml .octocov.yml
-    - name: bundle install
-      run: gem install bundler:2.5.7
-      run: ./bin/bundle install
+    - run: gem install bundler:2.5.7
+    - run: ./bin/bundle install
     - name: Run tests
       run: ruby mini_test_runner.rb
