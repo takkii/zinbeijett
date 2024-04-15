@@ -34,6 +34,6 @@ jobs:
         ruby-version: ${{ matrix.ruby-version }}
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
     - name: Run tests
-      run: bundle exec rake
+      run: ruby mini_test_runner.rb
     - name: Coverage Report by octocov (in this pull request)
       uses: k1LoW/octocov-action@v0
