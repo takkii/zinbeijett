@@ -6,7 +6,9 @@ require 'bundler'
 require 'rake'
 require 'rdoc/task'
 require 'rake/testtask'
-require 'simplecov'
+
+
+# bundler
 
 begin
   Bundler.setup(:default, :development)
@@ -16,13 +18,6 @@ rescue Bundler::BundlerError => e
   exit e.status_code
 end
 
-
-# simplecov
-SimpleCov.command_name 'MiniTest'
-SimpleCov.start do
-  add_filter './mini_test/'
-  add_filter './mini_unit/'
-end
 
 # mini_test
 
@@ -35,8 +30,8 @@ end
 # mini_unit_test
 
 task :default => [:test]
-Rake::TestTask.new do |mini_test|
-  mini_test.test_files = Dir['mini_unit/**/mini_unit_*.rb']
-  mini_test.verbose = true
+Rake::TestTask.new do |mini_unit|
+  mini_unit.test_files = Dir['mini_unit/**/mini_unit_*.rb']
+  mini_unit.verbose = true
 end
 
