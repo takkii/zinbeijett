@@ -36,6 +36,6 @@ jobs:
       run: gem install bundler:2.5.7
       run: ./bin/bundle install
     - name: Run tests
-      run: ruby ./mini_test_runner.rb
+      run: ruby mini_test_runner.rb
     - name: Coverage Report by octocov (in this pull request)
       uses: k1LoW/octocov-action@v0
