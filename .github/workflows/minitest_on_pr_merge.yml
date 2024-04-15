@@ -23,4 +23,4 @@ jobs:
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
     - run: mv .octocov.base.yml .octocov.yml
     - name: Run tests
-      run: bundle exec ruby mini_test_runner.rb
+      run: ruby mini_test_runner.rb
