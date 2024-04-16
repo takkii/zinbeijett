@@ -29,7 +29,7 @@ begin
   SimpleCov.start
   MiniTestFile.new.remove
 rescue StandardError => e
-  puts e.backtrace
+  puts e.backtrace.tanraku_exit
 ensure
   GC.compact
 end
