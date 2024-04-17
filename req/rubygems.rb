@@ -1,9 +1,12 @@
 # frozen_string_literal: true
 
+# dependent file or library.
 # --------------------------------------
 require 'version'
 # --------------------------------------
 
-# encoding_style
+# file encoding.
+# --------------------------------------
 Encoding.default_internal = 'UTF-8'
 Encoding.default_external = 'UTF-8'
+# --------------------------------------
