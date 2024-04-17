@@ -1,16 +1,6 @@
 # frozen_string_literal: true
 
-lib = File.expand_path('../lib', __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-
-require 'version'
-
-def encoding_style
-  Encoding.default_internal = 'UTF-8'
-  Encoding.default_external = 'UTF-8'
-end
-
-encoding_style
+require "#{File.dirname(__FILE__)}/req/rubygems"
 
 Gem::Specification.new do |s|
   s.name = "zinbeijett"
