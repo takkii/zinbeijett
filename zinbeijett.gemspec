@@ -10,8 +10,9 @@ def encoding_style
   Encoding.default_external = 'UTF-8'
 end
 
+encoding_style
+
 Gem::Specification.new do |s|
-  encoding_style
   s.name = "zinbeijett"
   s.version = EngineLeft::VERSION
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
@@ -33,7 +34,7 @@ Gem::Specification.new do |s|
   s.description = "engine is simple search which moves by Ruby."
 
   # Needing to rubygems
-  # s.add_runtime_dependency('gem名', '~> 2桁バージョン番号')
+  # s.add_runtime_dependency('gem_name', '~> 0.1')
 
   if s.respond_to? :specification_version
     s.specification_version = 4
