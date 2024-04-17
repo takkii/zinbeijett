@@ -5,10 +5,13 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 require 'version'
 
-Encoding.default_internal = 'UTF-8'
-Encoding.default_external = 'UTF-8'
+def encoding_style
+  Encoding.default_internal = 'UTF-8'
+  Encoding.default_external = 'UTF-8'
+end
 
 Gem::Specification.new do |s|
+  encoding_style
   s.name = "zinbeijett"
   s.version = EngineLeft::VERSION
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
@@ -29,11 +32,7 @@ Gem::Specification.new do |s|
   s.summary = "It is the form which made find of zinbeiw smart!"
   s.description = "engine is simple search which moves by Ruby."
 
-  # 依存ライブラリ
-  # s.add_runtime_dependency('himekuri', '~> 0.1')
-  # s.add_runtime_dependency('himekuri_ts', '~> 1.0')
-  # s.add_runtime_dependency('minitest-runners', '~> 1.1.5')
-  # s.add_runtime_dependency('tanraku', '~> 1.0')
+  # Needing to rubygems
   # s.add_runtime_dependency('gem名', '~> 2桁バージョン番号')
 
   if s.respond_to? :specification_version
