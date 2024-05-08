@@ -20,10 +20,5 @@ gem 'bmi'
 #gem 'feedjira'
 #gem 'win32console' if Gem.win_platform?
 
-# No use Twitter SNS.
-# gem 'twitter'
-
-# GitHub Package.
-# source "https://rubygems.pkg.github.com/takkii" do
-#   gem "minitest-runners", "1.1.7"
-# end
+# No use.
+#gem 'twitter'
