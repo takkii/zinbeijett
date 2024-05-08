@@ -4,11 +4,6 @@ require "#{File.dirname(__FILE__)}/req/katakana"
 
 # Katakana Runner
 class KatakanaRunner
-  # default encoding utf-8, change encode here.
-  def self.encoding_style
-    Encoding.default_internal = 'UTF-8'
-    Encoding.default_external = 'UTF-8'
-  end
 
   def self.run1
     encoding_style
