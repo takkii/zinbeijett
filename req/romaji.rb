@@ -4,5 +4,6 @@
 
 require 'open3'
 require 'tanraku'
+require 'bmi'
 
 # --------------------------------------

@@ -4,13 +4,16 @@ source 'https://rubygems.org'
 
 # gemspec
 gem 'bundler'
-#gem 'ruby-debug-ide'
 gem 'pry'
-#gem 'pycall'
 gem 'rake'
-# gem 'rspec'
 gem 'minitest'
 gem 'simplecov'
+gem 'bmi'
+
+# dependent library
+#gem 'ruby-debug-ide'
+#gem 'pycall'
+#gem 'rspec'
 #gem 'solargraph'
 #gem 'nokogiri'
 #gem 'httparty'

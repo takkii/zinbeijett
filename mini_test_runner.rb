@@ -6,12 +6,6 @@ require "#{File.dirname(__FILE__)}/req/minitest"
 class MiniTestFile
   attr_reader :mini_test, :mini_unit
 
-  # Default encoding utf8, Encoding change here.
-  def encoding_style
-    Encoding.default_internal = 'UTF-8'
-    Encoding.default_external = 'UTF-8'
-  end
-
   def initialize
     encoding_style
     @mini_test = Mini(true, '/GitHub/zinbeijett/mini_test')
