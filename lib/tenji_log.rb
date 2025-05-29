@@ -4711,3 +4711,5 @@ class TenjiMaker
     end
   end
 end
+
+GC.compact

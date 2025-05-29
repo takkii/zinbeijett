@@ -19,6 +19,6 @@ DRb.start_service(uri, Puts.new)
 puts DRb.uri
 sleep
 
-GC.start
+GC.compact
 
 __END__

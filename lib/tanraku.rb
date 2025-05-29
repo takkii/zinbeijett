@@ -1,86 +1,5 @@
 ﻿# frozen_string_literal: true
 
-class MyError < StandardError
-  def volt
-    raise MyError
-  rescue StandardError => e
-    puts "#{e.class} : #{e.message}"
-    puts e.backtrace.join('          \n')
-  ensure
-    puts '例外メッセージは以上です！'
-  end
-
-  def execute_process
-    raise MyError, 'プロジェクト固有の例外です！'
-  end
-
-rescue MyError => e
-  e.backtrace.join('        \n')
-end
-
-# MyError = Class.new(StandardError)
-MyError1 = Class.new(MyError)
-MyError2 = Class.new(MyError)
-MyError3 = Class.new(MyError)
-
-class YouError < RuntimeError
-  def anpea
-    raise YouError
-  rescue StandardError => e
-    puts "#{e.class} : #{e.message}"
-    puts e.backtrace.join('          \n')
-  ensure
-    puts '例外メッセージは以上です！'
-  end
-end
-
-# YouError = Class.new(ScriptError)
-YouError1 = Class.new(YouError)
-YouError2 = Class.new(YouError)
-YouError3 = Class.new(YouError)
-
-class WhoError < RuntimeError
-  def teikou
-    raise WhoError
-  rescue StandardError => e
-    puts "#{e.class} : #{e.message}"
-    puts e.backtrace.join('          \n')
-  ensure
-    puts '例外メッセージは以上です！'
-  end
-end
-
-# WhoError = Class.new(SignalException)
-WhoError1 = Class.new(WhoError)
-
-class CatError < RuntimeError
-  def kasai
-    raise CatError
-  rescue StandardError => e
-    puts "#{e.class} : #{e.message}"
-    puts e.backtrace.join('          \n')
-  ensure
-    puts '例外メッセージは以上です！'
-  end
-end
-
-# CatError = Class.new(NoMemoryError)
-CatError1 = Class.new(CatError)
-
-class DogError < RuntimeError
-  def tebunan
-    raise DogError
-  rescue StandardError => e
-    puts "#{e.class} : #{e.message}"
-    puts e.backtrace.join('          \n')
-  ensure
-    puts '例外メッセージは以上です！'
-  end
-end
-
-# DogError = Class.new(SystemExit)
-DogError1 = Class.new(DogError)
-
 class Object
   def tanraku
     m = Mutex.new
@@ -137,8 +56,10 @@ class Object
   end
 end
 
-# module Tanraku
-#   VERSION = '1.0.1'
-# end
+module Tanraku
+  VERSION = '1.1.0'
+end
+
+GC.compact
 
 __END__

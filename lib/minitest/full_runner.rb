@@ -5,9 +5,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 begin
 # --------------------------------------
-require 'minitest'
-require 'minitest/autorun'
-require 'minitest/unit'
+require "#{File.dirname(__FILE__)}/../../req/full_runner"
 # --------------------------------------
 rescue LoadError
 puts 'Not found rubygems, Please install minitest'
@@ -18,23 +16,22 @@ exit!
 end
 
 # Encoding Setting.
-Encoding.default_internal = 'UTF-8'
-Encoding.default_external = 'UTF-8'
+encoding_style
 
 module MiniRunner
   module_function
 
-  def Full(msg = true, msg_dir = '/mini_test/')
+  def Full(msg = true, win_dir = 'C:/Users/sudok', msg_dir = '/mini_test/')
     begin
       if msg == true
-        if File.exist?(msg_dir)
+        if File.exist?(win_dir + msg_dir)
           puts ''
           puts ' mini_test in filename list '.center(80, '~')
           puts ''
           puts ' minitest file load '.center(80, '~')
 
           puts ''
-          puts Dir.glob(msg_dir + "/*.rb")
+          puts Dir.glob(win_dir + msg_dir + "/*.rb")
           puts ''
 
           puts ' minitest file load '.center(80, '~')
@@ -42,7 +39,7 @@ module MiniRunner
           puts ' mini_test in filename list '.center(80, '~')
           puts ''
 
-          Dir[msg_dir + "/*.rb"].sort.filter do |file|
+          Dir[win_dir + msg_dir + "/*.rb"].sort.filter do |file|
             require file
           end
 
@@ -62,13 +59,29 @@ module MiniRunner
     end
   end
 
-  def Mini(msg = true, msg_dir = '/mini_test/')
+  def FullW(msg = true, wsl_dir = '/mnt/c/Users/', msg_dir = '/mini_test/')
     begin
       if msg == true
-        if File.exist?(msg_dir)
-          Dir[msg_dir + "/*.rb"].sort.filter do |file|
+        if File.exist?(wsl_dir + msg_dir)
+          puts ''
+          puts ' mini_test in filename list '.center(80, '~')
+          puts ''
+          puts ' minitest file load '.center(80, '~')
+
+          puts ''
+          puts Dir.glob(wsl_dir + msg_dir + "/*.rb")
+          puts ''
+
+          puts ' minitest file load '.center(80, '~')
+          puts ''
+          puts ' mini_test in filename list '.center(80, '~')
+          puts ''
+
+          Dir[wsl_dir + msg_dir + "/*.rb"].sort.filter do |file|
             require file
           end
+
+          puts ''
         else
           puts 'Can not find the minitest folder, Check your minitest folder path.'
           exit!

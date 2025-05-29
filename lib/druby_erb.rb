@@ -3,12 +3,12 @@
 require 'date'
 require 'drb/drb'
 require 'erb'
-
-Encoding.default_internal = 'UTF-8'
-Encoding.default_external = 'UTF-8'
+require 'bmi'
 
 # dRuby class method.
 class Remindar
+  encoding_style
+
   def initialize(remindar)
     @remindar = remindar
     @erb = ERB.new(erb_src)
@@ -40,6 +40,6 @@ class Druby
   end
 end
 
-GC.start
+GC.compact
 
 __END__

@@ -35,4 +35,6 @@ puts ''
 puts ' Mecab_wakati_End '.center(80, '-')
 puts ''
 
+GC.compact
+
 __END__

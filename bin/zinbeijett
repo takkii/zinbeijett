@@ -6,9 +6,9 @@ lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 require 'version'
+require 'bmi'
 
-Encoding.default_internal = 'UTF-8'
-Encoding.default_external = 'UTF-8'
+encoding_style
 
 # zinbeijett loads.
 module Zinbeijett
@@ -61,7 +61,7 @@ module Zinbeijett
 
     The MIT License
 
-    Copyright (c) 2013-2022 Takayuki Kamiyama
+    Copyright (c) 2013 - #{(DateTime.now.year).to_s} Takayuki Kamiyama
 
     Permission is hereby granted, free of charge,
     to any person obtaining a copy of this software and
@@ -101,7 +101,7 @@ module Zinbeijett
     puts <<-HELP
 
     [tweet]
-    engine -l → tweet
+    aqua -l → tweet
     Twitter_tubuyaki tools.
 
     [speak]
@@ -109,15 +109,15 @@ module Zinbeijett
     Now version is zinbeiw (= 1.4.3.1) clone.
 
     Plus amaoto function.
-    
+
     [tenji]
-    
+
     Convert Romaji to Tenji.
-    
+
     tenji [alphabet] [alphabet] .. 10 case
-    
+
     tenji A I U E O
-    
+
     ---output---
     o-
     --
@@ -141,15 +141,15 @@ module Zinbeijett
     Convert Tenji to Romaji.
 
     romaji [tenji convert in filename.txt]
-    
+
     <Example>
-    
+
     romaji log/tenji_a.txt
 
     [tenji_log]
 
     10 case, alpha beta ... kappa
-    
+
     log/tenji_*.txt write Tenji.
 
     tenji_log [alphabet] [alphabet] .. 10 case
@@ -178,49 +178,49 @@ module Zinbeijett
 
     -l,license         License information!
 
-    [engine]
+    [aqua]
 
     < how to use >
 
-    engine [ option ] [ File name ] [ String or regular expression ]
+    aqua [ option ] [ File name ] [ String or regular expression ]
 
     < Example >
 
-    $ engine druby://localhost:8888
+    $ aqua druby://localhost:8888
     druby process server.
-    engine -d server output.
+    aqua -d server output.
 
-    $ engine -a notojima.txt wajima
+    $ aqua -a notojima.txt wajima
     AND Search.
 
-    $ engine -b https://takkii.github.io/feed.xml
+    $ aqua -b https://takkii.github.io/feed.xml
     Display summary, GitHub Pages for takkii.
 
-    $ engine -c
+    $ aqua -c
     Calendar views. Today now.
 
-    $ engine -d druby://localhost:8888
+    $ aqua -d druby://localhost:8888
     druby process server output.
     ※ console "can't parse uri:-d (DRb::DRbBadURI)"
     → The output disappeared by catching the exception.
 
-    $ engine -e
+    $ aqua -e
     Tubuyaki clone ver. zinbeijett.
 
-    $ engine -f 2007 09
+    $ aqua -f 2007 09
     Calendar views, select year and month.
 
-    $ engine -g
+    $ aqua -g
     print GC.stat, Garbage collection info output.
 
-    $ engine -h [百人一首(one word)]
+    $ aqua -h [百人一首(one word)]
     Search the full text from the first 百人一首.
 
-    $ engine -i
+    $ aqua -i
     Tubuyaki GUI CLONE, Log write version.
 
-    $ engine -j https://github.com/takkii.atom
-    engine -j https://visualstudiomagazine.com/rss-feeds/blogs.aspx
+    $ aqua -j https://github.com/takkii.atom
+    aqua -j https://visualstudiomagazine.com/rss-feeds/blogs.aspx
 
     [ Example ]
 
@@ -229,50 +229,50 @@ module Zinbeijett
 
     ※ Display title only.
 
-    $ engine -k notojima.txt wajima
+    $ aqua -k notojima.txt wajima
     match method all search, log/output.txt write.
 
-    $ engine -l
+    $ aqua -l
     Use Pycall, Roll the dice.
 
-    $ engine -m notojima.txt
+    $ aqua -m notojima.txt
     mail search. pattern match is mailaddress word only.
 
-    $ engine -n notojima.txt wajima
+    $ aqua -n notojima.txt wajima
     NOT Search.
 
-    $ engine -o notojima.txt wajima notojima
+    $ aqua -o notojima.txt wajima notojima
     OR search. use two words.
 
-    $ engine -p notojima.txt wajima
+    $ aqua -p notojima.txt wajima
     line number : Applicable number, outputs.
 
-    $ engine -q string1 string2
+    $ aqua -q string1 string2
     ruby convert encript use openssl.
     sha cript use case password.
 
-    $ engine -r https://takkii.github.io/feed.xml
+    $ aqua -r https://takkii.github.io/feed.xml
     Display Title, GitHub Pages for takkii.
 
-    $ engine -s notojima.txt notojima
+    $ aqua -s notojima.txt notojima
     String count search. String count in File.
 
-    $ engine -t notojima.txt wajima
+    $ aqua -t notojima.txt wajima
     match method search. ( = all search )
 
-    $ engine -u
+    $ aqua -u
     Twitter User, Tweet TIMELINE list output.
 
-    $ engine -w notojima.txt
+    $ aqua -w notojima.txt
     rice is keitaiso analyse
 
-    $ engine -x notojima.txt
+    $ aqua -x notojima.txt
     kome is wakati writer and wordcount.
 
-    $ engine -y notojima.txt
+    $ aqua -y notojima.txt
     suihan is wakati writer.
 
-    $ engine -z notojima.txt wajima
+    $ aqua -z notojima.txt wajima
     Full-text search.
 
     HELP

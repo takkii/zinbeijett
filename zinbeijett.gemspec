@@ -14,20 +14,28 @@ Gem::Specification.new do |s|
   s.extra_rdoc_files = [
     "LICENSE.txt",
   ]
-  s.executables = %w(zinbeijett engine speak tweet tenji tenji_log romaji katakana)
-  s.files = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|mini_test)/}) }
+  # Ignore files in mini_test and mini_unit folder.
+  s.files = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(mini_test|mini_unit)/}) }
+  s.executables = s.files.grep(%r{^bin/}) { |f| File.basename(f) }
   s.homepage = "https://github.com/takkii/zinbeijett"
   s.licenses = ["MIT"]
-  s.metadata = { "github_repo" => "ssh://github.com/takkii/zinbeijett" }
-  s.metadata["yard.run"] = "yri"
   s.require_paths = ["lib"]
   s.required_ruby_version = ['>= 3.0']
-  s.rubygems_version = ['>= 3.5']
-  s.summary = "It is the form which made find of zinbeiw smart!"
-  s.description = "engine is simple search which moves by Ruby."
+  s.required_rubygems_version = '~> 3.6.9'
+  s.summary = "This is a console application, a remake of zinbeiw."
+  s.description = "Simple search which moves by Ruby."
 
   # Needing to rubygems
-  # s.add_runtime_dependency('gem_name', '~> 0.1')
+  s.add_runtime_dependency('bundler', '~> 2.6')
+  s.add_runtime_dependency('dotenv', '~> 3.1')
+  s.add_runtime_dependency('feedjira', '~> 3.2')
+  s.add_runtime_dependency('httparty', '~> 0.23')
+  s.add_runtime_dependency('minitest', '~> 5.25')
+  s.add_runtime_dependency('nokogiri', '~> 1.18')
+  s.add_runtime_dependency('pry', '~> 0.15')
+  s.add_runtime_dependency('pycall', '~> 1.5') unless Gem.win_platform?
+  s.add_runtime_dependency('rake', '~> 13.2')
+  s.add_runtime_dependency('simplecov', '~> 0.22')
 
   if s.respond_to? :specification_version
     s.specification_version = 4

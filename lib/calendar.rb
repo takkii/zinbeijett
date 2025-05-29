@@ -12,6 +12,6 @@ module Calendar
   end
 end
 
-puts ''
+GC.compact
 
 __END__

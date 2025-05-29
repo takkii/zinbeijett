@@ -15,6 +15,6 @@ class String_encrypt
   end
 end
 
-GC.start
+GC.compact
 
 __END__

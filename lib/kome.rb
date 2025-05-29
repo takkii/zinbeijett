@@ -36,4 +36,6 @@ puts ''
 puts ' Mecab_wordcount_End '.center(80, '-')
 puts ''
 
+GC.compact
+
 __END__

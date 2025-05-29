@@ -1,13 +1,11 @@
 require 'twitter'
-require 'yaml'
-
-Settings = YAML.load_file("#{Dir.home}/yml/setting.yml")
+require 'dotenv/load'
 
 client = Twitter::REST::Client.new do |config|
-  config.consumer_key = Settings['consumer_key']
-  config.consumer_secret = Settings['consumer_secret']
-  config.access_token = Settings['access_token']
-  config.access_token_secret = Settings['access_token_secret']
+  config.consumer_key = ENV['consumer_key']
+  config.consumer_secret = ENV['consumer_secret']
+  config.access_token = ENV['access_token']
+  config.access_token_secret = ENV['access_token_secret']
 end
 
 puts ''
@@ -24,5 +22,7 @@ end
 
 puts 'Twitter_Timeline'.center(100, '-')
 puts ''
+
+GC.compact
 
 __END__

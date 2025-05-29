@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
-lib = File.expand_path('lib', __dir__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-
+require 'date'
 require 'minitest/autorun'
 require "#{File.dirname(__FILE__)}/../lib/version"
 
@@ -10,7 +8,10 @@ require "#{File.dirname(__FILE__)}/../lib/version"
 class VersionTest < Minitest::Test
   def test_version
     @v1 = EngineLeft::VERSION
-    @v2 = '2.0.0'
+    zinbeijett_version = '4.0.0'
+    t = Date.today
+    build_day = t.strftime('%Y.%m.%d')
+    @v2 = "#{zinbeijett_version}-#{build_day}".freeze
 
     refute_equal(@v1, @v2)
     assert_operator(@v1, :<, @v2)

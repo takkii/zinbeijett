@@ -1,17 +1,15 @@
 # frozen_string_literal: true
 
 require 'require_sec_seiki'
-
-puts ''
-
-Encoding.default_internal = 'UTF-8'
-Encoding.default_external = 'UTF-8'
+require 'bmi'
 
 # match search loads.
 module Mat
   module_function
 
   def search
+    encoding_style
+
     one = ARGV[1]
 
     File.open(one) do |f|
@@ -44,6 +42,4 @@ module Mat
   end
 end
 
-puts ''
-
-GC.start
+GC.compact

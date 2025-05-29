@@ -32,4 +32,6 @@ Elecjar.new.costar_chawan
 puts ''
 puts ' Natto_keitaiso_End '.center(80, '-')
 
+GC.compact
+
 __END__

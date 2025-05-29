@@ -1,14 +1,14 @@
 require 'date'
 require 'pycall/import'
 include PyCall::Import
-
-Encoding.default_internal = 'UTF-8'
-Encoding.default_external = 'UTF-8'
+require 'bmi'
 
 module Auto
   module_function
 
   def view
+    encoding_style
+
     yr = ARGV[1]
     mh = ARGV[2]
     pyimport :calendar
@@ -16,6 +16,6 @@ module Auto
   end
 end
 
-puts ''
+GC.compact
 
 __END__

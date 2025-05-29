@@ -3,10 +3,10 @@
 # dependent file or library.
 # --------------------------------------
 require 'version'
+require 'bmi'
 # --------------------------------------
 
-# file encoding.
+# File encoding setting is UTF-8.
 # --------------------------------------
-Encoding.default_internal = 'UTF-8'
-Encoding.default_external = 'UTF-8'
+encoding_style
 # --------------------------------------

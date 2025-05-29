@@ -1,17 +1,15 @@
 # frozen_string_literal: true
 
 require 'require_sec_seiki'
-
-puts ''
-
-Encoding.default_external = 'UTF-8'
-Encoding.default_internal = 'UTF-8'
+require 'bmi'
 
 # Count method.
 module Count
   module_function
 
   def search
+    encoding_style
+
     one = ARGV[1]
 
     File.open(one) do |f|
@@ -42,6 +40,4 @@ module Count
   end
 end
 
-puts ''
-
-GC.start
+GC.compact

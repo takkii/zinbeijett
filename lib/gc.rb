@@ -1,17 +1,17 @@
 # frozen_string_literal: true
 
-Encoding.default_external = "UTF-8"
-Encoding.default_internal = "UTF-8"
+require 'bmi'
 
-# GC start message
+# GC compaction run.
 module Star
   module_function
-  
+
   def search
-    puts GC.stat
+    encoding_style
+    puts GC.compact
   end
 end
 
-puts ''
+GC.compact
 
 __END__

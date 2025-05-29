@@ -14,3 +14,5 @@ class Dice
     puts ''
   end
 end
+
+GC.compact

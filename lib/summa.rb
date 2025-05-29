@@ -12,3 +12,4 @@ class Feed
   end
 end
 
+GC.compact

@@ -4,12 +4,12 @@
 # vim: filetype=ruby
 
 require 'timeout'
+require 'bmi'
 
 lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
-Encoding.default_internal = 'UTF-8'
-Encoding.default_external = 'UTF-8'
+encoding_style
 
 # zinbeijett function
 module Romaji

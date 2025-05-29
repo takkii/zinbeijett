@@ -84,3 +84,5 @@ c.command proc {
 }
 
 Tk.mainloop
+
+GC.compact

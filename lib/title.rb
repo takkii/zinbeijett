@@ -13,3 +13,5 @@ class Title
     puts ''
   end
 end
+
+GC.compact

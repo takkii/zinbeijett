@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
 require "#{File.dirname(__FILE__)}/../lib/require_sec_seiki"
-
-Encoding.default_internal = 'UTF-8'
-Encoding.default_external = 'UTF-8'
+require 'bmi'
 
 # Qiita tenji program.
 class TenjiMakerQiita
   def to_tenji(*args)
+    encoding_style
+
     beta = args.to_s.split.join
 
     # mini-test case add here.
@@ -4712,3 +4712,5 @@ class TenjiMaker
     end
   end
 end
+
+GC.compact

@@ -8,15 +8,15 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 puts ''
 
 require 'timeout'
-
-Encoding.default_external = 'UTF-8'
-Encoding.default_internal = 'UTF-8'
+require 'bmi'
 
 # Hyakunin ishu search text
 module Hyaku
   module_function
 
   def view
+    encoding_style
+
     one = "#{File.dirname(__FILE__)}/txt/hyakunin.txt"
 
     open(one) do |f|
@@ -50,8 +50,6 @@ module Hyaku
   end
 end
 
-puts ''
-
-GC.start
+GC.compact
 
 __END__

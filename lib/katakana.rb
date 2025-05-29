@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
 require 'require_sec_seiki'
-
-Encoding.default_internal = 'UTF-8'
-Encoding.default_external = 'UTF-8'
+require 'bmi'
 
 class TenjiMaker
   def self.to_katakana
+    encoding_style
+
     one = ARGV[0]
 
     File.open(one) do |f|
