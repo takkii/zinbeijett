@@ -21,7 +21,7 @@ encoding_style
 module MiniRunner
   module_function
 
-  def Mini(msg = true, msg_dir = '/mini_test/')
+  def Mini(msg = true, msg_dir = ''.to_s)
     begin
       if msg == true
         if File.exist?("#{Dir.home}" + msg_dir)
@@ -43,7 +43,7 @@ module MiniRunner
     end
   end
 
-  def MiniW(msg = true, wsl_dir = '/mnt/c/Users/', msg_dir = '/mini_test/')
+  def MiniW(msg = true, wsl_dir = ''.to_s, msg_dir = ''.to_s)
     begin
       if msg == true
         if File.exist?(wsl_dir + msg_dir)

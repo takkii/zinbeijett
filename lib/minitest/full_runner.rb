@@ -21,7 +21,8 @@ encoding_style
 module MiniRunner
   module_function
 
-  def Full(msg = true, win_dir = 'C:/Users/sudok', msg_dir = '/mini_test/')
+  # def Full(msg = true, win_dir = 'C:/Users/sudok', msg_dir = '/mini_test/')
+  def Full(msg = true, win_dir = ''.to_s, msg_dir = ''.to_s)
     begin
       if msg == true
         if File.exist?(win_dir + msg_dir)
@@ -59,7 +60,8 @@ module MiniRunner
     end
   end
 
-  def FullW(msg = true, wsl_dir = '/mnt/c/Users/', msg_dir = '/mini_test/')
+  # def FullW(msg = true, wsl_dir = '/mnt/c/Users/', msg_dir = '/mini_test/')
+  def FullW(msg = true, wsl_dir = ''.to_s, msg_dir = ''.to_s)
     begin
       if msg == true
         if File.exist?(wsl_dir + msg_dir)
