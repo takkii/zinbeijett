@@ -24,4 +24,22 @@ FullW(msg = true || false, wsl_dir = '/mnt/c/Users/ユーザ名', msg_dir = '/mi
 
 ※ リファクタリング、仕様を策定しました。
 
-_更新履歴 : 2025/05/31_
+### 短絡の仕様
+
+```markdown
+# 独自例外を発生し、次の処理に転移します。
+Object.tanraku
+
+# 独自例外を発生し、設定した場所で処理が終了します。
+Object.tanraku_exit
+
+# 独自例外をシンプルに発生させます
+Object.execute_process
+
+# 短絡のログを記録します。
+Object.tanraku_log
+```
+
+※ Tanraku_VERSION: 1.1.0
+
+_更新履歴 : 2025/06/01_

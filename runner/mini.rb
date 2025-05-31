@@ -49,6 +49,7 @@ begin
   # SimpleCov.start
   MiniTestFile.new.remove
 rescue StandardError => e
+  puts "Tanraku_VERSION: " + Tanraku::VERSION
   puts e.backtrace.tanraku_exit
 ensure
   GC.compact
