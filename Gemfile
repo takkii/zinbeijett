@@ -1,9 +1,6 @@
 # frozen_string_literal: true
 
-source 'https://rubygems.org'
-
 # my makes gemspec
-gem 'bmi'
-
-# No use.
-#gem 'twitter'
+source "https://rubygems.pkg.github.com/takkii" do
+  gem "bmi", "1.0.3.1.pre.2025.05.29"
+end
