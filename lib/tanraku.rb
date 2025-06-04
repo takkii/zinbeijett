@@ -35,8 +35,10 @@ class Object
     raise Object
   rescue StandardError => e
     puts "#{e.class} : #{e.message}"
+    puts e.backtrace
   ensure
-    puts ea.backtrace
+    puts '--> Tanraku_Execute Method Exception'
+    exit!
   end
 
   def tanraku_log
@@ -57,7 +59,7 @@ class Object
 end
 
 module Tanraku
-  VERSION = '1.1.0'
+  VERSION = '1.1.1'
 end
 
 GC.compact
