@@ -5,26 +5,29 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 begin
 # --------------------------------------
-require "#{File.dirname(__FILE__)}/../../req/runner"
+  require "#{File.dirname(__FILE__)}/../../req/runner"
 # --------------------------------------
 rescue LoadError
-puts 'Not found rubygems, Please install minitest'
-puts ''
-puts 'gem install minitest'
-puts ''
-exit!
+  puts 'Not found rubygems, Please install minitest'
+  puts ''
+  puts 'gem install minitest'
+  puts ''
+  exit!
+ensure
+  GC.compact
 end
 
 # Encoding Setting.
 encoding_style
 
+# module MiniRunner
 module MiniRunner
   module_function
 
-  def Mini(msg = false, msg_dir = ''.to_s)
+  def Mini(msg = nil, msg_dir = ''.to_s)
     begin
-      if msg == true
-        if File.exist?("#{Dir.home}" + msg_dir)
+      if msg ||= true
+        if File.exist?("#{(Dir.home).to_s}" + msg_dir)
           Dir["#{Dir.home}" + msg_dir + "/*.rb"].sort.filter do |file|
             require file
           end
@@ -43,9 +46,9 @@ module MiniRunner
     end
   end
 
-  def MiniW(msg = false, wsl_dir = ''.to_s, msg_dir = ''.to_s)
+  def MiniW(msg = nil, wsl_dir = ''.to_s, msg_dir = ''.to_s)
     begin
-      if msg == true
+      if msg ||= true
         if File.exist?(wsl_dir + msg_dir)
           Dir[wsl_dir + msg_dir + "/*.rb"].sort.filter do |file|
             require file
