@@ -24,6 +24,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = '~> 3.6.9'
   s.summary = "This is a console application, a remake of zinbeiw."
   s.description = "箱入り娘 project, All in One Packages."
+  s.metadata["github_repo"] = "https://github.com/takkii/zinbeijett" 
 
   # Needing to rubygems
   s.add_runtime_dependency('bundler', '~> 2.6')
