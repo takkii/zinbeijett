@@ -33,7 +33,7 @@ Object.tanraku
 # 独自例外を発生し、設定した場所で処理が終了します
 Object.tanraku_exit
 
-# 独自例外をシンプルに発生させます
+# 独自例外を発生し、処理が終了します。
 Object.tanraku_execute
 
 # 短絡のログを記録します
