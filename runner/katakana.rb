@@ -1,76 +1,76 @@
 # frozen_string_literal: true
 
-require "#{File.dirname(__FILE__)}/req/katakana"
+require "#{File.dirname(__FILE__)}/../req/katakana"
 
 # Katakana Runner
 class KatakanaRunner
 
   def self.run1
     encoding_style
-    stdout_rb, _stderr_rb, _status_rb = Open3.capture3("ruby #{File.dirname(__FILE__)}/shell_ka/katakana_runner_1.rb")
+    stdout_rb, _stderr_rb, _status_rb = Open3.capture3("ruby #{File.dirname(__FILE__)}/../shell_ka/katakana_runner_1.rb")
 
     puts stdout_rb
   end
 
   def self.run2
     encoding_style
-    stdout_rb, _stderr_rb, _status_rb = Open3.capture3("ruby #{File.dirname(__FILE__)}/shell_ka/katakana_runner_2.rb")
+    stdout_rb, _stderr_rb, _status_rb = Open3.capture3("ruby #{File.dirname(__FILE__)}/../shell_ka/katakana_runner_2.rb")
 
     puts stdout_rb
   end
 
   def self.run3
     encoding_style
-    stdout_rb, _stderr_rb, _status_rb = Open3.capture3("ruby #{File.dirname(__FILE__)}/shell_ka/katakana_runner_3.rb")
+    stdout_rb, _stderr_rb, _status_rb = Open3.capture3("ruby #{File.dirname(__FILE__)}/../shell_ka/katakana_runner_3.rb")
 
     puts stdout_rb
   end
 
   def self.run4
     encoding_style
-    stdout_rb, _stderr_rb, _status_rb = Open3.capture3("ruby #{File.dirname(__FILE__)}/shell_ka/katakana_runner_4.rb")
+    stdout_rb, _stderr_rb, _status_rb = Open3.capture3("ruby #{File.dirname(__FILE__)}/../shell_ka/katakana_runner_4.rb")
 
     puts stdout_rb
   end
 
   def self.run5
     encoding_style
-    stdout_rb, _stderr_rb, _status_rb = Open3.capture3("ruby #{File.dirname(__FILE__)}/shell_ka/katakana_runner_5.rb")
+    stdout_rb, _stderr_rb, _status_rb = Open3.capture3("ruby #{File.dirname(__FILE__)}/../shell_ka/katakana_runner_5.rb")
 
     puts stdout_rb
   end
 
   def self.run6
     encoding_style
-    stdout_rb, _stderr_rb, _status_rb = Open3.capture3("ruby #{File.dirname(__FILE__)}/shell_ka/katakana_runner_6.rb")
+    stdout_rb, _stderr_rb, _status_rb = Open3.capture3("ruby #{File.dirname(__FILE__)}/../shell_ka/katakana_runner_6.rb")
 
     puts stdout_rb
   end
 
   def self.run7
     encoding_style
-    stdout_rb, _stderr_rb, _status_rb = Open3.capture3("ruby #{File.dirname(__FILE__)}/shell_ka/katakana_runner_7.rb")
+    stdout_rb, _stderr_rb, _status_rb = Open3.capture3("ruby #{File.dirname(__FILE__)}/../shell_ka/katakana_runner_7.rb")
 
     puts stdout_rb
   end
 
   def self.run8
     encoding_style
-    stdout_rb, _stderr_rb, _status_rb = Open3.capture3("ruby #{File.dirname(__FILE__)}/shell_ka/katakana_runner_8.rb")
+    stdout_rb, _stderr_rb, _status_rb = Open3.capture3("ruby #{File.dirname(__FILE__)}/../shell_ka/katakana_runner_8.rb")
 
     puts stdout_rb
   end
 
   def self.run9
     encoding_style
-    stdout_rb, _stderr_rb, _status_rb = Open3.capture3("ruby #{File.dirname(__FILE__)}/shell_ka/katakana_runner_9.rb")
+    stdout_rb, _stderr_rb, _status_rb = Open3.capture3("ruby #{File.dirname(__FILE__)}/../shell_ka/katakana_runner_9.rb")
 
     puts stdout_rb
   end
 
   def self.run10
     encoding_style
-    stdout_rb, _stderr_rb, _status_rb = Open3.capture3("ruby #{File.dirname(__FILE__)}/shell_ka/katakana_runner_10.rb")
+    stdout_rb, _stderr_rb, _status_rb = Open3.capture3("ruby #{File.dirname(__FILE__)}/../shell_ka/katakana_runner_10.rb")
 
     puts stdout_rb
   end

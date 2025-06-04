@@ -34,7 +34,7 @@ Object.tanraku
 Object.tanraku_exit
 
 # 独自例外をシンプルに発生させます
-Object.execute_process
+Object.tanraku_execute
 
 # 短絡のログを記録します
 Object.tanraku_log
