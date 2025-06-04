@@ -38,8 +38,14 @@ Object.tanraku_execute
 
 # 短絡のログを記録します
 Object.tanraku_log
+
+# 同機能を関数として使用できます。
+tanraku
+tanraku_exit
+tanraku_execute
+tanraku_log
 ```
 
-※ Tanraku_VERSION: 1.1.0
+※ Tanraku_VERSION: 1.1.2
 
-_更新履歴 : 2025/06/03_
+_更新履歴 : 2025/06/04_
