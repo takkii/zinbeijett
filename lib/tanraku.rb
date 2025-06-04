@@ -31,7 +31,7 @@ class Object
     end
   end
 
-  def execute_process
+  def tanraku_execute
     raise Object
   rescue StandardError => e
     puts "#{e.class} : #{e.message}"
