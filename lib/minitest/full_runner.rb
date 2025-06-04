@@ -5,14 +5,16 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 begin
 # --------------------------------------
-require "#{File.dirname(__FILE__)}/../../req/full_runner"
+  require "#{File.dirname(__FILE__)}/../../req/full_runner"
 # --------------------------------------
 rescue LoadError
-puts 'Not found rubygems, Please install minitest'
-puts ''
-puts 'gem install minitest'
-puts ''
-exit!
+  puts 'Not found rubygems, Please install minitest'
+  puts ''
+  puts 'gem install minitest'
+  puts ''
+  exit!
+ensure
+  GC.compact
 end
 
 # Encoding Setting.
@@ -21,9 +23,9 @@ encoding_style
 module MiniRunner
   module_function
 
-  def Full(msg = false, win_dir = ''.to_s, msg_dir = ''.to_s)
+  def Full(msg = nil, win_dir = ''.to_s, msg_dir = ''.to_s)
     begin
-      if msg == true
+      if msg ||= true
         if File.exist?(win_dir + msg_dir)
           puts ''
           puts ' mini_test in filename list '.center(80, '~')
@@ -59,9 +61,9 @@ module MiniRunner
     end
   end
 
-  def FullW(msg = false, wsl_dir = ''.to_s, msg_dir = ''.to_s)
+  def FullW(msg = nil, wsl_dir = ''.to_s, msg_dir = ''.to_s)
     begin
-      if msg == true
+      if msg ||= true
         if File.exist?(wsl_dir + msg_dir)
           puts ''
           puts ' mini_test in filename list '.center(80, '~')
