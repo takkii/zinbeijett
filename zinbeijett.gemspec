@@ -23,7 +23,7 @@ Gem::Specification.new do |s|
   s.required_ruby_version = ['>= 3.0']
   s.required_rubygems_version = '~> 3.6.9'
   s.summary = "This is a console application, a remake of zinbeiw."
-  s.description = "Simple search which moves by Ruby."
+  s.description = "箱入り娘 project, All in One Packages."
 
   # Needing to rubygems
   s.add_runtime_dependency('bundler', '~> 2.6')
