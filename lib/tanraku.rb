@@ -23,8 +23,8 @@ class Object
     begin
       m2.lock
       raise Object
-    rescue StandardError => ef
-      puts ef.backtrace
+    rescue StandardError => e
+      puts e.backtrace
     ensure
       puts '--> Tanraku_Exit Method Exception'
       m2.unlock
@@ -43,24 +43,30 @@ class Object
   end
 
   def tanraku_log
-    Dir.mkdir('log', 0o666) unless FileTest.exist?('log')
-    File.open('log/logs.txt', 'a:utf-8') do |m2|
-      exee = Exception.new('User Exception is raise message.')
-      m2.puts exee.message
-      raise
+    m2 = Mutex.new
+
+    begin
+      m2.lock
+      Dir.mkdir('log', 0o666) unless FileTest.exist?('log')
+      File.open('log/logs.txt', 'a:utf-8') do |m2|
+        custom = Exception.new('User Exception is raise message.')
+        m2.puts custom.message
+        raise Object
+      end
     rescue StandardError => e
       File.open('log/logs.txt', 'a:utf-8') do |m|
         m.puts e.backtrace.to_s
         m.puts "#{e.class} : #{e.message}"
       end
     ensure
-      puts 'log write (log/logs.txt).'
+      puts 'Tanraku_log write log/logs.txt.'
+      exit!
     end
   end
 end
 
 module Tanraku
-  VERSION = '1.1.2'
+  VERSION = '1.1.3'
 end
 
 # Can be used as a function
@@ -108,18 +114,24 @@ module Short_Circuit
   end
 
   def tanraku_log
-    Dir.mkdir('log', 0o666) unless FileTest.exist?('log')
-    File.open('log/logs.txt', 'a:utf-8') do |m2|
-      exee = Exception.new('User Exception is raise message.')
-      m2.puts exee.message
-      raise
+    m2 = Mutex.new
+
+    begin
+      m2.lock
+      Dir.mkdir('log', 0o666) unless FileTest.exist?('log')
+      File.open('log/logs.txt', 'a:utf-8') do |m2|
+        custom = Exception.new('User Exception is raise message.')
+        m2.puts custom.message
+        raise
+      end
     rescue StandardError => e
       File.open('log/logs.txt', 'a:utf-8') do |m|
         m.puts e.backtrace.to_s
         m.puts "#{e.class} : #{e.message}"
       end
     ensure
-      puts 'log write (log/logs.txt).'
+      puts 'Tanraku_log write log/logs.txt.'
+      exit!
     end
   end
 end
