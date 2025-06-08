@@ -48,15 +48,15 @@ class Object
     begin
       m2.lock
       Dir.mkdir('log', 0o666) unless FileTest.exist?('log')
-      File.open('log/logs.txt', 'a:utf-8') do |m2|
-        custom = Exception.new('User Exception is raise message.')
-        m2.puts custom.message
+      File.open('log/logs.txt', 'a:utf-8') do |log_create|
+        myself = Exception.new('My Exception is raise message.')
+        log_create.puts myself.message
         raise Object
       end
     rescue StandardError => e
-      File.open('log/logs.txt', 'a:utf-8') do |log|
-        log.puts "#{e.backtrace}".to_s
-        log.puts "#{e.class} : #{e.message}".to_s
+      File.open('log/logs.txt', 'a:utf-8') do |log_write|
+        log_write.puts "#{e.backtrace}".to_s
+        log_write.puts "#{e.class} : #{e.message}".to_s
       end
     ensure
       puts 'Tanraku_log write log/logs.txt.'.to_s
@@ -75,17 +75,17 @@ module Short_Circuit
   module_function
 
   def tanraku
-    m = Mutex.new
+    m2 = Mutex.new
 
     begin
-      m.lock
+      m2.lock
       raise
     rescue StandardError => e
       puts "#{e.backtrace}".to_s
       print 'Tanraku Method Exception '
     ensure
       puts '--> next class search...'
-      m.unlock
+      m2.unlock
     end
   end
 
@@ -120,15 +120,15 @@ module Short_Circuit
     begin
       m2.lock
       Dir.mkdir('log', 0o666) unless FileTest.exist?('log')
-      File.open('log/logs.txt', 'a:utf-8') do |m2|
-        custom = Exception.new('User Exception is raise message.')
-        m2.puts custom.message
+      File.open('log/logs.txt', 'a:utf-8') do |log_create|
+        myself = Exception.new('My Exception is raise message.')
+        log_create.puts myself.message
         raise
       end
     rescue StandardError => e
-      File.open('log/logs.txt', 'a:utf-8') do |log|
-        log.puts "#{e.backtrace}".to_s
-        log.puts "#{e.class} : #{e.message}".to_s
+      File.open('log/logs.txt', 'a:utf-8') do |log_write|
+        log_write.puts "#{e.backtrace}".to_s
+        log_write.puts "#{e.class} : #{e.message}".to_s
       end
     ensure
       puts 'Tanraku_log write log/logs.txt.'.to_s
