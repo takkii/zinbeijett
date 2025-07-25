@@ -4,6 +4,7 @@ lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 require "#{File.dirname(__FILE__)}/req/rubygems"
+require 'gem_version'
 
 Gem::Specification.new do |s|
   s.name = "zinbeijett"
@@ -21,7 +22,7 @@ Gem::Specification.new do |s|
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.required_ruby_version = ['>= 3.0']
-  s.required_rubygems_version = '~> 3.6.9'
+  s.required_rubygems_version = RbGemversion::VERSION
   s.summary = "This is a console application, a remake of zinbeiw."
   s.description = "箱入り娘 project, All in One Packages."
   s.metadata["github_repo"] = "https://github.com/takkii/zinbeijett"
