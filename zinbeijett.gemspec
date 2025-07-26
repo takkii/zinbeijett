@@ -9,8 +9,7 @@ require 'gem_version'
 Gem::Specification.new do |s|
   s.name = "zinbeijett"
   s.version = EngineLeft::VERSION
-  s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["takkii"]
+  s.authors = ["Takayuki Kamiyama"]
   s.email = "karuma.reason@gmail.com"
   s.extra_rdoc_files = [
     "LICENSE.txt",
@@ -22,7 +21,7 @@ Gem::Specification.new do |s|
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.required_ruby_version = ['>= 3.0']
-  s.required_rubygems_version = RbGemversion::VERSION
+  s.required_rubygems_version = '~> 3.6.9' if s.respond_to? RbGemversion::VERSION
   s.summary = "This is a console application, a remake of zinbeiw."
   s.description = "箱入り娘 project, All in One Packages."
   s.metadata["github_repo"] = "https://github.com/takkii/zinbeijett"
