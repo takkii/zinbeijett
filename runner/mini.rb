@@ -44,7 +44,7 @@ class MiniTestFile
   end
 end
 
-# Coverage, Start 'SimpleCov.start' add.
+# Run
 begin
   MiniTestFile.new.remove
 rescue
