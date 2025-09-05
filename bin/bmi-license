@@ -3,7 +3,7 @@
 
 # vim: filetype=ruby
 
-require "#{File.dirname(__FILE__)}/../require/bmi"
+require "#{File.dirname(__FILE__)}/../req/bmi"
 
 class MIT
 
