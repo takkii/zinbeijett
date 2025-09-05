@@ -1,0 +1,59 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# vim: filetype=ruby
+
+lib = File.expand_path('lib', __dir__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+
+require "#{File.dirname(__FILE__)}/../req/koyomi"
+
+begin
+  encoding_style
+
+  v = /\A-v\z/
+  r = /\A-r\z/
+  k = /\A-k\z/
+  c = /\A-c\z/
+  h = /\A-h\z/
+  w = /\A-w\z/
+  z = /\A-z\z/
+  t = /\A-t\z/
+  p = /\A-p\z/
+
+  one = ARGV[0]
+
+  if one.nil?
+    HimekuriClass.new.himekuri_print
+    HimekuriClass.new.count_print
+    HimekuriClass.new.reiwa_print
+    HimekuriClass.new.version
+    HimekuriClass.new.wahugetsu_print
+  elsif one.match?(v)
+    HimekuriClass.new.version
+  elsif one.match?(r)
+    HimekuriClass.new.reiwa_print
+  elsif one.match?(k)
+    HimekuriClass.new.himekuri_print
+  elsif one.match?(c)
+    HimekuriClass.new.count_print
+  elsif one.match?(h)
+    HimekuriClass.new.help
+  elsif one.match?(w)
+    HimekuriClass.new.wahugetsu_print
+  elsif one.match?(z)
+    puts Zella.formula
+  elsif one.match?(t)
+    puts HimekuriClass.zella_ts
+  elsif one.match?(p)
+    puts HimekuriClass.zella_py
+  else
+    puts '実行中のコマンドは存在しません !'
+  end
+rescue StandardError => e
+  puts e.backtrace
+ensure
+  GC.compact
+end
+
+__END__
