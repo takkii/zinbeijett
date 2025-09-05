@@ -6,7 +6,7 @@
 lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
-require "#{File.dirname(__FILE__)}/../require/bmi"
+require "#{File.dirname(__FILE__)}/../req/bmi"
 
 begin
   one = ARGV[0]
