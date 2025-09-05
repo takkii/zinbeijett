@@ -7,7 +7,7 @@ require "#{File.dirname(__FILE__)}/req/rubygems"
 require 'gem_version'
 
 Gem::Specification.new do |s|
-  s.name = "zinbeijett"
+  s.name = "sheltered-girl"
   s.version = EngineLeft::VERSION
   s.authors = ["Takayuki Kamiyama"]
   s.email = "karuma.reason@gmail.com"
@@ -17,14 +17,14 @@ Gem::Specification.new do |s|
   # Ignore files in mini_test and mini_unit folder.
   s.files = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(mini_test|mini_unit)/}) }
   s.executables = s.files.grep(%r{^bin/}) { |f| File.basename(f) }
-  s.homepage = "https://github.com/takkii/zinbeijett"
+  s.homepage = "https://github.com/takkii/sheltered-girl"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.required_ruby_version = ['>= 3.0']
   s.required_rubygems_version = '~> 3.6.9' if s.respond_to? RbGemversion::VERSION
   s.summary = "This is a console application, a remake of zinbeiw."
-  s.description = "箱入り娘 project, All in One Packages."
-  s.metadata["github_repo"] = "https://github.com/takkii/zinbeijett"
+  s.description = "箱入り娘, All in One Packages."
+  s.metadata["github_repo"] = "https://github.com/takkii/sheltered-girl"
 
   # Needing to rubygems
   s.add_runtime_dependency('bundler', '~> 2.6')
