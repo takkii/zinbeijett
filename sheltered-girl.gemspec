@@ -26,7 +26,7 @@ Gem::Specification.new do |s|
   s.description = "箱入り娘, All in One Packages."
   s.metadata["github_repo"] = "https://github.com/takkii/sheltered-girl"
 
-  # Needing to rubygems
+  # If build error case, unless Gem.win_platform?
   s.add_runtime_dependency('bundler', '~> 2.6')
   s.add_runtime_dependency('dotenv', '~> 3.1')
   s.add_runtime_dependency('feedjira', '~> 3.2')
@@ -34,9 +34,11 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency('minitest', '~> 5.25')
   s.add_runtime_dependency('nokogiri', '~> 1.18')
   s.add_runtime_dependency('pry', '~> 0.15')
-  s.add_runtime_dependency('pycall', '~> 1.5') unless Gem.win_platform?
+  s.add_runtime_dependency('pycall', '~> 1.5')
   s.add_runtime_dependency('rake', '~> 13.2')
   s.add_runtime_dependency('simplecov', '~> 0.22')
+  s.add_runtime_dependency('rinku', '~> 2.0')
+  s.add_runtime_dependency('sanitize', '~> 7.0')
 
   if s.respond_to? :specification_version
     s.specification_version = 4
