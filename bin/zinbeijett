@@ -17,7 +17,7 @@ module Zinbeijett
   def version
     puts '[ version ]'.center(60, '-')
     puts ''
-    print 'Zinbeijett VERSION : '
+    print 'Sheltered-girl VERSION : '
     puts EngineLeft::VERSION
     puts ''
     puts '[ version ]'.center(60, '-')
