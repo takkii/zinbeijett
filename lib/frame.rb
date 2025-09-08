@@ -103,7 +103,7 @@ module Heart
     end
   end
 
-  def appmakers
+  def appmaker
     require 'install'
     begin
       InstallerRunner.appmakers
@@ -192,8 +192,8 @@ elsif one.match?(i)
   downloader
 elsif one.match?(k)
   cooker
-elsif one.match?(k)
-  appmakers
+elsif one.match?(m)
+  appmaker
 elsif one.match?(n)
   installer
 elsif one.match?(s)
