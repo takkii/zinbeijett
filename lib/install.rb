@@ -41,6 +41,11 @@ class InstallerRunner
     nyasocom_app_command
   end
 
+  def self.appmakers
+    encoding_style
+    app_maker
+  end
+
   def self.database
     encoding_style
     two = ARGV[1]
@@ -196,6 +201,25 @@ end
     puts <<-EOF
 
 Cloned nyasocom_sun_app with nyasocom_frame.
+
+EOF
+  end
+
+  def self.app_maker
+    encoding_style
+    one = ARGV[2]
+    two = ARGV[3]
+    FileUtils.mkdir_p("./#{one}")
+    FileUtils.cd("./#{one}")
+    if system("git clone git@github.com:#{two}.git .", exception: true)
+    else
+      system("git clone https://github.com:#{two}.git .")
+    end
+    FileUtils.rm_rf("./.git")
+    FileUtils.rm_rf("./.github")
+    puts <<-EOF
+
+Cloned GitHub project with app-maker.
 
 EOF
   end
