@@ -103,6 +103,17 @@ module Heart
     end
   end
 
+  def appmakers
+    require 'install'
+    begin
+      InstallerRunner.appmakers
+    rescue LoadError => e
+      puts e.backtrace
+    ensure
+      GC.compact
+    end
+  end
+
   def default
     str = 'nyasocom_frame is a framework for generating web applications. '
     puts str
@@ -144,6 +155,9 @@ heat create example
 heat db postgresql
 heat db --pg
 
+# github project templete generated
+heat make takkii/nyasocom_frame
+
 # HELP
 heat -h
 EOS
@@ -156,6 +170,7 @@ d = /\Adb\z/
 h = /\A[-][h]\z/
 i = /\Aichi\z/
 k = /\Acook\z/
+m = /\Amake\z/
 n = /\Anew\z/
 s = /\Asun\z/
 t = /\Ani\z/
@@ -177,6 +192,8 @@ elsif one.match?(i)
   downloader
 elsif one.match?(k)
   cooker
+elsif one.match?(k)
+  appmakers
 elsif one.match?(n)
   installer
 elsif one.match?(s)
