@@ -13,8 +13,8 @@ class MiniTestFile
     when /mswin|msys|mingw|cygwin|bccwin|wince|emc/
       begin
         # Full, Switch ON / (true, string, string).
-        @mini_test = Full(true, "#{Dir.home}".to_s, '/GitLab/zinbeijett/mini_test')
-        @mini_unit = Full(true, "#{Dir.home}".to_s, '/GitLab/zinbeijett/mini_unit')
+        @mini_test = Full(true, "#{Dir.home}".to_s, '/GitHub/sheltered-girl/mini_test')
+        @mini_unit = Full(true, "#{Dir.home}".to_s, '/GitHub/sheltered-girl/mini_unit')
       rescue
         tanraku_execute
       end
@@ -23,8 +23,8 @@ class MiniTestFile
     when /linux/
       begin
         # FullW, Switch ON / (true, string, string).
-        @mini_test = FullW(true, '/mnt/c/Users/sudok', '/GitLab/zinbeijett/mini_test')
-        @mini_unit = FullW(true, '/mnt/c/Users/sudok', '/GitLab/zinbeijett/mini_unit')
+        @mini_test = FullW(true, '/mnt/c/Users/sudok', '/GitHub/sheltered-girl/mini_test')
+        @mini_unit = FullW(true, '/mnt/c/Users/sudok', '/GitHub/sheltered-girl/mini_unit')
       rescue
         tanraku_execute
       end

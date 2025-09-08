@@ -13,8 +13,8 @@ class MiniTestFile
     when /mswin|msys|mingw|cygwin|bccwin|wince|emc/
       begin
         # Mini, Switch ON / (true, string).
-        @mini_test = Mini(true, '/GitLab/zinbeijett/mini_test')
-        @mini_unit = Mini(true, '/GitLab/zinbeijett/mini_unit')
+        @mini_test = Mini(true, '/GitHub/sheltered-girl/mini_test')
+        @mini_unit = Mini(true, '/GitHub/sheltered-girl/mini_unit')
       rescue
         tanraku_execute
       end
@@ -23,8 +23,8 @@ class MiniTestFile
     when /linux/
       begin
         # MiniW, Switch ON / (true, string, string).
-        @mini_test = MiniW(true, '/mnt/c/Users/sudok', '/GitLab/zinbeijett/mini_test')
-        @mini_unit = MiniW(true, '/mnt/c/Users/sudok', '/GitLab/zinbeijett/mini_unit')
+        @mini_test = MiniW(true, '/mnt/c/Users/sudok', '/GitHub/sheltered-girl/mini_test')
+        @mini_unit = MiniW(true, '/mnt/c/Users/sudok', '/GitHub/sheltered-girl/mini_unit')
       rescue
         tanraku_execute
       end
