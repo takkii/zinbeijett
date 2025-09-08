@@ -156,7 +156,7 @@ heat db postgresql
 heat db --pg
 
 # github project templete generated
-heat make takkii/nyasocom_frame
+heat make nyasocom_sun_pg_win https://github.com:takkii/nyasocom_sun_pg_win.git
 
 # HELP
 heat -h
