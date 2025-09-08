@@ -1,7 +1,9 @@
 # frozen_string_literal: true
-#!/usr/bin/ruby
 
-require 'fileutils'
+lib = File.expand_path('lib', __dir__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+
+require "#{File.dirname(__FILE__)}/../req/nyasocom_frame"
 
 # Installer runner.
 class InstallerRunner
