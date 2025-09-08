@@ -211,9 +211,9 @@ EOF
     two = ARGV[3]
     FileUtils.mkdir_p("./#{one}")
     FileUtils.cd("./#{one}")
-    if system("git clone git@github.com:#{two}.git .", exception: true)
+    if system("git clone #{two} .", exception: true)
     else
-      system("git clone https://github.com:#{two}.git .")
+      system("git clone #{two} .")
     end
     FileUtils.rm_rf("./.git")
     FileUtils.rm_rf("./.github")
