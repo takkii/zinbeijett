@@ -207,13 +207,13 @@ EOF
 
   def self.app_maker
     encoding_style
-    one = ARGV[2]
-    two = ARGV[3]
-    FileUtils.mkdir_p("./#{one}")
-    FileUtils.cd("./#{one}")
-    if system("git clone #{two} .", exception: true)
+    FLN = ARGV[1]
+    GPH = ARGV[2]
+    FileUtils.mkdir_p("./#{FLN}")
+    FileUtils.cd("./#{FLN}")
+    if system("git clone git@github.com:#{GPH}.git .", exception: true)
     else
-      system("git clone #{two} .")
+      system("git clone https://github.com:#{GPH}.git .")
     end
     FileUtils.rm_rf("./.git")
     FileUtils.rm_rf("./.github")
