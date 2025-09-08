@@ -8,7 +8,7 @@ require "#{File.dirname(__FILE__)}/../lib/version"
 class VersionTest < Minitest::Test
   def test_version
     @v1 = EngineLeft::VERSION
-    zinbeijett_version = '4.0.0'
+    zinbeijett_version = '6.0.0'
     t = Date.today
     build_day = t.strftime('%Y.%m.%d')
     @v2 = "#{zinbeijett_version}-#{build_day}".freeze
