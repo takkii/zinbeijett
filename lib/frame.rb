@@ -3,14 +3,13 @@
 lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
-require 'fileutils'
+require "#{File.dirname(__FILE__)}/../req/nyasocom_frame"
 
 # Heat module
 module Heart
   module_function
 
   def version
-    require 'frame/version'
     print Frame::VERSION
     puts ' : [nyasocom_framework_version] '
   end
