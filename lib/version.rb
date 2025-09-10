@@ -5,7 +5,7 @@ require 'date'
 begin
 module EngineLeft
   # zinbeijett_version = x.x.x
-  zinbeijett_version = '4.0.3.1'
+  zinbeijett_version = '4.0.3.2'
   VERSION = "#{zinbeijett_version}"
 end
 
