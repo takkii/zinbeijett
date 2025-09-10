@@ -81,7 +81,7 @@ puts 'helpを入力またはTab補完で実行しましょう!'
 begin
   str = %w[sessi kashi exit help].map!(&:freeze).freeze
 
-  once = %w[find delete remove rename makefolder wordcount NumberGame Encode week calendar].map!(&:freeze).freeze
+  once = %w[find delete remove rename makefolder NumberGame Encode week calendar].map!(&:freeze).freeze
 
   lucky = %w[loto6 Numbers kuji].map!(&:freeze).freeze
 
@@ -334,8 +334,6 @@ rename      ファイルの名前を変えます
 
 makefolder  フォルダを作成します
 
-wordcount   対象のファイル全体を％で単語カウントします
-
 NumberGame  数字当てゲームです
 
 Encode      文字列のエンコードを評価します
@@ -566,65 +564,6 @@ rss         RSS投稿時間帯を判別します
       print '> '
     elsif line.match?(once[5])
 
-      begin
-        print '探したいフォルダのパスを指定してください： '
-        mik = gets.chomp
-      rescue StandardError => es
-        p es
-        puts 'エラーです。文字列を確認してください！'
-      end
-
-      begin
-        Dir.chdir(mik)
-      rescue Errno::EEXIST
-        Errno::EEXIST
-      end
-
-      begin
-        print '数えたいファイル名を拡張子を含んで入力してください： '
-
-        count = Hash.new(0)
-
-        # 文字列の出現頻度を調べる。
-        def char_stat(str)
-          table = Hash.new(0)
-          str.scan(/./m) do |ch|
-            table[ch] += 1
-          end
-          table.to_a.sort_by { |_, con| -con }
-        end
-
-        # 単語の集計
-        filename = gets.chomp
-        File.open(filename) do |d|
-          while line == d.gets
-            wa = line.split
-            wa.each do |w|
-              count[w] += 1
-            end
-          end
-
-          # 結果の出力
-
-          count.sort_by { |a| a[1] }.each do |web, con|
-            print "#{web.inspect}: "
-            print "#{con % 100 / wa.length}%"
-            puts ' '
-            puts ' '
-          end
-        end
-      rescue StandardError => ex
-        p ex
-        puts 'エラーです。ファイル名を確認してください。\ｎ'
-        retry
-      ensure
-        puts '終了は exit を入力してください！'
-      end
-
-      print '> '
-
-    elsif line.match?(once[6])
-
       x = Random.rand(1..100)
       numb = 0
       numb += 1
@@ -670,7 +609,7 @@ rss         RSS投稿時間帯を判別します
 
       puts 'お疲れさまでした。'
       print '> '
-    elsif line.match?(once[7])
+    elsif line.match?(once[6])
       puts
 
       class Enco
@@ -757,7 +696,7 @@ rss         RSS投稿時間帯を判別します
       end
       print '> '
 
-    elsif line.match?(once[8])
+    elsif line.match?(once[7])
       puts ''
       puts 'WEEK'.center(60, '-')
       puts ''
@@ -831,7 +770,7 @@ rss         RSS投稿時間帯を判別します
 
       print '> '
 
-    elsif line.match?(once[9])
+    elsif line.match?(once[8])
       puts ''
       puts 'WEEK'.center(60, '-')
       puts ''
