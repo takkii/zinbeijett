@@ -564,19 +564,20 @@ rss         RSS投稿時間帯を判別します
       print '> '
     elsif line.match?(once[5])
 
-      x = SecureRandom.random_number(1..100)
+      x = SecureRandom.random_number(1..100).freeze
       numb = 0
       numb += 1
 
       puts ''
       num = 6
-      puts "#{num}回、繰り返すまでに当ててください"
+      num_f = num.freeze
+      puts "#{num_f}回、繰り返すまでに当ててください"
       puts ''
       puts '1~100までの数字をいれてくださいNumberGameスタート！'
       print '> '
 
-      num.times do |x|
-        i_num = gets.chomp.to_i
+      num_f.times do |x|
+        i_num = gets.chomp.to_i.freeze
         if i_num < x
           puts 'コンピュータの選んだ数字の方が大きいため大きい数字を入力してください'
           print '> '
@@ -593,7 +594,7 @@ rss         RSS投稿時間帯を判別します
              puts
              break
         end
-        if i_num == (num - 1)
+        if i_num == (num_f - 1)
           puts ''
           puts '正解は' + x.to_s + 'でした'
           puts ''
