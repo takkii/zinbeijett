@@ -563,51 +563,62 @@ rss         RSS投稿時間帯を判別します
 
       print '> '
     elsif line.match?(once[5])
+      begin
+        x = SecureRandom.random_number(1..100).freeze
+        nub = 0
+        nub += 1
 
-      x = SecureRandom.random_number(1..100)
-      numb = 0
-      numb += 1
+        puts ''
+        num = 5
+        num_f = num.freeze
+        puts "#{num_f}回、繰り返すまでに当ててください"
+        puts ''
+        puts '1 ~ 100までの数字をいれてくださいNumberGameスタート！'
+        print '> '
 
-      puts ''
-      num = 5
-      puts "#{num}回、繰り返すまでに当ててください"
-      puts
-      puts '1~100までの数字をいれてくださいNumberGameスタート！'
-      print '> '
+        num_f.times do |z|
+          i_num = (gets.chomp.to_i).freeze
 
-      num.times do |z|
-        i_num = gets.chomp.to_i
-        if i_num < z
-          puts 'コンピュータの選んだ数字の方が大きいため大きい数字を入力してください'
-          print '> '
-          numb += 1
-        elsif i_num > z
-          puts 'コンピュータの選んだ数字の方が小さいため小さい数字を入力してください'
-          print '> '
-          numb += 1
-        else i_num == x
-             puts
-             puts 'おめでとうございます、正解です'
-             puts
-             puts "#{numb}回で正解しました"
-             puts
-             break
+          if i_num < 101
+            if i_num < x
+              puts 'コンピュータの選んだ数字の方が大きいため大きい数字を入力してください'
+              print '> '
+              nub += 1
+            elsif i_num > x
+              puts 'コンピュータの選んだ数字の方が小さいため小さい数字を入力してください'
+              print '> '
+              nub += 1
+            elsif i_num == x
+              puts ''
+              puts 'おめでとうございます、正解です'
+              puts ''
+              puts "#{nub}回と#{z+1}回繰り返しで正解しました"
+              puts ''
+              break
+            else
+              puts ''
+              puts '正解は' + x.to_s + 'でした'
+              puts ''
+              puts '残念、もう一度チャレンジ！'
+              puts ''
+              break
+            end
+          else
+            tanraku_execute
+          end
         end
-        if i == (num - 1)
-          puts
-          puts '正解は' + x.to_s + 'でした'
-          puts
-          puts '残念、もう一度チャレンジ！'
-          puts
-        end
-      rescue StandardError => ex
-        p ex
-        puts 'エラーです、数字を確認してください\ｎ'
-        retry
+
+      rescue StandardError => s
+        puts s.backtrace
+        tanraku_execute
+      
+      ensure
+        puts '正解は' + x.to_s + 'でした'
+        puts ''
+        puts 'お疲れさまでした。'
+        print '> '
       end
 
-      puts 'お疲れさまでした。'
-      print '> '
     elsif line.match?(once[6])
       puts
 
