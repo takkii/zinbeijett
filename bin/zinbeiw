@@ -613,7 +613,6 @@ rss         RSS投稿時間帯を判別します
         tanraku_execute
       
       ensure
-        puts ''
         puts '正解は' + x.to_s + 'でした'
         puts ''
         puts 'お疲れさまでした。'
