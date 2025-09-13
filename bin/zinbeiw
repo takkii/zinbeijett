@@ -578,28 +578,31 @@ rss         RSS投稿時間帯を判別します
 
       num_f.times do |x|
         i_num = gets.chomp.to_i.freeze
-        if i_num < x
-          puts 'コンピュータの選んだ数字の方が大きいため大きい数字を入力してください'
-          print '> '
+        if i_num =< 100
+          if i_num < x
+            puts 'コンピュータの選んだ数字の方が大きいため大きい数字を入力してください'
+            print '> '
           numb += 1
-        elsif i_num > x
-          puts 'コンピュータの選んだ数字の方が小さいため小さい数字を入力してください'
-          print '> '
-          numb += 1
-        else i_num == x
-             puts
-             puts 'おめでとうございます、正解です'
-             puts
-             puts "#{numb}回で正解しました"
-             puts
-             break
-        end
-        if i_num == (num_f - 1)
-          puts ''
-          puts '正解は' + x.to_s + 'でした'
-          puts ''
-          puts '残念、もう一度チャレンジ！'
-          puts ''
+          elsif i_num > x
+            puts 'コンピュータの選んだ数字の方が小さいため小さい数字を入力してください'
+            print '> '
+            numb += 1
+          elsif i_num == (num_f - 1)
+            puts ''
+            puts '正解は' + x.to_s + 'でした'
+            puts ''
+            puts '残念、もう一度チャレンジ！'
+            puts ''
+          else i_num == x
+               puts
+               puts 'おめでとうございます、正解です'
+               puts
+               puts "#{numb}回で正解しました"
+               puts
+               break
+          end
+        else
+          tanraku_execute
         end
       rescue StandardError => ex
         puts ex
