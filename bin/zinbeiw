@@ -578,7 +578,7 @@ rss         RSS投稿時間帯を判別します
 
       num_f.times do |x|
         i_num = gets.chomp.to_i.freeze
-        if i_num =< 100
+        if i_num < 101
           if i_num < x
             puts 'コンピュータの選んだ数字の方が大きいため大きい数字を入力してください'
             print '> '
