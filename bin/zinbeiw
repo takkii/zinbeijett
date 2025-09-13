@@ -606,17 +606,19 @@ rss         RSS投稿時間帯を判別します
           else
             tanraku_execute
           end
+        end
 
       rescue StandardError => s
         puts s.backtrace
         tanraku_execute
-      end
       
-      puts ''
-      puts '正解は' + x.to_s + 'でした'
-      puts ''
-      puts 'お疲れさまでした。'
-      print '> '
+      ensure
+        puts ''
+        puts '正解は' + x.to_s + 'でした'
+        puts ''
+        puts 'お疲れさまでした。'
+        print '> '
+      end
 
     elsif line.match?(once[6])
       puts
