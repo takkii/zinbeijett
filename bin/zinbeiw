@@ -569,9 +569,11 @@ rss         RSS投稿時間帯を判別します
         nub += 1
 
         puts ''
-        num = 5
+        puts '何回まで、繰り返すか指定してください (5回程度が目安です)'
+        print '> '
+        num = (gets.chomp.to_i).freeze
         num_f = num.freeze
-        puts "#{num_f}回、繰り返すまでに当ててください"
+        puts "#{num_f}回、繰り返すまでに当ててください:"
         puts ''
         puts '1 ~ 100までの数字をいれてくださいNumberGameスタート！'
         print '> '
@@ -592,14 +594,14 @@ rss         RSS投稿時間帯を判別します
               puts ''
               puts 'おめでとうございます、正解です'
               puts ''
-              puts "#{nub}回と#{z+1}回繰り返しで正解しました"
+              puts "#{num_f}回範囲内: #{z+1}回目で正解しました"
               puts ''
               break
             else
               puts ''
               puts '正解は' + x.to_s + 'でした'
               puts ''
-              puts '残念、もう一度チャレンジ！'
+              puts 'もう一度、NumberGameで遊びますか?'
               puts ''
               break
             end
@@ -615,7 +617,7 @@ rss         RSS投稿時間帯を判別します
       ensure
         puts '正解は' + x.to_s + 'でした'
         puts ''
-        puts 'お疲れさまでした。'
+        puts 'お疲れさまでした、NumberGameを終了します...処理を入力してください!'
         print '> '
       end
 
