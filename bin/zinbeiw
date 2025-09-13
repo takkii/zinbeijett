@@ -594,7 +594,7 @@ rss         RSS投稿時間帯を判別します
               puts ''
               puts 'おめでとうございます、正解です'
               puts ''
-              puts "#{nub}回と#{z+1}回繰り返しで正解しました"
+              puts "#{num_f}回範囲内: #{z+1}回目で正解しました"
               puts ''
               break
             else
