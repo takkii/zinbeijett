@@ -576,7 +576,7 @@ rss         RSS投稿時間帯を判別します
         puts '1 ~ 100までの数字をいれてくださいNumberGameスタート！'
         print '> '
 
-        num_f.times do
+        num_f.times do |z|
           i_num = (gets.chomp.to_i).freeze
 
           if i_num < 101
@@ -592,7 +592,7 @@ rss         RSS投稿時間帯を判別します
               puts ''
               puts 'おめでとうございます、正解です'
               puts ''
-              puts "#{nub}回で正解しました"
+              puts "#{nub}回と#{z}:繰り返しで正解しました"
               puts ''
               break
             else
