@@ -569,7 +569,7 @@ rss         RSS投稿時間帯を判別します
       numb += 1
 
       puts ''
-      num = 5
+      num = 6
       puts "#{num}回、繰り返すまでに当ててください"
       puts ''
       puts '1~100までの数字をいれてくださいNumberGameスタート！'
