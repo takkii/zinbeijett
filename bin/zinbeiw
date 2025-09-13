@@ -571,17 +571,17 @@ rss         RSS投稿時間帯を判別します
       puts ''
       num = 5
       puts "#{num}回、繰り返すまでに当ててください"
-      puts
+      puts ''
       puts '1~100までの数字をいれてくださいNumberGameスタート！'
       print '> '
 
-      num.times do |z|
+      num.times do |x|
         i_num = gets.chomp.to_i
-        if i_num < z
+        if i_num < x
           puts 'コンピュータの選んだ数字の方が大きいため大きい数字を入力してください'
           print '> '
           numb += 1
-        elsif i_num > z
+        elsif i_num > x
           puts 'コンピュータの選んだ数字の方が小さいため小さい数字を入力してください'
           print '> '
           numb += 1
@@ -593,16 +593,16 @@ rss         RSS投稿時間帯を判別します
              puts
              break
         end
-        if i == (num - 1)
-          puts
+        if i_num == (num - 1)
+          puts ''
           puts '正解は' + x.to_s + 'でした'
-          puts
+          puts ''
           puts '残念、もう一度チャレンジ！'
-          puts
+          puts ''
         end
       rescue StandardError => ex
-        p ex
-        puts 'エラーです、数字を確認してください\ｎ'
+        puts ex
+        puts 'エラーです、数字を確認してください'
         retry
       end
 
