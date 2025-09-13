@@ -564,7 +564,7 @@ rss         RSS投稿時間帯を判別します
       print '> '
     elsif line.match?(once[5])
 
-      x = Random.rand(1..100)
+      x = SecureRandom.random_number(1..100)
       numb = 0
       numb += 1
 
