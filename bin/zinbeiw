@@ -568,9 +568,8 @@ rss         RSS投稿時間帯を判別します
       numb = 0
       numb += 1
 
-      puts '何回まで、NumberGameで繰り返すか指定してください'
-      print '> '
-      num = gets.chomp.to_i
+      puts ''
+      num = 5
       puts "#{num}回、繰り返すまでに当ててください"
       puts
       puts '1~100までの数字をいれてくださいNumberGameスタート！'
