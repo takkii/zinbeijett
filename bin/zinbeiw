@@ -580,7 +580,7 @@ rss         RSS投稿時間帯を判別します
             input_n = (gets.chomp.to_i).freeze
 
             unless input_n.nil?
-              if input_n.match(/[0]|[0]{2}/o)
+              unless input_n.match(/^[1-9][0-9]*$/o)
                 if input_n < 101
                   if input_n < x
                     puts 'コンピュータの選んだ数字の方が大きいため大きい数字を入力してください'
