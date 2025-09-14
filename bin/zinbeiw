@@ -612,7 +612,7 @@ rss         RSS投稿時間帯を判別します
                 end
               else
                 puts ''
-                puts '0または00を入力したため、終了します...'
+                puts '00を入力したため、終了します...'
                 puts ''
                 break
               end
