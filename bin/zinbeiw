@@ -583,7 +583,7 @@ rss         RSS投稿時間帯を判別します
             if input_n < 101
               if input_m.match(/^0/o)
                 puts ''
-                puts '0と00を入力したため、終了します...'
+                puts '0と00または空白を入力したため、終了します...'
                 puts ''
                 break
               elsif input_n < x
