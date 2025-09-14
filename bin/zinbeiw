@@ -579,31 +579,38 @@ rss         RSS投稿時間帯を判別します
           num.times do |z|
             input_n = (gets.chomp.to_i).freeze
 
-            if input_n < 101 && input_n == 0
-              if input_n < x
-                puts 'コンピュータの選んだ数字の方が大きいため大きい数字を入力してください'
-                print '> '
-              elsif input_n > x
-                puts 'コンピュータの選んだ数字の方が小さいため小さい数字を入力してください'
-                print '> '
-              elsif input_n == x
-                puts ''
-                puts 'おめでとうございます、正解です'
-                puts ''
-                puts "#{num}回範囲内: #{z+1}回目で正解しました"
-                puts ''
-                break
+            if input_n == 0 || input_n == 00
+              if input_n < 101
+                if input_n < x
+                  puts 'コンピュータの選んだ数字の方が大きいため大きい数字を入力してください'
+                  print '> '
+                elsif input_n > x
+                  puts 'コンピュータの選んだ数字の方が小さいため小さい数字を入力してください'
+                  print '> '
+                elsif input_n == x
+                  puts ''
+                  puts 'おめでとうございます、正解です'
+                  puts ''
+                  puts "#{num}回範囲内: #{z+1}回目で正解しました"
+                  puts ''
+                  break
+                else
+                  puts ''
+                  puts '正解は' + x.to_s + 'でした'
+                  puts ''
+                  puts '処理を終了します...'
+                  puts ''
+                  break
+                end             
               else
                 puts ''
-                puts '正解は' + x.to_s + 'でした'
-                puts ''
-                puts '処理を終了します...'
+                puts '数字が100を超えたため、終了します...'
                 puts ''
                 break
-              end             
+              end
             else
               puts ''
-              puts '0を入力したか100を超えたかnilを返したため、終了します...'
+              puts '0を入力したため、終了します...'
               puts ''
               break
             end
