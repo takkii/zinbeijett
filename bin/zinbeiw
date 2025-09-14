@@ -581,40 +581,44 @@ rss         RSS投稿時間帯を判別します
             input_m = input_n.to_s
 
           unless input_m.nil?
-            if input_n < 101
-              puts ''
-              puts '100を超えた数字を入力したため、終了します...'
-              puts ''
-              break
-            elsif input_m.match(/^0/o)
-              puts ''
-              puts '0と00を入力したため、終了します...'
-              puts ''
-              break
-            elsif input_n < x
-              puts 'コンピュータの選んだ数字の方が大きいため大きい数字を入力してください'
-              print '> '
-            elsif input_n > x
-              puts 'コンピュータの選んだ数字の方が小さいため小さい数字を入力してください'
-              print '> '
-            elsif input_n == x
-              puts ''
-              puts 'おめでとうございます、正解です'
-              puts ''
-              puts "#{num}回範囲内: #{z+1}回目で正解しました"
-              puts ''
-              break
+            if input_m.match(/^0/o)
+              if input_n < 101
+                if input_n < x
+                  puts 'コンピュータの選んだ数字の方が大きいため大きい数字を入力してください'
+                  print '> '
+                elsif input_n > x
+                  puts 'コンピュータの選んだ数字の方が小さいため小さい数字を入力してください'
+                  print '> '
+                elsif input_n == x
+                  puts ''
+                  puts 'おめでとうございます、正解です'
+                  puts ''
+                  puts "#{num}回範囲内: #{z+1}回目で正解しました"
+                  puts ''
+                  break
+                else
+                  puts ''
+                  puts '正解は' + x.to_s + 'でした'
+                  puts ''
+                  puts '処理を終了します...'
+                  puts ''
+                  break
+                end
+              else
+                puts ''
+                puts '100を超えた数字を入力したため、終了します...'
+                puts ''
+                break
+              end
             else
               puts ''
-              puts '正解は' + x.to_s + 'でした'
-              puts ''
-              puts '処理を終了します...'
+              puts 'nilガードを発動します...'
               puts ''
               break
             end
           else
             puts ''
-            puts 'nilガードを発動します...'
+            puts '0と00を入力したため、終了します...'
             puts ''
             break
           end
