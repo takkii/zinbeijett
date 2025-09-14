@@ -612,7 +612,6 @@ rss         RSS投稿時間帯を判別します
           puts ''
           puts '繰り返す回数が20回を超えたため、終了します...'
           puts ''
-          break
         end
 
       rescue StandardError => s
