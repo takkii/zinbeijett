@@ -564,7 +564,7 @@ rss         RSS投稿時間帯を判別します
       print '> '
     elsif line.match?(once[5])
       begin
-        x = SecureRandom.random_number(1..100).freeze
+        x = SecureRandom.random_number(0..100).freeze
 
         puts ''
         puts '何回まで、繰り返すか指定してください (20回が限度です)'
@@ -572,7 +572,7 @@ rss         RSS投稿時間帯を判別します
         num = (gets.chomp.to_i).freeze
         puts "#{num}回、繰り返すまでに当ててください:"
         puts ''
-        puts '1~100までの数字をいれてください、NumberGameスタート！'
+        puts '0~100までの数字をいれてください、NumberGameスタート！'
         print '> '
 
         if num < 21
@@ -580,7 +580,7 @@ rss         RSS投稿時間帯を判別します
             input_n = (gets.chomp.to_i).freeze
             input_m = input_n.to_s
 
-            unless input_n.nil?
+            if input_m.nil?
               if input_m.match(/[00]/o)
                 if input_n < 101
                   if input_n < x
