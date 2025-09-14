@@ -602,7 +602,7 @@ rss         RSS投稿時間帯を判別します
             end
           else
             puts ''
-            puts '100回を超えたため、終了します...'
+            puts '100を超えたため、終了します...'
             puts ''
             break
           end
