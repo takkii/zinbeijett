@@ -572,15 +572,21 @@ rss         RSS投稿時間帯を判別します
         num = (gets.chomp.to_i).freeze
         puts "#{num}回、繰り返すまでに当ててください:"
         puts ''
-        puts '1~100までの数字をいれてください、NumberGameスタート！'
+        puts '1 ~ 100までの数字をいれてください、NumberGameスタート！'
         print '> '
 
         if num < 21
           num.times do |z|
             input_n = (gets.chomp.to_i).freeze
+            input_m = input_n.to_s
 
             if input_n < 101
-              if input_n < x
+              if input_m.match(/^0/o)
+                puts ''
+                puts '0と00または空白を入力したため、終了します...'
+                puts ''
+                break
+              elsif input_n < x
                 puts 'コンピュータの選んだ数字の方が大きいため大きい数字を入力してください'
                 print '> '
               elsif input_n > x
@@ -603,7 +609,7 @@ rss         RSS投稿時間帯を判別します
               end
             else
               puts ''
-              puts '入力した数字が100を超えたため、終了します...'
+              puts '100を超えた数字を入力したため、終了します...'
               puts ''
               break
             end
