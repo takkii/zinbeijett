@@ -586,11 +586,6 @@ rss         RSS投稿時間帯を判別します
                 puts '0と00を入力したため、終了します...'
                 puts ''
                 break
-              elsif !input_m.nil?
-                puts ''
-                puts 'nilガードを発動します...'
-                puts ''
-                break
               elsif input_n < x
                 puts 'コンピュータの選んだ数字の方が大きいため大きい数字を入力してください'
                 print '> '
