@@ -581,7 +581,7 @@ rss         RSS投稿時間帯を判別します
             input_m = input_n.to_s
 
             unless input_n.nil?
-              if input_m.match(/00/o) == nil
+              if input_m.match(/[00]/o)
                 if input_n < 101
                   if input_n < x
                     puts 'コンピュータの選んだ数字の方が大きいため大きい数字を入力してください'
