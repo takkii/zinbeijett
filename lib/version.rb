@@ -4,9 +4,8 @@ require 'date'
 
 begin
 module EngineLeft
-  # zinbeijett_version = x.x.x
-  zinbeijett_version = '4.0.3.11'
-  Z_VER = "#{zinbeijett_version}"
+  # version = x.x.x.x
+  Z_VER = '4.0.3.11'
 end
 
 rescue StandardError => e
