@@ -2,8 +2,9 @@
 # frozen_string_literal: true
 # vim: filetype=ruby
 
-require 'timeout'
 require 'bmi'
+require 'tanraku'
+require 'timeout'
 
 lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
@@ -111,7 +112,7 @@ module EngineLeft
     require 'version'
     puts '[ version ]'.center(60, '-')
     puts ''
-    puts 'Aqua VERSION : ' + EngineLeft::VERSION
+    puts 'Aqua VERSION : ' + EngineLeft::Z_VER
     puts ''
     puts '[ version ]'.center(60, '-')
   end
@@ -245,14 +246,18 @@ elsif one.match?(z)
   search_txt
 end
 rescue Exception => e
-	#puts e.backtrace
+  #puts e.backtrace
+ensure
+  GC.start
 end
 
 begin
-require 'druby_reci'
+  require 'druby_reci'
 rescue Exception => e
+  puts e.backtrace
+  tanraku_execute
+encure
+  GC.compact
 end
-
-GC.start
 
 __END__
