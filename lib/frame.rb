@@ -3,7 +3,7 @@
 lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
-require "#{File.dirname(__FILE__)}/../req/frame"
+require "#{File.dirname(__FILE__)}/../req/frame_version"
 
 # Heat module
 module Heart
