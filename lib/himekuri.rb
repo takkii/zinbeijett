@@ -126,19 +126,7 @@ class HimekuriClass
 
   def version
     print '日めくり数え番号 : '
-    puts Himekuri::VERSION
-  end
-
-  def self.zella_ts
-    nodejs_path = "node" + " " + "#{File.dirname(__FILE__) + '/zella.js'}".to_s
-    stdout_js, stderr_js, status_js = Open3.capture3(nodejs_path)
-    stdout_js
-  end
-
-  def self.zella_py
-    nodejs_path = "python" + " " + "#{File.dirname(__FILE__) + '/timestamp.py'}".to_s
-    stdout_py, stderr_py, status_py = Open3.capture3(nodejs_path)
-    stdout_py
+    puts Himekuri::HIMEKURI_VERSION
   end
 
   def help
@@ -179,14 +167,6 @@ class HimekuriClass
     puts 'koyomi -z 2024 4 11'
     puts ''
     puts '2024年4月11日 : 木曜日'
-    puts ''
-    puts 'koyomi -t'
-    puts ''
-    puts HimekuriClass.zella_ts
-    puts ''
-    puts 'koyomi -p'
-    puts ''
-    puts HimekuriClass.zella_py
     puts ''
     puts 'HELP'.center(60, '-')
   end
