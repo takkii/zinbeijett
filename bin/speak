@@ -4,6 +4,7 @@
 # vim: filetype=ruby
 
 require 'readline'
+require 'tanraku'
 
 lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
@@ -555,6 +556,7 @@ reader      RSSの取得先からタイトル表示 (雨音から移植)
       print '> '
 
     elsif line.match?(once[5])
+      begin
         x = Random.rand(1..100)
 
         puts ''
