@@ -25,10 +25,9 @@ module Zinbeijett
     puts 'Start'.center(60, '-')
 
     puts <<-DOC
-    == Contributing to zinbeijett
+    == Contributing to sheltered-girl
 
     GitHub account  : takkii
-    GitLab instance : takkii
 
     ** Spectacle **
 
@@ -43,6 +42,10 @@ module Zinbeijett
     match method : 1.x.x
 
     minimum core : 2.x.x
+
+    zinbeijett core : 3.x.x
+
+    sheltered-girl version : 4.x.x
 
     > Thank you for reading to the last.
     DOC
