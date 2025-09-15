@@ -3,6 +3,6 @@
 # --------------------------------------
 require 'date'
 require 'time'
-require 'version'
+require 'himekuri_version'
 require 'zella'
 # --------------------------------------

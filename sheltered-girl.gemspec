@@ -8,7 +8,7 @@ require 'gem_version'
 
 Gem::Specification.new do |s|
   s.name = "sheltered-girl"
-  s.version = EngineLeft::VERSION
+  s.version = EngineLeft.version
   s.authors = ["Takayuki Kamiyama"]
   s.email = "karuma.reason@gmail.com"
   s.extra_rdoc_files = [

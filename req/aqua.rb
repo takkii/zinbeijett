@@ -2,7 +2,8 @@
 
 # --------------------------------------
 require 'bmi'
-require 'date'
-require 'fileutils'
-require 'frame_version'
+require 'tanraku'
+require 'timeout'
+# --------------------------------------
+encoding_style
 # --------------------------------------

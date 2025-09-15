@@ -2,7 +2,7 @@
 
 # --------------------------------------
 require 'bmi'
-require 'date'
-require 'fileutils'
-require 'frame_version'
+require 'version'
+# --------------------------------------
+encoding_style
 # --------------------------------------
