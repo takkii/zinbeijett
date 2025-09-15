@@ -2,12 +2,14 @@
 
 require 'date'
 
-begin
-module EngineLeft
-  # version = x.x.x.x
-  Z_VER = '4.0.3.11'
+class EngineLeft
+  def self.version
+    '4.0.3.11'.to_s
+  end
 end
 
+begin
+  EngineLeft.version
 rescue StandardError => e
   puts e.backtrace
 ensure

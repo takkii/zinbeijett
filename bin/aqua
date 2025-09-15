@@ -112,7 +112,7 @@ module EngineLeft
     require 'version'
     puts '[ version ]'.center(60, '-')
     puts ''
-    puts 'Aqua VERSION : ' + EngineLeft::Z_VER
+    puts 'Aqua VERSION : ' + EngineLeft.version
     puts ''
     puts '[ version ]'.center(60, '-')
   end
