@@ -4,7 +4,7 @@ require 'date'
 
 class EngineLeft
   def self.version
-    '4.0.3.11'.to_s
+    '4.0.4.0'.to_s
   end
 end
 
