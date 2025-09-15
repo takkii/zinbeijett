@@ -15,7 +15,7 @@ begin
     puts ''
     puts 'STATUS'.center(60, '-')
     puts ''
-    puts "BMI_VERSION : #{BMI_CLI::VERSION}"
+    puts "BMI_VERSION : #{BMI_CLI::BMI_VERSION}"
     puts <<-EOF
 
 Copyright (c) 2024 - #{(DateTime.now.year).to_s} Takayuki Kamiyama
