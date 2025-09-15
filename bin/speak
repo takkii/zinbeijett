@@ -340,9 +340,7 @@ rename      ファイルの名前を変えます
 
 makefolder  フォルダを作成します
 
-wordcount   対象のファイル全体を％で単語カウントします
-
-NumberGame  数字当てゲームです
+NumberGame  数字当てゲームです (疑似乱数版)
 
 Encode      文字列のエンコードを評価します
 
