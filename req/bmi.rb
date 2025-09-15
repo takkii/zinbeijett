@@ -3,5 +3,5 @@
 # --------------------------------------
 require 'bmi'
 require 'date'
-require 'version'
+require 'bmi_version'
 # --------------------------------------

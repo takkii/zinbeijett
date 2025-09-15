@@ -3,6 +3,6 @@
 # --------------------------------------
 require 'bmi'
 require 'himekuri'
-require 'version'
+require 'himekuri_version'
 require 'zella'
 # --------------------------------------

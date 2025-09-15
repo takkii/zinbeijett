@@ -4,5 +4,5 @@
 require 'bmi'
 require 'date'
 require 'fileutils'
-require 'version'
+require 'frame_version'
 # --------------------------------------
