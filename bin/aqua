@@ -254,8 +254,8 @@ end
 begin
   require 'druby_reci'
 rescue Exception => e
-  puts e.backtrace
-  tanraku_execute
+  # puts e.backtrace
+  # tanraku_execute
 encure
   GC.compact
 end
