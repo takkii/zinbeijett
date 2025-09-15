@@ -256,7 +256,7 @@ begin
 rescue Exception => e
   # puts e.backtrace
   # tanraku_execute
-encure
+ensure
   GC.compact
 end
 
