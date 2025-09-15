@@ -3,7 +3,7 @@
 lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
-require "#{File.dirname(__FILE__)}/../req/bmi"
+require "#{File.dirname(__FILE__)}/../req/bmi_version"
 
 module BMI
   module_function
