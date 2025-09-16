@@ -336,7 +336,7 @@ makefolder  フォルダを作成します
 
 NumberGame  数字当てゲームです (疑似乱数版)
 
-NumberGame2  数字当てゲームです (乱数版)
+NumberGame2 数字当てゲームです (乱数版)
 
 Encode      文字列のエンコードを評価します
 
