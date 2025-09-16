@@ -3,8 +3,7 @@
 
 # vim: filetype=ruby
 
-require 'readline'
-require 'tanraku'
+require "#{File.dirname(__FILE__)}/../req/speak"
 
 lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
@@ -31,7 +30,7 @@ class Emerald
       print ' '
     end
     puts ''
-    end
+  end
 
   def fizzbizz
     puts 'FizzBizz問題の出力結果です!'
@@ -49,7 +48,7 @@ class Emerald
       print ' '
     end
     puts ''
-    end
+  end
 
   def kurage
     a = rand(15)
@@ -59,7 +58,7 @@ class Emerald
     end
     puts '＜コ：彡'
     puts ''
- end
+  end
 end
 
 saikoro = Random.rand(4)
@@ -75,26 +74,26 @@ else
 end
 
 puts ''
-puts 'まずは、helpと入力してください!コマンドがわかります!'
+puts 'helpを入力またはTab補完で実行しましょう!'
 
 # search words
 
 begin
   str = %w[sessi kashi exit help].map!(&:freeze).freeze
 
-  once = %w[find delete remove rename makefolder NumberGame Encode week].map!(&:freeze).freeze
+  once = %w[find delete remove rename makefolder NumberGame2 Encode week calendar NumberGame].map!(&:freeze).freeze
 
   lucky = %w[loto6 Numbers kuji].map!(&:freeze).freeze
 
-  dark = %w[OneRunner Eval].map!(&:freeze).freeze
+  dark = %w[OneRunner Eval output].map!(&:freeze).freeze
 
   denki = %w[Anpea Volt Rister].map!(&:freeze).freeze
 
-  rss = %w[reader].map!(&:freeze).freeze
+  other = %w[weather reader atom result rss].map!(&:freeze).freeze
 
-  WORDS = (str + once + lucky + dark + denki + rss).map!(&:freeze).freeze
+  WORDS = (str + once + lucky + dark + denki + other).map!(&:freeze).freeze
 
-  Readline.completion_proc = proc {|word|
+  Readline.completion_proc = proc { |word|
     WORDS.grep(/\A#{Regexp.quote word}/)
   }
 
@@ -104,14 +103,13 @@ begin
 
   # Wainting Action code!
 
-  while (line = Readline.readline(""))
+  while (line = Readline.readline(''))
 
     line.chomp!
 
     if line.match?(str[0])
       def seru(b)
-        y = (b - 32) * 5 / 9
-        y
+        (b - 32) * 5 / 9
       end
       puts '華氏を入力してください!'
         .print '> '
@@ -123,8 +121,7 @@ begin
 
     elsif line.match?(str[1])
       def seru(b)
-        y = (1.8 * b) + 32
-        y
+        (1.8 * b) + 32
       end
       puts '摂氏を入力してください！'
       print '> '
@@ -238,8 +235,7 @@ begin
     elsif line.match?(denki[0])
 
       def anpea(a, b)
-        x = b / a
-        x
+        b / a
       end
 
       puts
@@ -264,8 +260,7 @@ begin
     elsif line.match?(denki[1])
 
       def volt(c, d)
-        y = c * d
-        y
+        c * d
       end
 
       puts
@@ -289,8 +284,7 @@ begin
     elsif line.match?(denki[2])
 
       def rister(k, l)
-        z = k / l
-        z
+        k / l
       end
 
       puts
@@ -322,7 +316,7 @@ sessi       華氏から摂氏へ変換します
 
 kashi       摂氏から華氏へ変換します
 
-kuji        今日の運勢を乱数を使って占います
+kuji        今日の運勢を占います
 
 Numbers     Numbers４の候補となる数字を乱数を使って出力します
 
@@ -342,6 +336,8 @@ makefolder  フォルダを作成します
 
 NumberGame  数字当てゲームです (疑似乱数版)
 
+NumberGame2 数字当てゲームです (乱数版)
+
 Encode      文字列のエンコードを評価します
 
 Eval        eval族の館へようこそ、足し算などが行えます
@@ -352,9 +348,25 @@ Volt        オームの法則を使い、電圧を調べます
 
 Rister      オームの法則を使い、抵抗を調べます
 
-week        太陽暦で日付の曜日を真と偽で判定します
+week        現在日付と曜日を表示します
+
+calendar    PyCallでpythonを呼び出しカレンダー表示します
+
+output      外部コマンドを実行できます
+            ※ ただし、入力待ちは実行できません
+
+weather     zinbei2の天気機能を移植しました
 
 reader      RSSの取得先からタイトル表示 (雨音から移植)
+
+atom        gem install feedjira (v3.0.0~)
+            gem install httparty
+            atom形式のrssを読み込むことができます
+
+result      rssの記号を個数としてカウントします
+            ※ ただし、カウント後zinbeiwを終了します
+
+rss         RSS投稿時間帯を判別します
 
 終了するときは、exitと入力します'
 
@@ -364,11 +376,11 @@ reader      RSSの取得先からタイトル表示 (雨音から移植)
 
       # It is a help document of zinbeic exit!
 
-      # The command which can be called is only once. 　
+      # The command which can be called is only once.
     elsif line.match?(once[0])
 
       begin
-        print '探したい文字列を入力してください：　'
+        print '探したい文字列を入力してください： '
         re = gets.chomp
       rescue StandardError => et
         p et
@@ -377,7 +389,7 @@ reader      RSSの取得先からタイトル表示 (雨音から移植)
       end
 
       begin
-        print '探したいフォルダのパスを指定してください：　'
+        print '探したいフォルダのパスを指定してください： '
         fo = gets.chomp
       rescue StandardError => es
         p es
@@ -391,7 +403,7 @@ reader      RSSの取得先からタイトル表示 (雨音から移植)
       end
 
       begin
-        print 'ファイル名を拡張子を含んで入力してください：　'
+        print 'ファイル名を拡張子を含んで入力してください： '
 
         filename = gets.chomp
         File.open(filename) do |d|
@@ -418,7 +430,7 @@ reader      RSSの取得先からタイトル表示 (雨音から移植)
     elsif line.match?(once[1])
 
       begin
-        print '消したいフォルダのパスを指定してください：　'
+        print '消したいフォルダのパスを指定してください： '
         mo = gets.chomp
       rescue StandardError => es
         p es
@@ -432,7 +444,7 @@ reader      RSSの取得先からタイトル表示 (雨音から移植)
       end
 
       begin
-        print 'ファイル名を拡張子を含んで入力してください：　'
+        print 'ファイル名を拡張子を含んで入力してください： '
 
         del = readline.chomp!
         File.delete(del)
@@ -450,7 +462,7 @@ reader      RSSの取得先からタイトル表示 (雨音から移植)
     elsif line.match?(once[2])
 
       begin
-        print '削除したいフォルダのパスを指定してください：　'
+        print '削除したいフォルダのパスを指定してください： '
         st = gets.chomp
       rescue StandardError => es
         p es
@@ -464,7 +476,7 @@ reader      RSSの取得先からタイトル表示 (雨音から移植)
       end
 
       begin
-        print '削除したいフォルダ名を拡張子を含んで入力してください：　'
+        print '削除したいフォルダ名を拡張子を含んで入力してください： '
 
         rem = readline.chomp!
         Dir.rmdir(rem)
@@ -481,7 +493,7 @@ reader      RSSの取得先からタイトル表示 (雨音から移植)
     elsif line.match?(once[3])
 
       begin
-        print '名前を変えたいフォルダのパスを指定してください：　'
+        print '名前を変えたいフォルダのパスを指定してください： '
         nem = gets.chomp
       rescue StandardError => es
         p es
@@ -495,7 +507,7 @@ reader      RSSの取得先からタイトル表示 (雨音から移植)
       end
 
       begin
-        print '現在のファイル名を拡張子を含んで入力してください：　'
+        print '現在のファイル名を拡張子を含んで入力してください： '
         re = gets.chomp!
       rescue StandardError => ex
         p ex
@@ -504,7 +516,7 @@ reader      RSSの取得先からタイトル表示 (雨音から移植)
       end
 
       begin
-        print '変更するファイル名を拡張子を含んで入力してください：　'
+        print '変更するファイル名を拡張子を含んで入力してください： '
 
         no = gets.chomp!
 
@@ -523,7 +535,7 @@ reader      RSSの取得先からタイトル表示 (雨音から移植)
     elsif line.match?(once[4])
 
       begin
-        print '作成したいフォルダのパスを指定してください：　'
+        print '作成したいフォルダのパスを指定してください： '
         mk = gets.chomp
       rescue StandardError => es
         p es
@@ -537,7 +549,7 @@ reader      RSSの取得先からタイトル表示 (雨音から移植)
       end
 
       begin
-        print 'フォルダ名を入力してください：　'
+        print 'フォルダ名を入力してください： '
 
         ma = readline.chomp!
         Dir.mkdir(ma)
@@ -552,10 +564,9 @@ reader      RSSの取得先からタイトル表示 (雨音から移植)
       end
 
       print '> '
-
     elsif line.match?(once[5])
       begin
-        x = Random.rand(1..100)
+        x = SecureRandom.random_number(1..100).freeze
 
         puts ''
         puts '何回まで、繰り返すか指定してください (20回が限度です)'
@@ -637,14 +648,14 @@ reader      RSSの取得先からタイトル表示 (雨音から移植)
 
         puts ''
         puts '変更前のエンコードを指定してください'
-        puts 'ISO-2022-JP,SJIS,eucJP,UTF-8　が候補です。'
+        puts 'ISO-2022-JP,SJIS,eucJP,UTF-8 が候補です。'
         print '> '
         befenco = gets.chomp
 
         begin
           puts ''
           puts 'エンコードを指定してください'
-          puts 'ISO-2022-JP,SJIS,eucJP,UTF-8　が候補です。'
+          puts 'ISO-2022-JP,SJIS,eucJP,UTF-8 が候補です。'
           print '> '
           aftenco = gets.chomp
           puts
@@ -665,12 +676,38 @@ reader      RSSの取得先からタイトル表示 (雨音から移植)
       print '> '
     elsif line.match?(dark[1])
       begin
-        puts 'eval族の館へようこそ！'
-        puts '簡単な文字列を評価してください'
+        puts 'eval族の館へようこそ！
+簡単な文字列を評価してください'
         print '> '
         re = gets.chomp
         puts ''
         p eval(re)
+        puts ''
+      rescue StandardError => et
+        p et
+        print '> '
+        puts 'エラーです。文字列を確認してください！'
+        puts ''
+        retry
+      ensure
+        puts '終了は exit を入力してください！'
+      end
+      print '> '
+
+    elsif line.match?(dark[2])
+      begin
+        puts ''
+        puts 'OUTPUT'.center(60, '-')
+        puts ''
+        puts '外部コマンドを実行できます!'
+        puts ''
+        puts 'OUTPUT'.center(60, '-')
+        puts ''
+        print '> '
+        re = gets.chomp
+        puts ''
+        stdout, stderr, status = Open3.capture3(re)
+        puts stdout
         puts ''
       rescue StandardError => et
         p et
@@ -757,9 +794,117 @@ reader      RSSの取得先からタイトル表示 (雨音から移植)
 
       print '> '
 
-      # The command which can be called is only once.
+    elsif line.match?(once[8])
+      puts ''
+      puts 'WEEK'.center(60, '-')
+      puts ''
+      puts '入力した日付をカレンダーで表示します'
+      puts '半角数字で入力してください'
+      puts 'それでは、スタート！'
+      puts ''
+      puts 'WEEK'.center(60, '-')
+      puts ''
 
-      elsif line.match?(rss[0])
+      begin
+        puts '調べたい年を入力してください'
+        print '> '
+        nen = gets.chomp.to_i
+      rescue StandardError => ee
+        p ee
+        puts 'エラーです。数字を確認してください！'
+      end
+
+      puts ''
+
+      begin
+        puts '調べたい月を入力してください'
+        print '> '
+        mon = gets.chomp.to_i
+      rescue StandardError => ey
+        p ey
+        puts 'エラーです。数字を確認してください！'
+      end
+
+      puts ''
+
+      t = Time.local(nen, mon)
+
+      pyimport :calendar
+      puts(calendar.month(nen, mon))
+
+      puts ''
+
+      # The command which can be called is only once.
+      print '> '
+
+    elsif line.match?(other[0])
+
+      require 'net/http'
+      require 'uri'
+      require 'json'
+      require 'time'
+      require 'date'
+      require 'rinku'
+      require 'sanitize'
+
+
+      text = <<-EOS
+------------------------------------------------------------------------
+
+ IDの詳細はこちら → https://github.com/takkii/Utakata/wiki/Utakata-wiki
+
+ ※ 日本全国のIDから自分の地域IDを入力！
+------------------------------------------------------------------------
+      EOS
+
+      links = Rinku.auto_link(text, mode=:all, link_attr=nil, skip_tags=nil)
+      puts Sanitize.clean(links)
+
+      begin
+        puts '調べたい地域のIDを入力してください'
+        puts ''
+        print '> '
+        ID = gets.chomp
+      rescue StandardError => es
+        p es
+        puts 'エラーです。IDを確認してください！'
+      end
+
+      url = 'https://weather.tsukumijima.net/api/forecast?city=' + ID
+      uri = URI.parse(url)
+      json = Net::HTTP.get(uri)
+      result = JSON.parse!(json)
+      today_tel = result['forecasts'][0]['telop']
+      tomor_tel = result['forecasts'][1]['telop']
+      min_tem = result['forecasts'][1]['temperature']['min']['celsius']
+      max_tem = result['forecasts'][1]['temperature']['max']['celsius']
+      des = result['description']['text']
+      des1 = result['description']['publicTime']
+      des2 = DateTime.parse(des1)
+
+      # puts result
+      puts ' 天気予報 '.center(60, '-')
+      puts ''
+      puts '今日の天気は、' + today_tel + ' でしょう '
+      puts '最低気温は、' + min_tem + '℃' + ' でしょう '
+      puts '最高気温は、' + max_tem + '℃' + ' でしょう '
+      puts '明日の天気は、' + tomor_tel + ' でしょう '
+      puts ''
+      puts ' 天気予報 '.center(60, '-')
+      puts ''
+      puts ''
+      puts ' 天気概況文 '.center(60, '-')
+      puts
+      puts des
+      puts ''
+      print ' 天気概況文の発表時刻 : '
+      puts des2.strftime('%Y年%m月%d日 %H時%M分%S秒')
+      puts ''
+      puts ' 天気概況文 '.center(60, '-')
+
+      print '> '
+
+    elsif line.match?(other[1])
       require 'rss'
       require 'date'
       require 'kconv'
@@ -784,6 +929,207 @@ reader      RSSの取得先からタイトル表示 (雨音から移植)
       puts ''
       print '> '
 
+    elsif line.match?(other[2])
+
+      require 'feedjira'
+      require 'httparty'
+      require 'date'
+      require 'kconv'
+
+      begin
+        puts ''
+        puts '調べたいRSSのURLを入力してください'
+        puts ''
+        print '>'
+        URL = gets.chomp
+      rescue StandardError => es
+        p es
+        puts 'エラーです。URLを確認してください！'
+      end
+
+      Feedjira.logger.level = Logger::FATAL
+      atom = HTTParty.get(URL).body
+
+      Feedjira.parse(atom).entries.collect do |entry|
+        v = /1[0-9]/
+        w = /0[0-9]/
+        x = /2[0-4]/
+        s = entry.published.to_time.strftime '%H'
+
+        if s.match?(v)
+          print '#'
+          print ' '
+        elsif s.match?(w)
+          print '$'
+          print ' '
+        elsif s.match?(x)
+          print '@'
+          print ' '
+        end
+      end
+
+      puts ''
+      print '>'
+
+    elsif line.match?(other[3])
+
+      begin
+        puts 'rssの出力結果を貼り付けてください'
+        print '>'
+        re = gets.chomp
+      rescue StandardError => ee
+        p ee
+        puts 'エラーです。数字を確認してください！'
+      end
+
+      puts 'ログの最近の投稿時間を判別します...'
+
+      str = re.split('')
+
+      puts ''
+      print '20～24時に投稿した回数は...'
+      print str.count('@')
+      puts ' 回あります'
+      print '0時から9時に投稿した回数は...'
+      print str.count('$')
+      puts ' 回あります'
+      print '10時から19時に投稿した回数は...'
+      print str.count('#')
+      puts ' 回あります'
+
+      puts ''
+      enum = [str.count('@'), str.count('$'), str.count('#')]
+
+      q = enum.max
+      t = enum.min
+
+      puts '最も多い数字は ' + q.to_s + ' 回です'
+      puts '最も少ない数字は ' + t.to_s + ' 回です'
+
+      puts ''
+      print '合計 '
+      print str.count('@') + str.count('$') + str.count('#')
+      puts ' 回です'
+      puts ''
+
+      exit!
+
+    elsif line.match?(other[4])
+
+      require 'rss'
+      require 'date'
+      require 'kconv'
+
+      # date = Time.new.strftime('現在時刻 ： %Y年%m月%d日 %H時%M分')
+
+      begin
+        puts '調べたいRSSのURLを入力してください'
+        print '>'
+        URL = gets.chomp
+      rescue StandardError => es
+        p es
+        puts 'エラーです。URLを確認してください！'
+      end
+
+      rss = RSS::Parser.parse(URL)
+
+      rss.items.collect do |scale|
+        # puts scale.pubDate.strftime '投稿時刻 ： %Y年%m月%d日 %H時%M分'
+        # scale.pubDate.strftime '%H'
+
+        v = /1[0-9]/
+        w = /0[0-9]/
+        x = /2[0-4]/
+        s = scale.pubDate.strftime '%H'
+
+        if s.match?(v)
+          print '#'
+          print ' '
+        elsif s.match?(w)
+          print '$'
+          print ' '
+        elsif s.match?(x)
+          print '@'
+          print ' '
+          # print ' '
+          # puts scale.title
+          # puts scale.link
+          # puts scale.description
+          # print ' '
+        end
+      end
+      puts ''
+      print '>'
+
+    elsif line.match?(once[9])
+      begin
+        x = Random.rand(1..100)
+
+        puts ''
+        puts '何回まで、繰り返すか指定してください (20回が限度です)'
+        print '> '
+        num = (gets.chomp.to_i).freeze
+        puts "#{num}回、繰り返すまでに当ててください:"
+        puts ''
+        puts '1 ~ 100までの数字をいれてください、NumberGameスタート！'
+        print '> '
+
+        if num < 21
+          num.times do |z|
+            input_n = (gets.chomp.to_i).freeze
+            input_m = input_n.to_s
+
+            if input_n < 101
+              if input_m.match(/^0/o)
+                puts ''
+                puts '0と00または空白を入力したため、終了します...'
+                puts ''
+                break
+              elsif input_n < x
+                puts 'コンピュータの選んだ数字の方が大きいため大きい数字を入力してください'
+                print '> '
+              elsif input_n > x
+                puts 'コンピュータの選んだ数字の方が小さいため小さい数字を入力してください'
+                print '> '
+              elsif input_n == x
+                puts ''
+                puts 'おめでとうございます、正解です'
+                puts ''
+                puts "#{num}回範囲内: #{z+1}回目で正解しました"
+                puts ''
+                break
+              else
+                puts ''
+                puts '正解は' + x.to_s + 'でした'
+                puts ''
+                puts '処理を終了します...'
+                puts ''
+                break
+              end
+            else
+              puts ''
+              puts '100を超えた数字を入力したため、終了します...'
+              puts ''
+              break
+            end
+          end
+        else
+          puts ''
+          puts '繰り返す回数が20回を超えたため、終了します...'
+          puts ''
+        end
+
+      rescue StandardError => s
+        puts s.backtrace
+        tanraku_execute
+      
+      ensure
+        puts '正解は' + x.to_s + 'でした'
+        puts ''
+        puts 'お疲れさまでした、NumberGameを終了します...処理を入力してください!'
+        print '> '
+      end
+
     else
       puts "Can't Enter this Words. Please input help"
       print '> '
@@ -802,5 +1148,7 @@ rescue StandardError => ex
 ensure
   puts '終了は exit を入力してください！'
 end
+
+GC.compact
 
 __END__
