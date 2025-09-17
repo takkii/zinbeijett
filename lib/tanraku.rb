@@ -114,6 +114,13 @@ module Short_Circuit
     exit!
   end
 
+  def tanraku_match(str_tanraku, match_tanraku, process_tanraku)
+    str_tanraku = ''.to_s
+    match_tanraku = ''.to_s
+    str_tanraku.match(match_tanraku) || {}[:match]
+    process_tanraku
+  end
+
   def tanraku_log
     m2 = Mutex.new
 
