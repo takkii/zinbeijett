@@ -47,7 +47,7 @@ tanraku_log
 tanraku_match (新機能)🆙
 
 # 新機能の詳細
-tanraku_match(str_tanraku = '', match_tanraku = '', process_tanraku)
+tanraku_match(str_tanraku, match_tanraku, process_tanraku)
 tanraku_match(String, String, None)
 
 # 新機能の定義
