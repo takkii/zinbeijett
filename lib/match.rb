@@ -4,6 +4,7 @@ require 'bmi'
 require 'require_sec_seiki'
 require 'tanraku'
 
+
 # match search loads.
 module Mat
   module_function
@@ -15,17 +16,19 @@ module Mat
 
     File.open(one) do |f|
       while (f_open = f.gets)
-        str_f = f_open.chomp!
+        str = f_open.chomp!
         twice = ARGV[2]
         three_act = /#{twice}/o
 
         begin
-          if tanraku_match(str_f, three_act, printf('%2d : %s', f.lineno, str); puts '')
-          else
-            return
+          if str.match(three_act) || {}[:match]
+            printf('%2d : %s', f.lineno, str)
+            puts ''
           end
         rescue Timeout::Error
           exit!
+        ensure
+          GC.compact
         end
       end
 
@@ -36,8 +39,9 @@ module Mat
           raise All
         rescue StandardError => s
           puts s.backtrace
-          puts s.backtrace_locations
           tanraku_execute
+        ensure
+          GC.compact
         end
       end
     end
