@@ -67,7 +67,7 @@ class Object
 end
 
 module Tanraku
-  VERSION = '1.1.3.1'
+  VERSION = '1.1.4'
 end
 
 # Can be used as a function
