@@ -44,9 +44,9 @@ tanraku
 tanraku_exit
 tanraku_execute
 tanraku_log
+tanraku_match (実験的機能)
 
-# 実験的機能
-tanraku_match
+# 実験的機能の定義
 str_tanraku = ''
 match_tanraku = ''
 process_tanraku
@@ -55,9 +55,9 @@ process_tanraku
 require 'tanraku'
 tanraku_match('あいうえお'.to_s, '/あ/o', tanraku_execute)
 
-# 実験的機能の出力結果
+# 使用例の出力結果
 ...
-> TypeError : exception class/object expected
+TypeError : exception class/object expected
 --> Tanraku_Execute Method Exception
 ```
 
