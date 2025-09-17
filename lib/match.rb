@@ -1,7 +1,9 @@
 # frozen_string_literal: true
 
-require 'require_sec_seiki'
 require 'bmi'
+require 'require_sec_seiki'
+require 'tanraku'
+
 
 # match search loads.
 module Mat
@@ -13,18 +15,19 @@ module Mat
     one = ARGV[1]
 
     File.open(one) do |f|
-      while (str2 = f.gets)
-        str = str2.chomp!
+      while (f_open = f.gets)
+        str = f_open.chomp!
         twice = ARGV[2]
         three_act = /#{twice}/o
 
         begin
-            if str.match(three_act) || {}[:match]
-              printf('%2d : %s', f.lineno, str)
-              puts ''
-            end
+          if str.match(three_act) || {}[:match]
+            printf('%2d : %s', f.lineno, str)
+          end
         rescue Timeout::Error
           exit!
+        ensure
+          GC.compact
         end
       end
 
@@ -33,13 +36,15 @@ module Mat
       elsif !f.eof
         begin
           raise All
-        rescue StandardError => ee
-          puts ee.backtrace
-          puts ee.backtrace_locations
+        rescue StandardError => s
+          puts s.backtrace
+          tanraku_execute
+        ensure
+          GC.compact
         end
       end
     end
   end
 end
 
-GC.compact
+__END__
