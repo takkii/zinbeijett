@@ -50,6 +50,15 @@ tanraku_match
 str_tanraku = ''
 match_tanraku = ''
 process_tanraku
+
+# 実験的機能の使用例
+require 'tanraku'
+tanraku_match('あいうえお'.to_s, '/あ/o', tanraku_execute)
+
+# 実験的機能の出力結果
+...
+> TypeError : exception class/object expected
+--> Tanraku_Execute Method Exception
 ```
 
 ※ Tanraku_VERSION: 1.1.2
