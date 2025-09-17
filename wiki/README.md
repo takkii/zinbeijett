@@ -47,7 +47,9 @@ tanraku_log
 
 # 実験的機能
 tanraku_match
-tanraku_match(input string, match pattern type string, process write)
+str_tanraku = ''
+match_tanraku = ''
+process_tanraku
 ```
 
 ※ Tanraku_VERSION: 1.1.2
