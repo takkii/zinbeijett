@@ -44,6 +44,10 @@ tanraku
 tanraku_exit
 tanraku_execute
 tanraku_log
+
+# 実験的機能
+tanraku_match
+tanraku_match(input string, match pattern type string, process write)
 ```
 
 ※ Tanraku_VERSION: 1.1.2
