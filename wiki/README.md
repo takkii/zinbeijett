@@ -44,16 +44,20 @@ tanraku
 tanraku_exit
 tanraku_execute
 tanraku_log
-tanraku_match (実験的機能)
+tanraku_match (新機能)🆙
 
-# 実験的機能の定義
+# 新機能の詳細
+tanraku_match(str_tanraku = '', match_tanraku = '', process_tanraku)
+tanraku_match(String, String, None)
+
+# 新機能の定義
 str_tanraku = ''
 match_tanraku = ''
 process_tanraku
 
-# 実験的機能の使用例
+# 新機能の使用例
 require 'tanraku'
-tanraku_match('あいうえお'.to_s, '/あ/o', tanraku_execute)
+tanraku_match('あいうえお', '/あ/o', tanraku_execute)
 
 # 使用例の出力結果
 ...
@@ -61,6 +65,6 @@ TypeError : exception class/object expected
 --> Tanraku_Execute Method Exception
 ```
 
-※ Tanraku_VERSION: 1.1.2
+※ Tanraku_VERSION: 1.1.4
 
-_更新履歴 : 2025/06/04_
+_更新履歴 : 2025/09/17_
