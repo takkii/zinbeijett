@@ -55,7 +55,7 @@ str_tanraku = ''
 match_tanraku = ''
 process_tanraku
 
-# 新機能の使用例
+# 使用例、常に発動
 require 'tanraku'
 tanraku_match('あいうえお', '/あ/o', tanraku_execute)
 
