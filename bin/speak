@@ -100,14 +100,12 @@ begin
   print '> '
 
   # search words exit!
-
-  # Wainting Action code!
-
   while (line = Readline.readline(''))
 
     line.chomp!
 
     if line.match?(str[0])
+
       def seru(b)
         (b - 32) * 5 / 9
       end
@@ -120,6 +118,7 @@ begin
       print '> '
 
     elsif line.match?(str[1])
+
       def seru(b)
         (1.8 * b) + 32
       end
@@ -133,6 +132,7 @@ begin
 
     elsif line.match?(str[2])
       exit!
+
     elsif line.match?(lucky[0])
 
       class Loto6
@@ -161,6 +161,7 @@ begin
       print '> '
 
     elsif line.match?(lucky[1])
+
       puts 'ナンバーズで参考にする数字をランダムで表示します！'
       puts ''
       class Numbers
@@ -181,6 +182,7 @@ begin
       print '> '
 
     elsif line.match?(lucky[2])
+
       puts '今日の運勢を占ってみましょう。'
       puts '大吉→中吉→吉→小吉→凶→大凶'
 
@@ -238,18 +240,17 @@ begin
         b / a
       end
 
-      puts
+      puts ''
       puts '抵抗を入力してください'
 
       print '> '
       f = gets.to_i
 
-      puts
+      puts ''
       puts '電圧を入力してください'
       print '> '
 
       g = gets.to_i
-
       m = anpea(f, g)
 
       puts
@@ -272,11 +273,11 @@ begin
       puts '電流を入力してください'
 
       print '> '
-      i = gets.to_i
 
+      i = gets.to_i
       j = volt(h, i)
 
-      puts
+      puts ''
       puts "電圧は#{j.round}です。"
 
       print '> '
@@ -292,20 +293,18 @@ begin
       print '> '
 
       l = gets.to_i
-      puts
+      puts ''
       puts '電圧を入力してください'
 
       print '> '
-      k = gets.to_i
 
+      k = gets.to_i
       q = rister(k, l)
 
-      puts
+      puts ''
       puts "抵抗は#{q.round}です。"
 
       print '> '
-
-      # It is a help document of zinbeic.
 
     elsif line.match?(str[3])
 
@@ -371,12 +370,8 @@ rss         RSS投稿時間帯を判別します
 終了するときは、exitと入力します'
 
       puts 'COMMAND'.center(60, '-')
-
       print '> '
 
-      # It is a help document of zinbeic exit!
-
-      # The command which can be called is only once.
     elsif line.match?(once[0])
 
       begin
@@ -425,6 +420,7 @@ rss         RSS投稿時間帯を判別します
       ensure
         puts '終了は exit を入力してください！'
       end
+
       print '> '
 
     elsif line.match?(once[1])
@@ -457,6 +453,7 @@ rss         RSS投稿時間帯を判別します
       ensure
         puts '終了は exit を入力してください！'
       end
+
       print '> '
 
     elsif line.match?(once[2])
@@ -489,7 +486,9 @@ rss         RSS投稿時間帯を判別します
       ensure
         puts '終了は exit を入力してください！'
       end
+
       print '> '
+
     elsif line.match?(once[3])
 
       begin
@@ -532,6 +531,7 @@ rss         RSS投稿時間帯を判別します
       end
 
       print '> '
+
     elsif line.match?(once[4])
 
       begin
@@ -564,7 +564,9 @@ rss         RSS投稿時間帯を判別します
       end
 
       print '> '
+
     elsif line.match?(once[5])
+
       begin
         x = SecureRandom.random_number(1..99).freeze
 
@@ -639,7 +641,8 @@ rss         RSS投稿時間帯を判別します
       end
 
     elsif line.match?(once[6])
-      puts
+
+      puts ''
 
       class Enco
         begin
@@ -680,6 +683,7 @@ rss         RSS投稿時間帯を判別します
       end
       print '> '
     elsif line.match?(dark[1])
+
       begin
         puts 'eval族の館へようこそ！
 簡単な文字列を評価してください'
@@ -700,6 +704,7 @@ rss         RSS投稿時間帯を判別します
       print '> '
 
     elsif line.match?(dark[2])
+
       begin
         puts ''
         puts 'OUTPUT'.center(60, '-')
@@ -726,6 +731,7 @@ rss         RSS投稿時間帯を判別します
       print '> '
 
     elsif line.match?(once[7])
+
       puts ''
       puts 'WEEK'.center(60, '-')
       puts ''
@@ -800,6 +806,7 @@ rss         RSS投稿時間帯を判別します
       print '> '
 
     elsif line.match?(once[8])
+
       puts ''
       puts 'WEEK'.center(60, '-')
       puts ''
@@ -838,20 +845,9 @@ rss         RSS投稿時間帯を判別します
       puts(calendar.month(nen, mon))
 
       puts ''
-
-      # The command which can be called is only once.
       print '> '
 
     elsif line.match?(other[0])
-
-      require 'net/http'
-      require 'uri'
-      require 'json'
-      require 'time'
-      require 'date'
-      require 'rinku'
-      require 'sanitize'
-
 
       text = <<-EOS
 ------------------------------------------------------------------------
@@ -887,7 +883,6 @@ rss         RSS投稿時間帯を判別します
       des1 = result['description']['publicTime']
       des2 = DateTime.parse(des1)
 
-      # puts result
       puts ' 天気予報 '.center(60, '-')
       puts ''
       puts '今日の天気は、' + today_tel + ' でしょう '
@@ -910,9 +905,6 @@ rss         RSS投稿時間帯を判別します
       print '> '
 
     elsif line.match?(other[1])
-      require 'rss'
-      require 'date'
-      require 'kconv'
 
       begin
         puts '調べたいRSSのURLを入力してください'
@@ -935,11 +927,6 @@ rss         RSS投稿時間帯を判別します
       print '> '
 
     elsif line.match?(other[2])
-
-      require 'feedjira'
-      require 'httparty'
-      require 'date'
-      require 'kconv'
 
       begin
         puts ''
@@ -1021,12 +1008,6 @@ rss         RSS投稿時間帯を判別します
 
     elsif line.match?(other[4])
 
-      require 'rss'
-      require 'date'
-      require 'kconv'
-
-      # date = Time.new.strftime('現在時刻 ： %Y年%m月%d日 %H時%M分')
-
       begin
         puts '調べたいRSSのURLを入力してください'
         print '>'
@@ -1056,17 +1037,13 @@ rss         RSS投稿時間帯を判別します
         elsif s.match?(x)
           print '@'
           print ' '
-          # print ' '
-          # puts scale.title
-          # puts scale.link
-          # puts scale.description
-          # print ' '
         end
       end
       puts ''
       print '>'
 
     elsif line.match?(once[9])
+
       begin
         x = Random.rand(1..99)
 
@@ -1145,7 +1122,6 @@ rss         RSS投稿時間帯を判別します
       print '> '
     end
   end
-# Wainting Action Code exit!
 
 # Exception throw!
 rescue StandardError => ex
@@ -1153,12 +1129,10 @@ rescue StandardError => ex
   puts 'エラーです。文字列を確認してください！'
   retry
   print '> '
-
-# Ruby ensure is Java Exception of finally.
+# Once Run.
 ensure
   puts '終了は exit を入力してください！'
+  GC.compact
 end
-
-GC.compact
 
 __END__
