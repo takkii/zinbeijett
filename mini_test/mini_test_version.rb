@@ -7,7 +7,7 @@ require "#{File.dirname(__FILE__)}/../lib/version"
 # Mini_test file load.
 class VersionTest < Minitest::Test
   def test_version
-    @v1 = EngineLeft::VERSION
+    @v1 = EngineLeft.version
     zinbeijett_version = '6.0.0'
     t = Date.today
     build_day = t.strftime('%Y.%m.%d')
